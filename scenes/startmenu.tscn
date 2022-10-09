@@ -215,11 +215,11 @@ text = "Controles"
 [node name="SettingsContainer" type="VBoxContainer" parent="SettingsMenu/MainMenu2"]
 margin_top = 85.0
 margin_right = 1280.0
-margin_bottom = 219.0
+margin_bottom = 336.0
 
 [node name="VideoSettings" type="GridContainer" parent="SettingsMenu/MainMenu2/SettingsContainer"]
 margin_right = 1280.0
-margin_bottom = 134.0
+margin_bottom = 251.0
 rect_min_size = Vector2( 640, 0 )
 custom_constants/vseparation = 25
 custom_constants/hseparation = 25
@@ -229,16 +229,16 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="SettingsMenu/MainMenu2/SettingsContainer/VideoSettings"]
-margin_top = 19.0
-margin_right = 1183.0
-margin_bottom = 21.0
+margin_top = 4.0
+margin_right = 972.0
+margin_bottom = 63.0
 size_flags_horizontal = 3
 text = "Vsync"
 
 [node name="CheckButton" type="CheckButton" parent="SettingsMenu/MainMenu2/SettingsContainer/VideoSettings"]
 margin_left = 1208.0
 margin_right = 1280.0
-margin_bottom = 40.0
+margin_bottom = 67.0
 size_flags_horizontal = 8
 size_flags_vertical = 0
 __meta__ = {
@@ -246,17 +246,17 @@ __meta__ = {
 }
 
 [node name="Label2" type="Label" parent="SettingsMenu/MainMenu2/SettingsContainer/VideoSettings"]
-margin_top = 76.0
-margin_right = 1183.0
-margin_bottom = 78.0
+margin_top = 96.0
+margin_right = 972.0
+margin_bottom = 155.0
 size_flags_horizontal = 3
 text = "Fullscreen"
 
 [node name="CheckBox" type="CheckBox" parent="SettingsMenu/MainMenu2/SettingsContainer/VideoSettings"]
-margin_left = 1252.0
-margin_top = 65.0
+margin_left = 1202.0
+margin_top = 92.0
 margin_right = 1280.0
-margin_bottom = 89.0
+margin_bottom = 159.0
 size_flags_horizontal = 8
 text = "on"
 align = 2
@@ -265,17 +265,17 @@ __meta__ = {
 }
 
 [node name="Label3" type="Label" parent="SettingsMenu/MainMenu2/SettingsContainer/VideoSettings"]
-margin_top = 123.0
-margin_right = 1183.0
-margin_bottom = 125.0
+margin_top = 188.0
+margin_right = 972.0
+margin_bottom = 247.0
 size_flags_horizontal = 3
 text = "Resolution"
 
 [node name="OptionButton" type="OptionButton" parent="SettingsMenu/MainMenu2/SettingsContainer/VideoSettings"]
-margin_left = 1247.0
-margin_top = 114.0
+margin_left = 997.0
+margin_top = 184.0
 margin_right = 1280.0
-margin_bottom = 134.0
+margin_bottom = 251.0
 size_flags_horizontal = 8
 text = "1920 * 1080"
 items = [ "1920 * 1080", null, false, 0, null, "1280 * 720", null, false, 1, null ]

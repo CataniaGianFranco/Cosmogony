@@ -5,10 +5,10 @@ onready var _video_settings = $SettingsMenu/MainMenu2/SettingsContainer/VideoSet
 onready var _audio_settings = $SettingsMenu/MainMenu2/SettingsContainer/AudioSettings
 onready var _control_settings = $SettingsMenu/MainMenu2/SettingsContainer/ControlsSettings
 onready var _animation_player = $AnimationPlayer
-onready var _start_btn = $MainMenu/Start
+onready var _start = $MainMenu/Start
 
 func _ready() -> void:
-	_start_btn.grab_focus()
+	_start.grab_focus()
 
 func _on_Start_pressed() -> void:
 	get_tree().call_deferred("change_scene","res://scenes/Main.tscn")
