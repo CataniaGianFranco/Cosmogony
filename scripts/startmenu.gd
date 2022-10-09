@@ -1,50 +1,43 @@
 extends Control
 
-onready var setting_menu = $SettingsMenu
-onready var video_settings = $SettingsMenu/MainMenu2/SettingsContainer/VideoSettings
-onready var audio_settings = $SettingsMenu/MainMenu2/SettingsContainer/AudioSettings
-onready var control_settings = $SettingsMenu/MainMenu2/SettingsContainer/ControlsSettings
-onready var animation_player = $AnimationPlayer
-onready var start_btn = $MainMenu/StartBtn
+onready var _setting_menu = $SettingsMenu
+onready var _video_settings = $SettingsMenu/MainMenu2/SettingsContainer/VideoSettings
+onready var _audio_settings = $SettingsMenu/MainMenu2/SettingsContainer/AudioSettings
+onready var _control_settings = $SettingsMenu/MainMenu2/SettingsContainer/ControlsSettings
+onready var _animation_player = $AnimationPlayer
+onready var _start_btn = $MainMenu/Start
 
-func _ready():
-	start_btn.grab_focus()
+func _ready() -> void:
+	_start_btn.grab_focus()
 
-func _on_StartBtn_pressed():
-	get_tree().call_deferred("change_scene","res://Scenes/Main.tscn")
+func _on_Start_pressed() -> void:
+	get_tree().call_deferred("change_scene","res://scenes/Main.tscn")
 
-
-func _on_SettingsBtn_pressed():
-	setting_menu.popup_centered()
+func _on_Settings_pressed() -> void:
+	_setting_menu.popup_centered()
 	hide_settings()
-	video_settings.show()
+	_video_settings.show()
 
-
-func _on_QuitBtn_pressed():
+func _on_Quit_pressed() -> void:
 	get_tree().quit()
 
-
-func _on_VideoBtn_pressed():
+func _on_Video_pressed() -> void:
 	hide_settings()
-	video_settings.show()
+	_video_settings.show()
 
-
-func _on_AudioBtn_pressed():
+func _on_Audio_pressed() -> void:
 	hide_settings()
-	audio_settings.show()
+	_audio_settings.show()
 
-
-func _on_ControlsBtn_pressed():
+func _on_Controls_pressed() -> void:
 	hide_settings()
-	control_settings.show()
+	_control_settings.show()
 	
-	
-func hide_settings():
-	video_settings.hide()
-	audio_settings.hide()
-	control_settings.hide()
+func hide_settings() -> void:
+	_video_settings.hide()
+	_audio_settings.hide()
+	_control_settings.hide()
 	play_animation()
 
-
-func play_animation():
-	animation_player.play("settings")
+func play_animation() -> void:
+	_animation_player.play("settings")

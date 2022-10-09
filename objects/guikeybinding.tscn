@@ -65,7 +65,7 @@ columns = 2
 margin_top = 3.0
 margin_right = 64.0
 margin_bottom = 17.0
-text = "JUMP:"
+text = "Saltar:"
 align = 3
 valign = 3
 

@@ -1,7 +1,8 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
-[ext_resource path="res://Scripts/startmenu.gd" type="Script" id=1]
-[ext_resource path="res://Fonts/Pixel Sans Serif Condensed.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://scripts/startmenu.gd" type="Script" id=1]
+[ext_resource path="res://fonts/Pixel Sans Serif Condensed.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://fonts/Pixel Sans Serif.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://Theme/startmenu.theme" type="Theme" id=4]
 [ext_resource path="res://Fonts/Pixel Sans Serif.ttf" type="DynamicFontData" id=5]
 
@@ -10,11 +11,11 @@ size = 128
 outline_size = 2
 outline_color = Color( 0.105882, 0.388235, 0.682353, 1 )
 use_filter = true
-font_data = ExtResource( 3 )
+font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=10]
 size = 30
-font_data = ExtResource( 3 )
+font_data = ExtResource( 2 )
 
 [sub_resource type="InputEventAction" id=2]
 action = "start"
@@ -24,7 +25,7 @@ shortcut = SubResource( 2 )
 
 [sub_resource type="DynamicFont" id=11]
 size = 30
-font_data = ExtResource( 3 )
+font_data = ExtResource( 2 )
 
 [sub_resource type="InputEventAction" id=4]
 action = "settings"
@@ -45,19 +46,19 @@ shortcut = SubResource( 6 )
 [sub_resource type="DynamicFont" id=8]
 size = 64
 use_filter = true
-font_data = ExtResource( 5 )
+font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=13]
 size = 32
-font_data = ExtResource( 3 )
+font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=14]
 size = 32
-font_data = ExtResource( 3 )
+font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=15]
 size = 32
-font_data = ExtResource( 3 )
+font_data = ExtResource( 2 )
 
 [sub_resource type="Animation" id=9]
 length = 0.5
@@ -104,33 +105,33 @@ margin_bottom = 446.48
 rect_min_size = Vector2( 400, 400 )
 custom_constants/separation = 25
 
-[node name="StartBtn" type="Button" parent="MainMenu"]
+[node name="Start" type="Button" parent="MainMenu"]
 margin_right = 400.0
 margin_bottom = 116.0
-focus_neighbour_top = NodePath("../QuitBtn")
-focus_neighbour_bottom = NodePath("../SettingsBtn")
+focus_neighbour_top = NodePath("../Quit")
+focus_neighbour_bottom = NodePath("../Settings")
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 10 )
 shortcut = SubResource( 3 )
 text = "Iniciar"
 
-[node name="SettingsBtn" type="Button" parent="MainMenu"]
+[node name="Settings" type="Button" parent="MainMenu"]
 margin_top = 141.0
 margin_right = 400.0
 margin_bottom = 258.0
-focus_neighbour_top = NodePath("../StartBtn")
-focus_neighbour_bottom = NodePath("../QuitBtn")
+focus_neighbour_top = NodePath("../Start")
+focus_neighbour_bottom = NodePath("../Quit")
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 11 )
 shortcut = SubResource( 5 )
 text = "Configuración"
 
-[node name="QuitBtn" type="Button" parent="MainMenu"]
+[node name="Quit" type="Button" parent="MainMenu"]
 margin_top = 283.0
 margin_right = 400.0
 margin_bottom = 400.0
-focus_neighbour_top = NodePath("../SettingsBtn")
-focus_neighbour_bottom = NodePath("../StartBtn")
+focus_neighbour_top = NodePath("../Settings")
+focus_neighbour_bottom = NodePath("../Start")
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 12 )
 shortcut = SubResource( 7 )
@@ -179,33 +180,33 @@ margin_bottom = 60.0
 custom_constants/separation = 25
 alignment = 1
 
-[node name="VideoBtn" type="Button" parent="SettingsMenu/MainMenu2/HBoxContainer"]
+[node name="Video" type="Button" parent="SettingsMenu/MainMenu2/HBoxContainer"]
 margin_right = 410.0
 margin_bottom = 60.0
-focus_neighbour_left = NodePath("../ControlsBtn")
-focus_neighbour_right = NodePath("../AudioBtn")
+focus_neighbour_left = NodePath("../Controls")
+focus_neighbour_right = NodePath("../Audio")
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 13 )
 text = "Video"
 
-[node name="AudioBtn" type="Button" parent="SettingsMenu/MainMenu2/HBoxContainer"]
+[node name="Audio" type="Button" parent="SettingsMenu/MainMenu2/HBoxContainer"]
 margin_left = 435.0
 margin_right = 845.0
 margin_bottom = 60.0
-focus_neighbour_left = NodePath("../VideoBtn")
-focus_neighbour_right = NodePath("../ControlsBtn")
+focus_neighbour_left = NodePath("../Video")
+focus_neighbour_right = NodePath("../Controls")
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 14 )
 text = "Audio"
 
-[node name="ControlsBtn" type="Button" parent="SettingsMenu/MainMenu2/HBoxContainer"]
+[node name="Controls" type="Button" parent="SettingsMenu/MainMenu2/HBoxContainer"]
 margin_left = 870.0
 margin_right = 1280.0
 margin_bottom = 60.0
-focus_neighbour_left = NodePath("../AudioBtn")
-focus_neighbour_right = NodePath("../VideoBtn")
+focus_neighbour_left = NodePath("../Audio")
+focus_neighbour_right = NodePath("../Video")
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 15 )
@@ -282,9 +283,9 @@ selected = 0
 
 [node name="AudioSettings" type="GridContainer" parent="SettingsMenu/MainMenu2/SettingsContainer"]
 visible = false
-margin_top = 255.0
+margin_top = 138.0
 margin_right = 1280.0
-margin_bottom = 414.0
+margin_bottom = 227.0
 rect_min_size = Vector2( 640, 0 )
 custom_constants/vseparation = 25
 custom_constants/hseparation = 25
@@ -294,16 +295,16 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="SettingsMenu/MainMenu2/SettingsContainer/AudioSettings"]
-margin_top = 4.0
-margin_right = 1177.0
-margin_bottom = 63.0
+margin_top = 19.0
+margin_right = 1183.0
+margin_bottom = 21.0
 size_flags_horizontal = 3
 text = "Música"
 
 [node name="CheckButton" type="CheckButton" parent="SettingsMenu/MainMenu2/SettingsContainer/AudioSettings"]
 margin_left = 1208.0
 margin_right = 1280.0
-margin_bottom = 67.0
+margin_bottom = 40.0
 size_flags_horizontal = 8
 size_flags_vertical = 0
 __meta__ = {
@@ -311,17 +312,17 @@ __meta__ = {
 }
 
 [node name="Label2" type="Label" parent="SettingsMenu/MainMenu2/SettingsContainer/AudioSettings"]
-margin_top = 96.0
-margin_right = 1177.0
-margin_bottom = 155.0
+margin_top = 76.0
+margin_right = 1183.0
+margin_bottom = 78.0
 size_flags_horizontal = 3
 text = "Sonidos"
 
 [node name="CheckBox" type="CheckBox" parent="SettingsMenu/MainMenu2/SettingsContainer/AudioSettings"]
-margin_left = 1202.0
-margin_top = 92.0
+margin_left = 1252.0
+margin_top = 65.0
 margin_right = 1280.0
-margin_bottom = 159.0
+margin_bottom = 89.0
 size_flags_horizontal = 8
 text = "on"
 align = 2
@@ -431,9 +432,9 @@ __meta__ = {
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/settings = SubResource( 9 )
 
-[connection signal="pressed" from="MainMenu/StartBtn" to="." method="_on_StartBtn_pressed"]
-[connection signal="pressed" from="MainMenu/SettingsBtn" to="." method="_on_SettingsBtn_pressed"]
-[connection signal="pressed" from="MainMenu/QuitBtn" to="." method="_on_QuitBtn_pressed"]
-[connection signal="pressed" from="SettingsMenu/MainMenu2/HBoxContainer/VideoBtn" to="." method="_on_VideoBtn_pressed"]
-[connection signal="pressed" from="SettingsMenu/MainMenu2/HBoxContainer/AudioBtn" to="." method="_on_AudioBtn_pressed"]
-[connection signal="pressed" from="SettingsMenu/MainMenu2/HBoxContainer/ControlsBtn" to="." method="_on_ControlsBtn_pressed"]
+[connection signal="pressed" from="MainMenu/Start" to="." method="_on_Start_pressed"]
+[connection signal="pressed" from="MainMenu/Settings" to="." method="_on_Settings_pressed"]
+[connection signal="pressed" from="MainMenu/Quit" to="." method="_on_Quit_pressed"]
+[connection signal="pressed" from="SettingsMenu/MainMenu2/HBoxContainer/Video" to="." method="_on_Video_pressed"]
+[connection signal="pressed" from="SettingsMenu/MainMenu2/HBoxContainer/Audio" to="." method="_on_Audio_pressed"]
+[connection signal="pressed" from="SettingsMenu/MainMenu2/HBoxContainer/Controls" to="." method="_on_Controls_pressed"]
