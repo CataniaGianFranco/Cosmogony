@@ -1,0 +1,62 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Objects/guikeybinding.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/ParallaxBackground.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Camera.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/EnemyBuffalo.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Buffalo.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Owl.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/EnemyOwl.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/TileMap/TileMap.tscn" type="PackedScene" id=9]
+
+[sub_resource type="Environment" id=1]
+background_mode = 4
+tonemap_mode = 3
+tonemap_white = 2.0
+
+[node name="Main" type="Node"]
+
+[node name="World" type="Node2D" parent="."]
+
+[node name="Camera" parent="World" instance=ExtResource( 4 )]
+position = Vector2( 1190.08, 921.238 )
+smoothing_enabled = true
+smoothing_speed = 3.0
+drag_margin_left = 0.07
+drag_margin_top = 0.12
+drag_margin_right = 0.08
+drag_margin_bottom = 0.03
+editor_draw_limits = true
+editor_draw_drag_margin = true
+
+[node name="Buffalo" parent="World" instance=ExtResource( 6 )]
+position = Vector2( 3215, 959 )
+
+[node name="EnemyBuffalo" parent="World" instance=ExtResource( 5 )]
+position = Vector2( 1723, 1305 )
+
+[node name="Owl" parent="World" instance=ExtResource( 7 )]
+position = Vector2( 1488, 1175 )
+
+[node name="EnemyOwl" parent="World" instance=ExtResource( 8 )]
+position = Vector2( 2388, 1226 )
+
+[node name="guikeybinding" parent="World" instance=ExtResource( 2 )]
+follow_viewport_enable = true
+follow_viewport_scale = 4.0
+
+[node name="TileMap" parent="World" instance=ExtResource( 9 )]
+position = Vector2( 1333, 396 )
+tile_data = PoolIntArray( 655357, 3, 0, 655358, 4, 0, 655359, 5, 0, 589843, 7, 0, 589844, 6, 0, 589845, 6, 0, 589846, 6, 0, 589847, 6, 0, 589848, 6, 0, 589849, 6, 0, 589850, 6, 0, 589851, 8, 0, 720963, 3, 0, 720964, 4, 0, 720965, 4, 0, 720966, 4, 0, 720967, 5, 0, 786512, 3, 0, 786513, 5, 0, 983005, 7, 0, 983006, 6, 0, 983007, 6, 0, 983008, 6, 0, 983009, 6, 0, 983010, 6, 0, 983011, 6, 0, 983012, 6, 0, 983013, 6, 0, 983014, 6, 0, 983015, 6, 0, 983016, 6, 0, 983017, 6, 0, 983018, 8, 0, 983021, 7, 0, 983022, 6, 0, 983023, 6, 0, 983024, 6, 0, 983025, 6, 0, 983026, 6, 0, 983027, 6, 0, 983028, 6, 0, 983029, 6, 0, 983030, 6, 0, 983031, 6, 0, 983032, 6, 0, 983033, 6, 0, 983034, 6, 0, 983035, 6, 0, 983036, 8, 0, 917504, 7, 0, 917505, 6, 0, 917506, 6, 0, 917507, 6, 0, 917508, 6, 0, 917509, 6, 0, 917510, 6, 0, 917511, 6, 0, 917512, 8, 0, 917518, 7, 0, 917519, 6, 0, 917520, 6, 0, 917521, 6, 0, 917522, 6, 0, 917523, 6, 0, 917524, 8, 0, 917533, 7, 0, 917534, 6, 0, 917535, 6, 0, 917536, 6, 0, 917537, 6, 0, 917538, 6, 0, 917539, 6, 0, 917540, 6, 0, 917541, 6, 0, 917542, 8, 0, 917548, 7, 0, 917549, 6, 0, 917550, 6, 0, 917551, 6, 0, 917552, 6, 0, 917553, 6, 0, 917554, 6, 0, 917555, 6, 0, 917556, 6, 0, 917557, 6, 0, 917558, 6, 0, 917559, 6, 0, 917560, 6, 0, 917561, 6, 0, 917562, 6, 0, 917563, 6, 0, 917564, 6, 0, 917565, 6, 0, 917566, 6, 0, 917567, 6, 0, 917568, 6, 0, 917569, 6, 0, 917570, 6, 0, 917571, 6, 0, 917572, 6, 0, 917573, 6, 0, 917574, 6, 0, 917575, 6, 0, 917576, 6, 0, 917577, 6, 0, 917578, 6, 0, 917579, 8, 0, 1048557, 3, 0, 1048558, 4, 0, 1048559, 4, 0, 1048560, 4, 0, 1048561, 4, 0, 1048562, 4, 0, 1048563, 4, 0, 1048564, 4, 0, 1048565, 4, 0, 1048566, 4, 0, 1048567, 4, 0, 1048568, 4, 0, 1048569, 4, 0, 1048570, 4, 0, 1048571, 4, 0, 1048572, 5, 0, 983040, 3, 0, 983041, 4, 0, 983042, 4, 0, 983043, 4, 0, 983044, 4, 0, 983045, 4, 0, 983046, 4, 0, 983047, 4, 0, 983048, 5, 0, 983054, 3, 0, 983055, 4, 0, 983056, 4, 0, 983057, 4, 0, 983058, 4, 0, 983059, 4, 0, 983060, 5, 0 )
+
+[node name="Player" parent="World" instance=ExtResource( 1 )]
+position = Vector2( 1640.08, 719.238 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="World"]
+environment = SubResource( 1 )
+
+[node name="Background" type="Node2D" parent="."]
+position = Vector2( -182, 326 )
+
+[node name="ParallaxBackground" parent="Background" instance=ExtResource( 3 )]
