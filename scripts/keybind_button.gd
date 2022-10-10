@@ -2,14 +2,14 @@ extends Button
 
 export(String) var action_name = ""
 
-var do_set = false
+var _do_set = false
 
 func _pressed():
 	text = ""
-	do_set = true
+	_do_set = true
 	
 func _input(event):
-	if(do_set):
+	if(_do_set):
 		if(event is InputEventKey):
 			#Remove the old keys
 			var newkey = InputEventKey.new()
@@ -24,5 +24,5 @@ func _input(event):
 			#Save the dictionary to json
 			Guikeybinding.save_keys()
 			#stop setting the key
-			do_set = false
+			_do_set = false
 			

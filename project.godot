@@ -27,7 +27,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Cosmogony"
-run/main_scene="res://scenes/SplashAvatarg.tscn"
+run/main_scene="res://scenes/Main.tscn"
 boot_splash/image="res://splash_screen/SplashScreen.png"
 config/icon="res://icon.png"
 
@@ -40,6 +40,7 @@ Guikeybinding="*res://objects/guikeybinding.tscn"
 
 window/size/width=1920
 window/size/height=1080
+window/size/fullscreen=true
 window/size/test_width=1920
 window/size/test_height=1080
 window/stretch/mode="2d"

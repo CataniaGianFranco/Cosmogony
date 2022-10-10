@@ -79,7 +79,6 @@ custom_colors/font_color = Color( 1, 1, 1, 1 )
 enabled_focus_mode = 0
 text = "Space"
 script = ExtResource( 2 )
-action_name = "ui_jump"
 
 [node name="right" type="Label" parent="GridContainer/GridContainer2/GridContainer"]
 margin_top = 27.0
@@ -98,7 +97,6 @@ focus_mode = 0
 enabled_focus_mode = 0
 text = "A"
 script = ExtResource( 2 )
-action_name = "ui_left"
 
 [node name="left" type="Label" parent="GridContainer/GridContainer2/GridContainer"]
 margin_top = 51.0
@@ -117,6 +115,5 @@ focus_mode = 0
 enabled_focus_mode = 0
 text = "D"
 script = ExtResource( 2 )
-action_name = "ui_right"
 
 [connection signal="pressed" from="GridContainer/GridContainer2/HBoxContainer/Quit" to="." method="_on_Quit_pressed"]
