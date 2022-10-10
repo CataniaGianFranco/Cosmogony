@@ -11,9 +11,10 @@
 [ext_resource path="res://Scenes/TileMap/TileMap.tscn" type="PackedScene" id=9]
 
 [sub_resource type="Environment" id=1]
-background_mode = 4
+background_mode = 5
 tonemap_mode = 3
-tonemap_white = 2.0
+tonemap_exposure = 1.21
+glow_enabled = true
 
 [node name="Main" type="Node"]
 
