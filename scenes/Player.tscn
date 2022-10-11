@@ -1,7 +1,7 @@
 [gd_scene load_steps=77 format=2]
 
 [ext_resource path="res://sprites/player/animations/idle/idle_4.png" type="Texture" id=1]
-[ext_resource path="res://Scripts/Player.gd" type="Script" id=2]
+[ext_resource path="res://scripts/Player.gd" type="Script" id=2]
 [ext_resource path="res://sprites/player/animations/idle/idle_3.png" type="Texture" id=3]
 [ext_resource path="res://sprites/player/animations/idle/idle_1.png" type="Texture" id=4]
 [ext_resource path="res://sprites/player/animations/idle/idle_2.png" type="Texture" id=5]
@@ -67,233 +67,6 @@ height = 72.0
 [sub_resource type="RectangleShape2D" id=19]
 extents = Vector2( 6, 12 )
 
-[sub_resource type="Animation" id=8]
-resource_name = "Basic_attack"
-length = 0.416667
-step = 0.0833333
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.0833333, 0.166667, 0.25, 0.333333, 0.416667 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 29 ), ExtResource( 16 ), ExtResource( 27 ), ExtResource( 28 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("ScarfHitBox/ScarfCollision:disabled")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.25, 0.333333 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 1,
-"values": [ true, false, true ]
-}
-
-[sub_resource type="Animation" id=12]
-resource_name = "Crawl"
-length = 0.001
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ ExtResource( 52 ) ]
-}
-
-[sub_resource type="Animation" id=13]
-resource_name = "Crawling"
-length = 0.5
-loop = true
-step = 0.125
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ ExtResource( 52 ), ExtResource( 53 ), ExtResource( 51 ), ExtResource( 49 ), ExtResource( 50 ), ExtResource( 54 ) ]
-}
-
-[sub_resource type="Animation" id=14]
-resource_name = "Crouch"
-length = 0.5
-step = 0.125
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ ExtResource( 43 ), ExtResource( 46 ), ExtResource( 48 ), ExtResource( 45 ), ExtResource( 47 ), ExtResource( 44 ) ]
-}
-
-[sub_resource type="Animation" id=10]
-resource_name = "Dash"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 21 ) ]
-}
-
-[sub_resource type="Animation" id=16]
-resource_name = "Double_jump"
-length = 0.001
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ ExtResource( 17 ) ]
-}
-
-[sub_resource type="Animation" id=18]
-resource_name = "Exhausted"
-length = 0.625
-loop = true
-step = 0.125
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.125, 0.25, 0.375, 0.5, 0.625 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ ExtResource( 37 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 38 ), ExtResource( 42 ) ]
-}
-
-[sub_resource type="Animation" id=15]
-resource_name = "Faint"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ ExtResource( 31 ), ExtResource( 36 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ) ]
-}
-
-[sub_resource type="Animation" id=6]
-resource_name = "Fall"
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ ExtResource( 18 ) ]
-}
-
-[sub_resource type="Animation" id=11]
-resource_name = "Hurt"
-length = 0.375
-step = 0.125
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.125, 0.25, 0.375 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 1,
-"values": [ ExtResource( 57 ), ExtResource( 55 ), ExtResource( 56 ), ExtResource( 58 ) ]
-}
-
-[sub_resource type="Animation" id=7]
-resource_name = "Idle"
-length = 0.6
-loop = true
-step = 0.125
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 3 ), ExtResource( 1 ), ExtResource( 6 ), ExtResource( 7 ) ]
-}
-
-[sub_resource type="Animation" id=9]
-resource_name = "Jump"
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ ExtResource( 30 ) ]
-}
-
-[sub_resource type="Animation" id=17]
-resource_name = "Land"
-length = 0.1
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ ExtResource( 19 ), ExtResource( 20 ) ]
-}
-
 [sub_resource type="Animation" id=4]
 length = 0.001
 tracks/0/type = "value"
@@ -333,8 +106,235 @@ tracks/2/keys = {
 "values": [ false ]
 }
 
+[sub_resource type="Animation" id=8]
+resource_name = "basic_attack"
+length = 0.416667
+step = 0.0833333
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.0833333, 0.166667, 0.25, 0.333333, 0.416667 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 29 ), ExtResource( 16 ), ExtResource( 27 ), ExtResource( 28 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("ScarfHitBox/ScarfCollision:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.25, 0.333333 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true ]
+}
+
+[sub_resource type="Animation" id=12]
+resource_name = "crawl"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 52 ) ]
+}
+
+[sub_resource type="Animation" id=13]
+resource_name = "crawling"
+length = 0.5
+loop = true
+step = 0.125
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 52 ), ExtResource( 53 ), ExtResource( 51 ), ExtResource( 49 ), ExtResource( 50 ), ExtResource( 54 ) ]
+}
+
+[sub_resource type="Animation" id=14]
+resource_name = "crouch"
+length = 0.5
+step = 0.125
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 43 ), ExtResource( 46 ), ExtResource( 48 ), ExtResource( 45 ), ExtResource( 47 ), ExtResource( 44 ) ]
+}
+
+[sub_resource type="Animation" id=10]
+resource_name = "dash"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 21 ) ]
+}
+
+[sub_resource type="Animation" id=16]
+resource_name = "double_jump"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 17 ) ]
+}
+
+[sub_resource type="Animation" id=18]
+resource_name = "exhausted"
+length = 0.625
+loop = true
+step = 0.125
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.125, 0.25, 0.375, 0.5, 0.625 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 37 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 38 ), ExtResource( 42 ) ]
+}
+
+[sub_resource type="Animation" id=15]
+resource_name = "faint"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 31 ), ExtResource( 36 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "fall"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 18 ) ]
+}
+
+[sub_resource type="Animation" id=11]
+resource_name = "hurt"
+length = 0.375
+step = 0.125
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.125, 0.25, 0.375 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 57 ), ExtResource( 55 ), ExtResource( 56 ), ExtResource( 58 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "idle"
+length = 0.6
+loop = true
+step = 0.125
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 3 ), ExtResource( 1 ), ExtResource( 6 ), ExtResource( 7 ) ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "jump"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 30 ) ]
+}
+
+[sub_resource type="Animation" id=17]
+resource_name = "land"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 19 ), ExtResource( 20 ) ]
+}
+
 [sub_resource type="Animation" id=5]
-resource_name = "Walk"
+resource_name = "walk"
 length = 0.833335
 loop = true
 step = 0.166667
@@ -369,21 +369,21 @@ position = Vector2( 91, -11 )
 shape = SubResource( 19 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/Basic_attack = SubResource( 8 )
-anims/Crawl = SubResource( 12 )
-anims/Crawling = SubResource( 13 )
-anims/Crouch = SubResource( 14 )
-anims/Dash = SubResource( 10 )
-anims/Double_jump = SubResource( 16 )
-anims/Exhausted = SubResource( 18 )
-anims/Faint = SubResource( 15 )
-anims/Fall = SubResource( 6 )
-anims/Hurt = SubResource( 11 )
-anims/Idle = SubResource( 7 )
-anims/Jump = SubResource( 9 )
-anims/Land = SubResource( 17 )
 anims/RESET = SubResource( 4 )
-anims/Walk = SubResource( 5 )
+anims/basic_attack = SubResource( 8 )
+anims/crawl = SubResource( 12 )
+anims/crawling = SubResource( 13 )
+anims/crouch = SubResource( 14 )
+anims/dash = SubResource( 10 )
+anims/double_jump = SubResource( 16 )
+anims/exhausted = SubResource( 18 )
+anims/faint = SubResource( 15 )
+anims/fall = SubResource( 6 )
+anims/hurt = SubResource( 11 )
+anims/idle = SubResource( 7 )
+anims/jump = SubResource( 9 )
+anims/land = SubResource( 17 )
+anims/walk = SubResource( 5 )
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 11 )

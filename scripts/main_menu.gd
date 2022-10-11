@@ -1,17 +1,17 @@
 extends Control
 
 onready var _setting_menu = $SettingsMenu
-onready var _video_settings = $SettingsMenu/MainMenu2/SettingsContainer/VideoSettings
-onready var _audio_settings = $SettingsMenu/MainMenu2/SettingsContainer/AudioSettings
-onready var _control_settings = $SettingsMenu/MainMenu2/SettingsContainer/ControlsSettings
+onready var _video_settings = $SettingsMenu/MainMenuTwo/SettingsMenu/VideoSettings
+onready var _audio_settings = $SettingsMenu/MainMenuTwo/SettingsMenu/AudioSettings
+onready var _control_settings = $SettingsMenu/MainMenuTwo/SettingsMenu/ControlsSettings
 onready var _animation_player = $AnimationPlayer
-onready var _start = $MainMenu/Start
+onready var _start = $Menu/Start
 
 func _ready() -> void:
 	_start.grab_focus()
 
 func _on_Start_pressed() -> void:
-	get_tree().call_deferred("change_scene","res://scenes/Main.tscn")
+	get_tree().call_deferred("change_scene","res://scenes/World.tscn")
 
 func _on_Settings_pressed() -> void:
 	_setting_menu.popup_centered()

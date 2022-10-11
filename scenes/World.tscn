@@ -1,0 +1,54 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://WorldEnvironment/Main.tres" type="Environment" id=1]
+[ext_resource path="res://scenes/EnemyBuffalo.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/Owl.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/Buffalo.tscn" type="PackedScene" id=4]
+[ext_resource path="res://objects/guikeybinding.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/ParallaxBackground.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/Camera.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/EnemyOwl.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/TileMap/TileMap.tscn" type="PackedScene" id=10]
+
+[node name="World" type="Node"]
+
+[node name="Forest" type="Node2D" parent="."]
+
+[node name="Camera" parent="Forest" instance=ExtResource( 8 )]
+position = Vector2( 1190.08, 921.238 )
+smoothing_enabled = true
+smoothing_speed = 3.0
+drag_margin_left = 0.07
+drag_margin_top = 0.12
+drag_margin_right = 0.08
+drag_margin_bottom = 0.03
+editor_draw_limits = true
+editor_draw_drag_margin = true
+
+[node name="Buffalo" parent="Forest" instance=ExtResource( 4 )]
+position = Vector2( 3215, 959 )
+
+[node name="EnemyBuffalo" parent="Forest" instance=ExtResource( 2 )]
+position = Vector2( 1728, 1264 )
+
+[node name="EnemyOwl" parent="Forest" instance=ExtResource( 9 )]
+
+[node name="Owl" parent="Forest" instance=ExtResource( 3 )]
+
+[node name="guikeybinding" parent="Forest" instance=ExtResource( 5 )]
+follow_viewport_enable = true
+follow_viewport_scale = 4.0
+
+[node name="TileMap" parent="Forest" instance=ExtResource( 10 )]
+tile_data = PoolIntArray( 983081, 7, 0, 983082, 6, 0, 983083, 6, 0, 983084, 6, 0, 983085, 6, 0, 983086, 6, 0, 983087, 6, 0, 983088, 8, 0, 1114145, 7, 0, 1114146, 6, 0, 1114147, 6, 0, 1114148, 6, 0, 1114149, 8, 0, 1310719, 7, 0, 1245184, 6, 0, 1245185, 6, 0, 1245186, 6, 0, 1245187, 6, 0, 1245188, 6, 0, 1245189, 6, 0, 1245190, 6, 0, 1245191, 6, 0, 1245192, 6, 0, 1245193, 6, 0, 1245194, 6, 0, 1245195, 6, 0, 1245196, 8, 0, 1245203, 7, 0, 1245204, 6, 0, 1245205, 6, 0, 1245206, 6, 0, 1245207, 6, 0, 1245208, 6, 0, 1245209, 6, 0, 1245210, 6, 0, 1245211, 8, 0, 1245236, 7, 0, 1245237, 6, 0, 1245238, 6, 0, 1245239, 6, 0, 1245240, 6, 0, 1245241, 6, 0, 1245242, 6, 0, 1245243, 6, 0, 1245244, 6, 0, 1245245, 6, 0, 1245246, 6, 0, 1245247, 8, 0 )
+
+[node name="Player" parent="Forest" instance=ExtResource( 6 )]
+position = Vector2( 1640.08, 719.238 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Forest"]
+environment = ExtResource( 1 )
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="ParallaxBackground" parent="Background" instance=ExtResource( 7 )]

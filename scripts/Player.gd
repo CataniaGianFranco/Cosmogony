@@ -46,23 +46,23 @@ func travel_to(new_state : int) -> void:
 	_current_state = new_state
 	match _current_state:
 		_State.IDLE:
-			_new_animation = "Idle"
+			_new_animation = "idle"
 		_State.WALK:
-			_new_animation = "Walk"
+			_new_animation = "walk"
 		_State.JUMP:
-			_new_animation = "Jump"
+			_new_animation = "jump"
 		_State.DOUBLE_JUMP:
-			_new_animation = "Double_jump"
+			_new_animation = "double_jump"
 		_State.FALL:
-			_new_animation = "Fall"
+			_new_animation = "fall"
 		_State.ATTACK:
-			_new_animation = "Basic_attack"
+			_new_animation = "basic_attack"
 		_State.DASH:
-			_new_animation = "Dash"
+			_new_animation = "dash"
 		_State.CRAWL:
-			_new_animation = "Crawl"
+			_new_animation = "crawl"
 		_State.CRAWLING:
-			_new_animation = "Crawling"
+			_new_animation = "crawling"
 
 func state_machine() -> void:
 	if _current_animation != _new_animation:
@@ -173,7 +173,7 @@ func crawl() -> void:
 			_is_crawling = false
 
 func _on_AnimationPlayer_animation_finished(anim_name: String) -> void:
-	if anim_name == "Basic_attack":
+	if anim_name == "basic_attack":
 		_is_attacking = false
-	if anim_name == "Dash":
+	if anim_name == "dash":
 		_is_dashing = false
