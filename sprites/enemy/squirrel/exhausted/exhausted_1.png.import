@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/die_1.png-eabe4667bd2d390e1d7b1fe6610818dd.stex"
+path="res://.import/exhausted_1.png-9bb88c884d3cccefca37d16d26275087.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/enemy/buffalo/die/die_1.png"
-dest_files=[ "res://.import/die_1.png-eabe4667bd2d390e1d7b1fe6610818dd.stex" ]
+source_file="res://sprites/enemy/squirrel/exhausted/exhausted_1.png"
+dest_files=[ "res://.import/exhausted_1.png-9bb88c884d3cccefca37d16d26275087.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -31,5 +31,5 @@ process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

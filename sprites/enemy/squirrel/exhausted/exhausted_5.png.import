@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/die_2.png-c8e3c96adb52c94e8c03aeef9fe81807.stex"
+path="res://.import/exhausted_5.png-b3313718dade05049faa9cc04228ce39.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/enemy/squirrel/die/die_2.png"
-dest_files=[ "res://.import/die_2.png-c8e3c96adb52c94e8c03aeef9fe81807.stex" ]
+source_file="res://sprites/enemy/squirrel/exhausted/exhausted_5.png"
+dest_files=[ "res://.import/exhausted_5.png-b3313718dade05049faa9cc04228ce39.stex" ]
 
 [params]
 
