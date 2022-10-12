@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/WalK_3.png-31eb13de05db896af7666946e47fecd7.stex"
+path="res://.import/walK_3.png-091b3952b3d7137dbe78116303d2cd0c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/npc/Squirrel/Walk/WalK_3.png"
-dest_files=[ "res://.import/WalK_3.png-31eb13de05db896af7666946e47fecd7.stex" ]
+source_file="res://sprites/npc/squirrel/walk/walK_3.png"
+dest_files=[ "res://.import/walK_3.png-091b3952b3d7137dbe78116303d2cd0c.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -31,5 +31,5 @@ process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0
