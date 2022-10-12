@@ -44,7 +44,7 @@ font_data = ExtResource( 3 )
 [sub_resource type="Animation" id=9]
 length = 0.5
 tracks/0/type = "value"
-tracks/0/path = NodePath("SettingsMenu/MainMenu2/SettingsContainer:rect_position")
+tracks/0/path = NodePath("SettingsMenu/MainMenuTwo/SettingsMenu:rect_position")
 tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -326,5 +326,5 @@ anims/settings = SubResource( 9 )
 [connection signal="pressed" from="Menu/Settings" to="." method="_on_Settings_pressed"]
 [connection signal="pressed" from="Menu/Quit" to="." method="_on_Quit_pressed"]
 [connection signal="pressed" from="SettingsMenu/MainMenuTwo/HBoxContainer/Video" to="." method="_on_Video_pressed"]
-[connection signal="pressed" from="SettingsMenu/MainMenuTwo/HBoxContainer/Audio" to="." method="_on_Video_pressed"]
-[connection signal="pressed" from="SettingsMenu/MainMenuTwo/HBoxContainer/Controls" to="." method="_on_Video_pressed"]
+[connection signal="pressed" from="SettingsMenu/MainMenuTwo/HBoxContainer/Audio" to="." method="_on_Audio_pressed"]
+[connection signal="pressed" from="SettingsMenu/MainMenuTwo/HBoxContainer/Controls" to="." method="_on_Controls_pressed"]
