@@ -3,8 +3,8 @@ extends CanvasLayer
 var file_name = "res://keybinding.json"
 
 var key_dict = {"ui_jump":32,
-				"ui_right":68,
-				"ui_left":65}
+				"ui_right":37,
+				"ui_left":39}
 
 var _setting_key: bool = false
 var _is_pause: bool = false
