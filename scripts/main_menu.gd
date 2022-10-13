@@ -1,5 +1,6 @@
 extends Control
 
+onready var _video_player = $VideoPlayer
 onready var _setting_menu = $SettingsMenu
 onready var _video_settings = $SettingsMenu/MainMenuTwo/SettingsMenu/VideoSettings
 onready var _audio_settings = $SettingsMenu/MainMenuTwo/SettingsMenu/AudioSettings
@@ -9,6 +10,11 @@ onready var _start = $Menu/Start
 
 func _ready() -> void:
 	_start.grab_focus()
+	Input.set_mouse_mode(Input.MOUSE_MODE_CONFINED)
+
+func _process(delta: float) -> void:
+	if !_video_player.is_playing():
+		_video_player.play()
 
 func _on_Start_pressed() -> void:
 	get_tree().call_deferred("change_scene","res://scenes/World.tscn")

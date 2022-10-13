@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://theme/main_menu.theme" type="Theme" id=1]
 [ext_resource path="res://fonts/Pixel Sans Serif.ttf" type="DynamicFontData" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://sprites/menu_principal.png" type="Texture" id=4]
 [ext_resource path="res://scripts/main_menu.gd" type="Script" id=5]
 [ext_resource path="res://scripts/SettingsMenu.gd" type="Script" id=6]
+[ext_resource path="res://main_menu.webm" type="VideoStream" id=7]
 
 [sub_resource type="DynamicFont" id=1]
 size = 128
@@ -62,13 +63,22 @@ anchor_bottom = 1.0
 theme = ExtResource( 1 )
 script = ExtResource( 5 )
 
+[node name="VideoPlayer" type="VideoPlayer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+stream = ExtResource( 7 )
+autoplay = true
+expand = false
+
 [node name="Background" type="TextureRect" parent="."]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 texture = ExtResource( 4 )
 expand = true
 
 [node name="Title" type="Label" parent="."]
+visible = false
 anchor_right = 1.0
 margin_top = 72.0
 margin_bottom = 227.0

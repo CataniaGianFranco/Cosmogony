@@ -31,7 +31,7 @@
 [ext_resource path="res://sprites/enemy/squirrel/walk/walk_6.png" type="Texture" id=29]
 [ext_resource path="res://sprites/enemy/squirrel/walk/walk_3.png" type="Texture" id=30]
 [ext_resource path="res://sprites/enemy/squirrel/walk/walk_4.png" type="Texture" id=31]
-[ext_resource path="res://scripts/EnemySquirrel.gd" type="Script" id=32]
+[ext_resource path="res://scripts/enemySquirrel.gd" type="Script" id=32]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 18, 33.2351 )
