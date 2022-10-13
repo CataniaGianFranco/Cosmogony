@@ -20,12 +20,12 @@ custom_constants/hseparation = 12
 columns = 2
 
 [node name="GridContainer2" type="GridContainer" parent="GridContainer"]
-margin_right = 260.0
+margin_right = 373.0
 margin_bottom = 107.0
 custom_constants/vseparation = 19
 
 [node name="HBoxContainer" type="HBoxContainer" parent="GridContainer/GridContainer2"]
-margin_right = 260.0
+margin_right = 373.0
 margin_bottom = 20.0
 custom_constants/separation = 6
 __meta__ = {
@@ -49,15 +49,21 @@ margin_right = 215.0
 margin_bottom = 20.0
 text = "Continuar"
 
-[node name="Quit" type="Button" parent="GridContainer/GridContainer2/HBoxContainer"]
+[node name="Main menu" type="Button" parent="GridContainer/GridContainer2/HBoxContainer"]
 margin_left = 221.0
-margin_right = 260.0
+margin_right = 328.0
+margin_bottom = 20.0
+text = "Menú principal"
+
+[node name="Quit" type="Button" parent="GridContainer/GridContainer2/HBoxContainer"]
+margin_left = 334.0
+margin_right = 373.0
 margin_bottom = 20.0
 text = "Salir"
 
 [node name="GridContainer" type="GridContainer" parent="GridContainer/GridContainer2"]
 margin_top = 39.0
-margin_right = 260.0
+margin_right = 373.0
 margin_bottom = 107.0
 columns = 2
 
@@ -116,4 +122,5 @@ enabled_focus_mode = 0
 text = "Right"
 script = ExtResource( 2 )
 
+[connection signal="pressed" from="GridContainer/GridContainer2/HBoxContainer/Main menu" to="." method="_on_Main_menu_pressed"]
 [connection signal="pressed" from="GridContainer/GridContainer2/HBoxContainer/Quit" to="." method="_on_Quit_pressed"]

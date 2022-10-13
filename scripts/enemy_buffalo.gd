@@ -1,4 +1,5 @@
 extends KinematicBody2D
+
 var _health: int = 30 
 onready var _animation_player: AnimationPlayer = $AnimationPlayer 
 
@@ -11,6 +12,7 @@ func take_damage(amount : int) -> void:
 			print("Health:", _health)
 			_animation_player.play("hurt")
 		else:
+			
 			queue_free()
 			print("Buffalo is dead.")
 

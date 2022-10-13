@@ -27,7 +27,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Cosmogony"
-run/main_scene="res://scenes/SplashAvatarg.tscn"
+run/main_scene="res://scenes/World.tscn"
 boot_splash/image="res://splash_screen/SplashScreen.png"
 boot_splash/use_filter=false
 config/icon="res://icon.png"
@@ -37,6 +37,10 @@ config/windows_native_icon="res://icon.ico"
 
 Guikeybinding="*res://objects/guikeybinding.tscn"
 GameHandler="*res://scripts/game_handler.gd"
+
+[debug]
+
+settings/stdout/print_fps=true
 
 [display]
 

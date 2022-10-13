@@ -16,6 +16,7 @@ func _ready() -> void:
 	  
 func _process(delta: float) -> void:
 	if _is_pause == false and Input.is_action_just_pressed("ui_pause"):
+		
 		get_tree().paused = !get_tree().paused
 		get_child(0).visible = get_tree().paused
 		_is_pause = true
@@ -68,3 +69,9 @@ func save_keys() -> void:
 
 func _on_Quit_pressed() -> void:
 	get_tree().quit()
+
+
+func _on_Main_menu_pressed() -> void:
+	get_child(0).visible = false
+	get_tree().paused = false
+	get_tree().call_deferred("change_scene", "res://scenes/MainMenu.tscn")
