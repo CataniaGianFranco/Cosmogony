@@ -1,6 +1,15 @@
 extends Node2D
 
-onready var _animation_player: AnimationPlayer = $AnimationPlayer
+var _enemy_squirrel_position: Vector2 = Vector2(0,0)
+var _squirrel_position: Vector2 = Vector2(0,0)
+
+var _can_change_creature: bool = true 
 
 func _process(delta: float) -> void:
-	_animation_player.play("idle")
+	
+	if $EnemySquirrel != null:
+		_enemy_squirrel_position = $EnemySquirrel.position
+	elif $EnemySquirrel == null and _can_change_creature == true:
+		$AllySquirrel.position = _enemy_squirrel_position
+		$AllySquirrel.visible = true
+		_can_change_creature = false

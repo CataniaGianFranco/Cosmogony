@@ -6,6 +6,7 @@ export(float) var jump_strength: float = 1500.0
 export(int) var maximum_jumps: int = 2
 export(float) var double_jump_strength: float = 1200.0
 export(float) var gravity: float = 4500.0
+export(AudioStream) var sfx_dash = null
 
 #Variables privadas.
 var _jumps_made: int = 0
@@ -144,6 +145,8 @@ func dash() -> void:
 			_velocity.x += 250
 		else:
 			_velocity.x -= 250
+		$AudioStreamPlayer.stream = sfx_dash
+		$AudioStreamPlayer.play()
 		_is_dashing = true
 
 func jump() -> void:

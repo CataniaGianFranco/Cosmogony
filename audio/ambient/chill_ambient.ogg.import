@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/chill_ambient.ogg-55d3494c7d2ee8cadb670b61ed7a92de.oggstr"
+
+[deps]
+
+source_file="res://audio/ambient/chill_ambient.ogg"
+dest_files=[ "res://.import/chill_ambient.ogg-55d3494c7d2ee8cadb670b61ed7a92de.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

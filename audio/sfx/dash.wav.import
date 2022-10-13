@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/fragments.wav-59888eb210a9c06eae9af3e7e78f30a6.sample"
+path="res://.import/dash.wav-a1074fc8fb9ba33141e3602f382b76df.sample"
 
 [deps]
 
-source_file="res://sfx/fragments.wav"
-dest_files=[ "res://.import/fragments.wav-59888eb210a9c06eae9af3e7e78f30a6.sample" ]
+source_file="res://audio/sfx/dash.wav"
+dest_files=[ "res://.import/dash.wav-a1074fc8fb9ba33141e3602f382b76df.sample" ]
 
 [params]
 

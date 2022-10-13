@@ -1,8 +1,6 @@
-extends KinematicBody2D
-
-var _health: int = 50 
-
-onready var _animation_player: AnimationPlayer = $AnimationPlayer 
+extends Node2D
+var _health: int = 20 
+onready var _animation_player: AnimationPlayer = $AnimationPlayer
 
 func _ready() -> void:
 	_animation_player.play("idle")

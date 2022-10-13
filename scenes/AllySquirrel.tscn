@@ -1,0 +1,77 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://sprites/npc/squirrel/walk/walK_3.png" type="Texture" id=1]
+[ext_resource path="res://sprites/npc/squirrel/walk/walK_6.png" type="Texture" id=2]
+[ext_resource path="res://sprites/npc/squirrel/idle/idle_6.png" type="Texture" id=3]
+[ext_resource path="res://sprites/npc/squirrel/walk/walK_1.png" type="Texture" id=4]
+[ext_resource path="res://sprites/npc/squirrel/idle/idle_3.png" type="Texture" id=5]
+[ext_resource path="res://sprites/npc/squirrel/idle/idle_2.png" type="Texture" id=6]
+[ext_resource path="res://sprites/npc/squirrel/idle/idle_4.png" type="Texture" id=7]
+[ext_resource path="res://sprites/npc/squirrel/walk/walK_2.png" type="Texture" id=8]
+[ext_resource path="res://sprites/npc/squirrel/idle/idle_1.png" type="Texture" id=9]
+[ext_resource path="res://sprites/npc/squirrel/idle/idle_5.png" type="Texture" id=10]
+[ext_resource path="res://sprites/npc/squirrel/walk/walK_5.png" type="Texture" id=11]
+[ext_resource path="res://sprites/npc/squirrel/walk/walK_4.png" type="Texture" id=12]
+[ext_resource path="res://scripts/ally_squirrel.gd" type="Script" id=13]
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ ExtResource( 9 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "idle"
+length = 0.625
+loop = true
+step = 0.125
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.125, 0.25, 0.375, 0.5, 0.625 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 9 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 7 ), ExtResource( 10 ), ExtResource( 3 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "walk"
+length = 0.625
+loop = true
+step = 0.125
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.125, 0.25, 0.375, 0.5, 0.625 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 4 ), ExtResource( 8 ), ExtResource( 1 ), ExtResource( 12 ), ExtResource( 11 ), ExtResource( 2 ) ]
+}
+
+[node name="AllySquirrel" type="Node2D"]
+script = ExtResource( 13 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 9 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 2 )
+anims/idle = SubResource( 3 )
+anims/walk = SubResource( 4 )
