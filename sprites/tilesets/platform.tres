@@ -4,7 +4,7 @@
 [ext_resource path="res://sprites/tilesets/tilemap_floor.png" type="Texture" id=2]
 
 [sub_resource type="ConvexPolygonShape2D" id=13]
-points = PoolVector2Array( 25, 5, 128, 5, 128, 70, 25, 70 )
+points = PoolVector2Array( 24.25, 10.25, 128, 5, 128, 70, 25, 70 )
 
 [sub_resource type="ConvexPolygonShape2D" id=14]
 points = PoolVector2Array( 0, 5, 70, 5, 70, 70, 0, 70 )
@@ -65,7 +65,7 @@ points = PoolVector2Array( 0, 5, 288, 5, 288, 71, 0, 71 )
 10/texture = ExtResource( 1 )
 10/tex_offset = Vector2( 0, 0 )
 10/modulate = Color( 1, 1, 1, 1 )
-10/region = Rect2( 2, 1, 142, 70 )
+10/region = Rect2( 112, 25, 2, 16 )
 10/tile_mode = 0
 10/occluder_offset = Vector2( 0, 0 )
 10/navigation_offset = Vector2( 0, 0 )

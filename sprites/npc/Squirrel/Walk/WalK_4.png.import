@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/walK_4.png-6666e179ba86148e44a3f3055ce03daf.stex"
+path="res://.import/WalK_4.png-8a88938785de8318c18c271a2748c52a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/npc/squirrel/walk/walK_4.png"
-dest_files=[ "res://.import/walK_4.png-6666e179ba86148e44a3f3055ce03daf.stex" ]
+source_file="res://sprites/npc/Squirrel/Walk/WalK_4.png"
+dest_files=[ "res://.import/WalK_4.png-8a88938785de8318c18c271a2748c52a.stex" ]
 
 [params]
 
