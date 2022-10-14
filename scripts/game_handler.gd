@@ -13,7 +13,8 @@ func _ready() -> void:
 	pass
 
 func _score_update() -> void:
-	get_tree().get_nodes_in_group("Score")[0].text = String(_score)
+	#get_tree().get_nodes_in_group("Score")[0].text = String(_score)
+	pass
 
 func damage(amount : float) -> void:
 	_set_health(_health - amount)

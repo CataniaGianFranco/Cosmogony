@@ -68,7 +68,6 @@ tracks/0/keys = {
 }
 
 [node name="Plataforma2" type="Node2D"]
-position = Vector2( 1860, 1009 )
 
 [node name="b0" type="KinematicBody2D" parent="."]
 collision/safe_margin = 0.01
