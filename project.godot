@@ -27,7 +27,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Cosmogony"
-run/main_scene="res://scenes/World.tscn"
+run/main_scene="res://scenes/SplashAvatarg.tscn"
 boot_splash/image="res://splash_screen/SplashScreen.png"
 boot_splash/use_filter=false
 config/icon="res://icon.png"
