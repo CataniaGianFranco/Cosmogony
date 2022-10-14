@@ -47,3 +47,7 @@ func hide_settings() -> void:
 
 func play_animation() -> void:
 	_animation_player.play("settings")
+
+
+func _on_TextureButton3_pressed() -> void:
+	get_tree().quit()

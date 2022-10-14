@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://theme/main_menu.theme" type="Theme" id=1]
 [ext_resource path="res://fonts/Pixel Sans Serif.ttf" type="DynamicFontData" id=2]
@@ -8,12 +8,16 @@
 [ext_resource path="res://scripts/settings_menu.gd" type="Script" id=6]
 [ext_resource path="res://main_menu.webm" type="VideoStream" id=7]
 [ext_resource path="res://fonts/Lato-Black.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://sprites/menu/buton_configuration_2.png" type="Texture" id=9]
+[ext_resource path="res://sprites/menu/buton_configuration_1.png" type="Texture" id=10]
 
 [sub_resource type="DynamicFont" id=1]
 size = 128
 outline_size = 2
 outline_color = Color( 0.105882, 0.388235, 0.682353, 1 )
 font_data = ExtResource( 3 )
+
+[sub_resource type="Theme" id=10]
 
 [sub_resource type="DynamicFont" id=2]
 size = 35
@@ -65,6 +69,7 @@ theme = ExtResource( 1 )
 script = ExtResource( 5 )
 
 [node name="VideoPlayer" type="VideoPlayer" parent="."]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 stream = ExtResource( 7 )
@@ -92,25 +97,49 @@ valign = 1
 anchor_top = 0.5
 anchor_bottom = 0.5
 margin_left = 117.0
-margin_top = 27.04
+margin_top = -111.0
 margin_right = 517.0
-margin_bottom = 427.04
+margin_bottom = 413.0
 rect_min_size = Vector2( 400, 400 )
 custom_constants/separation = 25
 
+[node name="TextureButton" type="TextureButton" parent="Menu"]
+margin_right = 329.0
+margin_bottom = 158.0
+texture_normal = ExtResource( 10 )
+texture_pressed = ExtResource( 9 )
+
+[node name="TextureButton2" type="TextureButton" parent="Menu"]
+margin_top = 183.0
+margin_right = 329.0
+margin_bottom = 341.0
+texture_normal = ExtResource( 10 )
+texture_pressed = ExtResource( 9 )
+
+[node name="TextureButton3" type="TextureButton" parent="Menu"]
+margin_top = 366.0
+margin_right = 329.0
+margin_bottom = 524.0
+texture_normal = ExtResource( 10 )
+texture_pressed = ExtResource( 9 )
+
 [node name="Start" type="Button" parent="Menu"]
+visible = false
+margin_top = 183.0
 margin_right = 400.0
-margin_bottom = 116.0
+margin_bottom = 238.0
 focus_neighbour_top = NodePath("../Quit")
 focus_neighbour_bottom = NodePath("../Settings")
 size_flags_vertical = 3
+theme = SubResource( 10 )
 custom_fonts/font = SubResource( 2 )
 text = "Iniciar"
 
 [node name="Settings" type="Button" parent="Menu"]
-margin_top = 141.0
+visible = false
+margin_top = 549.0
 margin_right = 400.0
-margin_bottom = 258.0
+margin_bottom = 600.0
 focus_neighbour_top = NodePath("../Start")
 focus_neighbour_bottom = NodePath("../Quit")
 size_flags_vertical = 3
@@ -118,9 +147,10 @@ custom_fonts/font = SubResource( 3 )
 text = "Configuración"
 
 [node name="Quit" type="Button" parent="Menu"]
-margin_top = 283.0
+visible = false
+margin_top = 549.0
 margin_right = 400.0
-margin_bottom = 400.0
+margin_bottom = 600.0
 focus_neighbour_top = NodePath("../Settings")
 focus_neighbour_bottom = NodePath("../Start")
 size_flags_vertical = 3
@@ -332,6 +362,7 @@ __meta__ = {
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/settings = SubResource( 9 )
 
+[connection signal="pressed" from="Menu/TextureButton3" to="." method="_on_TextureButton3_pressed"]
 [connection signal="pressed" from="Menu/Start" to="." method="_on_Start_pressed"]
 [connection signal="pressed" from="Menu/Settings" to="." method="_on_Settings_pressed"]
 [connection signal="pressed" from="Menu/Quit" to="." method="_on_Quit_pressed"]
