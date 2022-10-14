@@ -8,6 +8,7 @@ export(float) var double_jump_strength: float = 1200.0
 export(float) var gravity: float = 4500.0
 export(AudioStream) var sfx_dash = null
 export(AudioStream) var sfx_basic_attack = null
+export(AudioStream) var sfx_jump = null
 
 #Variables privadas.
 var _jumps_made: int = 0
@@ -163,9 +164,13 @@ func jump() -> void:
 		if is_jumping and _is_crawling == false:
 			_jumps_made += 1
 			_velocity.y = -jump_strength
+			$AudioStreamPlayer.stream = sfx_jump
+			$AudioStreamPlayer.play()
 	else:
 		if is_double_jumping:
 			_jumps_made += 1;
+			#AudioStreamPlayer.stream = sfx_jump
+			$AudioStreamPlayer.play()
 			if _jumps_made <= maximum_jumps:
 				_velocity.y = -jump_strength
 		if is_jump_cancelled:

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://world_environment/Main.tres" type="Environment" id=1]
 [ext_resource path="res://audio/ambient/chill_ambient.ogg" type="AudioStream" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://scenes/Camera.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/EnemyOwl.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scenes/TileMap/TileMap.tscn" type="PackedScene" id=10]
+[ext_resource path="res://audio/sfx/jump.wav" type="AudioStream" id=11]
 [ext_resource path="res://scenes/AllySquirrel.tscn" type="PackedScene" id=12]
 
 [node name="World" type="Node"]
@@ -49,6 +50,7 @@ follow_viewport_scale = 4.0
 
 [node name="Player" parent="Forest" instance=ExtResource( 6 )]
 position = Vector2( 405, 1028 )
+sfx_jump = ExtResource( 11 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Forest"]
 environment = ExtResource( 1 )
