@@ -21,6 +21,5 @@ func _on_AnimationPlayer_animation_finished(anim_name: String) -> void:
 		$AudioStreamPlayer.play()
 		$Timer.start()
 
-
 func _on_Timer_timeout() -> void:
 	queue_free()

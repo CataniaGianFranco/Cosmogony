@@ -4,11 +4,12 @@ export(String) var action_name = ""
 
 var _do_set: bool = false
 
+
 func _pressed():
 	text = ""
 	_do_set = true
 	
-func _input(event) -> void:
+func _input(event: InputEvent) -> void:
 	if(_do_set):
 		if(event is InputEventKey):
 			#Remove the old keys
@@ -25,4 +26,3 @@ func _input(event) -> void:
 			Guikeybinding.save_keys()
 			#stop setting the key
 			_do_set = false
-			

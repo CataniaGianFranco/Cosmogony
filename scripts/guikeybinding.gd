@@ -2,9 +2,9 @@ extends CanvasLayer
 
 var file_name = "res://keybinding.json"
 
-var key_dict = {"ui_jump":32,
-				"ui_right":37,
-				"ui_left":39}
+var key_dict = {"ui_jump": 32,
+				"ui_right": 37,
+				"ui_left": 39}
 
 var _setting_key: bool = false
 var _is_pause: bool = false
@@ -16,7 +16,6 @@ func _ready() -> void:
 	  
 func _process(delta: float) -> void:
 	if _is_pause == false and Input.is_action_just_pressed("ui_pause"):
-		
 		get_tree().paused = !get_tree().paused
 		get_child(0).visible = get_tree().paused
 		_is_pause = true
@@ -26,7 +25,7 @@ func _process(delta: float) -> void:
 		get_tree().paused = get_tree().paused
 		get_child(0).visible = get_tree().paused
 		_is_pause = false
-	
+
 #We'll use this when the game loads
 func load_keys() -> void:
 	var file = File.new()

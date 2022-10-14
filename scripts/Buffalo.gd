@@ -14,4 +14,3 @@ func _process(delta: float) -> void:
 		$AllyBuffalo.position = _enemy_buffalo_position
 		$AllyBuffalo.visible = true
 		_can_change_creature = false
-

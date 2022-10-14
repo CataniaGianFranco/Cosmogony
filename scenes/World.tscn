@@ -3,13 +3,13 @@
 [ext_resource path="res://world_environment/Main.tres" type="Environment" id=1]
 [ext_resource path="res://audio/ambient/chill_ambient.ogg" type="AudioStream" id=2]
 [ext_resource path="res://scenes/Buffalo.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/Squirrel.tscn" type="PackedScene" id=4]
 [ext_resource path="res://objects/guikeybinding.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/ParallaxBackground.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scenes/Camera.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/EnemyOwl.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scenes/TileMap/TileMap.tscn" type="PackedScene" id=10]
-[ext_resource path="res://scenes/EnemySquirrel.tscn" type="PackedScene" id=11]
 [ext_resource path="res://scenes/AllySquirrel.tscn" type="PackedScene" id=12]
 
 [node name="World" type="Node"]
@@ -31,10 +31,10 @@ drag_margin_bottom = 0.03
 editor_draw_limits = true
 editor_draw_drag_margin = true
 
-[node name="Squirrel" parent="Forest" instance=ExtResource( 12 )]
+[node name="AllySquirrel" parent="Forest" instance=ExtResource( 12 )]
 position = Vector2( 3069, 1351 )
 
-[node name="EnemySquirrel" parent="Forest" instance=ExtResource( 11 )]
+[node name="Squirrel" parent="Forest" instance=ExtResource( 4 )]
 position = Vector2( 7204, 1351 )
 
 [node name="EnemyOwl" parent="Forest" instance=ExtResource( 9 )]
