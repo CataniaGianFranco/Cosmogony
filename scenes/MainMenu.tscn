@@ -1,8 +1,7 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://theme/main_menu.theme" type="Theme" id=1]
-[ext_resource path="res://fonts/Pixel Sans Serif.ttf" type="DynamicFontData" id=2]
-[ext_resource path="res://fonts/Pixel Sans Serif Condensed.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://fonts/Lato-BlackItalic.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://scripts/main_menu.gd" type="Script" id=5]
 [ext_resource path="res://scripts/settings_menu.gd" type="Script" id=6]
 [ext_resource path="res://main_menu.webm" type="VideoStream" id=7]
@@ -24,19 +23,55 @@ font_data = ExtResource( 8 )
 
 [sub_resource type="DynamicFont" id=5]
 size = 64
-font_data = ExtResource( 2 )
+font_data = ExtResource( 8 )
 
 [sub_resource type="DynamicFont" id=6]
 size = 32
-font_data = ExtResource( 3 )
+font_data = ExtResource( 8 )
 
 [sub_resource type="DynamicFont" id=7]
 size = 32
-font_data = ExtResource( 3 )
+font_data = ExtResource( 8 )
 
 [sub_resource type="DynamicFont" id=8]
 size = 32
-font_data = ExtResource( 3 )
+font_data = ExtResource( 8 )
+
+[sub_resource type="DynamicFont" id=13]
+size = 30
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=14]
+size = 30
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=15]
+size = 30
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=16]
+size = 30
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=17]
+size = 30
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=18]
+size = 30
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=19]
+size = 30
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=20]
+size = 30
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=21]
+size = 30
+font_data = ExtResource( 2 )
 
 [sub_resource type="Animation" id=9]
 length = 0.5
@@ -159,12 +194,12 @@ custom_constants/separation = 25
 
 [node name="HBoxContainer" type="HBoxContainer" parent="SettingsMenu/MainMenuTwo"]
 margin_right = 1280.0
-margin_bottom = 60.0
+margin_bottom = 47.0
 custom_constants/separation = 25
 
 [node name="Video" type="Button" parent="SettingsMenu/MainMenuTwo/HBoxContainer"]
 margin_right = 410.0
-margin_bottom = 60.0
+margin_bottom = 47.0
 focus_neighbour_left = NodePath("../Controls")
 focus_neighbour_right = NodePath("../Audio")
 size_flags_horizontal = 3
@@ -175,7 +210,7 @@ text = "Video"
 [node name="Audio" type="Button" parent="SettingsMenu/MainMenuTwo/HBoxContainer"]
 margin_left = 435.0
 margin_right = 845.0
-margin_bottom = 60.0
+margin_bottom = 47.0
 focus_neighbour_left = NodePath("../Video")
 focus_neighbour_right = NodePath("../Controls")
 size_flags_horizontal = 3
@@ -186,7 +221,7 @@ text = "Audio"
 [node name="Controls" type="Button" parent="SettingsMenu/MainMenuTwo/HBoxContainer"]
 margin_left = 870.0
 margin_right = 1280.0
-margin_bottom = 60.0
+margin_bottom = 47.0
 focus_neighbour_left = NodePath("../Audio")
 focus_neighbour_right = NodePath("../Video")
 size_flags_horizontal = 3
@@ -195,24 +230,25 @@ custom_fonts/font = SubResource( 8 )
 text = "Controles"
 
 [node name="SettingsMenu" type="VBoxContainer" parent="SettingsMenu/MainMenuTwo"]
-margin_top = 85.0
+margin_top = 72.0
 margin_right = 1280.0
-margin_bottom = 570.0
+margin_bottom = 491.0
 script = ExtResource( 6 )
 
 [node name="VideoSettings" type="GridContainer" parent="SettingsMenu/MainMenuTwo/SettingsMenu"]
 margin_right = 1280.0
-margin_bottom = 251.0
+margin_bottom = 207.0
 rect_min_size = Vector2( 640, 0 )
 custom_constants/vseparation = 25
 custom_constants/hseparation = 25
 columns = 2
 
 [node name="Vsync" type="Label" parent="SettingsMenu/MainMenuTwo/SettingsMenu/VideoSettings"]
-margin_top = 4.0
-margin_right = 972.0
-margin_bottom = 63.0
+margin_top = 15.0
+margin_right = 1074.0
+margin_bottom = 52.0
 size_flags_horizontal = 3
+custom_fonts/font = SubResource( 13 )
 text = "Vsync"
 
 [node name="CheckButton" type="CheckButton" parent="SettingsMenu/MainMenuTwo/SettingsMenu/VideoSettings"]
@@ -224,38 +260,43 @@ size_flags_vertical = 0
 
 [node name="FullScreen" type="Label" parent="SettingsMenu/MainMenuTwo/SettingsMenu/VideoSettings"]
 margin_top = 96.0
-margin_right = 972.0
-margin_bottom = 155.0
+margin_right = 1074.0
+margin_bottom = 133.0
 size_flags_horizontal = 3
+custom_fonts/font = SubResource( 14 )
 text = "Pantalla completa"
 
 [node name="CheckBox" type="CheckBox" parent="SettingsMenu/MainMenuTwo/SettingsMenu/VideoSettings"]
-margin_left = 997.0
+margin_left = 1099.0
 margin_top = 92.0
 margin_right = 1280.0
-margin_bottom = 159.0
+margin_bottom = 137.0
+custom_fonts/font = SubResource( 15 )
+pressed = true
 text = "Off"
 align = 2
 
 [node name="Resolution" type="Label" parent="SettingsMenu/MainMenuTwo/SettingsMenu/VideoSettings"]
-margin_top = 188.0
-margin_right = 972.0
-margin_bottom = 247.0
+margin_top = 166.0
+margin_right = 1074.0
+margin_bottom = 203.0
 size_flags_horizontal = 3
+custom_fonts/font = SubResource( 16 )
 text = "Resolución"
 
 [node name="OptionButton" type="OptionButton" parent="SettingsMenu/MainMenuTwo/SettingsMenu/VideoSettings"]
-margin_left = 997.0
-margin_top = 184.0
+margin_left = 1099.0
+margin_top = 162.0
 margin_right = 1280.0
-margin_bottom = 251.0
+margin_bottom = 207.0
 size_flags_horizontal = 8
+custom_fonts/font = SubResource( 17 )
 text = "1920 * 1080"
 
 [node name="AudioSettings" type="GridContainer" parent="SettingsMenu/MainMenuTwo/SettingsMenu"]
-margin_top = 255.0
+margin_top = 211.0
 margin_right = 1280.0
-margin_bottom = 414.0
+margin_bottom = 348.0
 rect_min_size = Vector2( 640, 0 )
 custom_constants/vseparation = 25
 custom_constants/hseparation = 25
@@ -265,10 +306,11 @@ __meta__ = {
 }
 
 [node name="Music" type="Label" parent="SettingsMenu/MainMenuTwo/SettingsMenu/AudioSettings"]
-margin_top = 4.0
-margin_right = 1161.0
-margin_bottom = 63.0
+margin_top = 15.0
+margin_right = 1183.0
+margin_bottom = 52.0
 size_flags_horizontal = 3
+custom_fonts/font = SubResource( 18 )
 text = "Música"
 
 [node name="CheckButton" type="CheckButton" parent="SettingsMenu/MainMenuTwo/SettingsMenu/AudioSettings"]
@@ -283,17 +325,19 @@ __meta__ = {
 
 [node name="Sound" type="Label" parent="SettingsMenu/MainMenuTwo/SettingsMenu/AudioSettings"]
 margin_top = 96.0
-margin_right = 1161.0
-margin_bottom = 155.0
+margin_right = 1183.0
+margin_bottom = 133.0
 size_flags_horizontal = 3
+custom_fonts/font = SubResource( 19 )
 text = "Sonido"
 
 [node name="CheckBox" type="CheckBox" parent="SettingsMenu/MainMenuTwo/SettingsMenu/AudioSettings"]
-margin_left = 1186.0
+margin_left = 1212.0
 margin_top = 92.0
 margin_right = 1280.0
-margin_bottom = 159.0
+margin_bottom = 137.0
 size_flags_horizontal = 8
+custom_fonts/font = SubResource( 20 )
 text = "Off"
 align = 2
 __meta__ = {
@@ -301,9 +345,9 @@ __meta__ = {
 }
 
 [node name="ControlsSettings" type="GridContainer" parent="SettingsMenu/MainMenuTwo/SettingsMenu"]
-margin_top = 418.0
+margin_top = 352.0
 margin_right = 1280.0
-margin_bottom = 485.0
+margin_bottom = 419.0
 rect_min_size = Vector2( 640, 0 )
 custom_constants/vseparation = 25
 custom_constants/hseparation = 25
@@ -313,10 +357,11 @@ __meta__ = {
 }
 
 [node name="Controls" type="Label" parent="SettingsMenu/MainMenuTwo/SettingsMenu/ControlsSettings"]
-margin_top = 4.0
+margin_top = 15.0
 margin_right = 1183.0
-margin_bottom = 63.0
+margin_bottom = 52.0
 size_flags_horizontal = 3
+custom_fonts/font = SubResource( 21 )
 text = "Controles"
 
 [node name="CheckButton" type="CheckButton" parent="SettingsMenu/MainMenuTwo/SettingsMenu/ControlsSettings"]

@@ -7,6 +7,7 @@ export(int) var maximum_jumps: int = 2
 export(float) var double_jump_strength: float = 1200.0
 export(float) var gravity: float = 4500.0
 export(AudioStream) var sfx_dash = null
+export(AudioStream) var sfx_basic_attack = null
 
 #Variables privadas.
 var _jumps_made: int = 0
@@ -136,6 +137,8 @@ func attack() -> void:
 	var is_basic_attack: bool = Input.is_action_just_pressed("ui_basic_attack")
 	if is_basic_attack:
 		_velocity.x = 0
+		$AudioStreamPlayer.stream = sfx_basic_attack
+		$AudioStreamPlayer.play()
 		_is_attacking = true
 
 func dash() -> void:
