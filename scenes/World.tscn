@@ -35,7 +35,7 @@ editor_draw_drag_margin = true
 position = Vector2( 3069, 1351 )
 
 [node name="Squirrel" parent="Forest" instance=ExtResource( 4 )]
-position = Vector2( 7204, 1351 )
+position = Vector2( 7255, 1351 )
 
 [node name="EnemyOwl" parent="Forest" instance=ExtResource( 9 )]
 position = Vector2( 2419, 897 )
