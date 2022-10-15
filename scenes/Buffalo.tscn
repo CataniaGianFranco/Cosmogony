@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://scenes/EnemyBuffalo.tscn" type="PackedScene" id=3]
-[ext_resource path="res://scenes/AllyBuffalo.tscn" type="PackedScene" id=4]
+[ext_resource path="res://characters/enemies/enemy_buffalo/EnemyBuffalo.tscn" type="PackedScene" id=3]
+[ext_resource path="res://characters/allies/ally_buffalo/AllyBuffalo.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scripts/buffalo.gd" type="Script" id=13]
 
 [node name="Buffalo" type="Node2D"]
