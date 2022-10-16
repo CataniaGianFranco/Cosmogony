@@ -1,16 +1,15 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://world_environment/Main.tres" type="Environment" id=1]
 [ext_resource path="res://audio/ambient/chill_ambient.ogg" type="AudioStream" id=2]
 [ext_resource path="res://characters/transforms/buffalo/Buffalo.tscn" type="PackedScene" id=3]
 [ext_resource path="res://characters/transforms/squirrel/Squirrel.tscn" type="PackedScene" id=4]
-[ext_resource path="res://objects/guikeybinding.tscn" type="PackedScene" id=5]
+[ext_resource path="res://gui/key_map/KeyBinding.tscn" type="PackedScene" id=5]
 [ext_resource path="res://characters/player/Player.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/ParallaxBackground.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scenes/Camera.tscn" type="PackedScene" id=8]
 [ext_resource path="res://characters/npcs/enemies/enemy_owl/EnemyOwl.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scenes/TileMap/TileMap.tscn" type="PackedScene" id=10]
-[ext_resource path="res://characters/player/sfx/jump.wav" type="AudioStream" id=11]
 [ext_resource path="res://characters/npcs/allies/ally_squirrel/AllySquirrel.tscn" type="PackedScene" id=12]
 [ext_resource path="res://collects/apple/Apple.tscn" type="PackedScene" id=13]
 [ext_resource path="res://scenes/Plataforma.tscn" type="PackedScene" id=14]
@@ -67,7 +66,6 @@ scale = Vector2( 1, 1 )
 
 [node name="Player" parent="Forest" instance=ExtResource( 6 )]
 position = Vector2( 405, 1028 )
-sfx_jump = ExtResource( 11 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Forest"]
 environment = ExtResource( 1 )
