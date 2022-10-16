@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://assets/characters/npcs/enemies/enemy_squirrel/EnemySquirrel.tscn" type="PackedScene" id=1]
-[ext_resource path="res://scenes/AllySquirrel.tscn" type="PackedScene" id=2]
-[ext_resource path="res://scripts/squirrel.gd" type="Script" id=3]
+[ext_resource path="res://assets/characters/npcs/allies/ally_squirrel/AllySquirrel.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/characters/transforms/squirrel/squirrel.gd" type="Script" id=3]
 
 [node name="Squirrel" type="Node2D"]
 script = ExtResource( 3 )

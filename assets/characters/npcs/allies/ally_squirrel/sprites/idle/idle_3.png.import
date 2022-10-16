@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/idle_4.png-aba69039433fb5e27237d14d532fe7be.stex"
+path="res://.import/idle_3.png-eccae5b780da58d6c1610c17593fce9e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/npc/owl/idle/idle_4.png"
-dest_files=[ "res://.import/idle_4.png-aba69039433fb5e27237d14d532fe7be.stex" ]
+source_file="res://assets/characters/npcs/allies/ally_squirrel/sprites/idle/idle_3.png"
+dest_files=[ "res://.import/idle_3.png-eccae5b780da58d6c1610c17593fce9e.stex" ]
 
 [params]
 
