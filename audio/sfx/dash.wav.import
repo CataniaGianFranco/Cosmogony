@@ -2,21 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-<<<<<<<< HEAD:assets/characters/player/sfx/dash.wav.import
-path="res://.import/dash.wav-ef0f7d67806dfa14a98e150326f2bb8e.sample"
-
-[deps]
-
-source_file="res://assets/characters/player/sfx/dash.wav"
-dest_files=[ "res://.import/dash.wav-ef0f7d67806dfa14a98e150326f2bb8e.sample" ]
-========
 path="res://.import/dash.wav-a1074fc8fb9ba33141e3602f382b76df.sample"
 
 [deps]
 
 source_file="res://audio/sfx/dash.wav"
 dest_files=[ "res://.import/dash.wav-a1074fc8fb9ba33141e3602f382b76df.sample" ]
->>>>>>>> parent of 7fa4c70 (Organizando carpetas parte 2):audio/sfx/dash.wav.import
 
 [params]
 

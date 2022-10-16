@@ -1,14 +1,8 @@
 [gd_scene load_steps=5 format=2]
 
-<<<<<<<< HEAD:assets/collects/apple/Apple.tscn
-[ext_resource path="res://assets/collects/apple/apple.png" type="Texture" id=1]
-[ext_resource path="res://assets/collects/apple/apple.gd" type="Script" id=2]
-[ext_resource path="res://assets/collects/apple/apple.wav" type="AudioStream" id=3]
-========
 [ext_resource path="res://sprites/collects/apple.png" type="Texture" id=1]
 [ext_resource path="res://scripts/Apple.gd" type="Script" id=2]
 [ext_resource path="res://audio/sfx/apple.wav" type="AudioStream" id=3]
->>>>>>>> parent of 7fa4c70 (Organizando carpetas parte 2):scenes/Apple.tscn
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 30.2655

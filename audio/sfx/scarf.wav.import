@@ -2,21 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-<<<<<<<< HEAD:assets/characters/player/sfx/scarf.wav.import
-path="res://.import/scarf.wav-89687d863e69607dce7afa5eb595c955.sample"
-
-[deps]
-
-source_file="res://assets/characters/player/sfx/scarf.wav"
-dest_files=[ "res://.import/scarf.wav-89687d863e69607dce7afa5eb595c955.sample" ]
-========
 path="res://.import/scarf.wav-cc77b0612ddca3b5b9831d83f75a21da.sample"
 
 [deps]
 
 source_file="res://audio/sfx/scarf.wav"
 dest_files=[ "res://.import/scarf.wav-cc77b0612ddca3b5b9831d83f75a21da.sample" ]
->>>>>>>> parent of 7fa4c70 (Organizando carpetas parte 2):audio/sfx/scarf.wav.import
 
 [params]
 

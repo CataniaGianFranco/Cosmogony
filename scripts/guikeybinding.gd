@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-var file_name = "res://keymap.json"
+var file_name = "res://keybinding.json"
 
 var key_dict = {"ui_jump": 32,
 				"ui_right": 37,

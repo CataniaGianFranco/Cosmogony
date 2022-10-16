@@ -2,21 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-<<<<<<<< HEAD:assets/characters/player/sfx/jump.wav.import
-path="res://.import/jump.wav-c38b7f93ea17eade7d14093e8668ac75.sample"
-
-[deps]
-
-source_file="res://assets/characters/player/sfx/jump.wav"
-dest_files=[ "res://.import/jump.wav-c38b7f93ea17eade7d14093e8668ac75.sample" ]
-========
 path="res://.import/jump.wav-ca4ccb66e678679518a9b9888fc39709.sample"
 
 [deps]
 
 source_file="res://audio/sfx/jump.wav"
 dest_files=[ "res://.import/jump.wav-ca4ccb66e678679518a9b9888fc39709.sample" ]
->>>>>>>> parent of 7fa4c70 (Organizando carpetas parte 2):audio/sfx/jump.wav.import
 
 [params]
 

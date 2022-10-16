@@ -2,21 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-<<<<<<<< HEAD:assets/collects/apple/apple.wav.import
-path="res://.import/apple.wav-cd835816d9ddb04234ddd4c2d6b7e18f.sample"
-
-[deps]
-
-source_file="res://assets/collects/apple/apple.wav"
-dest_files=[ "res://.import/apple.wav-cd835816d9ddb04234ddd4c2d6b7e18f.sample" ]
-========
 path="res://.import/apple.wav-c2eba376de9500a6439722e82cefffe3.sample"
 
 [deps]
 
 source_file="res://audio/sfx/apple.wav"
 dest_files=[ "res://.import/apple.wav-c2eba376de9500a6439722e82cefffe3.sample" ]
->>>>>>>> parent of 7fa4c70 (Organizando carpetas parte 2):audio/sfx/apple.wav.import
 
 [params]
 

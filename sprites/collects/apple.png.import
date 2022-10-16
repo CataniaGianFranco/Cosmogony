@@ -2,24 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-<<<<<<<< HEAD:assets/collects/apple/apple.png.import
-path="res://.import/apple.png-d572d46d945ae884a0bbe84db45d5a3e.stex"
-========
 path="res://.import/apple.png-4bb5feffc83fa18d0b543d35b74a5abd.stex"
->>>>>>>> parent of 7fa4c70 (Organizando carpetas parte 2):sprites/collects/apple.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<<< HEAD:assets/collects/apple/apple.png.import
-source_file="res://assets/collects/apple/apple.png"
-dest_files=[ "res://.import/apple.png-d572d46d945ae884a0bbe84db45d5a3e.stex" ]
-========
 source_file="res://sprites/collects/apple.png"
 dest_files=[ "res://.import/apple.png-4bb5feffc83fa18d0b543d35b74a5abd.stex" ]
->>>>>>>> parent of 7fa4c70 (Organizando carpetas parte 2):sprites/collects/apple.png.import
 
 [params]
 
