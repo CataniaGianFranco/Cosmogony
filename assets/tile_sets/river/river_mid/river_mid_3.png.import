@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tilemap_floor.png-1407b341b1c37f1317e019d05ec8f63b.stex"
+path="res://.import/river_mid_3.png-dcf0db7cae260b05e2f396155ef91820.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/tilesets/tilemap_floor.png"
-dest_files=[ "res://.import/tilemap_floor.png-1407b341b1c37f1317e019d05ec8f63b.stex" ]
+source_file="res://assets/tile_sets/river/river_mid/river_mid_3.png"
+dest_files=[ "res://.import/river_mid_3.png-dcf0db7cae260b05e2f396155ef91820.stex" ]
 
 [params]
 

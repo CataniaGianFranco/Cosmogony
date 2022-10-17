@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Tilemap.png-182d0b975a450388cf33a7c14496461a.stex"
+path="res://.import/river_left_3.png-ac0fbfc3c273131b44e899db90a8ba02.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/tilesets/Tilemap.png"
-dest_files=[ "res://.import/Tilemap.png-182d0b975a450388cf33a7c14496461a.stex" ]
+source_file="res://assets/tile_sets/river/river_left/river_left_3.png"
+dest_files=[ "res://.import/river_left_3.png-ac0fbfc3c273131b44e899db90a8ba02.stex" ]
 
 [params]
 

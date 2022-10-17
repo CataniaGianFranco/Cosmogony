@@ -1,7 +1,10 @@
-[gd_resource type="TileSet" load_steps=15 format=2]
+[gd_resource type="TileSet" load_steps=18 format=2]
 
-[ext_resource path="res://sprites/tilesets/Tilemap.png" type="Texture" id=1]
-[ext_resource path="res://sprites/tilesets/tilemap_floor.png" type="Texture" id=2]
+[ext_resource path="res://assets/tile_sets/tilemap_floor.png" type="Texture" id=1]
+[ext_resource path="res://assets/tile_sets/Tilemap.png" type="Texture" id=2]
+[ext_resource path="res://assets/tile_sets/river/river_mid/river_mid.tres" type="Texture" id=3]
+[ext_resource path="res://assets/tile_sets/river/river_left/river_left.tres" type="Texture" id=4]
+[ext_resource path="res://assets/tile_sets/river/river_right/river_right.tres" type="Texture" id=5]
 
 [sub_resource type="ConvexPolygonShape2D" id=13]
 points = PoolVector2Array( 24.25, 10.25, 128, 5, 128, 70, 25, 70 )
@@ -41,7 +44,7 @@ points = PoolVector2Array( 0, 5, 288, 5, 288, 71, 0, 71 )
 
 [resource]
 9/name = "Tilemap.png 9"
-9/texture = ExtResource( 1 )
+9/texture = ExtResource( 2 )
 9/tex_offset = Vector2( 0, 0 )
 9/modulate = Color( 1, 1, 1, 1 )
 9/region = Rect2( 3, 298, 288, 71 )
@@ -62,7 +65,7 @@ points = PoolVector2Array( 0, 5, 288, 5, 288, 71, 0, 71 )
 } ]
 9/z_index = 0
 10/name = "Tilemap.png 10"
-10/texture = ExtResource( 1 )
+10/texture = ExtResource( 2 )
 10/tex_offset = Vector2( 0, 0 )
 10/modulate = Color( 1, 1, 1, 1 )
 10/region = Rect2( 112, 25, 2, 16 )
@@ -83,7 +86,7 @@ points = PoolVector2Array( 0, 5, 288, 5, 288, 71, 0, 71 )
 } ]
 10/z_index = 0
 11/name = "1"
-11/texture = ExtResource( 2 )
+11/texture = ExtResource( 1 )
 11/tex_offset = Vector2( 0, 0 )
 11/modulate = Color( 1, 1, 1, 1 )
 11/region = Rect2( 70, 0, 70, 70 )
@@ -104,7 +107,7 @@ points = PoolVector2Array( 0, 5, 288, 5, 288, 71, 0, 71 )
 } ]
 11/z_index = 0
 12/name = "8"
-12/texture = ExtResource( 2 )
+12/texture = ExtResource( 1 )
 12/tex_offset = Vector2( 0, 0 )
 12/modulate = Color( 1, 1, 1, 1 )
 12/region = Rect2( 140, 140, 70, 70 )
@@ -125,7 +128,7 @@ points = PoolVector2Array( 0, 5, 288, 5, 288, 71, 0, 71 )
 } ]
 12/z_index = 0
 13/name = "2"
-13/texture = ExtResource( 2 )
+13/texture = ExtResource( 1 )
 13/tex_offset = Vector2( 0, 0 )
 13/modulate = Color( 1, 1, 1, 1 )
 13/region = Rect2( 140, 0, 70, 70 )
@@ -146,7 +149,7 @@ points = PoolVector2Array( 0, 5, 288, 5, 288, 71, 0, 71 )
 } ]
 13/z_index = 0
 15/name = "6"
-15/texture = ExtResource( 2 )
+15/texture = ExtResource( 1 )
 15/tex_offset = Vector2( 0, 0 )
 15/modulate = Color( 1, 1, 1, 1 )
 15/region = Rect2( 0, 70, 70, 70 )
@@ -167,7 +170,7 @@ points = PoolVector2Array( 0, 5, 288, 5, 288, 71, 0, 71 )
 } ]
 15/z_index = 0
 16/name = "5"
-16/texture = ExtResource( 2 )
+16/texture = ExtResource( 1 )
 16/tex_offset = Vector2( 0, 0 )
 16/modulate = Color( 1, 1, 1, 1 )
 16/region = Rect2( 140, 70, 70, 70 )
@@ -188,7 +191,7 @@ points = PoolVector2Array( 0, 5, 288, 5, 288, 71, 0, 71 )
 } ]
 16/z_index = 0
 18/name = "7"
-18/texture = ExtResource( 2 )
+18/texture = ExtResource( 1 )
 18/tex_offset = Vector2( 0, 0 )
 18/modulate = Color( 1, 1, 1, 1 )
 18/region = Rect2( 70, 140, 70, 70 )
@@ -209,7 +212,7 @@ points = PoolVector2Array( 0, 5, 288, 5, 288, 71, 0, 71 )
 } ]
 18/z_index = 0
 19/name = "4"
-19/texture = ExtResource( 2 )
+19/texture = ExtResource( 1 )
 19/tex_offset = Vector2( 0, 0 )
 19/modulate = Color( 1, 1, 1, 1 )
 19/region = Rect2( 70, 70, 70, 70 )
@@ -230,7 +233,7 @@ points = PoolVector2Array( 0, 5, 288, 5, 288, 71, 0, 71 )
 } ]
 19/z_index = 0
 20/name = "9"
-20/texture = ExtResource( 2 )
+20/texture = ExtResource( 1 )
 20/tex_offset = Vector2( 0, 0 )
 20/modulate = Color( 1, 1, 1, 1 )
 20/region = Rect2( 0, 140, 70, 70 )
@@ -251,7 +254,7 @@ points = PoolVector2Array( 0, 5, 288, 5, 288, 71, 0, 71 )
 } ]
 20/z_index = 0
 21/name = "3"
-21/texture = ExtResource( 2 )
+21/texture = ExtResource( 1 )
 21/tex_offset = Vector2( 0, 0 )
 21/modulate = Color( 1, 1, 1, 1 )
 21/region = Rect2( 0, 0, 70, 70 )
@@ -272,7 +275,7 @@ points = PoolVector2Array( 0, 5, 288, 5, 288, 71, 0, 71 )
 } ]
 21/z_index = 0
 22/name = "Tilemap.png 22"
-22/texture = ExtResource( 1 )
+22/texture = ExtResource( 2 )
 22/tex_offset = Vector2( 0, 0 )
 22/modulate = Color( 1, 1, 1, 1 )
 22/region = Rect2( 222, 4, 70, 140 )
@@ -292,3 +295,45 @@ points = PoolVector2Array( 0, 5, 288, 5, 288, 71, 0, 71 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 22/z_index = 0
+26/name = "river_left.tres 26"
+26/texture = ExtResource( 4 )
+26/tex_offset = Vector2( 0, 0 )
+26/modulate = Color( 1, 1, 1, 1 )
+26/region = Rect2( 0, 0, 70, 70 )
+26/tile_mode = 0
+26/occluder_offset = Vector2( 0, 0 )
+26/navigation_offset = Vector2( 0, 0 )
+26/shape_offset = Vector2( 0, 0 )
+26/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+26/shape_one_way = false
+26/shape_one_way_margin = 0.0
+26/shapes = [  ]
+26/z_index = 0
+27/name = "river_mid.tres 27"
+27/texture = ExtResource( 3 )
+27/tex_offset = Vector2( 0, 0 )
+27/modulate = Color( 1, 1, 1, 1 )
+27/region = Rect2( 0, 0, 70, 70 )
+27/tile_mode = 0
+27/occluder_offset = Vector2( 0, 0 )
+27/navigation_offset = Vector2( 0, 0 )
+27/shape_offset = Vector2( 0, 0 )
+27/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+27/shape_one_way = false
+27/shape_one_way_margin = 0.0
+27/shapes = [  ]
+27/z_index = 0
+28/name = "river_right.tres 28"
+28/texture = ExtResource( 5 )
+28/tex_offset = Vector2( 0, 0 )
+28/modulate = Color( 1, 1, 1, 1 )
+28/region = Rect2( 0, 0, 70, 70 )
+28/tile_mode = 0
+28/occluder_offset = Vector2( 0, 0 )
+28/navigation_offset = Vector2( 0, 0 )
+28/shape_offset = Vector2( 0, 0 )
+28/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+28/shape_one_way = false
+28/shape_one_way_margin = 0.0
+28/shapes = [  ]
+28/z_index = 0
