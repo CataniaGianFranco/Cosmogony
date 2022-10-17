@@ -28,15 +28,15 @@ _global_script_class_icons={
 
 config/name="Cosmogony"
 run/main_scene="res://scenes/World.tscn"
-boot_splash/image="res://splash_screen/SplashScreen.png"
+boot_splash/image="res://splash_screen/splash_screen_black.png"
 boot_splash/use_filter=false
 config/icon="res://icon.png"
 config/windows_native_icon="res://icon.ico"
 
 [autoload]
 
-GameHandler="*res://scripts/game_handler.gd"
-Guikeybinding="*res://objects/guikeybinding.tscn"
+GameHandler="*res://scripts/auto_load/game_handler.gd"
+Guikeybinding="*res://scripts/auto_load/guikeybinding.tscn"
 
 [display]
 

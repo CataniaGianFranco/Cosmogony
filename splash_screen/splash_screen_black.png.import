@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/apple.png-4bb5feffc83fa18d0b543d35b74a5abd.stex"
+path="res://.import/splash_screen_black.png-ddf9b09be9ecf9a368b5b6d83a96f042.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/collects/apple.png"
-dest_files=[ "res://.import/apple.png-4bb5feffc83fa18d0b543d35b74a5abd.stex" ]
+source_file="res://splash_screen/splash_screen_black.png"
+dest_files=[ "res://.import/splash_screen_black.png-ddf9b09be9ecf9a368b5b6d83a96f042.stex" ]
 
 [params]
 
