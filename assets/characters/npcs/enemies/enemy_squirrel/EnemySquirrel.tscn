@@ -32,7 +32,7 @@
 [ext_resource path="res://assets/characters/npcs/enemies/enemy_squirrel/sprites/walk/walk_3.png" type="Texture" id=30]
 [ext_resource path="res://assets/characters/npcs/enemies/enemy_squirrel/sprites/walk/walk_4.png" type="Texture" id=31]
 [ext_resource path="res://assets/characters/npcs/enemies/enemy_squirrel/scripts/enemy_squirrel.gd" type="Script" id=32]
-[ext_resource path="res://audio/sfx/fragments.wav" type="AudioStream" id=33]
+[ext_resource path="res://assets/characters/transforms/fragments.wav" type="AudioStream" id=33]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 18, 33.2351 )

@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/fragments.wav-585df0001daa9eb9dcaab5a4eb16f021.sample"
+path="res://.import/apple.wav-cd835816d9ddb04234ddd4c2d6b7e18f.sample"
 
 [deps]
 
-source_file="res://audio/sfx/fragments.wav"
-dest_files=[ "res://.import/fragments.wav-585df0001daa9eb9dcaab5a4eb16f021.sample" ]
+source_file="res://assets/collects/apple/apple.wav"
+dest_files=[ "res://.import/apple.wav-cd835816d9ddb04234ddd4c2d6b7e18f.sample" ]
 
 [params]
 

@@ -30,7 +30,7 @@
 [ext_resource path="res://assets/characters/npcs/enemies/enemy_buffalo/sprites/exhausted/exhausted_4.png" type="Texture" id=28]
 [ext_resource path="res://assets/characters/npcs/enemies/enemy_buffalo/sprites/attack/attack_3.png" type="Texture" id=29]
 [ext_resource path="res://assets/characters/npcs/enemies/enemy_buffalo/sprites/attack/attack_6.png" type="Texture" id=30]
-[ext_resource path="res://audio/sfx/fragments.wav" type="AudioStream" id=31]
+[ext_resource path="res://assets/characters/transforms/fragments.wav" type="AudioStream" id=31]
 [ext_resource path="res://assets/characters/npcs/enemies/enemy_buffalo/sprites/attack/attack_4.png" type="Texture" id=32]
 [ext_resource path="res://assets/characters/npcs/enemies/enemy_buffalo/sprites/attack/attack_2.png" type="Texture" id=33]
 
