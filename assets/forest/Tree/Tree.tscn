@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/forest/Tree/tree_front_part_2.png" type="Texture" id=1]
+[ext_resource path="res://assets/forest/Tree/tree_front_part_1.png" type="Texture" id=2]
+
+[node name="Tree" type="Node2D"]
+
+[node name="TreeFrontPart1" type="Sprite" parent="."]
+z_index = 1
+texture = ExtResource( 2 )
+
+[node name="TreeFrontPart2" type="Sprite" parent="."]
+position = Vector2( 0, -3 )
+z_index = -1
+texture = ExtResource( 1 )

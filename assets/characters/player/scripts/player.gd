@@ -138,6 +138,7 @@ func attack() -> void:
 	var is_basic_attack: bool = Input.is_action_just_pressed("ui_basic_attack")
 	if is_basic_attack:
 		_velocity.x = 0
+		Input.start_joy_vibration(0,0.08,0.08,0.2)
 		$AudioStreamPlayer.stream = sfx_basic_attack
 		$AudioStreamPlayer.play()
 		_is_attacking = true
@@ -149,6 +150,7 @@ func dash() -> void:
 			_velocity.x += 250
 		else:
 			_velocity.x -= 250
+		Input.start_joy_vibration(0,0.1,0.1,0.3)
 		$AudioStreamPlayer.stream = sfx_dash
 		$AudioStreamPlayer.play()
 		_is_dashing = true

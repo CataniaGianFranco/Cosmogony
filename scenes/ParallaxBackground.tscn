@@ -17,6 +17,7 @@ motion_mirroring = Vector2( 1920, 0 )
 
 [node name="Background_6" type="Sprite" parent="ParallaxLayer"]
 scale = Vector2( 0.75, 0.75 )
+z_index = -1
 texture = ExtResource( 4 )
 centered = false
 
@@ -27,6 +28,7 @@ motion_mirroring = Vector2( 1920, 0 )
 
 [node name="Background_5" type="Sprite" parent="ParallaxLayer2"]
 scale = Vector2( 0.75, 0.75 )
+z_index = -1
 texture = ExtResource( 3 )
 centered = false
 
@@ -37,6 +39,7 @@ motion_mirroring = Vector2( 1920, 0 )
 
 [node name="Background_4" type="Sprite" parent="ParallaxLayer3"]
 scale = Vector2( 0.75, 0.75 )
+z_index = -1
 texture = ExtResource( 2 )
 centered = false
 
@@ -47,6 +50,7 @@ motion_mirroring = Vector2( 1920, 0 )
 
 [node name="Background_3" type="Sprite" parent="ParallaxLayer4"]
 scale = Vector2( 0.75, 0.75 )
+z_index = -1
 texture = ExtResource( 1 )
 centered = false
 
@@ -57,6 +61,7 @@ motion_mirroring = Vector2( 1920, 0 )
 
 [node name="Background_2" type="Sprite" parent="ParallaxLayer5"]
 scale = Vector2( 0.75, 0.75 )
+z_index = -1
 texture = ExtResource( 6 )
 centered = false
 
@@ -67,5 +72,6 @@ motion_mirroring = Vector2( 1920, 0 )
 
 [node name="Background_1" type="Sprite" parent="ParallaxLayer6"]
 scale = Vector2( 0.75, 0.75 )
+z_index = -1
 texture = ExtResource( 5 )
 centered = false
