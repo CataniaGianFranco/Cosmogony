@@ -10,7 +10,8 @@ func _ready() -> void:
 	$AnimatedSprite.animation = name_animation
 
 func _on_StoneRune_body_entered(body: Node) -> void:
-	if body.is_in_group("Player") and stone_rune_on == false:
+	if body.is_in_group("Player") and stone_rune_on == false: #and count_run == 5:
+		Input.start_joy_vibration(0,0.15,0.15,1)
 		$Sprite.visible = false
 		$AnimatedSprite.play()
 		$AudioStreamPlayer2D.play()
