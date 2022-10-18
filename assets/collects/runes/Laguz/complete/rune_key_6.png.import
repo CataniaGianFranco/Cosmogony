@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tree_front_part_2.png-788e7e76f3253a411487df4143cd59d9.stex"
+path="res://.import/rune_key_6.png-f2de41f332f2d1b9cda355948e394ee1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/forest/tree/tree_front_part_2.png"
-dest_files=[ "res://.import/tree_front_part_2.png-788e7e76f3253a411487df4143cd59d9.stex" ]
+source_file="res://assets/collects/runes/Laguz/complete/rune_key_6.png"
+dest_files=[ "res://.import/rune_key_6.png-f2de41f332f2d1b9cda355948e394ee1.stex" ]
 
 [params]
 

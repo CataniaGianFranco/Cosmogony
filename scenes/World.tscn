@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://world_environment/Main.tres" type="Environment" id=1]
 [ext_resource path="res://audio/ambient/chill_ambient.ogg" type="AudioStream" id=2]
@@ -10,11 +10,13 @@
 [ext_resource path="res://scenes/Camera.tscn" type="PackedScene" id=8]
 [ext_resource path="res://assets/characters/npcs/enemies/enemy_owl/EnemyOwl.tscn" type="PackedScene" id=9]
 [ext_resource path="res://assets/tile_map/Forest.tscn" type="PackedScene" id=10]
-[ext_resource path="res://assets/forest/Tree/Tree.tscn" type="PackedScene" id=11]
+[ext_resource path="res://assets/forest/tree/Tree.tscn" type="PackedScene" id=11]
 [ext_resource path="res://assets/characters/npcs/allies/ally_squirrel/AllySquirrel.tscn" type="PackedScene" id=12]
 [ext_resource path="res://assets/collects/apple/Apple.tscn" type="PackedScene" id=13]
 [ext_resource path="res://scenes/Plataforma.tscn" type="PackedScene" id=14]
 [ext_resource path="res://scenes/Plataforma2.tscn" type="PackedScene" id=15]
+[ext_resource path="res://assets/collects/runes/StoneRune.tscn" type="PackedScene" id=16]
+[ext_resource path="res://assets/collects/runes/Laguz/StoneRuneLaguzOn.tres" type="SpriteFrames" id=17]
 
 [node name="World" type="Node"]
 
@@ -34,6 +36,11 @@ drag_margin_right = 0.03
 drag_margin_bottom = 0.03
 editor_draw_limits = true
 editor_draw_drag_margin = true
+
+[node name="StoneRune" parent="Forest" instance=ExtResource( 16 )]
+position = Vector2( 1033, 1310 )
+name_animation = "stone_rune_on"
+frames_rune = ExtResource( 17 )
 
 [node name="Plataforma" parent="Forest" instance=ExtResource( 14 )]
 position = Vector2( 1854, 1002 )
