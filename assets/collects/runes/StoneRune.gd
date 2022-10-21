@@ -3,6 +3,8 @@ extends Area2D
 export(String) var name_animation: String = ""
 export(SpriteFrames) var frames_rune: SpriteFrames = null
 
+onready var _camera = $"../Camera"
+
 var stone_rune_on: bool = false
 
 func _ready() -> void:
@@ -16,3 +18,8 @@ func _on_StoneRune_body_entered(body: Node) -> void:
 		$AnimatedSprite.play()
 		$AudioStreamPlayer2D.play()
 		stone_rune_on = true
+
+
+func _on_AnimatedSprite_animation_finished() -> void:
+	Input.start_joy_vibration(0,0.2,0.2,1.2)
+	_camera.shake(1.5)
