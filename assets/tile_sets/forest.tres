@@ -1,10 +1,7 @@
-[gd_resource type="TileSet" load_steps=17 format=2]
+[gd_resource type="TileSet" load_steps=14 format=2]
 
 [ext_resource path="res://assets/tile_sets/tilemap_floor.png" type="Texture" id=1]
 [ext_resource path="res://assets/tile_sets/Tilemap.png" type="Texture" id=2]
-[ext_resource path="res://assets/tile_sets/river/river_mid/river_mid.tres" type="Texture" id=3]
-[ext_resource path="res://assets/tile_sets/river/river_left/river_left.tres" type="Texture" id=4]
-[ext_resource path="res://assets/tile_sets/river/river_right/river_right.tres" type="Texture" id=5]
 
 [sub_resource type="ConvexPolygonShape2D" id=14]
 points = PoolVector2Array( 0, 5, 70, 5, 70, 70, 0, 70 )
@@ -251,7 +248,6 @@ points = PoolVector2Array( 0, 5, 288, 5, 288, 71, 0, 71 )
 } ]
 21/z_index = 0
 26/name = "river_left.tres 26"
-26/texture = ExtResource( 4 )
 26/tex_offset = Vector2( 0, 0 )
 26/modulate = Color( 1, 1, 1, 1 )
 26/region = Rect2( 0, 0, 70, 70 )
@@ -265,7 +261,6 @@ points = PoolVector2Array( 0, 5, 288, 5, 288, 71, 0, 71 )
 26/shapes = [  ]
 26/z_index = 0
 27/name = "river_mid.tres 27"
-27/texture = ExtResource( 3 )
 27/tex_offset = Vector2( 0, 0 )
 27/modulate = Color( 1, 1, 1, 1 )
 27/region = Rect2( 0, 0, 70, 70 )
@@ -279,7 +274,6 @@ points = PoolVector2Array( 0, 5, 288, 5, 288, 71, 0, 71 )
 27/shapes = [  ]
 27/z_index = 0
 28/name = "river_right.tres 28"
-28/texture = ExtResource( 5 )
 28/tex_offset = Vector2( 0, 0 )
 28/modulate = Color( 1, 1, 1, 1 )
 28/region = Rect2( 0, 0, 70, 70 )
