@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tilemap_floor_down_.png-abc4c2413d255521261526b3d85bde64.stex"
+path="res://.import/tilemap_floor_up_.png-a3accf03efa560240d85830b178eab90.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tile_map/tilemap_floor_down_.png"
-dest_files=[ "res://.import/tilemap_floor_down_.png-abc4c2413d255521261526b3d85bde64.stex" ]
+source_file="res://assets/tile_sets/tilemap_floor_up_.png"
+dest_files=[ "res://.import/tilemap_floor_up_.png-a3accf03efa560240d85830b178eab90.stex" ]
 
 [params]
 
@@ -31,5 +31,5 @@ process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0
