@@ -65,7 +65,7 @@
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 13.0
-height = 72.0
+height = 85.0
 
 [sub_resource type="RectangleShape2D" id=19]
 extents = Vector2( 6, 12 )

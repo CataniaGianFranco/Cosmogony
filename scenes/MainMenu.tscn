@@ -1,13 +1,14 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://theme/main_menu.theme" type="Theme" id=1]
 [ext_resource path="res://fonts/Lato-BlackItalic.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://sprites/menu_principal_signs/sign_1/main_menu_sign_!.tres" type="Texture" id=3]
+[ext_resource path="res://sprites/menu_principal_signs/sign_2/main_menu_sign_2.tres" type="Texture" id=4]
 [ext_resource path="res://scripts/main_menu.gd" type="Script" id=5]
 [ext_resource path="res://scripts/settings_menu.gd" type="Script" id=6]
 [ext_resource path="res://main_menu.webm" type="VideoStream" id=7]
 [ext_resource path="res://fonts/Lato-Black.ttf" type="DynamicFontData" id=8]
-[ext_resource path="res://sprites/menu/buton_configuration_2.png" type="Texture" id=9]
-[ext_resource path="res://sprites/menu/buton_configuration_1.png" type="Texture" id=10]
+[ext_resource path="res://sprites/menu_principal_signs/sign_3/main_menu_sign_3.tres" type="Texture" id=9]
 
 [sub_resource type="DynamicFont" id=10]
 size = 35
@@ -106,16 +107,15 @@ anchor_top = 0.5
 anchor_bottom = 0.5
 margin_left = 117.0
 margin_top = -111.0
-margin_right = 517.0
-margin_bottom = 413.0
+margin_right = 802.0
+margin_bottom = 508.0
 rect_min_size = Vector2( 400, 400 )
 custom_constants/separation = 25
 
 [node name="Start" type="TextureButton" parent="Menu"]
-margin_right = 400.0
-margin_bottom = 158.0
-texture_normal = ExtResource( 10 )
-texture_pressed = ExtResource( 9 )
+margin_right = 685.0
+margin_bottom = 253.0
+texture_normal = ExtResource( 3 )
 
 [node name="Play" type="Label" parent="Menu/Start"]
 anchor_right = 0.832
@@ -128,11 +128,10 @@ align = 1
 valign = 1
 
 [node name="Settings" type="TextureButton" parent="Menu"]
-margin_top = 183.0
-margin_right = 400.0
-margin_bottom = 341.0
-texture_normal = ExtResource( 10 )
-texture_pressed = ExtResource( 9 )
+margin_top = 278.0
+margin_right = 685.0
+margin_bottom = 541.0
+texture_normal = ExtResource( 4 )
 
 [node name="Configuration" type="Label" parent="Menu/Settings"]
 anchor_right = 0.832
@@ -145,11 +144,10 @@ align = 1
 valign = 1
 
 [node name="Quit" type="TextureButton" parent="Menu"]
-margin_top = 366.0
-margin_right = 400.0
-margin_bottom = 524.0
-texture_normal = ExtResource( 10 )
-texture_pressed = ExtResource( 9 )
+margin_top = 566.0
+margin_right = 685.0
+margin_bottom = 821.0
+texture_normal = ExtResource( 9 )
 
 [node name="Quit" type="Label" parent="Menu/Quit"]
 anchor_right = 0.832
