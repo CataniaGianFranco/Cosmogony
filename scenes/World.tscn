@@ -22,7 +22,7 @@
 
 [node name="Forest" type="Node2D" parent="."]
 
-[node name="Forest" parent="Forest" instance=ExtResource( 10 )]
+[node name="ForestFloor" parent="Forest" instance=ExtResource( 10 )]
 z_index = -1
 tile_data = PoolIntArray( 1245227, 13, 0, 1245228, 13, 0, 1245229, 13, 0, 1245230, 13, 0, 1245231, 13, 0, 1310752, 19, 0, 1310753, 16, 0, 1310756, 16, 0, 1310757, 16, 0, 1310758, 16, 0 )
 
