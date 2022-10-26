@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://world_environment/Main.tres" type="Environment" id=1]
 [ext_resource path="res://audio/ambient/chill_ambient.ogg" type="AudioStream" id=2]
@@ -19,6 +19,7 @@
 [ext_resource path="res://assets/collects/runes/Laguz/StoneRuneLaguzOn.tres" type="SpriteFrames" id=17]
 [ext_resource path="res://assets/tile_sets/forest_dirt_river.tres" type="TileSet" id=18]
 [ext_resource path="res://assets/tile_sets/forest_clean_river.tres" type="TileSet" id=19]
+[ext_resource path="res://assets/Portal/Portal.tscn" type="PackedScene" id=20]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 14.485, 106.292 )
@@ -32,6 +33,9 @@ extents = Vector2( 27.0354, 11.657 )
 [node name="World" type="Node"]
 
 [node name="Forest" type="Node2D" parent="."]
+
+[node name="Portal" parent="Forest" instance=ExtResource( 20 )]
+position = Vector2( 11166.8, 1235.62 )
 
 [node name="ForestFloorNegativeOne" type="TileMap" parent="Forest"]
 z_index = -1
@@ -83,6 +87,7 @@ format = 1
 tile_data = PoolIntArray( 1245261, 45, 0, 1245262, 46, 0, 1245263, 47, 0, 1310797, 29, 0, 1310798, 29, 0, 1310799, 29, 0 )
 
 [node name="ForestDirtRiver" type="TileMap" parent="Forest"]
+z_index = 1
 tile_set = ExtResource( 18 )
 cell_size = Vector2( 70, 70 )
 cell_custom_transform = Transform2D( 70, 0, 0, 70, 0, 0 )
@@ -99,6 +104,7 @@ tile_data = PoolIntArray( 589928, 11, 0, 589929, 12, 0, 589930, 12, 0, 589931, 1
 
 [node name="ForestCleanRiver" type="TileMap" parent="Forest"]
 visible = false
+z_index = 1
 tile_set = ExtResource( 19 )
 cell_size = Vector2( 70, 70 )
 cell_custom_transform = Transform2D( 70, 0, 0, 70, 0, 0 )
@@ -165,7 +171,7 @@ position = Vector2( 3297, 966 )
 scale = Vector2( 1, 1 )
 
 [node name="Player" parent="Forest" instance=ExtResource( 6 )]
-position = Vector2( 5098.3, 1208.26 )
+position = Vector2( 11056, 1230.91 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Forest"]
 environment = ExtResource( 1 )

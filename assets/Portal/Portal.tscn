@@ -1,0 +1,35 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://assets/Portal/portal_stay_open/Portal_stay_5.png" type="Texture" id=1]
+[ext_resource path="res://assets/Portal/portal_stay_open/Portal_stay_1.png" type="Texture" id=2]
+[ext_resource path="res://assets/Portal/portal_stay_open/Portal_stay_4.png" type="Texture" id=3]
+[ext_resource path="res://assets/Portal/portal_stay_open/Portal_stay_2.png" type="Texture" id=4]
+[ext_resource path="res://assets/Portal/portal_stay_open/Portal_stay_6.png" type="Texture" id=5]
+[ext_resource path="res://assets/Portal/portal_stay_open/Portal_stay_3.png" type="Texture" id=6]
+[ext_resource path="res://assets/Portal/portal_opening/Portal_open_6.png" type="Texture" id=7]
+[ext_resource path="res://assets/Portal/portal_opening/Portal_open_5.png" type="Texture" id=8]
+[ext_resource path="res://assets/Portal/portal_opening/Portal_open_1.png" type="Texture" id=9]
+[ext_resource path="res://assets/Portal/portal_opening/Portal_open_4.png" type="Texture" id=10]
+[ext_resource path="res://assets/Portal/portal_opening/Portal_open_2.png" type="Texture" id=11]
+[ext_resource path="res://assets/Portal/portal_opening/Portal_open_3.png" type="Texture" id=12]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 9 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 10 ), ExtResource( 8 ), ExtResource( 7 ) ],
+"loop": false,
+"name": "open",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 4 ), ExtResource( 6 ), ExtResource( 3 ), ExtResource( 1 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "stay_open",
+"speed": 5.0
+} ]
+
+[node name="Portal" type="Node2D"]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "stay_open"
+frame = 1
+playing = true
