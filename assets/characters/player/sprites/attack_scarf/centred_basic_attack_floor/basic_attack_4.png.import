@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Tree_front_1.png-ed500366324b6a4b307e81da889500d5.stex"
+path="res://.import/basic_attack_4.png-79e74704526ca0be967ce933573a4687.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/forest/Tree/Tree_front_1.png"
-dest_files=[ "res://.import/Tree_front_1.png-ed500366324b6a4b307e81da889500d5.stex" ]
+source_file="res://assets/characters/player/sprites/attack_scarf/centred_basic_attack_floor/basic_attack_4.png"
+dest_files=[ "res://.import/basic_attack_4.png-79e74704526ca0be967ce933573a4687.stex" ]
 
 [params]
 

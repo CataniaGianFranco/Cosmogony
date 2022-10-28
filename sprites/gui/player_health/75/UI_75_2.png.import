@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Tree_front_1.png-ed500366324b6a4b307e81da889500d5.stex"
+path="res://.import/UI_75_2.png-533d6f52da792f6f3af70c65079c4657.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/forest/Tree/Tree_front_1.png"
-dest_files=[ "res://.import/Tree_front_1.png-ed500366324b6a4b307e81da889500d5.stex" ]
+source_file="res://sprites/gui/player_health/75/UI_75_2.png"
+dest_files=[ "res://.import/UI_75_2.png-533d6f52da792f6f3af70c65079c4657.stex" ]
 
 [params]
 
