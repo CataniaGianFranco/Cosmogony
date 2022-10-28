@@ -4,10 +4,12 @@
 [ext_resource path="res://assets/characters/npcs/allies/ally_squirrel/AllySquirrel.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/characters/transforms/squirrel/squirrel.gd" type="Script" id=3]
 
-[node name="Squirrel" type="Node2D"]
+[node name="Squirrel" type="Position2D"]
 script = ExtResource( 3 )
 
 [node name="EnemySquirrel" parent="." instance=ExtResource( 1 )]
 
 [node name="AllySquirrel" parent="." instance=ExtResource( 2 )]
 visible = false
+
+[connection signal="tree_exited" from="EnemySquirrel" to="." method="_on_EnemySquirrel_tree_exited"]

@@ -128,9 +128,11 @@ func move() -> void:
 	if _is_attacking == false and _is_dashing == false:
 		_velocity.x = _horizontal_direction * speed
 		if _velocity.x > 0:
-			scale.x = scale.y * 1
+			$Sprite.flip_h = false
+			#scale.x = scale.y * 1
 		elif _velocity.x < 0:
-			scale.x = scale.y * -1
+			#scale.x = scale.y * -1
+			$Sprite.flip_h = true
 		else:
 			_velocity.x = 0
 
@@ -147,7 +149,7 @@ func dash() -> void:
 	var is_dashing: bool = Input.is_action_just_pressed("ui_dash")
 	if is_dashing and _is_dashing == false:
 		_is_dashing = true
-		if scale.y == 1:
+		if $Sprite.flip_h == false:
 			_velocity.x += 250
 		else:
 			_velocity.x -= 250
