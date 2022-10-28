@@ -206,7 +206,7 @@ position = Vector2( 200, 856 )
 scale = Vector2( 0.66, 0.66 )
 
 [node name="Tree2" parent="Forest" instance=ExtResource( 11 )]
-position = Vector2( 11497.7, 863 )
+position = Vector2( 11497.7, 858.516 )
 scale = Vector2( 0.66, 0.66 )
 
 [node name="Parallax" type="Node2D" parent="."]
