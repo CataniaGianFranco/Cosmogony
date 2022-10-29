@@ -41,15 +41,15 @@ extents = Vector2( 27.0354, 11.657 )
 
 [node name="Forest" type="Node2D" parent="."]
 
+[node name="Portal" parent="Forest" instance=ExtResource( 20 )]
+position = Vector2( 11166.8, 1235.62 )
+
 [node name="Fog" type="Sprite" parent="Forest"]
 material = SubResource( 4 )
 position = Vector2( 6000, 0 )
 scale = Vector2( 7.77778, 7.77778 )
 z_index = -2
 texture = ExtResource( 21 )
-
-[node name="Portal" parent="Forest" instance=ExtResource( 20 )]
-position = Vector2( 11166.8, 1235.62 )
 
 [node name="ForestFloorNegativeOne" type="TileMap" parent="Forest"]
 z_index = -1
@@ -150,7 +150,7 @@ editor_draw_limits = true
 editor_draw_drag_margin = true
 
 [node name="StoneRune" parent="Forest" instance=ExtResource( 16 )]
-position = Vector2( 9508.95, 1306.58 )
+position = Vector2( 975.94, 1306.58 )
 name_animation = "stone_rune_on"
 frames_rune = ExtResource( 17 )
 
