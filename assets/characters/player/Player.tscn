@@ -9,13 +9,13 @@
 [ext_resource path="res://assets/characters/player/sprites/idle/idle_6.png" type="Texture" id=7]
 [ext_resource path="res://assets/characters/player/sprites/walk/walk_1.png" type="Texture" id=8]
 [ext_resource path="res://assets/characters/player/sprites/walk/walk_2.png" type="Texture" id=9]
-[ext_resource path="res://assets/characters/player/sprites/attack_scarf/basic_attack_floor/basic_attack_1.png" type="Texture" id=10]
+[ext_resource path="res://assets/characters/player/sprites/attack_scarf/centred_basic_attack_floor/basic_attack_2.png" type="Texture" id=10]
 [ext_resource path="res://assets/characters/player/sprites/attack_scarf/basic_attack_2.png" type="Texture" id=11]
 [ext_resource path="res://assets/characters/player/sprites/walk/walk_6.png" type="Texture" id=12]
 [ext_resource path="res://assets/characters/player/sprites/walk/walk_3.png" type="Texture" id=13]
 [ext_resource path="res://assets/characters/player/sprites/walk/walk_4.png" type="Texture" id=14]
 [ext_resource path="res://assets/characters/player/sprites/walk/walk_5.png" type="Texture" id=15]
-[ext_resource path="res://assets/characters/player/sprites/attack_scarf/basic_attack_floor/basic_attack_4.png" type="Texture" id=16]
+[ext_resource path="res://assets/characters/player/sprites/attack_scarf/centred_basic_attack_floor/basic_attack_3.png" type="Texture" id=16]
 [ext_resource path="res://assets/characters/player/sprites/jumps/double_Jump.png" type="Texture" id=17]
 [ext_resource path="res://assets/characters/player/sprites/jumps/fall.png" type="Texture" id=18]
 [ext_resource path="res://assets/characters/player/sprites/jumps/land_1.png" type="Texture" id=19]
@@ -26,9 +26,9 @@
 [ext_resource path="res://assets/characters/player/sprites/dash/dash_1.png" type="Texture" id=24]
 [ext_resource path="res://assets/characters/player/sprites/dash/dash_2.png" type="Texture" id=25]
 [ext_resource path="res://assets/characters/player/sprites/dash/dash_3.png" type="Texture" id=26]
-[ext_resource path="res://assets/characters/player/sprites/attack_scarf/basic_attack_floor/basic_attack_2.png" type="Texture" id=27]
-[ext_resource path="res://assets/characters/player/sprites/attack_scarf/basic_attack_floor/basic_attack_6.png" type="Texture" id=28]
-[ext_resource path="res://assets/characters/player/sprites/attack_scarf/basic_attack_floor/basic_attack_5.png" type="Texture" id=29]
+[ext_resource path="res://assets/characters/player/sprites/attack_scarf/centred_basic_attack_floor/basic_attack_5.png" type="Texture" id=27]
+[ext_resource path="res://assets/characters/player/sprites/attack_scarf/centred_basic_attack_floor/basic_attack_6.png" type="Texture" id=28]
+[ext_resource path="res://assets/characters/player/sprites/attack_scarf/centred_basic_attack_floor/basic_attack_1.png" type="Texture" id=29]
 [ext_resource path="res://assets/characters/player/sprites/jumps/Jump.png" type="Texture" id=30]
 [ext_resource path="res://assets/characters/player/sprites/faint/faint_1.png" type="Texture" id=31]
 [ext_resource path="res://assets/characters/player/sprites/faint/faint_3.png" type="Texture" id=32]
@@ -62,7 +62,7 @@
 [ext_resource path="res://assets/characters/player/sfx/dash.wav" type="AudioStream" id=60]
 [ext_resource path="res://assets/characters/player/sfx/scarf.wav" type="AudioStream" id=61]
 [ext_resource path="res://assets/characters/player/sfx/jump.wav" type="AudioStream" id=62]
-[ext_resource path="res://assets/characters/player/sprites/attack_scarf/basic_attack_floor/basic_attack_3.png" type="Texture" id=63]
+[ext_resource path="res://assets/characters/player/sprites/attack_scarf/centred_basic_attack_floor/basic_attack_4.png" type="Texture" id=63]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 13.0
@@ -124,7 +124,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.0833333, 0.166667, 0.25, 0.333333, 0.416667 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 10 ), ExtResource( 27 ), ExtResource( 63 ), ExtResource( 16 ), ExtResource( 29 ), ExtResource( 28 ) ]
+"values": [ ExtResource( 29 ), ExtResource( 10 ), ExtResource( 16 ), ExtResource( 63 ), ExtResource( 27 ), ExtResource( 28 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("ScarfHitBox/ScarfCollision:disabled")
