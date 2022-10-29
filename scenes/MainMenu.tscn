@@ -98,18 +98,23 @@ script = ExtResource( 5 )
 [node name="VideoPlayer" type="VideoPlayer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = 2.0
+margin_top = 6.0
+margin_right = 2.0
+margin_bottom = 6.0
 stream = ExtResource( 7 )
 autoplay = true
 expand = false
 
 [node name="Menu" type="VBoxContainer" parent="."]
-anchor_top = 0.5
-anchor_bottom = 0.5
-margin_left = 117.0
-margin_top = -111.0
-margin_right = 802.0
-margin_bottom = 508.0
+anchor_top = 0.265
+anchor_bottom = 0.265
+margin_left = 131.0
+margin_top = 221.8
+margin_right = 816.0
+margin_bottom = 1042.8
 rect_min_size = Vector2( 400, 400 )
+rect_scale = Vector2( 0.55461, 0.577209 )
 custom_constants/separation = 25
 
 [node name="Start" type="TextureButton" parent="Menu"]
@@ -118,10 +123,14 @@ margin_bottom = 253.0
 texture_normal = ExtResource( 3 )
 
 [node name="Play" type="Label" parent="Menu/Start"]
-anchor_right = 0.832
+anchor_left = 0.5
+anchor_right = 0.5
 anchor_bottom = 1.0
-margin_right = 0.199982
-margin_bottom = -7.0
+margin_left = -129.386
+margin_top = 51.0543
+margin_right = -43.3857
+margin_bottom = -142.946
+rect_scale = Vector2( 2.05225, 2.05225 )
 custom_fonts/font = SubResource( 10 )
 text = "Jugar"
 align = 1
@@ -134,10 +143,14 @@ margin_bottom = 541.0
 texture_normal = ExtResource( 4 )
 
 [node name="Configuration" type="Label" parent="Menu/Settings"]
-anchor_right = 0.832
+anchor_left = 0.5
+anchor_right = 0.5
 anchor_bottom = 1.0
-margin_right = 0.199982
-margin_bottom = -7.0
+margin_left = -256.618
+margin_top = 59.2681
+margin_right = -32.618
+margin_bottom = -145.732
+rect_scale = Vector2( 2.14405, 2.14405 )
 custom_fonts/font = SubResource( 11 )
 text = "Configuración"
 align = 1
@@ -150,10 +163,14 @@ margin_bottom = 821.0
 texture_normal = ExtResource( 9 )
 
 [node name="Quit" type="Label" parent="Menu/Quit"]
-anchor_right = 0.832
+anchor_left = 0.5
+anchor_right = 0.5
 anchor_bottom = 1.0
-margin_right = 0.199982
-margin_bottom = -7.0
+margin_left = -117.614
+margin_top = 66.7644
+margin_right = -45.6144
+margin_bottom = -133.236
+rect_scale = Vector2( 2.08708, 2.08708 )
 custom_fonts/font = SubResource( 12 )
 text = "Salir"
 align = 1

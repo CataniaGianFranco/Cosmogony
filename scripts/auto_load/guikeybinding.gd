@@ -74,3 +74,8 @@ func _on_Main_menu_pressed() -> void:
 	get_child(0).visible = false
 	get_tree().paused = false
 	get_tree().call_deferred("change_scene", "res://scenes/MainMenu.tscn")
+
+
+func _on_HSlider_value_changed(value: float) -> void:
+	AudioServer.set_bgm_volume_db(1, linear2db(value))
+	AudioServer.set_bgm_mute(1, value < 0.01)
