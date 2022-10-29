@@ -150,7 +150,7 @@ editor_draw_limits = true
 editor_draw_drag_margin = true
 
 [node name="StoneRune" parent="Forest" instance=ExtResource( 16 )]
-position = Vector2( 975.94, 1306.58 )
+position = Vector2( 9475.04, 1306.58 )
 name_animation = "stone_rune_on"
 frames_rune = ExtResource( 17 )
 
