@@ -10,7 +10,6 @@
 [ext_resource path="res://assets/characters/player/sprites/walk/walk_1.png" type="Texture" id=8]
 [ext_resource path="res://assets/characters/player/sprites/walk/walk_2.png" type="Texture" id=9]
 [ext_resource path="res://assets/characters/player/sprites/attack_scarf/centred_basic_attack_floor/basic_attack_2.png" type="Texture" id=10]
-[ext_resource path="res://assets/characters/player/sprites/attack_scarf/basic_attack_2.png" type="Texture" id=11]
 [ext_resource path="res://assets/characters/player/sprites/walk/walk_6.png" type="Texture" id=12]
 [ext_resource path="res://assets/characters/player/sprites/walk/walk_3.png" type="Texture" id=13]
 [ext_resource path="res://assets/characters/player/sprites/walk/walk_4.png" type="Texture" id=14]
@@ -64,6 +63,9 @@
 [ext_resource path="res://assets/characters/player/sfx/jump.wav" type="AudioStream" id=62]
 [ext_resource path="res://assets/characters/player/sprites/attack_scarf/centred_basic_attack_floor/basic_attack_4.png" type="Texture" id=63]
 
+[sub_resource type="StreamTexture" id=20]
+load_path = "res://.import/basic_attack_2.png-b929c89c595ce10f3ccb2d7d155ab8f8.stex"
+
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 13.0
 height = 85.0
@@ -95,7 +97,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ ExtResource( 11 ) ]
+"values": [ SubResource( 20 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("ScarfHitBox/ScarfCollision:disabled")
@@ -364,7 +366,7 @@ sfx_basic_attack = ExtResource( 61 )
 sfx_jump = ExtResource( 62 )
 
 [node name="Sprite" type="Sprite" parent="."]
-texture = ExtResource( 11 )
+texture = SubResource( 20 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
