@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://world_environment/Main.tres" type="Environment" id=1]
 [ext_resource path="res://audio/ambient/chill_ambient.ogg" type="AudioStream" id=2]
@@ -34,8 +34,17 @@ extents = Vector2( 14.485, 106.292 )
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 14.5044, 40.2018 )
 
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 35.9187, 170.401 )
+
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 27.0354, 11.657 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 10.2467, 176.437 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 16.6854, 368.503 )
 
 [node name="World" type="Node"]
 
@@ -76,6 +85,13 @@ shape = SubResource( 2 )
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Forest/ForestFloorZero/StaticBody2D"]
 position = Vector2( -185.504, 48.4979 )
 shape = SubResource( 3 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Forest/ForestFloorZero"]
+position = Vector2( 9766, 1254 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Forest/ForestFloorZero/StaticBody2D3"]
+position = Vector2( -140.138, -50.1256 )
+shape = SubResource( 6 )
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="Forest/ForestFloorZero"]
 position = Vector2( 9320, 1320 )
@@ -136,9 +152,9 @@ tile_data = PoolIntArray( 589928, 10, 0, 589929, 11, 0, 589930, 11, 0, 589931, 1
 
 [node name="Camera" parent="Forest" instance=ExtResource( 8 )]
 position = Vector2( 960, 920 )
-limit_left = -2
+limit_left = 0
 limit_top = 382
-limit_right = 11424
+limit_right = 11409
 limit_bottom = 1458
 smoothing_enabled = true
 smoothing_speed = 3.0
@@ -173,7 +189,7 @@ position = Vector2( 2400, 855 )
 position = Vector2( 6894.68, 855 )
 
 [node name="Buffalo" parent="Forest" instance=ExtResource( 3 )]
-position = Vector2( 5084.87, 1264.49 )
+position = Vector2( 5084.87, 1268.42 )
 
 [node name="Buffalo2" parent="Forest" instance=ExtResource( 3 )]
 position = Vector2( 8484.87, 776.487 )
@@ -208,6 +224,20 @@ scale = Vector2( 0.66, 0.66 )
 [node name="Tree2" parent="Forest" instance=ExtResource( 11 )]
 position = Vector2( 11497.7, 858.516 )
 scale = Vector2( 0.66, 0.66 )
+
+[node name="LimitLeft" type="StaticBody2D" parent="Forest"]
+position = Vector2( -7.52372, 1319.57 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Forest/LimitLeft"]
+position = Vector2( 0.246695, -119.307 )
+shape = SubResource( 7 )
+
+[node name="LimitRight" type="StaticBody2D" parent="Forest"]
+position = Vector2( 11415.4, 1251.77 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Forest/LimitRight"]
+position = Vector2( 0.4375, -273.561 )
+shape = SubResource( 5 )
 
 [node name="Parallax" type="Node2D" parent="."]
 
