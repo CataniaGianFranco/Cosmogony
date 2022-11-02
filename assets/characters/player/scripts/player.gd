@@ -23,7 +23,7 @@ const _UP_DIRECTION : Vector2 = Vector2.UP
 
 onready var _start_scale: Vector2 = $"Sprite".scale
 onready var _animationPlayer: AnimationPlayer = $"AnimationPlayer"
-
+onready var _scarf_hit_box : Area2D = $ScarfHitBox
 #Máquina de estados
 enum _State {IDLE, WALK, JUMP, DOUBLE_JUMP, FALL, ATTACK, DASH, CRAWL, CRAWLING}
 var _current_state: int
@@ -129,10 +129,10 @@ func move() -> void:
 		_velocity.x = _horizontal_direction * speed
 		if _velocity.x > 0:
 			$Sprite.flip_h = false
-			#scale.x = scale.y * 1
+			_scarf_hit_box.scale.x = 1
 		elif _velocity.x < 0:
-			#scale.x = scale.y * -1
 			$Sprite.flip_h = true
+			_scarf_hit_box.scale.x = -1
 		else:
 			_velocity.x = 0
 
