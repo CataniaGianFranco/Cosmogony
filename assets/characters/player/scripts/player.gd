@@ -182,13 +182,13 @@ func jump() -> void:
 
 func crawl() -> void:
 		var is_crawl: bool = Input.is_action_pressed("ui_down")
-		if is_crawl:
-			$CollisionShape2D.position.y = 16
-			$CollisionShape2D.shape.height = 55
+		if is_crawl and _jumps_made == 0:
+			$CollisionShape2D.disabled = true
+			$CollisionShapeCrawl.disabled = false
 			_is_crawling = true
 		else:
-			$CollisionShape2D.position.y = 0
-			$CollisionShape2D.shape.height = 85
+			$CollisionShape2D.disabled = false
+			$CollisionShapeCrawl.disabled = true
 			_is_crawling = false
 
 func _on_AnimationPlayer_animation_finished(anim_name: String) -> void:
