@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+onready var _audio_stream_player : AudioStreamPlayer = $AudioStreamPlayer
+
 #Variables públicas.
 export(float) var speed: float = 600.0
 export(float) var jump_strength: float = 1500.0
@@ -154,8 +156,8 @@ func dash() -> void:
 		else:
 			_velocity.x -= 250
 		Input.start_joy_vibration(0,0.1,0.1,0.3)
-		$AudioStreamPlayer.stream = sfx_dash
-		$AudioStreamPlayer.play()
+		_audio_stream_player.stream = sfx_dash
+		_audio_stream_player.play()
 
 func jump() -> void:
 	var is_jumping: bool = Input.is_action_just_pressed("ui_jump")
@@ -168,13 +170,13 @@ func jump() -> void:
 		if is_jumping and _is_crawling == false:
 			_jumps_made += 1
 			_velocity.y = -jump_strength
-			$AudioStreamPlayer.stream = sfx_jump
-			$AudioStreamPlayer.play()
+			_audio_stream_player.stream = sfx_jump
+			_audio_stream_player.play()
 	else:
 		if is_double_jumping:
 			_jumps_made += 1;
 			#AudioStreamPlayer.stream = sfx_jump
-			$AudioStreamPlayer.play()
+			_audio_stream_player.play()
 			if _jumps_made <= maximum_jumps:
 				_velocity.y = -jump_strength
 		if is_jump_cancelled:

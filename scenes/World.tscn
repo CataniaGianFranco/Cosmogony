@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://world_environment/Main.tres" type="Environment" id=1]
 [ext_resource path="res://audio/ambient/chill_ambient.ogg" type="AudioStream" id=2]
@@ -22,6 +22,7 @@
 [ext_resource path="res://assets/Portal/Portal.tscn" type="PackedScene" id=20]
 [ext_resource path="res://sprites/Fog.png" type="Texture" id=21]
 [ext_resource path="res://assets/shaders/fog.shader" type="Shader" id=22]
+[ext_resource path="res://river.wav" type="AudioStream" id=23]
 
 [sub_resource type="ShaderMaterial" id=4]
 shader = ExtResource( 22 )
@@ -153,6 +154,7 @@ tile_data = PoolIntArray( 589928, 10, 0, 589929, 11, 0, 589930, 11, 0, 589931, 1
 
 [node name="Camera" parent="Forest" instance=ExtResource( 8 )]
 position = Vector2( 960, 920 )
+offset = Vector2( 400, 0 )
 limit_left = 0
 limit_top = 382
 limit_right = 11409
@@ -247,4 +249,42 @@ shape = SubResource( 5 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 2 )
+volume_db = -9.0
+
+[node name="AudioRiver" type="Node2D" parent="."]
+
+[node name="RiverZero" type="AudioStreamPlayer2D" parent="AudioRiver"]
+position = Vector2( 1153.3, 1366.88 )
+stream = ExtResource( 23 )
 autoplay = true
+max_distance = 750.0
+
+[node name="RiverOne" type="AudioStreamPlayer2D" parent="AudioRiver"]
+position = Vector2( 1959.37, 1366.88 )
+stream = ExtResource( 23 )
+autoplay = true
+max_distance = 750.0
+
+[node name="RiverTwo" type="AudioStreamPlayer2D" parent="AudioRiver"]
+position = Vector2( 2276.51, 1366.88 )
+stream = ExtResource( 23 )
+autoplay = true
+max_distance = 750.0
+
+[node name="RiverThree" type="AudioStreamPlayer2D" parent="AudioRiver"]
+position = Vector2( 4180.3, 1366.88 )
+stream = ExtResource( 23 )
+autoplay = true
+max_distance = 1800.0
+
+[node name="RiverFour" type="AudioStreamPlayer2D" parent="AudioRiver"]
+position = Vector2( 6420.74, 1366.88 )
+stream = ExtResource( 23 )
+autoplay = true
+max_distance = 900.0
+
+[node name="RiverFive" type="AudioStreamPlayer2D" parent="AudioRiver"]
+position = Vector2( 7534.22, 1366.88 )
+stream = ExtResource( 23 )
+autoplay = true
+max_distance = 900.0
