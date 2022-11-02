@@ -77,5 +77,5 @@ func _on_Main_menu_pressed() -> void:
 
 
 func _on_HSlider_value_changed(value: float) -> void:
-	AudioServer.set_bgm_volume_db(1, linear2db(value))
-	AudioServer.set_bgm_mute(1, value < 0.01)
+	AudioServer.set_bus_volume_db(1, linear2db(value))
+	AudioServer.set_bus_mute(1, value < 0.01)
