@@ -4,8 +4,6 @@ var _get_apple: bool = true
 
 func _on_Apple_body_entered(body: Node) -> void:
 	if body.is_in_group("Player") and _get_apple:
-		GameHandler._score += 5
-		GameHandler._score_update()
 		$Sprite.visible = false
 		_get_apple = false
 		$AudioStreamPlayer2D.play()

@@ -8,12 +8,17 @@
 [ext_resource path="res://sprites/background/background_2.png" type="Texture" id=6]
 
 [node name="ParallaxBackground" type="ParallaxBackground"]
+offset = Vector2( 0, -380 )
+transform = Transform2D( 1, 0, 0, 1, 0, -380 )
 scroll_ignore_camera_zoom = true
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="."]
 position = Vector2( 0, 380 )
 motion_scale = Vector2( 0.1, 1 )
 motion_mirroring = Vector2( 1920, 0 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Background_6" type="Sprite" parent="ParallaxLayer"]
 scale = Vector2( 0.75, 0.75 )
@@ -25,6 +30,9 @@ centered = false
 position = Vector2( 0, 380 )
 motion_scale = Vector2( 0.2, 1 )
 motion_mirroring = Vector2( 1920, 0 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Background_5" type="Sprite" parent="ParallaxLayer2"]
 scale = Vector2( 0.75, 0.75 )
@@ -36,6 +44,9 @@ centered = false
 position = Vector2( 0, 380 )
 motion_scale = Vector2( 0.5, 1 )
 motion_mirroring = Vector2( 1920, 0 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Background_4" type="Sprite" parent="ParallaxLayer3"]
 scale = Vector2( 0.75, 0.75 )
@@ -47,6 +58,9 @@ centered = false
 position = Vector2( 0, 380 )
 motion_scale = Vector2( 0.6, 1 )
 motion_mirroring = Vector2( 1920, 0 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Background_3" type="Sprite" parent="ParallaxLayer4"]
 visible = false
@@ -59,6 +73,9 @@ centered = false
 position = Vector2( 0, 380 )
 motion_scale = Vector2( 0.7, 1 )
 motion_mirroring = Vector2( 1920, 0 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Background_2" type="Sprite" parent="ParallaxLayer5"]
 scale = Vector2( 0.75, 0.75 )
@@ -70,6 +87,9 @@ centered = false
 position = Vector2( 0, 380 )
 motion_scale = Vector2( 0.8, 1 )
 motion_mirroring = Vector2( 1920, 0 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Background_1" type="Sprite" parent="ParallaxLayer6"]
 scale = Vector2( 0.75, 0.75 )

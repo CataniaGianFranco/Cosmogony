@@ -4,7 +4,9 @@ onready var _health : float = max_health setget _set_health
 
 export var max_health : float = 100.00
 
-var _score : int = 0
+var _score_rune : int = 0
+var _name_anim_rune : String = ""
+var _active_rune_animation : bool = false
 
 signal health_update(_health)
 signal killed()

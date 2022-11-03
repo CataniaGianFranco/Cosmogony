@@ -1,6 +1,7 @@
 extends KinematicBody2D
 
 var _health: int = 50
+export var name_anim_rune : String = ""
 
 const MAX_SPEED : float = 100.0
 const GRAVITY : float = 25.0
@@ -46,6 +47,8 @@ func _on_AnimationPlayer_animation_finished(anim_name: String) -> void:
 		_animation_player.play("idle")
 	if anim_name == "exhausted":
 		$AudioStreamPlayer.play()
+		GameHandler._name_anim_rune = name_anim_rune
+		GameHandler._active_rune_animation = true
 		$Timer.start()
 
 func _on_Timer_timeout() -> void:

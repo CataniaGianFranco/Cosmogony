@@ -71,6 +71,7 @@ extents = Vector2( 16.6854, 368.503 )
 [node name="World" type="Node"]
 
 [node name="Forest" type="Node2D" parent="."]
+position = Vector2( 0, -380.57 )
 
 [node name="Portal" parent="Forest" instance=ExtResource( 20 )]
 position = Vector2( 11166.8, 1235.62 )
@@ -174,11 +175,10 @@ format = 1
 tile_data = PoolIntArray( 589928, 10, 0, 589929, 11, 0, 589930, 11, 0, 589931, 11, 0, 589932, 11, 0, 589933, 11, 0, 589934, 12, 0, 655464, 13, 0, 655465, 14, 0, 655466, 14, 0, 655467, 14, 0, 655468, 14, 0, 655469, 14, 0, 655470, 15, 0, 721000, 13, 0, 721001, 14, 0, 721002, 14, 0, 721003, 14, 0, 721004, 14, 0, 721005, 14, 0, 721006, 15, 0, 786536, 13, 0, 786537, 14, 0, 786538, 14, 0, 786539, 14, 0, 786540, 14, 0, 786541, 14, 0, 786542, 15, 0, 852031, 17, 0, 852032, 19, 0, 852072, 13, 0, 852073, 14, 0, 852074, 14, 0, 852075, 14, 0, 852076, 14, 0, 852077, 14, 0, 852078, 15, 0, 917567, 16, 0, 917568, 18, 0, 917608, 13, 0, 917609, 14, 0, 917610, 14, 0, 917611, 14, 0, 917612, 14, 0, 917613, 14, 0, 917614, 15, 0, 983103, 13, 0, 983104, 15, 0, 983144, 13, 0, 983145, 14, 0, 983146, 14, 0, 983147, 14, 0, 983148, 14, 0, 983149, 14, 0, 983150, 15, 0, 1048639, 13, 0, 1048640, 15, 0, 1048680, 13, 0, 1048681, 14, 0, 1048682, 14, 0, 1048683, 14, 0, 1048684, 14, 0, 1048685, 14, 0, 1048686, 15, 0, 1114175, 13, 0, 1114176, 15, 0, 1114216, 13, 0, 1114217, 14, 0, 1114218, 14, 0, 1114219, 14, 0, 1114220, 14, 0, 1114221, 14, 0, 1114222, 15, 0, 1179711, 13, 0, 1179712, 15, 0, 1179752, 13, 0, 1179753, 14, 0, 1179754, 14, 0, 1179755, 14, 0, 1179756, 14, 0, 1179757, 14, 0, 1179758, 15, 0, 1245247, 13, 0, 1245248, 15, 0, 1245288, 13, 0, 1245289, 14, 0, 1245290, 14, 0, 1245291, 14, 0, 1245292, 14, 0, 1245293, 14, 0, 1245294, 15, 0 )
 
 [node name="Camera" parent="Forest" instance=ExtResource( 8 )]
-position = Vector2( 960, 920 )
 limit_left = 0
-limit_top = 382
-limit_right = 11409
-limit_bottom = 1458
+limit_top = 0
+limit_right = 11400
+limit_bottom = 1090
 smoothing_enabled = true
 smoothing_speed = 3.0
 drag_margin_left = 0.57
@@ -207,6 +207,7 @@ margin_left = -198.747
 margin_top = -145.116
 margin_right = 239.253
 margin_bottom = -58.1158
+dialog = [ "¿QUÉ?", "[shake rate=100 level=7]¡¡SOY UNA ARDILLA!![/shake]", "Olvida, estamos en problema." ]
 
 [node name="Squirrel" parent="Forest" instance=ExtResource( 4 )]
 position = Vector2( 8664, 1295 )
@@ -218,7 +219,7 @@ position = Vector2( 2400, 855 )
 position = Vector2( 6894.68, 855 )
 
 [node name="Buffalo" parent="Forest" instance=ExtResource( 3 )]
-position = Vector2( 5018.5, 1268.42 )
+position = Vector2( 845.641, 1268.42 )
 
 [node name="Buffalo2" parent="Forest" instance=ExtResource( 3 )]
 position = Vector2( 8484.87, 776.487 )
@@ -279,6 +280,7 @@ volume_db = -9.0
 autoplay = true
 
 [node name="AudioRiver" type="Node2D" parent="."]
+position = Vector2( 0, -380.57 )
 
 [node name="RiverZero" type="AudioStreamPlayer2D" parent="AudioRiver"]
 position = Vector2( 1153.3, 1366.88 )

@@ -1,4 +1,4 @@
-[gd_scene load_steps=82 format=2]
+[gd_scene load_steps=102 format=2]
 
 [ext_resource path="res://assets/characters/player/sprites/idle/idle_4.png" type="Texture" id=1]
 [ext_resource path="res://assets/characters/player/scripts/player.gd" type="Script" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://assets/characters/player/sprites/walk/walk_1.png" type="Texture" id=8]
 [ext_resource path="res://assets/characters/player/sprites/walk/walk_2.png" type="Texture" id=9]
 [ext_resource path="res://assets/characters/player/sprites/attack_scarf/centred_basic_attack_floor/basic_attack_2.png" type="Texture" id=10]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/1/idle/rune_part1_5.png" type="Texture" id=11]
 [ext_resource path="res://assets/characters/player/sprites/walk/walk_6.png" type="Texture" id=12]
 [ext_resource path="res://assets/characters/player/sprites/walk/walk_3.png" type="Texture" id=13]
 [ext_resource path="res://assets/characters/player/sprites/walk/walk_4.png" type="Texture" id=14]
@@ -62,6 +63,23 @@
 [ext_resource path="res://assets/characters/player/sfx/scarf.wav" type="AudioStream" id=61]
 [ext_resource path="res://assets/characters/player/sfx/jump.wav" type="AudioStream" id=62]
 [ext_resource path="res://assets/characters/player/sprites/attack_scarf/centred_basic_attack_floor/basic_attack_4.png" type="Texture" id=63]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/1/idle/rune_part1_6.png" type="Texture" id=64]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/1/disappear/rune_part1_5.png" type="Texture" id=65]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/1/disappear/rune_part1_6.png" type="Texture" id=66]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/1/disappear/rune_part1_2.png" type="Texture" id=67]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/1/disappear/rune_part1_1.png" type="Texture" id=68]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/1/appear/rune_part1_4.png" type="Texture" id=69]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/1/disappear/rune_part1_4.png" type="Texture" id=70]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/1/disappear/rune_part1_3.png" type="Texture" id=71]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/1/idle/rune_part1_4.png" type="Texture" id=72]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/1/appear/rune_part1_1.png" type="Texture" id=73]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/1/appear/rune_part1_6.png" type="Texture" id=74]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/1/idle/rune_part1_1.png" type="Texture" id=75]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/1/appear/rune_part1_5.png" type="Texture" id=76]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/1/appear/rune_part1_3.png" type="Texture" id=77]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/1/appear/rune_part1_2.png" type="Texture" id=78]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/1/idle/rune_part1_2.png" type="Texture" id=79]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/1/idle/rune_part1_3.png" type="Texture" id=80]
 
 [sub_resource type="StreamTexture" id=20]
 
@@ -359,6 +377,61 @@ tracks/0/keys = {
 "values": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 12 ) ]
 }
 
+[sub_resource type="Animation" id=22]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("SpriteFramentRune:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ ExtResource( 78 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("SpriteFramentRune:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -104 ) ]
+}
+
+[sub_resource type="Animation" id=23]
+resource_name = "fragment_laguz_0"
+length = 3.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("SpriteFramentRune:texture")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6, 1.8, 2, 2.2, 2.4, 2.6, 2.8, 3, 3.2, 3.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 73 ), ExtResource( 78 ), ExtResource( 77 ), ExtResource( 69 ), ExtResource( 76 ), ExtResource( 74 ), ExtResource( 75 ), ExtResource( 79 ), ExtResource( 80 ), ExtResource( 72 ), ExtResource( 11 ), ExtResource( 64 ), ExtResource( 68 ), ExtResource( 67 ), ExtResource( 71 ), ExtResource( 70 ), ExtResource( 65 ), ExtResource( 66 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("SpriteFramentRune:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1, 1.4, 1.8, 3.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -80 ), Vector2( 0, -104 ), Vector2( 0, -93.7917 ), Vector2( 0, -104 ), Vector2( 0, -15 ) ]
+}
+
 [node name="Player" type="KinematicBody2D" groups=["Player"]]
 collision_layer = 2
 collision_mask = 15
@@ -407,4 +480,14 @@ anims/walk = SubResource( 5 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 
+[node name="AnimationFragmentRune" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 22 )
+anims/fragment_laguz_0 = SubResource( 23 )
+
+[node name="SpriteFramentRune" type="Sprite" parent="."]
+visible = false
+position = Vector2( 0, -104 )
+texture = ExtResource( 78 )
+
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
+[connection signal="animation_finished" from="AnimationFragmentRune" to="." method="_on_AnimationFragmentRune_animation_finished"]

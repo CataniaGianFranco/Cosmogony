@@ -1,7 +1,8 @@
 extends KinematicBody2D
-
+class_name Player
 onready var _audio_stream_player : AudioStreamPlayer = $AudioStreamPlayer
-
+onready var _sprite : Sprite = $Sprite
+signal a
 #Variables públicas.
 export(float) var speed: float = 600.0
 export(float) var jump_strength: float = 1500.0
@@ -36,6 +37,19 @@ func _ready() -> void:
 	travel_to(_State.IDLE)
 	get_node("ScarfHitBox/ScarfCollision").disabled = true #Encontrar una solución sin necesidad de pedirle ya que comienza activado.
 
+func _process(delta: float) -> void:
+	var fps = Engine.get_frames_per_second()
+	var lerp_interval = _velocity / fps
+	var lerp_position = global_transform.origin + lerp_interval
+	
+	if fps > 60:
+		_sprite.set_as_toplevel(true)
+		_sprite.global_transform.origin = _sprite.global_transform.origin.linear_interpolate(lerp_position, 50 * delta)
+	else:
+		_sprite.global_transform = global_transform
+		_sprite.set_as_toplevel(false)
+		
+	change_animation()
 func _physics_process(delta: float) -> void:
 	_velocity.y += gravity * delta
 	
@@ -193,8 +207,19 @@ func crawl() -> void:
 			$CollisionShapeCrawl.disabled = true
 			_is_crawling = false
 
+func change_animation() -> void:
+	if GameHandler._active_rune_animation == true:
+		$SpriteFramentRune.visible = true
+		$AnimationFragmentRune.play(GameHandler._name_anim_rune)
+		GameHandler._active_rune_animation = false
+
 func _on_AnimationPlayer_animation_finished(anim_name: String) -> void:
 	if anim_name == "basic_attack":
 		_is_attacking = false
 	if anim_name == "dash":
 		_is_dashing = false
+
+
+func _on_AnimationFragmentRune_animation_finished(anim_name: String) -> void:
+	if $AnimationFragmentRune.name == GameHandler._name_anim_rune:
+		$SpriteFramentRune.visible = false
