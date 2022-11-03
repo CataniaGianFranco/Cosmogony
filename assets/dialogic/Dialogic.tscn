@@ -1,0 +1,99 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://assets/dialogic/dialogic.gd" type="Script" id=1]
+[ext_resource path="res://assets/dialogic/Dialogic.png" type="Texture" id=2]
+[ext_resource path="res://assets/dialogic/card.png" type="Texture" id=3]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://fonts/Lato-Black.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 18
+use_filter = true
+font_data = SubResource( 1 )
+
+[sub_resource type="Animation" id=4]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 420, 68 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "waiting"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 420, 70 ), Vector2( 420, 68 ) ]
+}
+
+[node name="Dialogic" type="Control"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -130.5
+margin_top = -566.0
+margin_right = 130.5
+margin_bottom = -514.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = 10.0
+margin_right = -10.0
+margin_bottom = -10.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 2 )
+bbcode_enabled = true
+
+[node name="Next" type="TextureRect" parent="."]
+visible = false
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 420.0
+margin_top = 68.0
+margin_right = 433.0
+margin_bottom = 81.0
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Next"]
+autoplay = "waiting"
+anims/RESET = SubResource( 4 )
+anims/waiting = SubResource( 3 )
+
+[node name="Tween" type="Tween" parent="."]
+
+[connection signal="tween_completed" from="Tween" to="." method="_on_Tween_tween_completed"]

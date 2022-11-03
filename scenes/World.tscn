@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=2]
+[gd_scene load_steps=37 format=2]
 
 [ext_resource path="res://world_environment/Main.tres" type="Environment" id=1]
 [ext_resource path="res://audio/ambient/chill_ambient.ogg" type="AudioStream" id=2]
@@ -20,6 +20,7 @@
 [ext_resource path="res://assets/tile_sets/forest_dirt_river.tres" type="TileSet" id=18]
 [ext_resource path="res://assets/tile_sets/forest_clean_river.tres" type="TileSet" id=19]
 [ext_resource path="res://assets/Portal/Portal.tscn" type="PackedScene" id=20]
+[ext_resource path="res://assets/dialogic/Dialogic.tscn" type="PackedScene" id=21]
 [ext_resource path="res://assets/shaders/fog.shader" type="Shader" id=22]
 [ext_resource path="res://river.wav" type="AudioStream" id=23]
 
@@ -200,6 +201,12 @@ position = Vector2( 3434, 1120 )
 
 [node name="AllySquirrel" parent="Forest" instance=ExtResource( 12 )]
 position = Vector2( 839.754, 1292.97 )
+
+[node name="Dialogic" parent="Forest/AllySquirrel" instance=ExtResource( 21 )]
+margin_left = -198.747
+margin_top = -145.116
+margin_right = 239.253
+margin_bottom = -58.1158
 
 [node name="Squirrel" parent="Forest" instance=ExtResource( 4 )]
 position = Vector2( 8664, 1295 )
