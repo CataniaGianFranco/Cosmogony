@@ -8,9 +8,10 @@
 script = ExtResource( 13 )
 
 [node name="EnemyBuffalo" parent="." instance=ExtResource( 3 )]
-collision_layer = 4
 
 [node name="AllyBuffalo" parent="." instance=ExtResource( 4 )]
 visible = false
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
 
 [connection signal="tree_exited" from="EnemyBuffalo" to="." method="_on_EnemyBuffalo_tree_exited"]

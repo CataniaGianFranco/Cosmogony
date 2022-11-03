@@ -6,20 +6,20 @@ const MAX_SPEED : float = 100.0
 const GRAVITY : float = 25.0
 
 var _motion : Vector2 = Vector2.ZERO
+var _active : bool = false
 
 onready var _animation_player: AnimationPlayer = $AnimationPlayer 
 onready var _sprite : Sprite = $Sprite
 
 func _ready() -> void:
 	_sprite.scale.x = -1
-	_animation_player.play("walk")
 	_motion.x = MAX_SPEED
 
-func _process(delta: float) -> void:
-	_motion.y += GRAVITY
-	flip()
-	
-	_motion = move_and_slide(_motion)
+func _physics_process(delta: float) -> void:
+	if _active == true:
+		_motion.y += GRAVITY
+		flip()
+		_motion = move_and_slide(_motion)
 
 func next_to_left_wall() -> bool:
 	return $LeftRay.is_colliding()
@@ -50,3 +50,7 @@ func _on_AnimationPlayer_animation_finished(anim_name: String) -> void:
 
 func _on_Timer_timeout() -> void:
 	queue_free()
+
+func _on_VisibilityNotifier2D_screen_entered() -> void:
+	_active = true
+	_animation_player.play("walk")
