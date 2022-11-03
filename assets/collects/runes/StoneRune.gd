@@ -29,8 +29,6 @@ func _on_StoneRune_body_entered(body: Node) -> void:
 		$AnimatedSprite.play()
 		$AudioStreamPlayer2D.play()
 		stone_rune_on = true
-		
-
 
 func _on_AnimatedSprite_animation_finished() -> void:
 	Input.start_joy_vibration(0,0.2,0.2,1.2)
