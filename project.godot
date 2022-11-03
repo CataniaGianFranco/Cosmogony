@@ -124,6 +124,7 @@ common/physics_interpolation=true
 
 [rendering]
 
+quality/driver/driver_name="GLES2"
 gles3/shaders/shader_compilation_mode=2
 gles3/shaders/shader_compilation_mode.mobile=2
 gles3/shaders/shader_compilation_mode.web=2

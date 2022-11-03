@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://world_environment/Main.tres" type="Environment" id=1]
 [ext_resource path="res://audio/ambient/chill_ambient.ogg" type="AudioStream" id=2]
@@ -20,14 +20,34 @@
 [ext_resource path="res://assets/tile_sets/forest_dirt_river.tres" type="TileSet" id=18]
 [ext_resource path="res://assets/tile_sets/forest_clean_river.tres" type="TileSet" id=19]
 [ext_resource path="res://assets/Portal/Portal.tscn" type="PackedScene" id=20]
-[ext_resource path="res://sprites/Fog.png" type="Texture" id=21]
 [ext_resource path="res://assets/shaders/fog.shader" type="Shader" id=22]
 [ext_resource path="res://river.wav" type="AudioStream" id=23]
 
+[sub_resource type="Gradient" id=12]
+offsets = PoolRealArray( 0.0648148, 0.546296, 0.611111, 0.805556 )
+colors = PoolColorArray( 0.415686, 0.415686, 0.415686, 0, 0.552941, 0.552941, 0.552941, 1, 0.788317, 0.788317, 0.788317, 1, 0, 0, 0, 1 )
+
+[sub_resource type="GradientTexture2D" id=13]
+gradient = SubResource( 12 )
+
+[sub_resource type="OpenSimplexNoise" id=10]
+
+[sub_resource type="NoiseTexture" id=11]
+seamless = true
+noise = SubResource( 10 )
+
 [sub_resource type="ShaderMaterial" id=4]
 shader = ExtResource( 22 )
-shader_param/color = Vector3( 0.8125, 0.886719, 0.996094 )
-shader_param/octaves = 4
+shader_param/scroll1 = Vector2( 0.02, 0.02 )
+shader_param/scroll2 = Vector2( 0.02, 0.02 )
+shader_param/texture2 = SubResource( 11 )
+shader_param/colorTexture = SubResource( 13 )
+
+[sub_resource type="OpenSimplexNoise" id=8]
+
+[sub_resource type="NoiseTexture" id=9]
+seamless = true
+noise = SubResource( 8 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 14.485, 106.292 )
@@ -57,9 +77,9 @@ position = Vector2( 11166.8, 1235.62 )
 [node name="Fog" type="Sprite" parent="Forest"]
 material = SubResource( 4 )
 position = Vector2( 6000, 0 )
-scale = Vector2( 7.77778, 7.77778 )
+scale = Vector2( 26.0329, 26.0329 )
 z_index = -2
-texture = ExtResource( 21 )
+texture = SubResource( 9 )
 
 [node name="ForestFloorNegativeOne" type="TileMap" parent="Forest"]
 z_index = -1
@@ -249,6 +269,7 @@ shape = SubResource( 5 )
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 2 )
 volume_db = -9.0
+autoplay = true
 
 [node name="AudioRiver" type="Node2D" parent="."]
 

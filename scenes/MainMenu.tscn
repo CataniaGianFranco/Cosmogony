@@ -157,6 +157,7 @@ align = 1
 valign = 1
 
 [node name="Quit" type="TextureButton" parent="Menu"]
+visible = false
 margin_top = 566.0
 margin_right = 685.0
 margin_bottom = 821.0
