@@ -56,7 +56,7 @@ func _on_AnimationPlayer_animation_finished(anim_name: String) -> void:
 		GameHandler._active_rune_animation = true
 		GameHandler._score_rune += 1
 		$"../AllyBuffalo".position = Vector2(position.x, position.y + 2)
-		$"../AllyBuffalo".scale.x = scale.x
+		$"../AllyBuffalo".scale.x = _sprite.scale.x
 		$Timer.start()
 
 func _on_Timer_timeout() -> void:
