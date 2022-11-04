@@ -219,11 +219,11 @@ position = Vector2( 2400, 855 )
 position = Vector2( 6894.68, 855 )
 
 [node name="Buffalo" parent="Forest" instance=ExtResource( 3 )]
-position = Vector2( 5123.67, 1268.11 )
+position = Vector2( 5123.67, 1250.87 )
 name_anim_rune = "fragment_laguz_1"
 
 [node name="Buffalo2" parent="Forest" instance=ExtResource( 3 )]
-position = Vector2( 8536.56, 776.465 )
+position = Vector2( 8536.56, 761.482 )
 
 [node name="guikeybinding" parent="Forest" instance=ExtResource( 5 )]
 follow_viewport_enable = true
@@ -278,7 +278,6 @@ shape = SubResource( 5 )
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 2 )
 volume_db = -9.0
-autoplay = true
 
 [node name="AudioRiver" type="Node2D" parent="."]
 position = Vector2( 0, -380.57 )

@@ -45,7 +45,10 @@ func take_damage(amount : int) -> void:
 
 func _on_AnimationPlayer_animation_finished(anim_name: String) -> void:
 	if anim_name == "hurt":
-		_motion.x = MAX_SPEED
+		if _sprite.scale.x == -1:
+			_motion.x = MAX_SPEED
+		else:
+			_motion.x = -MAX_SPEED
 		_animation_player.play("walk")
 	if anim_name == "exhausted":
 		$AudioStreamPlayer.play()
