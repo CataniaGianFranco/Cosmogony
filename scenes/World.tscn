@@ -213,9 +213,11 @@ position = Vector2( 8979, 1283 )
 scale = Vector2( 1.25, 1.25 )
 
 [node name="EnemyOwl" parent="Forest" instance=ExtResource( 9 )]
+visible = false
 position = Vector2( 2400, 855 )
 
 [node name="EnemyOwl2" parent="Forest" instance=ExtResource( 9 )]
+visible = false
 position = Vector2( 6894.68, 855 )
 
 [node name="Buffalo" parent="Forest" instance=ExtResource( 3 )]

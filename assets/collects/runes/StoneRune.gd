@@ -24,7 +24,7 @@ func tween() -> void:
 
 func _on_StoneRune_body_entered(body: Node) -> void:
 	print("Le falta ", 5 - GameHandler._score_rune)
-	if body.is_in_group("Player") and stone_rune_on == false and GameHandler._score_rune == 5:
+	if body.is_in_group("Player") and stone_rune_on == false and GameHandler._score_rune == 3:
 		Input.start_joy_vibration(0,0.15,0.15,1)
 		$Sprite.visible = false
 		$AnimatedSprite.play()

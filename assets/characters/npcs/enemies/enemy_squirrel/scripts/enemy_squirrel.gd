@@ -41,7 +41,6 @@ func take_damage(amount : int) -> void:
 			_motion.x = 0.0
 			_animation_player.play("hurt")
 		else:
-			
 			_motion.x = 0.0
 			_animation_player.play("exhausted")
 
