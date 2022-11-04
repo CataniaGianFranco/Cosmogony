@@ -1,8 +1,7 @@
 extends KinematicBody2D
-class_name Player
+
 onready var _audio_stream_player : AudioStreamPlayer = $AudioStreamPlayer
 onready var _sprite : Sprite = $Sprite
-signal a
 #Variables públicas.
 export(float) var speed: float = 600.0
 export(float) var jump_strength: float = 1500.0
@@ -219,7 +218,6 @@ func _on_AnimationPlayer_animation_finished(anim_name: String) -> void:
 	if anim_name == "dash":
 		_is_dashing = false
 
-
 func _on_AnimationFragmentRune_animation_finished(anim_name: String) -> void:
-	if $AnimationFragmentRune.name == GameHandler._name_anim_rune:
+	if anim_name == GameHandler._name_anim_rune:
 		$SpriteFramentRune.visible = false

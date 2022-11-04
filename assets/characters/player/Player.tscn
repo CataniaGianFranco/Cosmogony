@@ -1,4 +1,4 @@
-[gd_scene load_steps=102 format=2]
+[gd_scene load_steps=175 format=2]
 
 [ext_resource path="res://assets/characters/player/sprites/idle/idle_4.png" type="Texture" id=1]
 [ext_resource path="res://assets/characters/player/scripts/player.gd" type="Script" id=2]
@@ -80,6 +80,75 @@
 [ext_resource path="res://assets/collects/runes/Laguz/fragments/1/appear/rune_part1_2.png" type="Texture" id=78]
 [ext_resource path="res://assets/collects/runes/Laguz/fragments/1/idle/rune_part1_2.png" type="Texture" id=79]
 [ext_resource path="res://assets/collects/runes/Laguz/fragments/1/idle/rune_part1_3.png" type="Texture" id=80]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/2/idle/rune_part2_1.png" type="Texture" id=81]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/2/appear/rune_part2_4.png" type="Texture" id=82]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/2/appear/rune_part2_6.png" type="Texture" id=83]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/2/disappear/rune_part2_1.png" type="Texture" id=84]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/2/idle/rune_part2_5.png" type="Texture" id=85]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/2/appear/rune_part2_3.png" type="Texture" id=86]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/2/idle/rune_part2_6.png" type="Texture" id=87]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/2/disappear/rune_part2_6.png" type="Texture" id=88]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/2/appear/rune_part2_2.png" type="Texture" id=89]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/2/appear/rune_part2_5.png" type="Texture" id=90]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/2/disappear/rune_part2_4.png" type="Texture" id=91]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/2/idle/rune_part2_4.png" type="Texture" id=92]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/2/idle/rune_part2_3.png" type="Texture" id=93]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/2/appear/rune_part2_1.png" type="Texture" id=94]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/2/disappear/rune_part2_5.png" type="Texture" id=95]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/2/disappear/rune_part2_3.png" type="Texture" id=96]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/2/disappear/rune_part2_2.png" type="Texture" id=97]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/4/idle/rune_part4_6.png" type="Texture" id=98]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/3/disappear/rune_part3_1.png" type="Texture" id=99]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/3/appear/rune_part3_1.png" type="Texture" id=100]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/4/appear/rune_part4_3.png" type="Texture" id=101]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/4/appear/rune_part4_4.png" type="Texture" id=102]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/3/appear/rune_part3_4.png" type="Texture" id=103]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/3/idle/rune_part3_1.png" type="Texture" id=104]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/3/idle/rune_part3_3.png" type="Texture" id=105]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/3/appear/rune_part3_5.png" type="Texture" id=106]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/3/idle/rune_part3_2.png" type="Texture" id=107]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/3/idle/rune_part3_4.png" type="Texture" id=108]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/3/appear/rune_part3_3.png" type="Texture" id=109]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/3/appear/rune_part3_6.png" type="Texture" id=110]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/3/idle/rune_part3_5.png" type="Texture" id=111]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/3/disappear/rune_part3_2.png" type="Texture" id=112]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/3/disappear/rune_part3_3.png" type="Texture" id=113]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/3/appear/rune_part3_2.png" type="Texture" id=114]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/3/disappear/rune_part3_5.png" type="Texture" id=115]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/3/disappear/rune_part3_6.png" type="Texture" id=116]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/4/appear/rune_part4_1.png" type="Texture" id=117]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/4/appear/rune_part4_2.png" type="Texture" id=118]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/3/idle/rune_part3_6.png" type="Texture" id=119]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/4/idle/rune_part4_2.png" type="Texture" id=120]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/4/idle/rune_part4_4.png" type="Texture" id=121]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/4/idle/rune_part4_5.png" type="Texture" id=122]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/4/idle/rune_part4_3.png" type="Texture" id=123]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/4/disappear/rune_part4_5.png" type="Texture" id=124]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/4/appear/rune_part4_5.png" type="Texture" id=125]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/4/appear/rune_part4_6.png" type="Texture" id=126]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/4/disappear/rune_part4_1.png" type="Texture" id=127]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/4/disappear/rune_part4_2.png" type="Texture" id=128]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/4/disappear/rune_part4_4.png" type="Texture" id=129]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/4/disappear/rune_part4_6.png" type="Texture" id=130]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/4/disappear/rune_part4_3.png" type="Texture" id=131]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/4/idle/rune_part4_1.png" type="Texture" id=132]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/5/appear/rune_part5_2.png" type="Texture" id=133]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/5/appear/rune_part5_1.png" type="Texture" id=134]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/5/disappear/rune_part5_6.png" type="Texture" id=135]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/5/disappear/rune_part5_5.png" type="Texture" id=136]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/5/idle/rune_part5_4.png" type="Texture" id=137]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/5/appear/rune_part5_6.png" type="Texture" id=138]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/5/disappear/rune_part5_1.png" type="Texture" id=139]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/5/disappear/rune_part5_4.png" type="Texture" id=140]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/5/idle/rune_part5_5.png" type="Texture" id=141]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/5/appear/rune_part5_5.png" type="Texture" id=142]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/5/disappear/rune_part5_2.png" type="Texture" id=143]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/5/appear/rune_part5_3.png" type="Texture" id=144]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/5/idle/rune_part5_3.png" type="Texture" id=145]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/5/appear/rune_part5_4.png" type="Texture" id=146]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/5/idle/rune_part5_6.png" type="Texture" id=147]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/5/idle/rune_part5_2.png" type="Texture" id=148]
+[ext_resource path="res://assets/collects/runes/Laguz/fragments/5/disappear/rune_part5_3.png" type="Texture" id=149]
 
 [sub_resource type="StreamTexture" id=20]
 
@@ -432,6 +501,118 @@ tracks/1/keys = {
 "values": [ Vector2( 0, -80 ), Vector2( 0, -104 ), Vector2( 0, -93.7917 ), Vector2( 0, -104 ), Vector2( 0, -15 ) ]
 }
 
+[sub_resource type="Animation" id=24]
+resource_name = "fragment_laguz_1"
+length = 3.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("SpriteFramentRune:texture")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6, 1.8, 2, 2.2, 2.4, 2.6, 2.8, 3, 3.2, 3.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 94 ), ExtResource( 89 ), ExtResource( 86 ), ExtResource( 82 ), ExtResource( 90 ), ExtResource( 83 ), ExtResource( 81 ), ExtResource( 84 ), ExtResource( 93 ), ExtResource( 92 ), ExtResource( 85 ), ExtResource( 87 ), ExtResource( 84 ), ExtResource( 97 ), ExtResource( 96 ), ExtResource( 91 ), ExtResource( 95 ), ExtResource( 88 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("SpriteFramentRune:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1, 1.4, 1.8, 3.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -80 ), Vector2( 0, -104 ), Vector2( 0, -93.7917 ), Vector2( 0, -104 ), Vector2( 0, -15 ) ]
+}
+
+[sub_resource type="Animation" id=25]
+resource_name = "fragment_laguz_2"
+length = 3.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("SpriteFramentRune:texture")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6, 1.8, 2, 2.2, 2.4, 2.6, 2.8, 3, 3.2, 3.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 100 ), ExtResource( 114 ), ExtResource( 109 ), ExtResource( 103 ), ExtResource( 106 ), ExtResource( 110 ), ExtResource( 104 ), ExtResource( 107 ), ExtResource( 105 ), ExtResource( 108 ), ExtResource( 111 ), ExtResource( 119 ), ExtResource( 99 ), ExtResource( 112 ), ExtResource( 113 ), ExtResource( 91 ), ExtResource( 115 ), ExtResource( 116 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("SpriteFramentRune:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1, 1.4, 1.8, 3.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -80 ), Vector2( 0, -104 ), Vector2( 0, -93.7917 ), Vector2( 0, -104 ), Vector2( 0, -15 ) ]
+}
+
+[sub_resource type="Animation" id=26]
+resource_name = "fragment_laguz_3"
+length = 3.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("SpriteFramentRune:texture")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6, 1.8, 2, 2.2, 2.4, 2.6, 2.8, 3, 3.2, 3.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 117 ), ExtResource( 118 ), ExtResource( 101 ), ExtResource( 102 ), ExtResource( 125 ), ExtResource( 126 ), ExtResource( 132 ), ExtResource( 120 ), ExtResource( 123 ), ExtResource( 121 ), ExtResource( 122 ), ExtResource( 98 ), ExtResource( 127 ), ExtResource( 128 ), ExtResource( 131 ), ExtResource( 129 ), ExtResource( 124 ), ExtResource( 130 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("SpriteFramentRune:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1, 1.4, 1.8, 3.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -80 ), Vector2( 0, -104 ), Vector2( 0, -93.7917 ), Vector2( 0, -104 ), Vector2( 0, -15 ) ]
+}
+
+[sub_resource type="Animation" id=27]
+resource_name = "fragment_laguz_4"
+length = 3.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("SpriteFramentRune:texture")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6, 1.8, 2, 2.2, 2.4, 2.6, 2.8, 3, 3.2, 3.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 134 ), ExtResource( 133 ), ExtResource( 144 ), ExtResource( 146 ), ExtResource( 142 ), ExtResource( 138 ), ExtResource( 132 ), ExtResource( 148 ), ExtResource( 145 ), ExtResource( 137 ), ExtResource( 141 ), ExtResource( 147 ), ExtResource( 139 ), ExtResource( 143 ), ExtResource( 149 ), ExtResource( 140 ), ExtResource( 136 ), ExtResource( 135 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("SpriteFramentRune:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1, 1.4, 1.8, 3.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -80 ), Vector2( 0, -104 ), Vector2( 0, -93.7917 ), Vector2( 0, -104 ), Vector2( 0, -15 ) ]
+}
+
 [node name="Player" type="KinematicBody2D" groups=["Player"]]
 collision_layer = 2
 collision_mask = 15
@@ -483,6 +664,10 @@ anims/walk = SubResource( 5 )
 [node name="AnimationFragmentRune" type="AnimationPlayer" parent="."]
 anims/RESET = SubResource( 22 )
 anims/fragment_laguz_0 = SubResource( 23 )
+anims/fragment_laguz_1 = SubResource( 24 )
+anims/fragment_laguz_2 = SubResource( 25 )
+anims/fragment_laguz_3 = SubResource( 26 )
+anims/fragment_laguz_4 = SubResource( 27 )
 
 [node name="SpriteFramentRune" type="Sprite" parent="."]
 visible = false

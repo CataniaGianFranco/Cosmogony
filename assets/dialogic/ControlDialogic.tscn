@@ -78,8 +78,6 @@ margin_bottom = -20.0
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_fonts/normal_font = SubResource( 2 )
 bbcode_enabled = true
-bbcode_text = "Hola holaa"
-text = "Hola holaa"
 
 [node name="Next" type="TextureRect" parent="Dialogic"]
 visible = false

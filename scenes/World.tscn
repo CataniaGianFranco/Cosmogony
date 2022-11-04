@@ -219,6 +219,7 @@ position = Vector2( 6894.68, 855 )
 
 [node name="Buffalo" parent="Forest" instance=ExtResource( 3 )]
 position = Vector2( 5032.67, 1268.42 )
+name_anim_rune = "fragment_laguz_1"
 
 [node name="Buffalo2" parent="Forest" instance=ExtResource( 3 )]
 position = Vector2( 8484.87, 776.487 )
