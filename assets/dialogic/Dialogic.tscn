@@ -1,14 +1,14 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/dialogic/dialogic.gd" type="Script" id=1]
-[ext_resource path="res://assets/dialogic/Dialogic.png" type="Texture" id=2]
-[ext_resource path="res://assets/dialogic/card.png" type="Texture" id=3]
+[ext_resource path="res://assets/dialogic/button_dialogic.png" type="Texture" id=2]
+[ext_resource path="res://assets/dialogic/dialogic_boquita.png" type="Texture" id=3]
 
 [sub_resource type="DynamicFontData" id=1]
 font_path = "res://fonts/Lato-Black.ttf"
 
 [sub_resource type="DynamicFont" id=2]
-size = 18
+size = 24
 use_filter = true
 font_data = SubResource( 1 )
 
@@ -40,18 +40,18 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 420, 70 ), Vector2( 420, 68 ) ]
+"values": [ Vector2( 950.5, 149 ), Vector2( 955.5, 149 ) ]
 }
 
 [node name="Dialogic" type="Control"]
 anchor_left = 0.5
-anchor_top = 1.0
+anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 1.0
-margin_left = -130.5
-margin_top = -566.0
-margin_right = 130.5
-margin_bottom = -514.0
+anchor_bottom = 0.5
+margin_left = -208.0
+margin_top = -41.5
+margin_right = 160.0
+margin_bottom = 68.5
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
@@ -60,20 +60,22 @@ __meta__ = {
 [node name="TextureRect" type="TextureRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 expand = true
 stretch_mode = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 10.0
-margin_top = 10.0
-margin_right = -10.0
-margin_bottom = -10.0
+margin_left = 154.0
+margin_top = 21.5
+margin_right = 6.0
+margin_bottom = -38.5
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_fonts/normal_font = SubResource( 2 )
 bbcode_enabled = true
+bbcode_text = "Hola como estas!"
+text = "Hola como estas!"
 
 [node name="Next" type="TextureRect" parent="."]
 visible = false
@@ -85,7 +87,8 @@ margin_left = 420.0
 margin_top = 68.0
 margin_right = 433.0
 margin_bottom = 81.0
-texture = ExtResource( 3 )
+rect_scale = Vector2( 1.8, 1.8 )
+texture = ExtResource( 2 )
 expand = true
 stretch_mode = 1
 

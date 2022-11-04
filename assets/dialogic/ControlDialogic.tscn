@@ -1,0 +1,105 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://assets/dialogic/dialogic_boquita.png" type="Texture" id=1]
+[ext_resource path="res://assets/dialogic/button_dialogic.png" type="Texture" id=2]
+[ext_resource path="res://assets/dialogic/dialogic.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://fonts/Lato-Black.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 22
+use_filter = true
+font_data = SubResource( 1 )
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 528.102, 129.749 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "wating"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 410.546, 102.271 ), Vector2( 416.539, 102.271 ) ]
+}
+
+[node name="ControlDialogic" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+
+[node name="Dialogic" type="Control" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -297.0
+margin_top = -631.0
+margin_right = 179.0
+margin_bottom = -485.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="TextureRect" type="TextureRect" parent="Dialogic"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Dialogic"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 30.0
+margin_top = 20.0
+margin_right = -30.0
+margin_bottom = -20.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 2 )
+bbcode_enabled = true
+bbcode_text = "Hola holaa"
+text = "Hola holaa"
+
+[node name="Next" type="TextureRect" parent="Dialogic"]
+visible = false
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 528.102
+margin_top = 129.749
+margin_right = 553.102
+margin_bottom = 154.749
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Dialogic/Next"]
+autoplay = "wating"
+anims/RESET = SubResource( 3 )
+anims/wating = SubResource( 4 )
+
+[node name="Tween" type="Tween" parent="Dialogic"]
+
+[connection signal="tween_completed" from="Dialogic/Tween" to="." method="_on_Tween_tween_completed"]
