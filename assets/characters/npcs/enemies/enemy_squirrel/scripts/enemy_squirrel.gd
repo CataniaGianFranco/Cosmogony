@@ -35,28 +35,33 @@ func flip() -> void:
 		_sprite.scale.x *= -1 
 
 func take_damage(amount : int) -> void:
+		$HurtBox.visible = false
 		_health -= amount
 		if _health > 0:
 			_motion.x = 0.0
 			_animation_player.play("hurt")
 		else:
+			
 			_motion.x = 0.0
 			_animation_player.play("exhausted")
 
 func _on_AnimationPlayer_animation_finished(anim_name: String) -> void:
 	if anim_name == "hurt":
+		$HurtBox.visible = true
 		if _sprite.scale.x == -1:
 			_motion.x = MAX_SPEED
 		else:
 			_motion.x = -MAX_SPEED
 		_animation_player.play("walk")
 	if anim_name == "exhausted":
+		$HurtBox/CollisionShape2D.visible = false
 		$AudioStreamPlayer.play()
 		GameHandler._name_anim_rune = _name_anim_rune
 		GameHandler._active_rune_animation = true
 		GameHandler._score_rune += 1
+		$"../AllySquirrel".position = Vector2(position.x, position.y)
+		$"../AllySquirrel".scale.x = _sprite.scale.x
 		$Timer.start()
-
 
 func _on_Timer_timeout() -> void:
 	queue_free()

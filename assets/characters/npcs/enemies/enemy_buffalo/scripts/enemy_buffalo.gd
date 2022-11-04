@@ -35,6 +35,7 @@ func flip() -> void:
 		_sprite.scale.x *= -1 
 
 func take_damage(amount : int) -> void:
+		$HurtBox.visible = false
 		_health -= amount
 		if _health > 0:
 			_motion.x = 0.0
@@ -45,6 +46,7 @@ func take_damage(amount : int) -> void:
 
 func _on_AnimationPlayer_animation_finished(anim_name: String) -> void:
 	if anim_name == "hurt":
+		$HurtBox.visible = true
 		if _sprite.scale.x == -1:
 			_motion.x = MAX_SPEED
 		else:
