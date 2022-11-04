@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/swoosh.mp3-82af6ed557b3f4d509449f0291444d30.mp3str"
+
+[deps]
+
+source_file="res://assets/characters/npcs/enemies/enemy_buffalo/sfx/swoosh.mp3"
+dest_files=[ "res://.import/swoosh.mp3-82af6ed557b3f4d509449f0291444d30.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
