@@ -209,7 +209,8 @@ margin_right = 59.397
 margin_bottom = 399.012
 
 [node name="Squirrel" parent="Forest" instance=ExtResource( 4 )]
-position = Vector2( 8664, 1295 )
+position = Vector2( 8979, 1283 )
+scale = Vector2( 1.25, 1.25 )
 
 [node name="EnemyOwl" parent="Forest" instance=ExtResource( 9 )]
 position = Vector2( 2400, 855 )
@@ -218,11 +219,11 @@ position = Vector2( 2400, 855 )
 position = Vector2( 6894.68, 855 )
 
 [node name="Buffalo" parent="Forest" instance=ExtResource( 3 )]
-position = Vector2( 5032.67, 1268.42 )
+position = Vector2( 5123.67, 1268.11 )
 name_anim_rune = "fragment_laguz_1"
 
 [node name="Buffalo2" parent="Forest" instance=ExtResource( 3 )]
-position = Vector2( 8484.87, 776.487 )
+position = Vector2( 8536.56, 776.465 )
 
 [node name="guikeybinding" parent="Forest" instance=ExtResource( 5 )]
 follow_viewport_enable = true

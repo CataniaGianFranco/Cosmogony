@@ -8,6 +8,7 @@ const GRAVITY : float = 25.0
 
 var _motion : Vector2 = Vector2.ZERO
 var _active : bool = false
+var _moving : bool = false
 
 onready var _animation_player: AnimationPlayer = $AnimationPlayer 
 onready var _sprite : Sprite = $Sprite
@@ -37,6 +38,7 @@ func flip() -> void:
 func take_damage(amount : int) -> void:
 		_health -= amount
 		if _health > 0:
+			_motion.x = 0.0
 			_animation_player.play("hurt")
 		else:
 			_motion.x = 0.0
@@ -44,11 +46,18 @@ func take_damage(amount : int) -> void:
 
 func _on_AnimationPlayer_animation_finished(anim_name: String) -> void:
 	if anim_name == "hurt":
-		_animation_player.play("idle")
+		if _moving == true:
+			_moving = false
+			_motion.x = MAX_SPEED
+		else:
+			_moving = true
+			_motion.x = -MAX_SPEED
+		_animation_player.play("walk")
 	if anim_name == "exhausted":
 		$AudioStreamPlayer.play()
 		GameHandler._name_anim_rune = _name_anim_rune
 		GameHandler._active_rune_animation = true
+		GameHandler._score_rune += 1
 		$Timer.start()
 
 func _on_Timer_timeout() -> void:

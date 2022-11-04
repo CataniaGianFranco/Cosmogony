@@ -1,6 +1,7 @@
 extends KinematicBody2D
 
-var _health: int = 20
+var _health: int = 40
+var _name_anim_rune : String = ""
 
 const MAX_SPEED : float = 100.0
 const GRAVITY : float = 25.0
@@ -36,15 +37,21 @@ func flip() -> void:
 func take_damage(amount : int) -> void:
 		_health -= amount
 		if _health > 0:
+			_motion.x = 0.0
 			_animation_player.play("hurt")
 		else:
+			_motion.x = 0.0
 			_animation_player.play("exhausted")
 
 func _on_AnimationPlayer_animation_finished(anim_name: String) -> void:
 	if anim_name == "hurt":
-		_animation_player.play("idle")
+		_motion.x = MAX_SPEED
+		_animation_player.play("walk")
 	if anim_name == "exhausted":
 		$AudioStreamPlayer.play()
+		GameHandler._name_anim_rune = _name_anim_rune
+		GameHandler._active_rune_animation = true
+		GameHandler._score_rune += 1
 		$Timer.start()
 
 

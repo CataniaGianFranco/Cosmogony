@@ -6,6 +6,7 @@
 
 [node name="Squirrel" type="Position2D"]
 script = ExtResource( 3 )
+name_anim_rune = "fragment_laguz_2"
 
 [node name="EnemySquirrel" parent="." instance=ExtResource( 1 )]
 
