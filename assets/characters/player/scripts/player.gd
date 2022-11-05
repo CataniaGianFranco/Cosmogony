@@ -50,15 +50,18 @@ func _process(delta: float) -> void:
 		
 	change_animation()
 func _physics_process(delta: float) -> void:
-	_velocity.y += gravity * delta
-	
-	move()
-	jump()
-	attack()
-	dash()
-	crawl()
-	state_machine()
-	_velocity = move_and_slide(_velocity, _UP_DIRECTION)
+	if GameHandler._is_action_player == true:
+		_velocity.y += gravity * delta
+		
+		move()
+		jump()
+		attack()
+		dash()
+		crawl()
+		state_machine()
+		_velocity = move_and_slide(_velocity, _UP_DIRECTION)
+	else:
+		_animationPlayer.play("idle")
 	
 func travel_to(new_state : int) -> void:
 	_current_state = new_state

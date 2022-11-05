@@ -31,6 +31,7 @@ func load_dialog() -> void:
 		 0, 1, tween_duration, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 		$Dialogic/Tween.start()
 	else:
+		GameHandler._is_action_player = true
 		queue_free()
 	_dialog_index += 1
 

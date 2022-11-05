@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=2]
+[gd_scene load_steps=41 format=2]
 
 [ext_resource path="res://world_environment/Main.tres" type="Environment" id=1]
 [ext_resource path="res://audio/ambient/chill_ambient.ogg" type="AudioStream" id=2]
@@ -25,6 +25,10 @@
 [ext_resource path="res://river.wav" type="AudioStream" id=23]
 [ext_resource path="res://assets/forest/ControlSign.tscn" type="PackedScene" id=24]
 [ext_resource path="res://assets/forest/MapController.tscn" type="PackedScene" id=25]
+[ext_resource path="res://assets/dialogic/conversation/conversation.gd" type="Script" id=26]
+
+[sub_resource type="RectangleShape2D" id=14]
+extents = Vector2( 12.9302, 370.811 )
 
 [sub_resource type="Gradient" id=12]
 offsets = PoolRealArray( 0.0648148, 0.546296, 0.611111, 0.805556 )
@@ -77,6 +81,17 @@ visible = false
 
 [node name="Forest" type="Node2D" parent="."]
 position = Vector2( 3919.98, -382 )
+
+[node name="Conversation" type="Area2D" parent="Forest"]
+position = Vector2( 669.883, 1304.84 )
+script = ExtResource( 26 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Forest/Conversation"]
+position = Vector2( -2.79346, -315.032 )
+shape = SubResource( 14 )
 
 [node name="Portal" parent="Forest" instance=ExtResource( 20 )]
 position = Vector2( 11166.8, 1235.62 )
@@ -261,6 +276,14 @@ position = Vector2( -3196.49, 1256.67 )
 scale = Vector2( 1.4, 1.4 )
 collision_mask = 9
 
+[node name="ControlDialogic" parent="Forest/Player" instance=ExtResource( 21 )]
+visible = false
+margin_left = 57.6614
+margin_top = 407.136
+margin_right = 57.6614
+margin_bottom = 407.136
+dialog = [ "¡¡UN MAPACHA!!" ]
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Forest"]
 environment = ExtResource( 1 )
 
@@ -334,3 +357,5 @@ position = Vector2( 7534.22, 1366.88 )
 stream = ExtResource( 23 )
 autoplay = true
 max_distance = 900.0
+
+[connection signal="body_entered" from="Forest/Conversation" to="Forest/Conversation" method="_on_Conversation_body_entered"]
