@@ -37,16 +37,16 @@ func _ready() -> void:
 	get_node("ScarfHitBox/ScarfCollision").disabled = true #Encontrar una solución sin necesidad de pedirle ya que comienza activado.
 
 func _process(delta: float) -> void:
-	var fps = Engine.get_frames_per_second()
-	var lerp_interval = _velocity / fps
-	var lerp_position = global_transform.origin + lerp_interval
+	#var fps = Engine.get_frames_per_second()
+	#var lerp_interval = _velocity / fps
+	#var lerp_position = global_transform.origin + lerp_interval
 	
-	if fps > 60:
-		_sprite.set_as_toplevel(true)
-		_sprite.global_transform.origin = _sprite.global_transform.origin.linear_interpolate(lerp_position, 50 * delta)
-	else:
-		_sprite.global_transform = global_transform
-		_sprite.set_as_toplevel(false)
+	#if fps > 60:
+	#	_sprite.set_as_toplevel(true)
+	#	_sprite.global_transform.origin = _sprite.global_transform.origin.linear_interpolate(lerp_position, 50 * delta)
+	#else:
+	#	_sprite.global_transform = global_transform
+	#	_sprite.set_as_toplevel(false)
 		
 	change_animation()
 func _physics_process(delta: float) -> void:
