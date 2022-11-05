@@ -32,7 +32,8 @@ func load_dialog() -> void:
 		$Dialogic/Tween.start()
 	else:
 		GameHandler._is_action_player = true
-		queue_free()
+		visible = false
+		#queue_free()
 	_dialog_index += 1
 
 

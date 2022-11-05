@@ -282,7 +282,7 @@ margin_left = 57.6614
 margin_top = 407.136
 margin_right = 57.6614
 margin_bottom = 407.136
-dialog = [ "¡¡UN MAPACHA!!" ]
+dialog = [ "¡¡UN MAPACHE!!" ]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Forest"]
 environment = ExtResource( 1 )
