@@ -325,36 +325,42 @@ position = Vector2( 3919.98, -382 )
 [node name="RiverZero" type="AudioStreamPlayer2D" parent="AudioRiver"]
 position = Vector2( 1153.3, 1366.88 )
 stream = ExtResource( 23 )
+volume_db = -21.81
 autoplay = true
 max_distance = 780.0
 
 [node name="RiverOne" type="AudioStreamPlayer2D" parent="AudioRiver"]
 position = Vector2( 1959.37, 1366.88 )
 stream = ExtResource( 23 )
+volume_db = -21.81
 autoplay = true
 max_distance = 750.0
 
 [node name="RiverTwo" type="AudioStreamPlayer2D" parent="AudioRiver"]
 position = Vector2( 2276.51, 1366.88 )
 stream = ExtResource( 23 )
+volume_db = -21.81
 autoplay = true
 max_distance = 750.0
 
 [node name="RiverThree" type="AudioStreamPlayer2D" parent="AudioRiver"]
 position = Vector2( 4180.3, 1366.88 )
 stream = ExtResource( 23 )
+volume_db = -21.81
 autoplay = true
 max_distance = 1800.0
 
 [node name="RiverFour" type="AudioStreamPlayer2D" parent="AudioRiver"]
 position = Vector2( 6420.74, 1366.88 )
 stream = ExtResource( 23 )
+volume_db = -21.81
 autoplay = true
 max_distance = 900.0
 
 [node name="RiverFive" type="AudioStreamPlayer2D" parent="AudioRiver"]
 position = Vector2( 7534.22, 1366.88 )
 stream = ExtResource( 23 )
+volume_db = -21.81
 autoplay = true
 max_distance = 900.0
 
