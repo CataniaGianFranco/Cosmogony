@@ -77,7 +77,6 @@ extents = Vector2( 16.6854, 368.503 )
 [node name="World" type="Node"]
 
 [node name="MapController" parent="." instance=ExtResource( 25 )]
-visible = false
 
 [node name="Forest" type="Node2D" parent="."]
 position = Vector2( 3919.98, -382 )

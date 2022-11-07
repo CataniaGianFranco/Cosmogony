@@ -12,3 +12,4 @@ func _on_Conversation_body_entered(body: Node) -> void:
 		GameHandler._is_action_player = false
 		$"../Player/ControlDialogic".visible = true
 		_change_conversation = true
+		$CollisionShape2D.queue_free()
