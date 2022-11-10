@@ -15,12 +15,12 @@ export(AudioStream) var sfx_jump = null
 #Variables privadas.
 var _jumps_made: int = 0
 var _velocity: Vector2 = Vector2.ZERO
+var _snap: Vector2 = Vector2.ZERO
 var _is_attacking: bool = false
 var _is_dashing: bool = false
 var _is_jumping: bool = false
 var _is_crawling: bool = false
 var _is_lading: bool = false
-
 const _UP_DIRECTION : Vector2 = Vector2.UP
 
 onready var _start_scale: Vector2 = $"Sprite".scale
@@ -47,21 +47,22 @@ func _process(delta: float) -> void:
 	#else:
 	#	_sprite.global_transform = global_transform
 	#	_sprite.set_as_toplevel(false)
-		
+	if Input.is_action_just_pressed("ui_restart"):
+		get_tree().reload_current_scene()
 	change_animation()
-func _physics_process(delta: float) -> void:
-	if GameHandler._is_action_player == true:
-		_velocity.y += gravity * delta
-		
-		move()
-		jump()
-		attack()
-		dash()
-		crawl()
-		state_machine()
-		_velocity = move_and_slide(_velocity, _UP_DIRECTION)
-	else:
-		_animationPlayer.play("idle")
+#func _physics_process(delta: float) -> void:
+#	if GameHandler._is_action_player == true:
+#		_velocity.y += gravity * delta
+#
+#		#move()
+#		jump()
+#		attack()
+#		#dash()
+#		crawl()
+#		state_machine()
+#		_velocity = move_and_slide(_velocity, _UP_DIRECTION)
+#	else:
+#		_animationPlayer.play("idle")
 	
 func travel_to(new_state : int) -> void:
 	_current_state = new_state
@@ -218,8 +219,8 @@ func change_animation() -> void:
 func _on_AnimationPlayer_animation_finished(anim_name: String) -> void:
 	if anim_name == "basic_attack":
 		_is_attacking = false
-	if anim_name == "dash":
-		_is_dashing = false
+	#if anim_name == "dash":
+	#	_is_dashing = false
 
 func _on_AnimationFragmentRune_animation_finished(anim_name: String) -> void:
 	if anim_name == GameHandler._name_anim_rune:

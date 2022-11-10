@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=2]
+[gd_scene load_steps=39 format=2]
 
 [ext_resource path="res://world_environment/Main.tres" type="Environment" id=1]
 [ext_resource path="res://audio/ambient/chill_ambient.ogg" type="AudioStream" id=2]
@@ -23,8 +23,6 @@
 [ext_resource path="res://assets/dialogic/ControlDialogic.tscn" type="PackedScene" id=21]
 [ext_resource path="res://assets/shaders/fog.shader" type="Shader" id=22]
 [ext_resource path="res://river.wav" type="AudioStream" id=23]
-[ext_resource path="res://assets/forest/ControlSign.tscn" type="PackedScene" id=24]
-[ext_resource path="res://assets/forest/MapController.tscn" type="PackedScene" id=25]
 [ext_resource path="res://assets/dialogic/conversation/conversation.gd" type="Script" id=26]
 
 [sub_resource type="RectangleShape2D" id=14]
@@ -76,10 +74,12 @@ extents = Vector2( 16.6854, 368.503 )
 
 [node name="World" type="Node"]
 
-[node name="MapController" parent="." instance=ExtResource( 25 )]
-
 [node name="Forest" type="Node2D" parent="."]
 position = Vector2( 3919.98, -382 )
+
+[node name="guikeybinding" parent="Forest" instance=ExtResource( 5 )]
+follow_viewport_enable = true
+follow_viewport_scale = 4.0
 
 [node name="Conversation" type="Area2D" parent="Forest"]
 position = Vector2( 669.883, 1304.84 )
@@ -193,12 +193,6 @@ cell_custom_transform = Transform2D( 70, 0, 0, 70, 0, 0 )
 format = 1
 tile_data = PoolIntArray( 589928, 10, 0, 589929, 11, 0, 589930, 11, 0, 589931, 11, 0, 589932, 11, 0, 589933, 11, 0, 589934, 12, 0, 655464, 13, 0, 655465, 14, 0, 655466, 14, 0, 655467, 14, 0, 655468, 14, 0, 655469, 14, 0, 655470, 15, 0, 721000, 13, 0, 721001, 14, 0, 721002, 14, 0, 721003, 14, 0, 721004, 14, 0, 721005, 14, 0, 721006, 15, 0, 786536, 13, 0, 786537, 14, 0, 786538, 14, 0, 786539, 14, 0, 786540, 14, 0, 786541, 14, 0, 786542, 15, 0, 852031, 17, 0, 852032, 19, 0, 852072, 13, 0, 852073, 14, 0, 852074, 14, 0, 852075, 14, 0, 852076, 14, 0, 852077, 14, 0, 852078, 15, 0, 917567, 16, 0, 917568, 18, 0, 917608, 13, 0, 917609, 14, 0, 917610, 14, 0, 917611, 14, 0, 917612, 14, 0, 917613, 14, 0, 917614, 15, 0, 983103, 13, 0, 983104, 15, 0, 983144, 13, 0, 983145, 14, 0, 983146, 14, 0, 983147, 14, 0, 983148, 14, 0, 983149, 14, 0, 983150, 15, 0, 1048639, 13, 0, 1048640, 15, 0, 1048680, 13, 0, 1048681, 14, 0, 1048682, 14, 0, 1048683, 14, 0, 1048684, 14, 0, 1048685, 14, 0, 1048686, 15, 0, 1114175, 13, 0, 1114176, 15, 0, 1114216, 13, 0, 1114217, 14, 0, 1114218, 14, 0, 1114219, 14, 0, 1114220, 14, 0, 1114221, 14, 0, 1114222, 15, 0, 1179711, 13, 0, 1179712, 15, 0, 1179752, 13, 0, 1179753, 14, 0, 1179754, 14, 0, 1179755, 14, 0, 1179756, 14, 0, 1179757, 14, 0, 1179758, 15, 0, 1245247, 13, 0, 1245248, 15, 0, 1245288, 13, 0, 1245289, 14, 0, 1245290, 14, 0, 1245291, 14, 0, 1245292, 14, 0, 1245293, 14, 0, 1245294, 15, 0 )
 
-[node name="ControlSign" parent="Forest" instance=ExtResource( 24 )]
-visible = false
-position = Vector2( -2798.46, 1290.66 )
-scale = Vector2( 0.12, 0.12 )
-collision_mask = 3
-
 [node name="Camera" parent="Forest" instance=ExtResource( 8 )]
 position = Vector2( -2955.06, 0 )
 limit_left = 0
@@ -253,10 +247,6 @@ name_anim_rune = "fragment_laguz_1"
 
 [node name="Buffalo2" parent="Forest" instance=ExtResource( 3 )]
 position = Vector2( 8536.56, 761.482 )
-
-[node name="guikeybinding" parent="Forest" instance=ExtResource( 5 )]
-follow_viewport_enable = true
-follow_viewport_scale = 4.0
 
 [node name="Apple" parent="Forest" instance=ExtResource( 13 )]
 position = Vector2( 1851, 718 )

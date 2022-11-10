@@ -1,6 +1,6 @@
 extends Area2D
 
-onready var _map_controller := $"../../MapController"
+onready var _map_controller := $"../../CanvasLayer/MapController"
 
 var _interact : bool = false
 
@@ -9,7 +9,7 @@ func _process(delta: float) -> void:
 
 
 func _on_ControlSign_body_entered(body: Node) -> void:
-	if body.is_in_group("Player") and _interact:
+	if body.is_in_group("Player") and _interact == true:
 		if _map_controller.visible == false:
 			_map_controller.visible == true
 		else:

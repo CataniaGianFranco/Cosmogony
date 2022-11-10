@@ -1,4 +1,4 @@
-[gd_scene load_steps=175 format=2]
+[gd_scene load_steps=178 format=2]
 
 [ext_resource path="res://assets/characters/player/sprites/idle/idle_4.png" type="Texture" id=1]
 [ext_resource path="res://assets/characters/player/scripts/player.gd" type="Script" id=2]
@@ -59,9 +59,9 @@
 [ext_resource path="res://assets/characters/player/sprites/hurt/hurt_1.png" type="Texture" id=57]
 [ext_resource path="res://assets/characters/player/sprites/hurt/hurt_4.png" type="Texture" id=58]
 [ext_resource path="res://scripts/hit_box.gd" type="Script" id=59]
-[ext_resource path="res://assets/characters/player/sfx/dash.wav" type="AudioStream" id=60]
-[ext_resource path="res://assets/characters/player/sfx/scarf.wav" type="AudioStream" id=61]
-[ext_resource path="res://assets/characters/player/sfx/jump.wav" type="AudioStream" id=62]
+[ext_resource path="res://assets/characters/player/player_attack.gd" type="Script" id=60]
+[ext_resource path="res://assets/characters/player/player_jump.gd" type="Script" id=61]
+[ext_resource path="res://assets/characters/player/player_fall.gd" type="Script" id=62]
 [ext_resource path="res://assets/characters/player/sprites/attack_scarf/centred_basic_attack_floor/basic_attack_4.png" type="Texture" id=63]
 [ext_resource path="res://assets/collects/runes/Laguz/fragments/1/idle/rune_part1_6.png" type="Texture" id=64]
 [ext_resource path="res://assets/collects/runes/Laguz/fragments/1/disappear/rune_part1_5.png" type="Texture" id=65]
@@ -149,6 +149,9 @@
 [ext_resource path="res://assets/collects/runes/Laguz/fragments/5/idle/rune_part5_6.png" type="Texture" id=147]
 [ext_resource path="res://assets/collects/runes/Laguz/fragments/5/idle/rune_part5_2.png" type="Texture" id=148]
 [ext_resource path="res://assets/collects/runes/Laguz/fragments/5/disappear/rune_part5_3.png" type="Texture" id=149]
+[ext_resource path="res://assets/characters/player/scripts/player_fsm.gd" type="Script" id=150]
+[ext_resource path="res://assets/characters/player/scripts/player_idle.gd" type="Script" id=151]
+[ext_resource path="res://assets/characters/player/scripts/player_walk.gd" type="Script" id=152]
 
 [sub_resource type="StreamTexture" id=20]
 
@@ -617,9 +620,6 @@ tracks/1/keys = {
 collision_layer = 2
 collision_mask = 15
 script = ExtResource( 2 )
-sfx_dash = ExtResource( 60 )
-sfx_basic_attack = ExtResource( 61 )
-sfx_jump = ExtResource( 62 )
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = SubResource( 20 )
@@ -673,6 +673,27 @@ anims/fragment_laguz_4 = SubResource( 27 )
 visible = false
 position = Vector2( 0, -104 )
 texture = ExtResource( 78 )
+
+[node name="PlayerFSM" type="Node2D" parent="."]
+script = ExtResource( 150 )
+_initial_state = "Idle"
+
+[node name="Idle" type="Node2D" parent="PlayerFSM"]
+script = ExtResource( 151 )
+
+[node name="Walk" type="Node2D" parent="PlayerFSM"]
+script = ExtResource( 152 )
+
+[node name="Attack" type="Node2D" parent="PlayerFSM"]
+script = ExtResource( 60 )
+
+[node name="Jump" type="Node2D" parent="PlayerFSM"]
+script = ExtResource( 61 )
+
+[node name="Hurt" type="Node2D" parent="PlayerFSM"]
+
+[node name="Fall" type="Node2D" parent="PlayerFSM"]
+script = ExtResource( 62 )
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
 [connection signal="animation_finished" from="AnimationFragmentRune" to="." method="_on_AnimationFragmentRune_animation_finished"]
