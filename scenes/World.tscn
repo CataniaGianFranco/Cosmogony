@@ -1,12 +1,4 @@
-<<<<<<< Updated upstream
 [gd_scene load_steps=39 format=2]
-=======
-<<<<<<< HEAD
-[gd_scene load_steps=42 format=2]
-=======
-[gd_scene load_steps=39 format=2]
->>>>>>> 27e22145b136c7b3ae359d067d0d37e73c8716ad
->>>>>>> Stashed changes
 
 [ext_resource path="res://world_environment/Main.tres" type="Environment" id=1]
 [ext_resource path="res://audio/ambient/chill_ambient.ogg" type="AudioStream" id=2]
@@ -21,6 +13,7 @@
 [ext_resource path="res://assets/forest/tree/Tree.tscn" type="PackedScene" id=11]
 [ext_resource path="res://assets/characters/npcs/allies/ally_squirrel/AllySquirrel.tscn" type="PackedScene" id=12]
 [ext_resource path="res://assets/collects/apple/Apple.tscn" type="PackedScene" id=13]
+[ext_resource path="res://scenes/Plataforma.tscn" type="PackedScene" id=14]
 [ext_resource path="res://scenes/Plataforma2.tscn" type="PackedScene" id=15]
 [ext_resource path="res://assets/collects/runes/StoneRune.tscn" type="PackedScene" id=16]
 [ext_resource path="res://assets/collects/runes/Laguz/StoneRuneLaguzOn.tres" type="SpriteFrames" id=17]
@@ -79,67 +72,8 @@ extents = Vector2( 27.7656, 490.666 )
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 16.6854, 368.503 )
 
-[sub_resource type="Animation" id=18]
-resource_name = "MovePlat"
-length = 12.0
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("Plataforma2:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 6, 12 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 0, 0 ), Vector2( 1063, 0 ), Vector2( 0, 0 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Plataforma2:rotation_degrees")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 6, 12 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, 0.0, 0.0 ]
-}
-
-<<<<<<< Updated upstream
-=======
-[sub_resource type="Animation" id=19]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/path = NodePath("Plataforma2:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 586, 0 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Plataforma2:rotation_degrees")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0.0 ]
-}
-
 [node name="World" type="Node"]
 
->>>>>>> Stashed changes
 [node name="Forest" type="Node2D" parent="."]
 position = Vector2( 3919.98, -382 )
 
@@ -163,7 +97,7 @@ position = Vector2( 11166.8, 1235.62 )
 
 [node name="Fog" type="Sprite" parent="Forest"]
 material = SubResource( 4 )
-position = Vector2( 4118.02, 0 )
+position = Vector2( 3864, 0 )
 scale = Vector2( 35.7813, 32.343 )
 z_index = -2
 texture = SubResource( 9 )
@@ -279,6 +213,12 @@ position = Vector2( 9468.1, 1306.58 )
 name_animation = "stone_rune_on"
 frames_rune = ExtResource( 17 )
 
+[node name="Plataforma" parent="Forest" instance=ExtResource( 14 )]
+position = Vector2( 1854, 1002 )
+
+[node name="Plataforma2" parent="Forest" instance=ExtResource( 15 )]
+position = Vector2( 3434, 1120 )
+
 [node name="AllySquirrel" parent="Forest" instance=ExtResource( 12 )]
 position = Vector2( 1004.57, 1292.97 )
 
@@ -357,17 +297,6 @@ position = Vector2( 11415.4, 1251.77 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Forest/LimitRight"]
 position = Vector2( 0.4375, -273.561 )
 shape = SubResource( 5 )
-
-[node name="Position2D" type="Position2D" parent="Forest"]
-position = Vector2( 3107.02, 1201 )
-
-[node name="Plataforma2" parent="Forest/Position2D" instance=ExtResource( 15 )]
-position = Vector2( 586, 0 )
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Forest/Position2D"]
-autoplay = "MovePlat"
-anims/MovePlat = SubResource( 18 )
-anims/RESET = SubResource( 19 )
 
 [node name="Parallax" type="Node2D" parent="."]
 position = Vector2( 3919.98, -1.42987 )
