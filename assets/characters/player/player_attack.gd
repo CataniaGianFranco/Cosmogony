@@ -1,10 +1,17 @@
-extends "res://assets/characters/player/scripts/player_state.gd"
+extends "res://assets/characters/player/scripts/player_motion.gd"
 
 func _enter() -> void:
-	_animation.play("basic_attack")
+	if _player._snap_length.y > 0: 
+		_animation.play("basic_attack")
+	else:
+		_animation.play("basic_attack_on_air")
 
-func _handle_input(event: InputEvent) -> void:
-	pass
+func _update(delta) -> void:
+	._update(delta)
+	_player._velocity.x = _get_direction() * _player.speed
 
 func _exit() -> void:
-	print("Te tomaste el palo del idle")
+	pass
+
+func _animation_finished() -> void:
+	emit_signal("finished", "Idle")

@@ -1,11 +1,10 @@
 extends "res://fsm/state.gd"
 
-var _player: KinematicBody2D
+onready var _player: KinematicBody2D = owner
 var _animation: AnimationPlayer
 var _sprite: Sprite
 
 func _ready() -> void:
-	_player = owner
 	_sprite = _player.get_node("Sprite")
 	_animation = _player.get_node("AnimationPlayer")
 

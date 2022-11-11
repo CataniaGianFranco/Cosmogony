@@ -4,17 +4,13 @@ var _direction: Vector2
 
 func _enter() -> void:
 	._enter()
+	_player._velocity.x = 0
 	_animation.play("idle")
 
-#func _update(delta) -> void:
-#	if _get_direction() != 0:
-#		emit_signal("finished", "Walk")
-
-func _handle_input(event: InputEvent):
-	_direction.x = int(event.is_action_pressed("ui_right")) - int(event.is_action_pressed("ui_left"))
-	
-	if _direction.x != 0:
+func _update(delta) -> void:
+	._update(delta)
+	if _get_direction() != 0:
 		emit_signal("finished", "Walk")
 
 func _exit() -> void:
-	_direction = _player._UP_DIRECTION
+	_direction = Vector2.ZERO

@@ -1,4 +1,4 @@
-[gd_scene load_steps=178 format=2]
+[gd_scene load_steps=186 format=2]
 
 [ext_resource path="res://assets/characters/player/sprites/idle/idle_4.png" type="Texture" id=1]
 [ext_resource path="res://assets/characters/player/scripts/player.gd" type="Script" id=2]
@@ -152,6 +152,13 @@
 [ext_resource path="res://assets/characters/player/scripts/player_fsm.gd" type="Script" id=150]
 [ext_resource path="res://assets/characters/player/scripts/player_idle.gd" type="Script" id=151]
 [ext_resource path="res://assets/characters/player/scripts/player_walk.gd" type="Script" id=152]
+[ext_resource path="res://assets/characters/player/scripts/weapon.gd" type="Script" id=153]
+[ext_resource path="res://assets/characters/player/sprites/attack_scarf/centred_basic_attack__air/basic_attack_1.png" type="Texture" id=154]
+[ext_resource path="res://assets/characters/player/sprites/attack_scarf/centred_basic_attack__air/basic_attack_3.png" type="Texture" id=155]
+[ext_resource path="res://assets/characters/player/sprites/attack_scarf/centred_basic_attack__air/basic_attack_2.png" type="Texture" id=156]
+[ext_resource path="res://assets/characters/player/sprites/attack_scarf/centred_basic_attack__air/basic_attack_4.png" type="Texture" id=157]
+[ext_resource path="res://assets/characters/player/sprites/attack_scarf/centred_basic_attack__air/basic_attack_5.png" type="Texture" id=158]
+[ext_resource path="res://assets/characters/player/sprites/attack_scarf/centred_basic_attack__air/basic_attack_6.png" type="Texture" id=159]
 
 [sub_resource type="StreamTexture" id=20]
 
@@ -161,9 +168,6 @@ height = 85.0
 
 [sub_resource type="RectangleShape2D" id=21]
 extents = Vector2( 32, 27.5 )
-
-[sub_resource type="RectangleShape2D" id=19]
-extents = Vector2( 6, 12 )
 
 [sub_resource type="Animation" id=4]
 length = 0.001
@@ -192,7 +196,7 @@ tracks/1/keys = {
 "values": [ SubResource( 20 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("ScarfHitBox/ScarfCollision:disabled")
+tracks/2/path = NodePath("Weapon/ScarfHitBox/ScarfCollision:disabled")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -221,13 +225,41 @@ tracks/0/keys = {
 "values": [ ExtResource( 29 ), ExtResource( 10 ), ExtResource( 16 ), ExtResource( 63 ), ExtResource( 27 ), ExtResource( 28 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("ScarfHitBox/ScarfCollision:disabled")
+tracks/1/path = NodePath("Weapon/ScarfHitBox/ScarfCollision:disabled")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
 "times": PoolRealArray( 0, 0.25, 0.333333 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true ]
+}
+
+[sub_resource type="Animation" id=28]
+resource_name = "basic_attack_on_air"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 154 ), ExtResource( 156 ), ExtResource( 155 ), ExtResource( 157 ), ExtResource( 158 ), ExtResource( 159 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Weapon/ScarfHitBox/ScarfCollision:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3, 0.4 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
 "values": [ true, false, true ]
@@ -616,6 +648,9 @@ tracks/1/keys = {
 "values": [ Vector2( 0, -80 ), Vector2( 0, -104 ), Vector2( 0, -93.7917 ), Vector2( 0, -104 ), Vector2( 0, -15 ) ]
 }
 
+[sub_resource type="RectangleShape2D" id=19]
+extents = Vector2( 6, 12 )
+
 [node name="Player" type="KinematicBody2D" groups=["Player"]]
 collision_layer = 2
 collision_mask = 15
@@ -633,18 +668,10 @@ position = Vector2( 5, 20.5 )
 shape = SubResource( 21 )
 disabled = true
 
-[node name="ScarfHitBox" type="Area2D" parent="."]
-collision_layer = 2
-collision_mask = 4
-script = ExtResource( 59 )
-
-[node name="ScarfCollision" type="CollisionShape2D" parent="ScarfHitBox"]
-position = Vector2( 91, -11 )
-shape = SubResource( 19 )
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/RESET = SubResource( 4 )
 anims/basic_attack = SubResource( 8 )
+anims/basic_attack_on_air = SubResource( 28 )
 anims/crawl = SubResource( 12 )
 anims/crawling = SubResource( 13 )
 anims/crouch = SubResource( 14 )
@@ -674,6 +701,21 @@ visible = false
 position = Vector2( 0, -104 )
 texture = ExtResource( 78 )
 
+[node name="Weapon" type="Node2D" parent="."]
+script = ExtResource( 153 )
+
+[node name="ScarfHitBox" type="Area2D" parent="Weapon"]
+collision_layer = 2
+collision_mask = 4
+script = ExtResource( 59 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ScarfCollision" type="CollisionShape2D" parent="Weapon/ScarfHitBox"]
+position = Vector2( 91, -11 )
+shape = SubResource( 19 )
+
 [node name="PlayerFSM" type="Node2D" parent="."]
 script = ExtResource( 150 )
 _initial_state = "Idle"
@@ -695,5 +737,6 @@ script = ExtResource( 61 )
 [node name="Fall" type="Node2D" parent="PlayerFSM"]
 script = ExtResource( 62 )
 
-[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
+[connection signal="animation_finished" from="AnimationPlayer" to="PlayerFSM" method="_on_AnimationPlayer_animation_finished"]
 [connection signal="animation_finished" from="AnimationFragmentRune" to="." method="_on_AnimationFragmentRune_animation_finished"]
+[connection signal="body_entered" from="Weapon/ScarfHitBox" to="Weapon" method="_on_ScarfHitBox_body_entered"]

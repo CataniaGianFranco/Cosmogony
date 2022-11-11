@@ -82,6 +82,7 @@ follow_viewport_enable = true
 follow_viewport_scale = 4.0
 
 [node name="Conversation" type="Area2D" parent="Forest"]
+visible = false
 position = Vector2( 669.883, 1304.84 )
 script = ExtResource( 26 )
 __meta__ = {
@@ -234,7 +235,6 @@ position = Vector2( 8979, 1283 )
 scale = Vector2( 1.25, 1.25 )
 
 [node name="EnemyOwl" parent="Forest" instance=ExtResource( 9 )]
-visible = false
 position = Vector2( 2400, 855 )
 
 [node name="EnemyOwl2" parent="Forest" instance=ExtResource( 9 )]
@@ -261,7 +261,7 @@ position = Vector2( 3297, 966 )
 scale = Vector2( 1, 1 )
 
 [node name="Player" parent="Forest" instance=ExtResource( 6 )]
-position = Vector2( -3196.49, 1256.67 )
+position = Vector2( -963.877, 1256.67 )
 scale = Vector2( 1.4, 1.4 )
 collision_mask = 9
 

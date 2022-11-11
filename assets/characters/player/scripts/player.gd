@@ -1,7 +1,5 @@
 extends KinematicBody2D
 
-onready var _audio_stream_player : AudioStreamPlayer = $AudioStreamPlayer
-onready var _sprite : Sprite = $Sprite
 #Variables públicas.
 export(float) var speed: float = 600.0
 export(float) var jump_strength: float = 1500.0
@@ -12,10 +10,14 @@ export(AudioStream) var sfx_dash = null
 export(AudioStream) var sfx_basic_attack = null
 export(AudioStream) var sfx_jump = null
 
-#Variables privadas.
-var _jumps_made: int = 0
-var _velocity: Vector2 = Vector2.ZERO
-var _snap: Vector2 = Vector2.ZERO
+onready var _start_scale: Vector2 = $"Sprite".scale
+onready var _animationPlayer: AnimationPlayer = $"AnimationPlayer"
+onready var _scarf_hit_box : Area2D = $ScarfHitBox
+onready var _audio_stream_player : AudioStreamPlayer = $AudioStreamPlayer
+onready var _sprite : Sprite = $Sprite
+
+
+
 var _is_attacking: bool = false
 var _is_dashing: bool = false
 var _is_jumping: bool = false
@@ -23,9 +25,10 @@ var _is_crawling: bool = false
 var _is_lading: bool = false
 const _UP_DIRECTION : Vector2 = Vector2.UP
 
-onready var _start_scale: Vector2 = $"Sprite".scale
-onready var _animationPlayer: AnimationPlayer = $"AnimationPlayer"
-onready var _scarf_hit_box : Area2D = $ScarfHitBox
+#Variables privadas.
+var _jumps_made: int = 0
+var _velocity: Vector2 = Vector2.ZERO
+var _snap_length: Vector2 = Vector2.ZERO
 #Máquina de estados
 enum _State {IDLE, WALK, JUMP, DOUBLE_JUMP, FALL, ATTACK, DASH, CRAWL, CRAWLING}
 var _current_state: int
@@ -33,8 +36,9 @@ var _current_animation: String
 var _new_animation: String
 
 func _ready() -> void:
-	travel_to(_State.IDLE)
-	get_node("ScarfHitBox/ScarfCollision").disabled = true #Encontrar una solución sin necesidad de pedirle ya que comienza activado.
+	pass
+	#travel_to(_State.IDLE)
+	#get_node("$Weapon/ScarfHitBox/ScarfCollision").disabled = true #Encontrar una solución sin necesidad de pedirle ya que comienza activado.
 
 func _process(delta: float) -> void:
 	#var fps = Engine.get_frames_per_second()
