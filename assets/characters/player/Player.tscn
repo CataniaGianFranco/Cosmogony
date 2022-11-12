@@ -653,7 +653,7 @@ extents = Vector2( 6, 12 )
 
 [node name="Player" type="KinematicBody2D" groups=["Player"]]
 collision_layer = 2
-collision_mask = 15
+collision_mask = 13
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -736,6 +736,10 @@ script = ExtResource( 61 )
 
 [node name="Fall" type="Node2D" parent="PlayerFSM"]
 script = ExtResource( 62 )
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+enabled = true
+cast_to = Vector2( 0, -62 )
 
 [connection signal="animation_finished" from="AnimationPlayer" to="PlayerFSM" method="_on_AnimationPlayer_animation_finished"]
 [connection signal="animation_finished" from="AnimationFragmentRune" to="." method="_on_AnimationFragmentRune_animation_finished"]

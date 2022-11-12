@@ -17,13 +17,13 @@ onready var _audio_stream_player : AudioStreamPlayer = $AudioStreamPlayer
 onready var _sprite : Sprite = $Sprite
 
 
-
 var _is_attacking: bool = false
 var _is_dashing: bool = false
 var _is_jumping: bool = false
 var _is_crawling: bool = false
 var _is_lading: bool = false
 const _UP_DIRECTION : Vector2 = Vector2.UP
+var ray : RayCast2D
 
 #Variables privadas.
 var _jumps_made: int = 0
@@ -36,15 +36,18 @@ var _current_animation: String
 var _new_animation: String
 
 func _ready() -> void:
-	pass
+	ray = get_node("RayCast2D")
+	ray.enabled = false
 	#travel_to(_State.IDLE)
 	#get_node("$Weapon/ScarfHitBox/ScarfCollision").disabled = true #Encontrar una solución sin necesidad de pedirle ya que comienza activado.
 
 func _process(delta: float) -> void:
+	
+	#print("Velocity Y: ", _velocity.y)
+	#print("Velocity X: ", _velocity.x)
 	#var fps = Engine.get_frames_per_second()
 	#var lerp_interval = _velocity / fps
 	#var lerp_position = global_transform.origin + lerp_interval
-	
 	#if fps > 60:
 	#	_sprite.set_as_toplevel(true)
 	#	_sprite.global_transform.origin = _sprite.global_transform.origin.linear_interpolate(lerp_position, 50 * delta)
