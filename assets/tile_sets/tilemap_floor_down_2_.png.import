@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/controls_sign.png-d3844eb9866c5fe492d2cbb61b7c6012.stex"
+path="res://.import/tilemap_floor_down_2_.png-fa1038cc38599d672715323d824473b0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/controls_menu/controls_sign.png"
-dest_files=[ "res://.import/controls_sign.png-d3844eb9866c5fe492d2cbb61b7c6012.stex" ]
+source_file="res://assets/tile_sets/tilemap_floor_down_2_.png"
+dest_files=[ "res://.import/tilemap_floor_down_2_.png-fa1038cc38599d672715323d824473b0.stex" ]
 
 [params]
 

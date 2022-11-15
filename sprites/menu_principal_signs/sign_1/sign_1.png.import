@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/controls_sign.png-d3844eb9866c5fe492d2cbb61b7c6012.stex"
+path="res://.import/sign_1.png-a40e4840dc1404a54d6789610b177898.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/controls_menu/controls_sign.png"
-dest_files=[ "res://.import/controls_sign.png-d3844eb9866c5fe492d2cbb61b7c6012.stex" ]
+source_file="res://sprites/menu_principal_signs/sign_1/sign_1.png"
+dest_files=[ "res://.import/sign_1.png-a40e4840dc1404a54d6789610b177898.stex" ]
 
 [params]
 

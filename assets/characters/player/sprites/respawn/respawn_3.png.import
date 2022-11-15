@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/controls_sign.png-d3844eb9866c5fe492d2cbb61b7c6012.stex"
+path="res://.import/respawn_3.png-d01610158124443ea622f93d4ebe839b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/controls_menu/controls_sign.png"
-dest_files=[ "res://.import/controls_sign.png-d3844eb9866c5fe492d2cbb61b7c6012.stex" ]
+source_file="res://assets/characters/player/sprites/respawn/respawn_3.png"
+dest_files=[ "res://.import/respawn_3.png-d01610158124443ea622f93d4ebe839b.stex" ]
 
 [params]
 
