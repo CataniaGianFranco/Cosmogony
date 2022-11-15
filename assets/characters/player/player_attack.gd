@@ -13,7 +13,7 @@ func _update(delta) -> void:
 	_player._velocity.x = _get_direction() * _player.speed
 	_player._audio_stream_player.stream = _player.sfx_basic_attack
 	_player._audio_stream_player.play()
-
+	Input.start_joy_vibration(0,0.02,0.02,0.2)
 func _exit() -> void:
 	pass
 

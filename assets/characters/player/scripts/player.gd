@@ -184,29 +184,6 @@ func dash() -> void:
 		_audio_stream_player.stream = sfx_dash
 		_audio_stream_player.play()
 
-func jump() -> void:
-	var is_jumping: bool = Input.is_action_just_pressed("ui_jump")
-	var is_double_jumping: bool = Input.is_action_just_pressed("ui_jump")
-	var is_jump_cancelled: float = Input.is_action_just_released("ui_jump")
-	
-	if is_on_floor():
-		_jumps_made = 0
-		_is_lading = true
-		if is_jumping and _is_crawling == false:
-			_jumps_made += 1
-			_velocity.y = -jump_strength
-			_audio_stream_player.stream = sfx_jump
-			_audio_stream_player.play()
-	else:
-		if is_double_jumping:
-			_jumps_made += 1;
-			#AudioStreamPlayer.stream = sfx_jump
-			_audio_stream_player.play()
-			if _jumps_made <= _MAXIMUM_JUMPS:
-				_velocity.y = -jump_strength
-		if is_jump_cancelled:
-			_velocity.y = 0.0
-
 func crawl() -> void:
 		var is_crawl: bool = Input.is_action_pressed("ui_down")
 		if is_crawl and _jumps_made == 0:
@@ -223,12 +200,6 @@ func change_animation() -> void:
 		$SpriteFramentRune.visible = true
 		$AnimationFragmentRune.play(GameHandler._name_anim_rune)
 		GameHandler._active_rune_animation = false
-
-func _on_AnimationPlayer_animation_finished(anim_name: String) -> void:
-	if anim_name == "basic_attack":
-		_is_attacking = false
-	#if anim_name == "dash":
-	#	_is_dashing = false
 
 func _on_AnimationFragmentRune_animation_finished(anim_name: String) -> void:
 	if anim_name == GameHandler._name_anim_rune:
