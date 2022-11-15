@@ -3,7 +3,6 @@ extends KinematicBody2D
 #Variables públicas.
 export(float) var speed: float = 600.0
 export(float) var jump_strength: float = 1500.0
-export(int) var maximum_jumps: int = 2
 export(float) var double_jump_strength: float = 1200.0
 export(float) var gravity: float = 4500.0
 export(AudioStream) var sfx_dash = null
@@ -12,9 +11,10 @@ export(AudioStream) var sfx_jump = null
 
 onready var _start_scale: Vector2 = $"Sprite".scale
 onready var _animationPlayer: AnimationPlayer = $"AnimationPlayer"
-onready var _scarf_hit_box : Area2D = $ScarfHitBox
+onready var _weapon: Node2D = $Weapon
+onready var _scarf_hit_box: Area2D = $Weapon/ScarfHitBox
 onready var _audio_stream_player : AudioStreamPlayer = $AudioStreamPlayer
-onready var _sprite : Sprite = $Sprite
+onready var _sprite: Sprite = $Sprite
 
 
 var _is_attacking: bool = false
@@ -23,6 +23,7 @@ var _is_jumping: bool = false
 var _is_crawling: bool = false
 var _is_lading: bool = false
 const _UP_DIRECTION : Vector2 = Vector2.UP
+const _MAXIMUM_JUMPS: int = 2
 var ray : RayCast2D
 
 #Variables privadas.
@@ -36,10 +37,10 @@ var _current_animation: String
 var _new_animation: String
 
 func _ready() -> void:
+	#Encontrar una solución sin necesidad de pedirle ya que comienza activado.
 	ray = get_node("RayCast2D")
 	ray.enabled = false
 	#travel_to(_State.IDLE)
-	#get_node("$Weapon/ScarfHitBox/ScarfCollision").disabled = true #Encontrar una solución sin necesidad de pedirle ya que comienza activado.
 
 func _process(delta: float) -> void:
 	
@@ -148,19 +149,19 @@ func state_machine() -> void:
 		if _current_state == _State.IDLE and _velocity.y > 0:
 			travel_to(_State.FALL)
 
-func move() -> void:
-	var _horizontal_direction: float = (Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left"))
-	
-	if _is_attacking == false and _is_dashing == false:
-		_velocity.x = _horizontal_direction * speed
-		if _velocity.x > 0:
-			$Sprite.flip_h = false
-			_scarf_hit_box.scale.x = 1
-		elif _velocity.x < 0:
-			$Sprite.flip_h = true
-			_scarf_hit_box.scale.x = -1
-		else:
-			_velocity.x = 0
+#func move() -> void:
+#	var _horizontal_direction: float = (Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left"))
+#
+#	if _is_attacking == false and _is_dashing == false:
+#		_velocity.x = _horizontal_direction * speed
+#		if _velocity.x > 0:
+#			$Sprite.flip_h = false
+#			_scarf_hit_box.scale.x = 1
+#		elif _velocity.x < 0:
+#			$Sprite.flip_h = true
+#			_scarf_hit_box.scale.x = -1
+#		else:
+#			_velocity.x = 0
 
 func attack() -> void:
 	var is_basic_attack: bool = Input.is_action_just_pressed("ui_basic_attack")
@@ -201,7 +202,7 @@ func jump() -> void:
 			_jumps_made += 1;
 			#AudioStreamPlayer.stream = sfx_jump
 			_audio_stream_player.play()
-			if _jumps_made <= maximum_jumps:
+			if _jumps_made <= _MAXIMUM_JUMPS:
 				_velocity.y = -jump_strength
 		if is_jump_cancelled:
 			_velocity.y = 0.0

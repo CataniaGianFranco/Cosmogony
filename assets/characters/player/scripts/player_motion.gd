@@ -12,6 +12,7 @@ func _get_direction() -> int:
 	return _direction
 
 func _update(delta):
+	print(_player._jumps_made)
 	_player.move_and_slide_with_snap(_player._velocity, _player._snap_length, _player._UP_DIRECTION)
 	_player._velocity.y += _player.gravity * delta
 

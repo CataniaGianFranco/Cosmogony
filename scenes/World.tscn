@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=2]
+[gd_scene load_steps=43 format=2]
 
 [ext_resource path="res://world_environment/Main.tres" type="Environment" id=1]
 [ext_resource path="res://audio/ambient/chill_ambient.ogg" type="AudioStream" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://assets/forest/tree/Tree.tscn" type="PackedScene" id=11]
 [ext_resource path="res://assets/characters/npcs/allies/ally_squirrel/AllySquirrel.tscn" type="PackedScene" id=12]
 [ext_resource path="res://assets/collects/apple/Apple.tscn" type="PackedScene" id=13]
+[ext_resource path="res://assets/characters/player/sfx/scarf.wav" type="AudioStream" id=14]
 [ext_resource path="res://scenes/Plataforma2.tscn" type="PackedScene" id=15]
 [ext_resource path="res://assets/collects/runes/StoneRune.tscn" type="PackedScene" id=16]
 [ext_resource path="res://assets/collects/runes/Laguz/StoneRuneLaguzOn.tres" type="SpriteFrames" id=17]
@@ -22,6 +23,8 @@
 [ext_resource path="res://assets/dialogic/ControlDialogic.tscn" type="PackedScene" id=21]
 [ext_resource path="res://assets/shaders/fog.shader" type="Shader" id=22]
 [ext_resource path="res://river.wav" type="AudioStream" id=23]
+[ext_resource path="res://assets/characters/player/sfx/jump.wav" type="AudioStream" id=24]
+[ext_resource path="res://assets/characters/player/sfx/dash.wav" type="AudioStream" id=25]
 [ext_resource path="res://assets/dialogic/conversation/conversation.gd" type="Script" id=26]
 
 [sub_resource type="RectangleShape2D" id=14]
@@ -314,9 +317,12 @@ position = Vector2( 3297, 966 )
 scale = Vector2( 1, 1 )
 
 [node name="Player" parent="Forest" instance=ExtResource( 6 )]
-position = Vector2( 4613.33, 1256.67 )
+position = Vector2( 4883.73, 1256.67 )
 scale = Vector2( 1.4, 1.4 )
 collision_mask = 9
+sfx_dash = ExtResource( 25 )
+sfx_basic_attack = ExtResource( 14 )
+sfx_jump = ExtResource( 24 )
 
 [node name="ControlDialogic" parent="Forest/Player" instance=ExtResource( 21 )]
 visible = false
