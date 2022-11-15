@@ -1,6 +1,6 @@
 extends VBoxContainer
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	full_screen()
 
 func full_screen() -> void:

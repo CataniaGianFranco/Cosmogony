@@ -12,7 +12,7 @@ func _ready() -> void:
 	_start.grab_focus()
 	Input.set_mouse_mode(Input.MOUSE_MODE_CONFINED)
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if !_video_player.is_playing():
 		_video_player.play()
 

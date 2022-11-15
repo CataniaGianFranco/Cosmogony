@@ -10,7 +10,7 @@ func _ready() -> void:
 	_animation = _player.get_node("AnimationPlayer")
 	_raycast = _player.get_node("RayCast2D")
 
-func _handle_input(event: InputEvent):
+func _handle_input(_event: InputEvent):
 	pass
 
 func _animation_finished():

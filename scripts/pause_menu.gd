@@ -5,18 +5,22 @@ var _is_pause: bool = false
 func _ready() -> void:
 	pause_mode = Node.PAUSE_MODE_PROCESS
 
-func _process(delta: float) -> void:
-	if _is_pause == false and Input.is_action_just_pressed("ui_pause"):
+func _process(_delta: float) -> void:
+	_mode_pause()
+
+
+func _mode_pause() -> void:
+	var action_pause: bool = Input.is_action_just_pressed("ui_pause")
+	if _is_pause == false and action_pause:
 		get_tree().paused = !get_tree().paused
 		get_child(0).visible = get_tree().paused
 		_is_pause = true
 		get_tree().paused = true
-	elif _is_pause == true and Input.is_action_just_pressed("ui_pause"):
+	elif _is_pause == true and action_pause:
 		get_tree().paused = false
 		get_tree().paused = get_tree().paused
 		get_child(0).visible = get_tree().paused
 		_is_pause = false
-
 
 func _on_Main_menu_pressed() -> void:
 	get_child(0).visible = false

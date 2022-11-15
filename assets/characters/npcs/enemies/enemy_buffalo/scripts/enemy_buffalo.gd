@@ -16,7 +16,7 @@ func _ready() -> void:
 	_sprite.scale.x = -1
 	_motion.x = MAX_SPEED
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	if _active == true:
 		_motion.y += GRAVITY
 		flip()

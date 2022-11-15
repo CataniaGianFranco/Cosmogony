@@ -16,7 +16,7 @@ func _ready() -> void:
 	_rich_text_label.bbcode_text = ""
 	load_dialog()
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	$Dialogic/Next.visible = _finished
 	if Input.is_action_just_pressed("ui_accept"):
 		load_dialog()
@@ -37,5 +37,5 @@ func load_dialog() -> void:
 	_dialog_index += 1
 
 
-func _on_Tween_tween_completed(object: Object, key: NodePath) -> void:
+func _on_Tween_tween_completed(_object: Object, _key: NodePath) -> void:
 	_finished = true

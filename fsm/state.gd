@@ -5,7 +5,7 @@ signal finished(next_state)
 func _enter() -> void:
 	pass
 	
-func _update(delta) -> void:
+func _update(_delta: float) -> void:
 	pass
 
 func _exit() -> void:
