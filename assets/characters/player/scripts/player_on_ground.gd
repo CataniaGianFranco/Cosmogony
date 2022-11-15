@@ -4,7 +4,6 @@ func _enter() -> void:
 	_player._snap_length.y = 32
 
 func _update(delta) -> void:
-	
 	._update(delta)
 	
 	if _player.is_on_floor():

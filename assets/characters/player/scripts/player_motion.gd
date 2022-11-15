@@ -1,6 +1,5 @@
 extends "res://assets/characters/player/scripts/player_state.gd"
 
-
 func _ready() -> void:
 	pass
 
