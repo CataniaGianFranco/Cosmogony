@@ -132,12 +132,10 @@ tracks/1/keys = {
 
 [node name="World" type="Node"]
 
+[node name="guikeybinding" parent="." instance=ExtResource( 5 )]
+
 [node name="Forest" type="Node2D" parent="."]
 position = Vector2( 3919.98, -382 )
-
-[node name="guikeybinding" parent="Forest" instance=ExtResource( 5 )]
-follow_viewport_enable = true
-follow_viewport_scale = 4.0
 
 [node name="Conversation" type="Area2D" parent="Forest"]
 visible = false

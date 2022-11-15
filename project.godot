@@ -36,7 +36,7 @@ config/windows_native_icon="res://icon.ico"
 [autoload]
 
 GameHandler="*res://scripts/auto_load/game_handler.gd"
-Guikeybinding="*res://scripts/auto_load/guikeybinding.tscn"
+Guikeybinding="*res://scripts/auto_load/guikeybinding.gd"
 
 [display]
 

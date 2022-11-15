@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=2]
 
-[ext_resource path="res://scripts/auto_load/guikeybinding.gd" type="Script" id=1]
+[ext_resource path="res://scripts/pause_menu.gd" type="Script" id=1]
 [ext_resource path="res://Scripts.gd" type="Script" id=2]
 [ext_resource path="res://fonts/Lato-Regular.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://fonts/Lato-Bold.ttf" type="DynamicFontData" id=4]

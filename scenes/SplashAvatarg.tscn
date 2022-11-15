@@ -50,26 +50,28 @@ tracks/0/keys = {
 "values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
 }
 
-[node name="SplashAvatarg" type="Control"]
+[node name="Node" type="Node"]
+
+[node name="SplashAvatarg" type="Control" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 2 )
 
-[node name="BackgroundBlack" type="ColorRect" parent="."]
+[node name="BackgroundBlack" type="ColorRect" parent="SplashAvatarg"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 
-[node name="Logo" type="TextureRect" parent="."]
+[node name="Logo" type="TextureRect" parent="SplashAvatarg"]
 margin_right = 1920.0
 margin_bottom = 1080.0
 texture = ExtResource( 3 )
 
-[node name="BackgroundWhite" type="ColorRect" parent="."]
+[node name="BackgroundWhite" type="ColorRect" parent="SplashAvatarg"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color( 0, 0, 0, 0 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SplashAvatarg"]
 anims/RESET = SubResource( 1 )
 anims/fade_in = SubResource( 2 )
 anims/fade_out = SubResource( 3 )
