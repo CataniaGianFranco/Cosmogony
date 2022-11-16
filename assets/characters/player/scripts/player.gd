@@ -15,32 +15,24 @@ onready var _scarf_hit_box: Area2D = $Weapon/ScarfHitBox
 onready var _audio_stream_player : AudioStreamPlayer = $AudioStreamPlayer
 onready var _sprite: Sprite = $Sprite
 
+const _UP_DIRECTION : Vector2 = Vector2.UP
+const _SNAP_DIRECTION: Vector2 = Vector2.DOWN
+const _SNAP_LENGTH: float = 32.0
+const _SLOPE_THRESHOLD: float = deg2rad(45)
+const _MAXIMUM_JUMPS: int = 2
 var _is_crawling: bool = false
 var _is_lading: bool = false
-const _UP_DIRECTION : Vector2 = Vector2.UP
-const _MAXIMUM_JUMPS: int = 2
 var ray : RayCast2D
 
 var _jumps_made: int = 0
 var _velocity: Vector2 = Vector2.ZERO
-var _snap_length: Vector2 = Vector2.ZERO
+var _snap_vector: Vector2 = _SNAP_DIRECTION * _SNAP_LENGTH
 
 func _ready() -> void:
 	ray = get_node("RayCast2D")
 	ray.enabled = false
 
-func _process(delta: float) -> void:
-	var fps = Engine.get_frames_per_second()
-	var lerp_interval = _velocity / fps
-	var lerp_position = global_transform.origin + lerp_interval
-	
-	if fps > 60:
-		_sprite.set_as_toplevel(true)
-		_sprite.global_transform.origin = _sprite.global_transform.origin.linear_interpolate(lerp_position, 50 * delta)
-	else:
-		_sprite.global_transform = global_transform
-		_sprite.set_as_toplevel(false)
-
+func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("ui_restart"):
 		get_tree().reload_current_scene()
 	change_animation()

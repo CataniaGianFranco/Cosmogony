@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=42 format=2]
 
 [ext_resource path="res://theme/main_menu.theme" type="Theme" id=1]
 [ext_resource path="res://fonts/Lato-BlackItalic.ttf" type="DynamicFontData" id=2]
@@ -6,9 +6,41 @@
 [ext_resource path="res://sprites/menu_principal_signs/sign_2/main_menu_sign_2.tres" type="Texture" id=4]
 [ext_resource path="res://scripts/main_menu.gd" type="Script" id=5]
 [ext_resource path="res://scripts/settings_menu.gd" type="Script" id=6]
-[ext_resource path="res://main_menu.webm" type="VideoStream" id=7]
+[ext_resource path="res://audio/menu.wav" type="AudioStream" id=7]
 [ext_resource path="res://fonts/Lato-Black.ttf" type="DynamicFontData" id=8]
 [ext_resource path="res://sprites/menu_principal_signs/sign_3/main_menu_sign_3.tres" type="Texture" id=9]
+[ext_resource path="res://sprites/menu_principal/menu_principal_layer_7.png" type="Texture" id=10]
+[ext_resource path="res://sprites/menu_principal/menu_principal_layer_5.png" type="Texture" id=11]
+[ext_resource path="res://sprites/menu_principal/menu_principal_layer_1.png" type="Texture" id=12]
+[ext_resource path="res://sprites/menu_principal/menu_principal_layer_4.png" type="Texture" id=13]
+[ext_resource path="res://sprites/menu_principal/menu_principal_layer_2.png" type="Texture" id=14]
+[ext_resource path="res://assets/shaders/fog.shader" type="Shader" id=15]
+
+[sub_resource type="Gradient" id=12]
+offsets = PoolRealArray( 0.0648148, 0.546296, 0.611111, 0.805556 )
+colors = PoolColorArray( 0.415686, 0.415686, 0.415686, 0, 0.552941, 0.552941, 0.552941, 1, 0.788317, 0.788317, 0.788317, 1, 0, 0, 0, 1 )
+
+[sub_resource type="GradientTexture2D" id=13]
+gradient = SubResource( 12 )
+
+[sub_resource type="OpenSimplexNoise" id=22]
+
+[sub_resource type="NoiseTexture" id=23]
+seamless = true
+noise = SubResource( 22 )
+
+[sub_resource type="ShaderMaterial" id=24]
+shader = ExtResource( 15 )
+shader_param/scroll1 = Vector2( 0.05, 0.05 )
+shader_param/scroll2 = Vector2( 0.04, 0.04 )
+shader_param/texture2 = SubResource( 23 )
+shader_param/colorTexture = SubResource( 13 )
+
+[sub_resource type="OpenSimplexNoise" id=25]
+
+[sub_resource type="NoiseTexture" id=26]
+seamless = true
+noise = SubResource( 25 )
 
 [sub_resource type="DynamicFont" id=10]
 size = 35
@@ -18,7 +50,7 @@ font_data = ExtResource( 8 )
 size = 35
 font_data = ExtResource( 8 )
 
-[sub_resource type="DynamicFont" id=12]
+[sub_resource type="DynamicFont" id=27]
 size = 35
 font_data = ExtResource( 8 )
 
@@ -38,7 +70,7 @@ font_data = ExtResource( 8 )
 size = 32
 font_data = ExtResource( 8 )
 
-[sub_resource type="DynamicFont" id=13]
+[sub_resource type="DynamicFont" id=28]
 size = 30
 font_data = ExtResource( 2 )
 
@@ -74,6 +106,38 @@ font_data = ExtResource( 2 )
 size = 30
 font_data = ExtResource( 2 )
 
+[sub_resource type="Animation" id=29]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control/TextureRect5:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0.470588 ) ]
+}
+
+[sub_resource type="Animation" id=30]
+resource_name = "flower_lights"
+length = 3.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control/TextureRect5:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.5, 3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.470588 ), Color( 1, 1, 1, 1 ) ]
+}
+
 [sub_resource type="Animation" id=9]
 length = 0.5
 tracks/0/type = "value"
@@ -95,16 +159,57 @@ anchor_bottom = 1.0
 theme = ExtResource( 1 )
 script = ExtResource( 5 )
 
-[node name="VideoPlayer" type="VideoPlayer" parent="."]
+[node name="Control" type="Control" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 2.0
-margin_top = 6.0
-margin_right = 2.0
-margin_bottom = 6.0
-stream = ExtResource( 7 )
-autoplay = true
-expand = false
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 10 )
+expand = true
+stretch_mode = 1
+
+[node name="Fog" type="TextureRect" parent="Control"]
+material = SubResource( 24 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -75.0
+margin_top = -358.0
+margin_right = 43.0
+margin_bottom = 404.0
+texture = SubResource( 26 )
+expand = true
+stretch_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 11 )
+expand = true
+stretch_mode = 1
+
+[node name="TextureRect3" type="TextureRect" parent="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 13 )
+expand = true
+stretch_mode = 1
+
+[node name="TextureRect4" type="TextureRect" parent="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 14 )
+expand = true
+stretch_mode = 1
+
+[node name="TextureRect5" type="TextureRect" parent="Control"]
+modulate = Color( 1, 1, 1, 0.470588 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 12 )
+expand = true
+stretch_mode = 1
 
 [node name="Menu" type="VBoxContainer" parent="."]
 anchor_top = 0.265
@@ -157,7 +262,6 @@ align = 1
 valign = 1
 
 [node name="Quit" type="TextureButton" parent="Menu"]
-visible = false
 margin_top = 566.0
 margin_right = 685.0
 margin_bottom = 821.0
@@ -172,7 +276,7 @@ margin_top = 66.7644
 margin_right = -45.6144
 margin_bottom = -133.236
 rect_scale = Vector2( 2.08708, 2.08708 )
-custom_fonts/font = SubResource( 12 )
+custom_fonts/font = SubResource( 27 )
 text = "Salir"
 align = 1
 valign = 1
@@ -245,9 +349,10 @@ custom_fonts/font = SubResource( 8 )
 text = "Controles"
 
 [node name="SettingsMenu" type="VBoxContainer" parent="SettingsMenu/MainMenuTwo"]
-margin_top = 72.0
-margin_right = 1280.0
-margin_bottom = 491.0
+margin_left = -1920.0
+margin_top = 92.0
+margin_right = -640.0
+margin_bottom = 511.0
 script = ExtResource( 6 )
 
 [node name="VideoSettings" type="GridContainer" parent="SettingsMenu/MainMenuTwo/SettingsMenu"]
@@ -263,7 +368,7 @@ margin_top = 15.0
 margin_right = 1074.0
 margin_bottom = 52.0
 size_flags_horizontal = 3
-custom_fonts/font = SubResource( 13 )
+custom_fonts/font = SubResource( 28 )
 text = "Vsync"
 
 [node name="CheckButton" type="CheckButton" parent="SettingsMenu/MainMenuTwo/SettingsMenu/VideoSettings"]
@@ -390,7 +495,14 @@ __meta__ = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "flower_lights"
+anims/RESET = SubResource( 29 )
+anims/flower_lights = SubResource( 30 )
 anims/settings = SubResource( 9 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+autoplay = true
 
 [connection signal="pressed" from="Menu/Start" to="." method="_on_Start_pressed"]
 [connection signal="pressed" from="Menu/Settings" to="." method="_on_Settings_pressed"]

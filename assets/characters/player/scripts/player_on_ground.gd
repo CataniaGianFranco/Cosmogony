@@ -1,7 +1,7 @@
 extends "res://assets/characters/player/scripts/player_motion.gd"
 
 func _enter() -> void:
-	_player._snap_length.y = 32
+	_player._snap_vector = _player._SNAP_DIRECTION * _player._SNAP_LENGTH
 
 func _update(delta) -> void:
 	._update(delta)

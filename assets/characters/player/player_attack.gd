@@ -1,7 +1,7 @@
 extends "res://assets/characters/player/scripts/player_motion.gd"
 
 func _enter() -> void:
-	if _player._snap_length.y > 0: 
+	if _player._snap_vector.y > 0: 
 		_animation.play("basic_attack")
 	else:
 		_animation.play("basic_attack_on_air")
