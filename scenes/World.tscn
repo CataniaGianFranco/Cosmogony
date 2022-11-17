@@ -77,7 +77,7 @@ extents = Vector2( 16.6854, 368.503 )
 
 [sub_resource type="Animation" id=15]
 resource_name = "MovePlat"
-length = 12.0
+length = 6.0
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Plataforma:position")
@@ -86,10 +86,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 6, 12 ),
+"times": PoolRealArray( 0, 3, 6 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, 0 ), Vector2( 1176, 0 ), Vector2( -4, 0 ) ]
+"values": [ Vector2( -1.00012, 0 ), Vector2( 560, 0 ), Vector2( -1.00012, 0 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Plataforma:rotation_degrees")
@@ -98,7 +98,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 6, 12 ),
+"times": PoolRealArray( 0, 3, 6 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ 0.0, 0.0, 0.0 ]
@@ -158,9 +158,10 @@ shape = SubResource( 14 )
 position = Vector2( 11461, 254 )
 
 [node name="Fog" type="Sprite" parent="Forest"]
+visible = false
 material = SubResource( 4 )
-position = Vector2( 4062.02, -1574 )
-scale = Vector2( 35.7813, 32.343 )
+position = Vector2( 16236, -1833 )
+scale = Vector2( 82.2735, 74.3676 )
 z_index = -2
 texture = SubResource( 9 )
 
@@ -240,6 +241,7 @@ format = 1
 tile_data = PoolIntArray( 589928, 11, 0, 589929, 12, 0, 589930, 12, 0, 589931, 12, 0, 589932, 12, 0, 589933, 12, 0, 589934, 13, 0, 655464, 14, 0, 655465, 15, 0, 655466, 15, 0, 655467, 15, 0, 655468, 15, 0, 655469, 15, 0, 655470, 16, 0, 721000, 14, 0, 721001, 15, 0, 721002, 15, 0, 721003, 15, 0, 721004, 15, 0, 721005, 15, 0, 721006, 16, 0, 786536, 14, 0, 786537, 15, 0, 786538, 15, 0, 786539, 15, 0, 786540, 15, 0, 786541, 15, 0, 786542, 16, 0, 852031, 5, 0, 852032, 6, 0, 852072, 14, 0, 852073, 15, 0, 852074, 15, 0, 852075, 15, 0, 852076, 15, 0, 852077, 15, 0, 852078, 16, 0, 917567, 3, 0, 917568, 4, 0, 917608, 14, 0, 917609, 15, 0, 917610, 15, 0, 917611, 15, 0, 917612, 15, 0, 917613, 15, 0, 917614, 16, 0, 983103, 14, 0, 983104, 16, 0, 983144, 14, 0, 983145, 15, 0, 983146, 15, 0, 983147, 15, 0, 983148, 15, 0, 983149, 15, 0, 983150, 16, 0, 1048639, 14, 0, 1048640, 16, 0, 1048680, 14, 0, 1048681, 15, 0, 1048682, 15, 0, 1048683, 15, 0, 1048684, 15, 0, 1048685, 15, 0, 1048686, 16, 0, 1114175, 14, 0, 1114176, 16, 0, 1114216, 14, 0, 1114217, 15, 0, 1114218, 15, 0, 1114219, 15, 0, 1114220, 15, 0, 1114221, 15, 0, 1114222, 16, 0, 1179711, 14, 0, 1179712, 16, 0, 1179752, 14, 0, 1179753, 15, 0, 1179754, 15, 0, 1179755, 15, 0, 1179756, 15, 0, 1179757, 15, 0, 1179758, 16, 0, 1245247, 14, 0, 1245248, 16, 0, 1245288, 14, 0, 1245289, 15, 0, 1245290, 15, 0, 1245291, 15, 0, 1245292, 15, 0, 1245293, 15, 0, 1245294, 16, 0 )
 
 [node name="ForestCleanRiver" type="TileMap" parent="Forest"]
+visible = false
 z_index = 1
 tile_set = ExtResource( 19 )
 cell_size = Vector2( 70, 70 )
@@ -261,7 +263,7 @@ tile_data = PoolIntArray( 589928, 10, 0, 589929, 11, 0, 589930, 11, 0, 589931, 1
 position = Vector2( -2955.06, 0 )
 limit_left = 0
 limit_top = 0
-limit_right = 15320
+limit_right = 39800
 limit_bottom = 1090
 smoothing_enabled = true
 smoothing_speed = 3.0
@@ -358,7 +360,7 @@ position = Vector2( 24415.6, -175.77 )
 shape = SubResource( 5 )
 
 [node name="Position2D" type="Position2D" parent="Forest"]
-position = Vector2( 3069.02, 1202 )
+position = Vector2( 3590.02, 1202 )
 
 [node name="Plataforma" parent="Forest/Position2D" instance=ExtResource( 15 )]
 
