@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=2]
+[gd_scene load_steps=60 format=2]
 
 [ext_resource path="res://world_environment/Main.tres" type="Environment" id=1]
 [ext_resource path="res://audio/ambient/chill_ambient.ogg" type="AudioStream" id=2]
@@ -27,6 +27,7 @@
 [ext_resource path="res://assets/characters/player/sfx/dash.wav" type="AudioStream" id=25]
 [ext_resource path="res://assets/dialogic/conversation/conversation.gd" type="Script" id=26]
 [ext_resource path="res://scenes/Danger.tscn" type="PackedScene" id=27]
+[ext_resource path="res://assets/forest/Tree/tree_water.png" type="Texture" id=28]
 
 [sub_resource type="RectangleShape2D" id=14]
 extents = Vector2( 12.9302, 370.811 )
@@ -74,6 +75,185 @@ extents = Vector2( 27.7656, 490.666 )
 
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 16.6854, 368.503 )
+
+[sub_resource type="RectangleShape2D" id=20]
+extents = Vector2( 131.5, 19.5 )
+
+[sub_resource type="Animation" id=21]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("KinematicBody2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("KinematicBody2D:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -304 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath(".:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath(".:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("KinematicBody2D/CollisionShape2D:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 4.5, -1.5 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("KinematicBody2D/CollisionShape2D:rotation_degrees")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+
+[sub_resource type="Animation" id=22]
+resource_name = "TreeInRiver1"
+length = 5.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("KinematicBody2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("KinematicBody2D:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = false
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath(".:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = false
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -462 ), Vector2( 0, 78 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath(".:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = false
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("KinematicBody2D/CollisionShape2D:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = false
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 4.5, -1.5 ), Vector2( 4.5, -1.5 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("KinematicBody2D/CollisionShape2D:rotation_degrees")
+tracks/6/interp = 1
+tracks/6/loop_wrap = false
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0 ]
+}
 
 [sub_resource type="Animation" id=15]
 resource_name = "MovePlat"
@@ -190,6 +370,239 @@ tracks/1/keys = {
 }
 
 [sub_resource type="Animation" id=19]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Plataforma:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Plataforma:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+
+[sub_resource type="Animation" id=23]
+resource_name = "MovePlat"
+length = 6.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Plataforma:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3, 6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -1.00012, 0 ), Vector2( 560, 0 ), Vector2( -1.00012, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Plataforma:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 3, 6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 0.0 ]
+}
+
+[sub_resource type="Animation" id=24]
+resource_name = "MovePlat01"
+length = 4.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Plataforma:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2, 4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -1.00012, 0 ), Vector2( 252, 0 ), Vector2( -0.00012207, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Plataforma:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2, 4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 0.0 ]
+}
+
+[sub_resource type="Animation" id=25]
+resource_name = "MovePlat3"
+length = 6.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Plataforma:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3, 6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 446, 0 ), Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Plataforma:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 3, 6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 0.0 ]
+}
+
+[sub_resource type="Animation" id=26]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Plataforma:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Plataforma:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+
+[sub_resource type="Animation" id=27]
+resource_name = "MovePlat"
+length = 6.0
+loop = true
+
+[sub_resource type="Animation" id=28]
+resource_name = "MovePlat01"
+length = 4.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Plataforma:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2, 4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -1.00012, 0 ), Vector2( 252, 0 ), Vector2( -0.00012207, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Plataforma:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2, 4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 0.0 ]
+}
+
+[sub_resource type="Animation" id=29]
+resource_name = "MovePlat3"
+length = 6.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Plataforma:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3, 6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 293, 0 ), Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Plataforma:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 3, 6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 0.0 ]
+}
+
+[sub_resource type="Animation" id=30]
+resource_name = "MovePlatV"
+length = 6.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Plataforma:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3, 6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -1.00012, 0 ), Vector2( -1.00012, -401 ), Vector2( -1.00012, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Plataforma:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 3, 6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 0.0 ]
+}
+
+[sub_resource type="Animation" id=31]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/path = NodePath("Plataforma:position")
@@ -404,7 +817,7 @@ position = Vector2( 3297, 966 )
 scale = Vector2( 1, 1 )
 
 [node name="Player" parent="Forest" instance=ExtResource( 6 )]
-position = Vector2( -3161.23, 1246.97 )
+position = Vector2( 12713, 1245 )
 scale = Vector2( 1.4, 1.4 )
 collision_mask = 9
 sfx_dash = ExtResource( 25 )
@@ -423,7 +836,7 @@ dialog = [ "¡¡UN MAPACHE!!" ]
 environment = ExtResource( 1 )
 
 [node name="Tree" parent="Forest" instance=ExtResource( 11 )]
-position = Vector2( 6175.02, 995 )
+position = Vector2( 6174.02, 857 )
 scale = Vector2( 0.66, 0.66 )
 
 [node name="Tree2" parent="Forest" instance=ExtResource( 11 )]
@@ -443,26 +856,73 @@ position = Vector2( 11415.4, 1251.77 )
 position = Vector2( 24415.6, -175.77 )
 shape = SubResource( 5 )
 
-[node name="Position2D" type="Position2D" parent="Forest"]
+[node name="TreeRiver" type="Node2D" parent="Forest"]
+position = Vector2( 13306, 1289 )
+
+[node name="Position2D" type="Position2D" parent="Forest/TreeRiver"]
+
+[node name="TreeWater" type="Sprite" parent="Forest/TreeRiver/Position2D"]
+position = Vector2( 0, -304 )
+texture = ExtResource( 28 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Forest/TreeRiver/Position2D/TreeWater"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Forest/TreeRiver/Position2D/TreeWater/KinematicBody2D"]
+position = Vector2( 4.5, -1.5 )
+shape = SubResource( 20 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Forest/TreeRiver/Position2D/TreeWater"]
+autoplay = "TreeInRiver1"
+anims/RESET = SubResource( 21 )
+anims/TreeInRiver1 = SubResource( 22 )
+
+[node name="Plataformas" type="Node2D" parent="Forest"]
+
+[node name="Position2D" type="Position2D" parent="Forest/Plataformas"]
 position = Vector2( 3590.02, 1202 )
 
-[node name="Plataforma" parent="Forest/Position2D" instance=ExtResource( 15 )]
+[node name="Plataforma" parent="Forest/Plataformas/Position2D" instance=ExtResource( 15 )]
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Forest/Position2D"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Forest/Plataformas/Position2D"]
 autoplay = "MovePlat"
 anims/MovePlat = SubResource( 15 )
 anims/RESET = SubResource( 16 )
 
-[node name="Position2D2" type="Position2D" parent="Forest"]
+[node name="Position2D2" type="Position2D" parent="Forest/Plataformas"]
 position = Vector2( 1513.02, 1202 )
 
-[node name="Plataforma" parent="Forest/Position2D2" instance=ExtResource( 15 )]
+[node name="Plataforma" parent="Forest/Plataformas/Position2D2" instance=ExtResource( 15 )]
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Forest/Position2D2"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Forest/Plataformas/Position2D2"]
 autoplay = "MovePlat01"
 anims/MovePlat = SubResource( 17 )
 anims/MovePlat01 = SubResource( 18 )
 anims/RESET = SubResource( 19 )
+
+[node name="Position2D3" type="Position2D" parent="Forest/Plataformas"]
+position = Vector2( 13649, 962 )
+
+[node name="Plataforma" parent="Forest/Plataformas/Position2D3" instance=ExtResource( 15 )]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Forest/Plataformas/Position2D3"]
+autoplay = "MovePlat3"
+anims/MovePlat = SubResource( 23 )
+anims/MovePlat01 = SubResource( 24 )
+anims/MovePlat3 = SubResource( 25 )
+anims/RESET = SubResource( 26 )
+
+[node name="Position2D4" type="Position2D" parent="Forest/Plataformas"]
+position = Vector2( 12967, 1215 )
+
+[node name="Plataforma" parent="Forest/Plataformas/Position2D4" instance=ExtResource( 15 )]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Forest/Plataformas/Position2D4"]
+autoplay = "MovePlatV"
+anims/MovePlat = SubResource( 27 )
+anims/MovePlat01 = SubResource( 28 )
+anims/MovePlat3 = SubResource( 29 )
+anims/MovePlatV = SubResource( 30 )
+anims/RESET = SubResource( 31 )
 
 [node name="Parallax" type="Node2D" parent="."]
 position = Vector2( 3919.98, -1.42987 )
