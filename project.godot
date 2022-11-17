@@ -42,7 +42,6 @@ Guikeybinding="*res://scripts/auto_load/guikeybinding.gd"
 
 window/size/width=1920
 window/size/height=1080
-window/size/fullscreen=true
 window/size/test_width=1920
 window/size/test_height=1080
 window/stretch/mode="2d"
@@ -136,6 +135,7 @@ ui_restart={
 2d_physics/layer_3="enemy"
 2d_physics/layer_4="collect"
 2d_physics/layer_5="raycast"
+2d_physics/layer_6="danger"
 
 [physics]
 

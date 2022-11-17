@@ -1,9 +1,6 @@
 class_name hurt_box
 extends Area2D
 
-func _init() -> void:
-	collision_layer = 0
-	collision_mask = 2
 
 func _ready() -> void:
 	connect("area_entered", self, "_on_area_entered")
@@ -14,3 +11,6 @@ func _on_area_entered(_hitBox: hit_box) -> void:
 	
 	if owner.has_method("take_damage"):
 		owner.take_damage(_hitBox.damage)
+
+	if owner.get_node("PlayerFSM/Hurt").has_method("take_damage"):
+		owner.get_node("PlayerFSM/Hurt").take_damage(_hitBox.damage)

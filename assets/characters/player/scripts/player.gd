@@ -9,7 +9,7 @@ export(AudioStream) var sfx_basic_attack = null
 export(AudioStream) var sfx_jump = null
 
 onready var _start_scale: Vector2 = $"Sprite".scale
-onready var _animationPlayer: AnimationPlayer = $"AnimationPlayer"
+onready var _animation_player: AnimationPlayer = $"AnimationPlayer"
 onready var _weapon: Node2D = $Weapon
 onready var _scarf_hit_box: Area2D = $Weapon/ScarfHitBox
 onready var _audio_stream_player : AudioStreamPlayer = $AudioStreamPlayer
@@ -47,6 +47,17 @@ func crawl() -> void:
 			$CollisionShape2D.disabled = false
 			$CollisionShapeCrawl.disabled = true
 			_is_crawling = false
+
+#func take_damage(amount : int) -> void:
+#		$HurtBox.visible = false
+#		GameHandler._health -= amount
+#		if GameHandler._health > 0:
+#			_velocity.x = 0.0
+#			#emit_signal("finished", "Hurt")
+#			_animation_player.play("hurt")
+#		else:
+#			_velocity.x = 0.0
+#			_animation_player.play("exhausted")
 
 func change_animation() -> void:
 	if GameHandler._active_rune_animation == true:

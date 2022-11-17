@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-var _health: int = 50
+var _health: int = 5
 var _name_anim_rune : String = ""
 
 const MAX_SPEED : float = 100.0

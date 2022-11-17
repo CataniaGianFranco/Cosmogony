@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=2]
+[gd_scene load_steps=44 format=2]
 
 [ext_resource path="res://world_environment/Main.tres" type="Environment" id=1]
 [ext_resource path="res://audio/ambient/chill_ambient.ogg" type="AudioStream" id=2]
@@ -26,6 +26,7 @@
 [ext_resource path="res://assets/characters/player/sfx/jump.wav" type="AudioStream" id=24]
 [ext_resource path="res://assets/characters/player/sfx/dash.wav" type="AudioStream" id=25]
 [ext_resource path="res://assets/dialogic/conversation/conversation.gd" type="Script" id=26]
+[ext_resource path="res://scenes/Danger.tscn" type="PackedScene" id=27]
 
 [sub_resource type="RectangleShape2D" id=14]
 extents = Vector2( 12.9302, 370.811 )
@@ -137,9 +138,13 @@ tracks/1/keys = {
 [node name="Forest" type="Node2D" parent="."]
 position = Vector2( 3919.98, -382 )
 
+[node name="Danger" parent="Forest" instance=ExtResource( 27 )]
+position = Vector2( -2558.89, 1263.57 )
+
 [node name="Conversation" type="Area2D" parent="Forest"]
 visible = false
 position = Vector2( 669.883, 1304.84 )
+collision_mask = 2
 script = ExtResource( 26 )
 __meta__ = {
 "_edit_group_": true
