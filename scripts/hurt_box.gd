@@ -11,6 +11,3 @@ func _on_area_entered(_hitBox: hit_box) -> void:
 	
 	if owner.has_method("take_damage"):
 		owner.take_damage(_hitBox.damage)
-
-	if owner.get_node("PlayerFSM/Hurt").has_method("take_damage"):
-		owner.get_node("PlayerFSM/Hurt").take_damage(_hitBox.damage)

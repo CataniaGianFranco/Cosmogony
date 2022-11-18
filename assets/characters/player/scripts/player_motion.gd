@@ -11,8 +11,11 @@ func _get_direction() -> int:
 	return _direction
 
 func _update(_delta: float):
-	_player.move_and_slide_with_snap(_player._velocity, _player._snap_vector, _player._UP_DIRECTION, true, 4, _player._SLOPE_THRESHOLD).y
-	_player._velocity.y += _player.gravity * _delta
+	if _player._not_move == false:
+		_player.move_and_slide_with_snap(_player._velocity, _player._snap_vector, _player._UP_DIRECTION, true, 4, _player._SLOPE_THRESHOLD).y
+		_player._velocity.y += _player.gravity * _delta
+	else:
+		_player._velocity.x = 0
 
 func _handle_input(_event: InputEvent) -> void:
 	if _event.is_action_pressed("ui_basic_attack"):

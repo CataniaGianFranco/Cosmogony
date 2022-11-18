@@ -34,9 +34,8 @@ func _ready() -> void:
 	ray.enabled = false
 
 func _process(_delta: float) -> void:
-	var nombre = ray.get_collider()
-	print(nombre)
 	if Input.is_action_just_pressed("ui_restart"):
+		GameHandler._health = 5
 		get_tree().reload_current_scene()
 	change_animation()
 
@@ -51,16 +50,13 @@ func crawl() -> void:
 			$CollisionShapeCrawl.disabled = true
 			_is_crawling = false
 
-#func take_damage(amount : int) -> void:
-#		$HurtBox.visible = false
-#		GameHandler._health -= amount
-#		if GameHandler._health > 0:
-#			_velocity.x = 0.0
-#			#emit_signal("finished", "Hurt")
-#			_animation_player.play("hurt")
-#		else:
-#			_velocity.x = 0.0
-#			_animation_player.play("exhausted")
+func take_damage(amount : int) -> void:
+		$HurtBox.visible = false
+		GameHandler._health -= amount
+		if GameHandler._health > 0: 
+				_animation_player.play("hurt")
+		else:
+			_animation_player.play("exhausted")
 
 func change_animation() -> void:
 	if GameHandler._active_rune_animation == true:
