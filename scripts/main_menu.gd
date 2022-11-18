@@ -12,6 +12,9 @@ func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CONFINED)
 
 func _on_Start_pressed() -> void:
+	$AudioStreamPlayer.playing = false
+	$Loading.visible = true
+	yield(get_tree().create_timer(3), "timeout")
 	get_tree().call_deferred("change_scene","res://scenes/World.tscn")
 
 func _on_Settings_pressed() -> void:
