@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=2]
+[gd_scene load_steps=73 format=2]
 
 [ext_resource path="res://world_environment/Main.tres" type="Environment" id=1]
 [ext_resource path="res://audio/ambient/chill_ambient.ogg" type="AudioStream" id=2]
@@ -31,6 +31,10 @@
 [ext_resource path="res://scenes/Tree_base.tscn" type="PackedScene" id=29]
 [ext_resource path="res://scenes/Mushroom_green.tscn" type="PackedScene" id=30]
 [ext_resource path="res://scenes/Tree_plataform.tscn" type="PackedScene" id=31]
+[ext_resource path="res://scenes/MushroomMid1GreenTree.tscn" type="PackedScene" id=32]
+[ext_resource path="res://scenes/Mushroom_big_green.tscn" type="PackedScene" id=33]
+[ext_resource path="res://assets/forest/Tree/tunnel_tree.png" type="Texture" id=34]
+[ext_resource path="res://scenes/MushroomMid2GreenTree.tscn" type="PackedScene" id=35]
 
 [sub_resource type="RectangleShape2D" id=14]
 extents = Vector2( 12.9302, 370.811 )
@@ -751,6 +755,9 @@ tracks/1/keys = {
 "values": [ 0.0 ]
 }
 
+[sub_resource type="RectangleShape2D" id=42]
+extents = Vector2( 290.5, 234.5 )
+
 [node name="World" type="Node"]
 
 [node name="guikeybinding" parent="." instance=ExtResource( 5 )]
@@ -1060,10 +1067,19 @@ anims/MovePlat3 = SubResource( 39 )
 anims/MovePlat6 = SubResource( 40 )
 anims/RESET = SubResource( 41 )
 
-[node name="KinematicBody2D" parent="Forest" instance=ExtResource( 30 )]
-position = Vector2( 16437, 1229 )
-
 [node name="Mushrrom" type="Node2D" parent="Forest"]
+
+[node name="Mushroom_green" parent="Forest/Mushrrom" instance=ExtResource( 30 )]
+position = Vector2( 16516, 1228 )
+
+[node name="Mushroom_green2" parent="Forest/Mushrrom" instance=ExtResource( 30 )]
+position = Vector2( 19767, 1228 )
+
+[node name="Mushroom_big_green" parent="Forest/Mushrrom" instance=ExtResource( 33 )]
+position = Vector2( 20550, 889 )
+
+[node name="Mushroom_big_green2" parent="Forest/Mushrrom" instance=ExtResource( 33 )]
+position = Vector2( 21003, 891 )
 
 [node name="Tree3" type="Node2D" parent="Forest"]
 
@@ -1081,6 +1097,25 @@ position = Vector2( 18687, 1182 )
 
 [node name="Tree_plataform4" parent="Forest/Tree3" instance=ExtResource( 31 )]
 position = Vector2( 19035, 1182 )
+
+[node name="MushroomMid2GreenTree" parent="Forest/Tree3" instance=ExtResource( 35 )]
+position = Vector2( 20675, 949 )
+
+[node name="MushroomMid2GreenTree2" parent="Forest/Tree3" instance=ExtResource( 35 )]
+position = Vector2( 21148, 949 )
+
+[node name="MushroomMid1GreenTree2" parent="Forest/Tree3" instance=ExtResource( 32 )]
+position = Vector2( 20848, 986 )
+
+[node name="TunnelTree" type="Sprite" parent="Forest/Tree3"]
+position = Vector2( 20856, 1117 )
+texture = ExtResource( 34 )
+
+[node name="Area2D" type="Area2D" parent="Forest/Tree3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Forest/Tree3/Area2D"]
+position = Vector2( 20845.5, 820.5 )
+shape = SubResource( 42 )
 
 [node name="Parallax" type="Node2D" parent="."]
 position = Vector2( 3919.98, -1.42987 )
