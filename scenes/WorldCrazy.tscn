@@ -1,82 +1,74 @@
-[gd_scene load_steps=107 format=2]
+[gd_scene load_steps=98 format=2]
 
-[ext_resource path="res://world_environment/Main.tres" type="Environment" id=1]
-[ext_resource path="res://audio/ambient/chill_ambient.ogg" type="AudioStream" id=2]
-[ext_resource path="res://assets/characters/transforms/buffalo/Buffalo.tscn" type="PackedScene" id=3]
-[ext_resource path="res://assets/characters/transforms/squirrel/Squirrel.tscn" type="PackedScene" id=4]
-[ext_resource path="res://scripts/auto_load/guikeybinding.tscn" type="PackedScene" id=5]
-[ext_resource path="res://assets/characters/player/Player.tscn" type="PackedScene" id=6]
-[ext_resource path="res://scenes/ParallaxBackground.tscn" type="PackedScene" id=7]
-[ext_resource path="res://scenes/Camera.tscn" type="PackedScene" id=8]
-[ext_resource path="res://assets/characters/npcs/enemies/enemy_owl/EnemyOwl.tscn" type="PackedScene" id=9]
-[ext_resource path="res://assets/tile_sets/forest_floor.tres" type="TileSet" id=10]
-[ext_resource path="res://assets/forest/tree/Tree.tscn" type="PackedScene" id=11]
-[ext_resource path="res://assets/characters/npcs/allies/ally_squirrel/AllySquirrel.tscn" type="PackedScene" id=12]
-[ext_resource path="res://assets/collects/apple/Apple.tscn" type="PackedScene" id=13]
-[ext_resource path="res://assets/characters/player/sfx/scarf.wav" type="AudioStream" id=14]
-[ext_resource path="res://scenes/Plataforma2.tscn" type="PackedScene" id=15]
-[ext_resource path="res://assets/collects/runes/StoneRune.tscn" type="PackedScene" id=16]
-[ext_resource path="res://assets/collects/runes/Laguz/StoneRuneLaguzOn.tres" type="SpriteFrames" id=17]
-[ext_resource path="res://assets/tile_sets/forest_dirt_river.tres" type="TileSet" id=18]
-[ext_resource path="res://assets/tile_sets/forest_clean_river.tres" type="TileSet" id=19]
-[ext_resource path="res://assets/Portal/Portal.tscn" type="PackedScene" id=20]
-[ext_resource path="res://assets/dialogic/ControlDialogic.tscn" type="PackedScene" id=21]
-[ext_resource path="res://assets/shaders/fog.shader" type="Shader" id=22]
-[ext_resource path="res://river.wav" type="AudioStream" id=23]
-[ext_resource path="res://assets/characters/player/sfx/jump.wav" type="AudioStream" id=24]
-[ext_resource path="res://assets/characters/player/sfx/dash.wav" type="AudioStream" id=25]
-[ext_resource path="res://assets/dialogic/conversation/conversation.gd" type="Script" id=26]
-[ext_resource path="res://scenes/Danger.tscn" type="PackedScene" id=27]
-[ext_resource path="res://scenes/Mushroom_green.tscn" type="PackedScene" id=30]
-[ext_resource path="res://scenes/Mushroom_big_green.tscn" type="PackedScene" id=33]
-[ext_resource path="res://scenes/Murshroom_green2.tscn" type="PackedScene" id=36]
-[ext_resource path="res://scenes/Mushrrom_blue.tscn" type="PackedScene" id=37]
+[ext_resource path="res://assets/tile_sets/forest_dirt_river.tres" type="TileSet" id=1]
+[ext_resource path="res://assets/tile_sets/forest_clean_river.tres" type="TileSet" id=2]
+[ext_resource path="res://assets/dialogic/conversation/conversation.gd" type="Script" id=4]
+[ext_resource path="res://assets/tile_sets/forest_floor.tres" type="TileSet" id=5]
+[ext_resource path="res://assets/characters/player/sfx/scarf.wav" type="AudioStream" id=6]
+[ext_resource path="res://assets/characters/player/sfx/dash.wav" type="AudioStream" id=8]
+[ext_resource path="res://assets/characters/player/sfx/jump.wav" type="AudioStream" id=9]
+[ext_resource path="res://assets/shaders/fog.shader" type="Shader" id=13]
+[ext_resource path="res://world_environment/Main.tres" type="Environment" id=14]
+[ext_resource path="res://assets/characters/npcs/allies/ally_squirrel/AllySquirrel.tscn" type="PackedScene" id=15]
+[ext_resource path="res://assets/characters/transforms/buffalo/Buffalo.tscn" type="PackedScene" id=16]
+[ext_resource path="res://scripts/auto_load/guikeybinding.tscn" type="PackedScene" id=18]
+[ext_resource path="res://assets/characters/player/Player.tscn" type="PackedScene" id=19]
+[ext_resource path="res://scenes/Camera.tscn" type="PackedScene" id=21]
+[ext_resource path="res://assets/characters/npcs/enemies/enemy_owl/EnemyOwl.tscn" type="PackedScene" id=22]
+[ext_resource path="res://assets/collects/apple/Apple.tscn" type="PackedScene" id=23]
+[ext_resource path="res://scenes/Plataforma2.tscn" type="PackedScene" id=25]
+[ext_resource path="res://assets/forest/tree/Tree.tscn" type="PackedScene" id=26]
+[ext_resource path="res://assets/Portal/Portal.tscn" type="PackedScene" id=27]
+[ext_resource path="res://scenes/Mushroom_big_green.tscn" type="PackedScene" id=30]
+[ext_resource path="res://scenes/Danger.tscn" type="PackedScene" id=35]
+[ext_resource path="res://assets/dialogic/ControlDialogic.tscn" type="PackedScene" id=36]
+[ext_resource path="res://scenes/Mushroom_green.tscn" type="PackedScene" id=37]
 
-[sub_resource type="RectangleShape2D" id=14]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 12.9302, 370.811 )
 
-[sub_resource type="Gradient" id=12]
+[sub_resource type="Gradient" id=2]
 offsets = PoolRealArray( 0.0648148, 0.546296, 0.611111, 0.805556 )
 colors = PoolColorArray( 0.415686, 0.415686, 0.415686, 0, 0.552941, 0.552941, 0.552941, 1, 0.788317, 0.788317, 0.788317, 1, 0, 0, 0, 1 )
 
-[sub_resource type="GradientTexture2D" id=94]
-gradient = SubResource( 12 )
+[sub_resource type="GradientTexture2D" id=3]
+gradient = SubResource( 2 )
 
-[sub_resource type="OpenSimplexNoise" id=10]
+[sub_resource type="OpenSimplexNoise" id=4]
 
-[sub_resource type="NoiseTexture" id=95]
+[sub_resource type="NoiseTexture" id=5]
 seamless = true
-noise = SubResource( 10 )
+noise = SubResource( 4 )
 
-[sub_resource type="ShaderMaterial" id=4]
-shader = ExtResource( 22 )
+[sub_resource type="ShaderMaterial" id=6]
+shader = ExtResource( 13 )
 shader_param/scroll1 = Vector2( 0.06, 0.06 )
 shader_param/scroll2 = Vector2( 0.04, 0.04 )
-shader_param/texture2 = SubResource( 95 )
-shader_param/colorTexture = SubResource( 94 )
+shader_param/texture2 = SubResource( 5 )
+shader_param/colorTexture = SubResource( 3 )
 
-[sub_resource type="OpenSimplexNoise" id=96]
+[sub_resource type="OpenSimplexNoise" id=7]
 
-[sub_resource type="NoiseTexture" id=9]
+[sub_resource type="NoiseTexture" id=8]
 seamless = true
-noise = SubResource( 96 )
+noise = SubResource( 7 )
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=9]
 extents = Vector2( 14.485, 106.292 )
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=10]
 extents = Vector2( 14.5044, 40.2018 )
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=11]
 extents = Vector2( 35.9187, 170.401 )
 
-[sub_resource type="RectangleShape2D" id=7]
+[sub_resource type="RectangleShape2D" id=12]
 extents = Vector2( 27.7656, 490.666 )
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=13]
 extents = Vector2( 16.6854, 368.503 )
 
-[sub_resource type="Animation" id=15]
+[sub_resource type="Animation" id=14]
 resource_name = "MovePlat"
 length = 6.0
 loop = true
@@ -103,36 +95,36 @@ tracks/1/keys = {
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ 0.0, 0.0, 0.0 ]
+}
+
+[sub_resource type="Animation" id=15]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Plataforma2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Plataforma2:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
 }
 
 [sub_resource type="Animation" id=16]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/path = NodePath("Plataforma2:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, 0 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Plataforma2:rotation_degrees")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0.0 ]
-}
-
-[sub_resource type="Animation" id=67]
 resource_name = "MovePlat"
 length = 6.0
 loop = true
@@ -159,36 +151,36 @@ tracks/1/keys = {
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ 0.0, 0.0, 0.0 ]
-}
-
-[sub_resource type="Animation" id=68]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/path = NodePath("Plataforma2:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, 0 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Plataforma2:rotation_degrees")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0.0 ]
 }
 
 [sub_resource type="Animation" id=17]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Plataforma2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Plataforma2:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+
+[sub_resource type="Animation" id=18]
 resource_name = "MovePlat"
 length = 6.0
 loop = true
@@ -212,73 +204,12 @@ tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
 "times": PoolRealArray( 0, 3, 6 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, 0.0, 0.0 ]
-}
-
-[sub_resource type="Animation" id=18]
-resource_name = "MovePlat01"
-length = 4.0
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("Plataforma2:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 2, 4 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( -1.00012, 0 ), Vector2( 252, 0 ), Vector2( -0.00012207, 0 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Plataforma2:rotation_degrees")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 2, 4 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ 0.0, 0.0, 0.0 ]
 }
 
 [sub_resource type="Animation" id=19]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/path = NodePath("Plataforma2:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, 0 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Plataforma2:rotation_degrees")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0.0 ]
-}
-
-[sub_resource type="Animation" id=27]
-resource_name = "MovePlat"
-length = 6.0
-loop = true
-
-[sub_resource type="Animation" id=28]
 resource_name = "MovePlat01"
 length = 4.0
 loop = true
@@ -307,7 +238,68 @@ tracks/1/keys = {
 "values": [ 0.0, 0.0, 0.0 ]
 }
 
-[sub_resource type="Animation" id=29]
+[sub_resource type="Animation" id=20]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Plataforma2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Plataforma2:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+
+[sub_resource type="Animation" id=21]
+resource_name = "MovePlat"
+length = 6.0
+loop = true
+
+[sub_resource type="Animation" id=22]
+resource_name = "MovePlat01"
+length = 4.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Plataforma2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2, 4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -1.00012, 0 ), Vector2( 252, 0 ), Vector2( -0.00012207, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Plataforma2:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2, 4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 0.0 ]
+}
+
+[sub_resource type="Animation" id=23]
 resource_name = "MovePlat3"
 length = 6.0
 loop = true
@@ -336,7 +328,7 @@ tracks/1/keys = {
 "values": [ 0.0, 0.0, 0.0 ]
 }
 
-[sub_resource type="Animation" id=30]
+[sub_resource type="Animation" id=24]
 resource_name = "MovePlatV"
 length = 6.0
 loop = true
@@ -365,7 +357,7 @@ tracks/1/keys = {
 "values": [ 0.0, 0.0, 0.0 ]
 }
 
-[sub_resource type="Animation" id=31]
+[sub_resource type="Animation" id=25]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/path = NodePath("Plataforma2:position")
@@ -392,7 +384,7 @@ tracks/1/keys = {
 "values": [ 0.0 ]
 }
 
-[sub_resource type="Animation" id=23]
+[sub_resource type="Animation" id=26]
 resource_name = "MovePlat"
 length = 6.0
 loop = true
@@ -421,7 +413,7 @@ tracks/1/keys = {
 "values": [ 0.0, 0.0, 0.0 ]
 }
 
-[sub_resource type="Animation" id=24]
+[sub_resource type="Animation" id=27]
 resource_name = "MovePlat01"
 length = 4.0
 loop = true
@@ -450,7 +442,7 @@ tracks/1/keys = {
 "values": [ 0.0, 0.0, 0.0 ]
 }
 
-[sub_resource type="Animation" id=25]
+[sub_resource type="Animation" id=28]
 resource_name = "MovePlat3"
 length = 6.0
 loop = true
@@ -479,7 +471,7 @@ tracks/1/keys = {
 "values": [ 0.0, 0.0, 0.0 ]
 }
 
-[sub_resource type="Animation" id=26]
+[sub_resource type="Animation" id=29]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/path = NodePath("Plataforma2:position")
@@ -506,12 +498,12 @@ tracks/1/keys = {
 "values": [ 0.0 ]
 }
 
-[sub_resource type="Animation" id=37]
+[sub_resource type="Animation" id=30]
 resource_name = "MovePlat"
 length = 6.0
 loop = true
 
-[sub_resource type="Animation" id=38]
+[sub_resource type="Animation" id=31]
 resource_name = "MovePlat01"
 length = 4.0
 loop = true
@@ -535,189 +527,189 @@ tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
 "times": PoolRealArray( 0, 2, 4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 0.0 ]
+}
+
+[sub_resource type="Animation" id=32]
+resource_name = "MovePlat3"
+length = 6.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Plataforma2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3, 6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 446, 0 ), Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Plataforma2:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 3, 6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 0.0 ]
+}
+
+[sub_resource type="Animation" id=33]
+resource_name = "MovePlat6"
+length = 6.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Plataforma2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3, 6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 452, 0 ), Vector2( -0.00012207, 0 ), Vector2( 452, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Plataforma2:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 3, 6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 0.0 ]
+}
+
+[sub_resource type="Animation" id=34]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Plataforma2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Plataforma2:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+
+[sub_resource type="Animation" id=35]
+resource_name = "MovePlat"
+length = 6.0
+loop = true
+
+[sub_resource type="Animation" id=36]
+resource_name = "MovePlat01"
+length = 4.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Plataforma2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2, 4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -1.00012, 0 ), Vector2( 252, 0 ), Vector2( -0.00012207, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Plataforma2:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2, 4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 0.0 ]
+}
+
+[sub_resource type="Animation" id=37]
+resource_name = "MovePlat3"
+length = 6.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Plataforma2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3, 6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 446, 0 ), Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Plataforma2:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 3, 6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 0.0 ]
+}
+
+[sub_resource type="Animation" id=38]
+resource_name = "MovePlat6"
+length = 6.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Plataforma2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3, 6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 452, 0 ), Vector2( -0.00012207, 0 ), Vector2( 452, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Plataforma2:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 3, 6 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ 0.0, 0.0, 0.0 ]
 }
 
 [sub_resource type="Animation" id=39]
-resource_name = "MovePlat3"
-length = 6.0
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("Plataforma2:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 3, 6 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 0, 0 ), Vector2( 446, 0 ), Vector2( 0, 0 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Plataforma2:rotation_degrees")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 3, 6 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, 0.0, 0.0 ]
-}
-
-[sub_resource type="Animation" id=40]
-resource_name = "MovePlat6"
-length = 6.0
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("Plataforma2:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 3, 6 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 452, 0 ), Vector2( -0.00012207, 0 ), Vector2( 452, 0 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Plataforma2:rotation_degrees")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 3, 6 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, 0.0, 0.0 ]
-}
-
-[sub_resource type="Animation" id=41]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/path = NodePath("Plataforma2:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, 0 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Plataforma2:rotation_degrees")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0.0 ]
-}
-
-[sub_resource type="Animation" id=43]
-resource_name = "MovePlat"
-length = 6.0
-loop = true
-
-[sub_resource type="Animation" id=44]
-resource_name = "MovePlat01"
-length = 4.0
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("Plataforma2:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 2, 4 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( -1.00012, 0 ), Vector2( 252, 0 ), Vector2( -0.00012207, 0 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Plataforma2:rotation_degrees")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 2, 4 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, 0.0, 0.0 ]
-}
-
-[sub_resource type="Animation" id=45]
-resource_name = "MovePlat3"
-length = 6.0
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("Plataforma2:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 3, 6 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 0, 0 ), Vector2( 446, 0 ), Vector2( 0, 0 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Plataforma2:rotation_degrees")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 3, 6 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, 0.0, 0.0 ]
-}
-
-[sub_resource type="Animation" id=46]
-resource_name = "MovePlat6"
-length = 6.0
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("Plataforma2:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 3, 6 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 452, 0 ), Vector2( -0.00012207, 0 ), Vector2( 452, 0 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Plataforma2:rotation_degrees")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 3, 6 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, 0.0, 0.0 ]
-}
-
-[sub_resource type="Animation" id=47]
 resource_name = "MovePlat7"
 length = 12.0
 loop = true
@@ -746,7 +738,7 @@ tracks/1/keys = {
 "values": [ 0.0, 0.0, 0.0 ]
 }
 
-[sub_resource type="Animation" id=48]
+[sub_resource type="Animation" id=40]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/path = NodePath("Plataforma2:position")
@@ -773,12 +765,12 @@ tracks/1/keys = {
 "values": [ 0.0 ]
 }
 
-[sub_resource type="Animation" id=49]
+[sub_resource type="Animation" id=41]
 resource_name = "MovePlat"
 length = 6.0
 loop = true
 
-[sub_resource type="Animation" id=50]
+[sub_resource type="Animation" id=42]
 resource_name = "MovePlat01"
 length = 4.0
 loop = true
@@ -807,7 +799,7 @@ tracks/1/keys = {
 "values": [ 0.0, 0.0, 0.0 ]
 }
 
-[sub_resource type="Animation" id=51]
+[sub_resource type="Animation" id=43]
 resource_name = "MovePlat3"
 length = 6.0
 loop = true
@@ -822,6 +814,188 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0, 0 ), Vector2( 446, 0 ), Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Plataforma2:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 3, 6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 0.0 ]
+}
+
+[sub_resource type="Animation" id=44]
+resource_name = "MovePlat6"
+length = 6.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Plataforma2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3, 6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 452, 0 ), Vector2( -0.00012207, 0 ), Vector2( 452, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Plataforma2:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 3, 6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 0.0 ]
+}
+
+[sub_resource type="Animation" id=45]
+resource_name = "MovePlat7"
+length = 12.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Plataforma2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 6, 12 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.000610352, 0 ), Vector2( -856.999, 0 ), Vector2( 0.000610352, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Plataforma2:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 6, 12 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 0.0 ]
+}
+
+[sub_resource type="Animation" id=46]
+resource_name = "MovePlat8"
+length = 8.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Plataforma2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 4, 8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.000610352, 0 ), Vector2( -439.999, 0 ), Vector2( 0.000610352, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Plataforma2:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 4, 8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 0.0 ]
+}
+
+[sub_resource type="Animation" id=47]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Plataforma2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Plataforma2:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+
+[sub_resource type="Animation" id=48]
+resource_name = "MovePlat"
+length = 6.0
+loop = true
+
+[sub_resource type="Animation" id=49]
+resource_name = "MovePlat01"
+length = 4.0
+loop = true
+
+[sub_resource type="Animation" id=50]
+resource_name = "MovePlat3"
+length = 6.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Plataforma2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3, 6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 446, 0 ), Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Plataforma2:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 3, 6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 0.0 ]
+}
+
+[sub_resource type="Animation" id=51]
+resource_name = "MovePlat6"
+length = 6.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Plataforma2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3, 6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 452, 0 ), Vector2( -0.00012207, 0 ), Vector2( 452, 0 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Plataforma2:rotation_degrees")
@@ -837,8 +1011,8 @@ tracks/1/keys = {
 }
 
 [sub_resource type="Animation" id=52]
-resource_name = "MovePlat6"
-length = 6.0
+resource_name = "MovePlat7"
+length = 12.0
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Plataforma2:position")
@@ -847,10 +1021,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 3, 6 ),
+"times": PoolRealArray( 0, 6, 12 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 452, 0 ), Vector2( -0.00012207, 0 ), Vector2( 452, 0 ) ]
+"values": [ Vector2( 0.000610352, 0 ), Vector2( -856.999, 0 ), Vector2( 0.000610352, 0 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Plataforma2:rotation_degrees")
@@ -859,15 +1033,15 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 3, 6 ),
+"times": PoolRealArray( 0, 6, 12 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ 0.0, 0.0, 0.0 ]
 }
 
 [sub_resource type="Animation" id=53]
-resource_name = "MovePlat7"
-length = 12.0
+resource_name = "MovePlat8"
+length = 8.0
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Plataforma2:position")
@@ -876,10 +1050,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 6, 12 ),
+"times": PoolRealArray( 0, 4, 8 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0.000610352, 0 ), Vector2( -856.999, 0 ), Vector2( 0.000610352, 0 ) ]
+"values": [ Vector2( 0.000610352, 0 ), Vector2( -439.999, 0 ), Vector2( 0.000610352, 0 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Plataforma2:rotation_degrees")
@@ -888,195 +1062,13 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 6, 12 ),
+"times": PoolRealArray( 0, 4, 8 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ 0.0, 0.0, 0.0 ]
 }
 
 [sub_resource type="Animation" id=54]
-resource_name = "MovePlat8"
-length = 8.0
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("Plataforma2:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 4, 8 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 0.000610352, 0 ), Vector2( -439.999, 0 ), Vector2( 0.000610352, 0 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Plataforma2:rotation_degrees")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 4, 8 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, 0.0, 0.0 ]
-}
-
-[sub_resource type="Animation" id=55]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/path = NodePath("Plataforma2:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, 0 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Plataforma2:rotation_degrees")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0.0 ]
-}
-
-[sub_resource type="Animation" id=75]
-resource_name = "MovePlat"
-length = 6.0
-loop = true
-
-[sub_resource type="Animation" id=76]
-resource_name = "MovePlat01"
-length = 4.0
-loop = true
-
-[sub_resource type="Animation" id=77]
-resource_name = "MovePlat3"
-length = 6.0
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("Plataforma2:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 3, 6 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 0, 0 ), Vector2( 446, 0 ), Vector2( 0, 0 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Plataforma2:rotation_degrees")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 3, 6 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, 0.0, 0.0 ]
-}
-
-[sub_resource type="Animation" id=78]
-resource_name = "MovePlat6"
-length = 6.0
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("Plataforma2:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 3, 6 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 452, 0 ), Vector2( -0.00012207, 0 ), Vector2( 452, 0 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Plataforma2:rotation_degrees")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 3, 6 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, 0.0, 0.0 ]
-}
-
-[sub_resource type="Animation" id=79]
-resource_name = "MovePlat7"
-length = 12.0
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("Plataforma2:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 6, 12 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 0.000610352, 0 ), Vector2( -856.999, 0 ), Vector2( 0.000610352, 0 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Plataforma2:rotation_degrees")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 6, 12 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, 0.0, 0.0 ]
-}
-
-[sub_resource type="Animation" id=80]
-resource_name = "MovePlat8"
-length = 8.0
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("Plataforma2:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 4, 8 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 0.000610352, 0 ), Vector2( -439.999, 0 ), Vector2( 0.000610352, 0 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Plataforma2:rotation_degrees")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 4, 8 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, 0.0, 0.0 ]
-}
-
-[sub_resource type="Animation" id=81]
 resource_name = "MovePlatV"
 length = 6.0
 loop = true
@@ -1105,7 +1097,7 @@ tracks/1/keys = {
 "values": [ 0.0, 0.0, 0.0 ]
 }
 
-[sub_resource type="Animation" id=82]
+[sub_resource type="Animation" id=55]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/path = NodePath("Plataforma2:position")
@@ -1362,12 +1354,12 @@ tracks/3/keys = {
 "values": [ 0.0 ]
 }
 
-[sub_resource type="Animation" id=83]
+[sub_resource type="Animation" id=64]
 resource_name = "MovePlat"
 length = 6.0
 loop = true
 
-[sub_resource type="Animation" id=84]
+[sub_resource type="Animation" id=65]
 resource_name = "MovePlat01"
 length = 4.0
 loop = true
@@ -1396,12 +1388,12 @@ tracks/1/keys = {
 "values": [ 0.0, 0.0, 0.0 ]
 }
 
-[sub_resource type="Animation" id=85]
+[sub_resource type="Animation" id=66]
 resource_name = "MovePlat3"
 length = 6.0
 loop = true
 
-[sub_resource type="Animation" id=86]
+[sub_resource type="Animation" id=67]
 resource_name = "MovePlat6"
 length = 6.0
 loop = true
@@ -1430,7 +1422,7 @@ tracks/1/keys = {
 "values": [ 0.0, 0.0, 0.0 ]
 }
 
-[sub_resource type="Animation" id=93]
+[sub_resource type="Animation" id=68]
 resource_name = "MovePlataVertical"
 length = 4.0
 loop = true
@@ -1459,7 +1451,7 @@ tracks/1/keys = {
 "values": [ 0.0, 0.0 ]
 }
 
-[sub_resource type="Animation" id=87]
+[sub_resource type="Animation" id=69]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/path = NodePath("Plataforma2:position")
@@ -1486,12 +1478,12 @@ tracks/1/keys = {
 "values": [ 0.0 ]
 }
 
-[sub_resource type="Animation" id=88]
+[sub_resource type="Animation" id=70]
 resource_name = "MovePlat"
 length = 6.0
 loop = true
 
-[sub_resource type="Animation" id=89]
+[sub_resource type="Animation" id=71]
 resource_name = "MovePlat01"
 length = 4.0
 loop = true
@@ -1520,7 +1512,7 @@ tracks/1/keys = {
 "values": [ 0.0, 0.0, 0.0 ]
 }
 
-[sub_resource type="Animation" id=90]
+[sub_resource type="Animation" id=72]
 resource_name = "MovePlat3"
 length = 6.0
 loop = true
@@ -1549,7 +1541,7 @@ tracks/1/keys = {
 "values": [ 0.0, 0.0, 0.0 ]
 }
 
-[sub_resource type="Animation" id=91]
+[sub_resource type="Animation" id=73]
 resource_name = "MovePlat6"
 length = 6.0
 loop = true
@@ -1578,7 +1570,7 @@ tracks/1/keys = {
 "values": [ 0.0, 0.0, 0.0 ]
 }
 
-[sub_resource type="Animation" id=92]
+[sub_resource type="Animation" id=74]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/path = NodePath("Plataforma2:position")
@@ -1605,52 +1597,49 @@ tracks/1/keys = {
 "values": [ 0.0 ]
 }
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 27.0354, 11.657 )
+[node name="WorldCrazy" type="Node"]
 
-[node name="World" type="Node"]
-
-[node name="guikeybinding" parent="." instance=ExtResource( 5 )]
+[node name="guikeybinding" parent="." instance=ExtResource( 18 )]
 
 [node name="Forest" type="Node2D" parent="."]
 position = Vector2( 3919.98, -382 )
 
-[node name="Danger" parent="Forest" instance=ExtResource( 27 )]
+[node name="Danger" parent="Forest" instance=ExtResource( 35 )]
 position = Vector2( -2558.89, 1263.57 )
 
 [node name="Conversation" type="Area2D" parent="Forest"]
 visible = false
 position = Vector2( 669.883, 1304.84 )
 collision_mask = 2
-script = ExtResource( 26 )
+script = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Forest/Conversation"]
 position = Vector2( -2.79346, -315.032 )
-shape = SubResource( 14 )
+shape = SubResource( 1 )
 
-[node name="Portal" parent="Forest" instance=ExtResource( 20 )]
+[node name="Portal" parent="Forest" instance=ExtResource( 27 )]
 position = Vector2( 35464, 1232 )
 
 [node name="Fog" type="Sprite" parent="Forest"]
-material = SubResource( 4 )
+material = SubResource( 6 )
 position = Vector2( 16236, -1833 )
 scale = Vector2( 82.2735, 74.3676 )
 z_index = -2
-texture = SubResource( 9 )
+texture = SubResource( 8 )
 
 [node name="ForestFloorNegativeOne" type="TileMap" parent="Forest"]
 z_index = -1
-tile_set = ExtResource( 10 )
+tile_set = ExtResource( 5 )
 cell_size = Vector2( 70, 70 )
 cell_custom_transform = Transform2D( 70, 0, 0, 70, 0, 0 )
 format = 1
 tile_data = PoolIntArray( 786548, 59, 0 )
 
 [node name="ForestFloorZero" type="TileMap" parent="Forest"]
-tile_set = ExtResource( 10 )
+tile_set = ExtResource( 5 )
 cell_size = Vector2( 70, 70 )
 cell_custom_transform = Transform2D( 70, 0, 0, 70, 0, 0 )
 show_collision = true
@@ -1663,22 +1652,22 @@ position = Vector2( 27103, 29.018 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Forest/ForestFloorZero/StaticBody2D"]
 position = Vector2( -616.981, 2272.98 )
-shape = SubResource( 2 )
+shape = SubResource( 9 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Forest/ForestFloorZero/StaticBody2D"]
 position = Vector2( -185.504, -164.508 )
-shape = SubResource( 3 )
+shape = SubResource( 10 )
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="Forest/ForestFloorZero"]
 position = Vector2( 28759, 32.018 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Forest/ForestFloorZero/StaticBody2D3"]
 position = Vector2( -105.98, 2175.98 )
-shape = SubResource( 6 )
+shape = SubResource( 11 )
 
 [node name="ForestFloorHoleNegativeOne" type="TileMap" parent="Forest"]
 z_index = -1
-tile_set = ExtResource( 10 )
+tile_set = ExtResource( 5 )
 cell_size = Vector2( 70, 70 )
 cell_custom_transform = Transform2D( 70, 0, 0, 70, 0, 0 )
 format = 1
@@ -1686,7 +1675,7 @@ tile_data = PoolIntArray( 1179985, 50, 0, 1179986, 51, 0, 1179987, 52, 0, 118006
 
 [node name="ForestFloorHoleOne" type="TileMap" parent="Forest"]
 z_index = 1
-tile_set = ExtResource( 10 )
+tile_set = ExtResource( 5 )
 cell_size = Vector2( 70, 70 )
 cell_custom_transform = Transform2D( 70, 0, 0, 70, 0, 0 )
 format = 1
@@ -1694,7 +1683,7 @@ tile_data = PoolIntArray( 1180024, 3, 0, 1180025, 4, 0, 1245521, 45, 0, 1245522,
 
 [node name="ForestDirtRiver" type="TileMap" parent="Forest"]
 z_index = 1
-tile_set = ExtResource( 18 )
+tile_set = ExtResource( 1 )
 cell_size = Vector2( 70, 70 )
 cell_custom_transform = Transform2D( 70, 0, 0, 70, 0, 0 )
 format = 1
@@ -1702,7 +1691,7 @@ tile_data = PoolIntArray( 1245193, 0, 0, 1245194, 1, 0, 1245195, 2, 0, 1245204, 
 
 [node name="ForestDirtWaterFall" type="TileMap" parent="Forest"]
 z_index = -1
-tile_set = ExtResource( 18 )
+tile_set = ExtResource( 1 )
 cell_size = Vector2( 70, 70 )
 cell_custom_transform = Transform2D( 70, 0, 0, 70, 0, 0 )
 format = 1
@@ -1711,7 +1700,7 @@ tile_data = PoolIntArray( 458939, 11, 0, 458940, 12, 0, 458941, 12, 0, 458942, 1
 [node name="ForestCleanRiver" type="TileMap" parent="Forest"]
 modulate = Color( 1, 1, 1, 0 )
 z_index = 1
-tile_set = ExtResource( 19 )
+tile_set = ExtResource( 2 )
 cell_size = Vector2( 70, 70 )
 cell_custom_transform = Transform2D( 70, 0, 0, 70, 0, 0 )
 format = 1
@@ -1720,14 +1709,14 @@ tile_data = PoolIntArray( 1245193, 0, 0, 1245194, 2, 0, 1245195, 1, 0, 1245204, 
 [node name="ForestCleanWaterFall" type="TileMap" parent="Forest"]
 modulate = Color( 1, 1, 1, 0 )
 z_index = -1
-tile_set = ExtResource( 19 )
+tile_set = ExtResource( 2 )
 cell_size = Vector2( 70, 70 )
 cell_custom_transform = Transform2D( 70, 0, 0, 70, 0, 0 )
 show_collision = true
 format = 1
 tile_data = PoolIntArray( 458939, 10, 0, 458940, 11, 0, 458941, 11, 0, 458942, 11, 0, 458943, 11, 0, 458944, 12, 0, 459100, 10, 0, 459101, 11, 0, 459102, 11, 0, 459103, 11, 0, 459104, 11, 0, 459105, 12, 0, 459239, 10, 0, 459240, 11, 0, 459241, 11, 0, 459242, 12, 0, 524475, 13, 0, 524476, 14, 0, 524477, 14, 0, 524478, 14, 0, 524479, 14, 0, 524480, 15, 0, 524636, 13, 0, 524637, 14, 0, 524638, 14, 0, 524639, 14, 0, 524640, 14, 0, 524641, 15, 0, 524775, 13, 0, 524776, 14, 0, 524777, 14, 0, 524778, 15, 0, 590011, 13, 0, 590012, 14, 0, 590013, 14, 0, 590014, 14, 0, 590015, 14, 0, 590016, 15, 0, 590172, 13, 0, 590173, 14, 0, 590174, 14, 0, 590175, 14, 0, 590176, 14, 0, 590177, 15, 0, 590262, 10, 0, 590263, 12, 0, 590282, 10, 0, 590283, 12, 0, 590311, 13, 0, 590312, 14, 0, 590313, 14, 0, 590314, 15, 0, 590321, 10, 0, 590322, 12, 0, 655547, 13, 0, 655548, 14, 0, 655549, 14, 0, 655550, 14, 0, 655551, 14, 0, 655552, 15, 0, 655708, 13, 0, 655709, 14, 0, 655710, 14, 0, 655711, 14, 0, 655712, 14, 0, 655713, 15, 0, 655798, 13, 0, 655799, 15, 0, 655818, 13, 0, 655819, 15, 0, 655847, 13, 0, 655848, 14, 0, 655849, 14, 0, 655850, 15, 0, 655857, 13, 0, 655858, 15, 0, 721083, 13, 0, 721084, 14, 0, 721085, 14, 0, 721086, 14, 0, 721087, 14, 0, 721088, 15, 0, 721244, 13, 0, 721245, 14, 0, 721246, 14, 0, 721247, 14, 0, 721248, 14, 0, 721249, 15, 0, 721334, 13, 0, 721335, 15, 0, 721354, 13, 0, 721355, 15, 0, 721383, 13, 0, 721384, 14, 0, 721385, 14, 0, 721386, 15, 0, 721393, 13, 0, 721394, 15, 0, 786619, 13, 0, 786620, 14, 0, 786621, 14, 0, 786622, 14, 0, 786623, 14, 0, 786624, 15, 0, 786780, 13, 0, 786781, 14, 0, 786782, 14, 0, 786783, 14, 0, 786784, 14, 0, 786785, 15, 0, 786870, 13, 0, 786871, 15, 0, 786890, 13, 0, 786891, 15, 0, 786919, 13, 0, 786920, 14, 0, 786921, 14, 0, 786922, 15, 0, 786929, 13, 0, 786930, 15, 0, 852155, 13, 0, 852156, 14, 0, 852157, 14, 0, 852158, 14, 0, 852159, 14, 0, 852160, 15, 0, 852316, 13, 0, 852317, 14, 0, 852318, 14, 0, 852319, 14, 0, 852320, 14, 0, 852321, 15, 0, 852406, 13, 0, 852407, 15, 0, 852426, 13, 0, 852427, 15, 0, 852455, 13, 0, 852456, 14, 0, 852457, 14, 0, 852458, 15, 0, 852465, 13, 0, 852466, 15, 0, 917691, 13, 0, 917692, 14, 0, 917693, 14, 0, 917694, 14, 0, 917695, 14, 0, 917696, 15, 0, 917852, 13, 0, 917853, 14, 0, 917854, 14, 0, 917855, 14, 0, 917856, 14, 0, 917857, 15, 0, 917942, 13, 0, 917943, 15, 0, 917962, 13, 0, 917963, 15, 0, 917991, 13, 0, 917992, 14, 0, 917993, 14, 0, 917994, 15, 0, 918001, 13, 0, 918002, 15, 0, 983227, 13, 0, 983228, 14, 0, 983229, 14, 0, 983230, 14, 0, 983231, 14, 0, 983232, 15, 0, 983388, 13, 0, 983389, 14, 0, 983390, 14, 0, 983391, 14, 0, 983392, 14, 0, 983393, 15, 0, 983478, 13, 0, 983479, 15, 0, 983498, 13, 0, 983499, 15, 0, 983527, 13, 0, 983528, 14, 0, 983529, 14, 0, 983530, 15, 0, 983537, 13, 0, 983538, 15, 0, 1048763, 13, 0, 1048764, 14, 0, 1048765, 14, 0, 1048766, 14, 0, 1048767, 14, 0, 1048768, 15, 0, 1048924, 13, 0, 1048925, 14, 0, 1048926, 14, 0, 1048927, 14, 0, 1048928, 14, 0, 1048929, 15, 0, 1049014, 13, 0, 1049015, 15, 0, 1049034, 13, 0, 1049035, 15, 0, 1049063, 13, 0, 1049064, 14, 0, 1049065, 14, 0, 1049066, 15, 0, 1049073, 13, 0, 1049074, 15, 0, 1114299, 13, 0, 1114300, 14, 0, 1114301, 14, 0, 1114302, 14, 0, 1114303, 14, 0, 1114304, 15, 0, 1114460, 13, 0, 1114461, 14, 0, 1114462, 14, 0, 1114463, 14, 0, 1114464, 14, 0, 1114465, 15, 0, 1114550, 13, 0, 1114551, 15, 0, 1114570, 13, 0, 1114571, 15, 0, 1114599, 13, 0, 1114600, 14, 0, 1114601, 14, 0, 1114602, 15, 0, 1114609, 13, 0, 1114610, 15, 0, 1179835, 13, 0, 1179836, 14, 0, 1179837, 14, 0, 1179838, 14, 0, 1179839, 14, 0, 1179840, 15, 0, 1179996, 13, 0, 1179997, 14, 0, 1179998, 14, 0, 1179999, 14, 0, 1180000, 14, 0, 1180001, 15, 0, 1180086, 13, 0, 1180087, 15, 0, 1180106, 13, 0, 1180107, 15, 0, 1180135, 13, 0, 1180136, 14, 0, 1180137, 14, 0, 1180138, 15, 0, 1180145, 13, 0, 1180146, 15, 0, 1245193, 0, 0, 1245371, 13, 0, 1245372, 14, 0, 1245373, 14, 0, 1245374, 14, 0, 1245375, 14, 0, 1245376, 15, 0, 1245532, 13, 0, 1245533, 14, 0, 1245534, 14, 0, 1245535, 14, 0, 1245536, 14, 0, 1245537, 15, 0, 1245622, 13, 0, 1245623, 15, 0, 1245642, 13, 0, 1245643, 15, 0, 1245671, 13, 0, 1245672, 14, 0, 1245673, 14, 0, 1245674, 15, 0, 1245681, 13, 0, 1245682, 15, 0 )
 
-[node name="Camera" parent="Forest" instance=ExtResource( 8 )]
+[node name="Camera" parent="Forest" instance=ExtResource( 21 )]
 position = Vector2( -2955.06, 0 )
 limit_left = 0
 limit_top = 0
@@ -1742,54 +1731,54 @@ drag_margin_bottom = 0.75
 editor_draw_limits = true
 editor_draw_drag_margin = true
 
-[node name="AllySquirrel" parent="Forest" instance=ExtResource( 12 )]
+[node name="AllySquirrel" parent="Forest" instance=ExtResource( 15 )]
 position = Vector2( 7643.02, 1293 )
 
-[node name="ControlDialogic" parent="Forest/AllySquirrel" instance=ExtResource( 21 )]
+[node name="ControlDialogic" parent="Forest/AllySquirrel" instance=ExtResource( 36 )]
 visible = false
 margin_left = 59.397
 margin_top = 399.012
 margin_right = 59.397
 margin_bottom = 399.012
 
-[node name="EnemyOwl" parent="Forest" instance=ExtResource( 9 )]
+[node name="EnemyOwl" parent="Forest" instance=ExtResource( 22 )]
 position = Vector2( 15122, 807 )
 
-[node name="EnemyOwl3" parent="Forest" instance=ExtResource( 9 )]
+[node name="EnemyOwl3" parent="Forest" instance=ExtResource( 22 )]
 position = Vector2( 31458, 759 )
 
-[node name="EnemyOwl2" parent="Forest" instance=ExtResource( 9 )]
+[node name="EnemyOwl2" parent="Forest" instance=ExtResource( 22 )]
 visible = false
 position = Vector2( 6894.68, 855 )
 
-[node name="Buffalo" parent="Forest" instance=ExtResource( 3 )]
+[node name="Buffalo" parent="Forest" instance=ExtResource( 16 )]
 position = Vector2( 10351, 1246 )
 name_anim_rune = "fragment_laguz_1"
 
-[node name="Buffalo2" parent="Forest" instance=ExtResource( 3 )]
+[node name="Buffalo2" parent="Forest" instance=ExtResource( 16 )]
 position = Vector2( 27524, 1248 )
 
-[node name="Apple" parent="Forest" instance=ExtResource( 13 )]
+[node name="Apple" parent="Forest" instance=ExtResource( 23 )]
 position = Vector2( -1372.98, 637 )
 scale = Vector2( 1, 1 )
 
-[node name="Apple2" parent="Forest" instance=ExtResource( 13 )]
+[node name="Apple2" parent="Forest" instance=ExtResource( 23 )]
 position = Vector2( 7692.02, 478 )
 scale = Vector2( 1, 1 )
 
-[node name="Apple3" parent="Forest" instance=ExtResource( 13 )]
+[node name="Apple3" parent="Forest" instance=ExtResource( 23 )]
 position = Vector2( 3297, 966 )
 scale = Vector2( 1, 1 )
 
-[node name="Player" parent="Forest" instance=ExtResource( 6 )]
+[node name="Player" parent="Forest" instance=ExtResource( 19 )]
 position = Vector2( -3179.37, 1261.49 )
 scale = Vector2( 1.4, 1.4 )
 collision_mask = 9
-sfx_dash = ExtResource( 25 )
-sfx_basic_attack = ExtResource( 14 )
-sfx_jump = ExtResource( 24 )
+sfx_dash = ExtResource( 8 )
+sfx_basic_attack = ExtResource( 6 )
+sfx_jump = ExtResource( 9 )
 
-[node name="ControlDialogic" parent="Forest/Player" instance=ExtResource( 21 )]
+[node name="ControlDialogic" parent="Forest/Player" instance=ExtResource( 36 )]
 visible = false
 margin_left = 57.6614
 margin_top = 407.136
@@ -1798,13 +1787,13 @@ margin_bottom = 407.136
 dialog = [ "¡¡UN MAPACHE!!" ]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Forest"]
-environment = ExtResource( 1 )
+environment = ExtResource( 14 )
 
-[node name="Tree" parent="Forest" instance=ExtResource( 11 )]
+[node name="Tree" parent="Forest" instance=ExtResource( 26 )]
 position = Vector2( 6174.02, 857 )
 scale = Vector2( 0.66, 0.66 )
 
-[node name="Tree2" parent="Forest" instance=ExtResource( 11 )]
+[node name="Tree2" parent="Forest" instance=ExtResource( 26 )]
 position = Vector2( 35922, 996 )
 scale = Vector2( 0.66, 0.66 )
 
@@ -1812,137 +1801,137 @@ scale = Vector2( 0.66, 0.66 )
 position = Vector2( -3915.15, 863.747 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Forest/LimitLeft"]
-shape = SubResource( 7 )
+shape = SubResource( 12 )
 
 [node name="LimitRight" type="StaticBody2D" parent="Forest"]
 position = Vector2( 11415.4, 1251.77 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Forest/LimitRight"]
 position = Vector2( 24415.6, -175.77 )
-shape = SubResource( 5 )
+shape = SubResource( 13 )
 
 [node name="Plataformas" type="Node2D" parent="Forest"]
 
 [node name="Position2D" type="Position2D" parent="Forest/Plataformas"]
 position = Vector2( 3590.02, 1202 )
 
-[node name="Plataforma2" parent="Forest/Plataformas/Position2D" instance=ExtResource( 15 )]
+[node name="Plataforma2" parent="Forest/Plataformas/Position2D" instance=ExtResource( 25 )]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Forest/Plataformas/Position2D"]
 autoplay = "MovePlat"
-anims/MovePlat = SubResource( 15 )
-anims/RESET = SubResource( 16 )
+anims/MovePlat = SubResource( 14 )
+anims/RESET = SubResource( 15 )
 
 [node name="Position2D5" type="Position2D" parent="Forest/Plataformas"]
 position = Vector2( 8918.02, 1202 )
 
-[node name="Plataforma2" parent="Forest/Plataformas/Position2D5" instance=ExtResource( 15 )]
+[node name="Plataforma2" parent="Forest/Plataformas/Position2D5" instance=ExtResource( 25 )]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Forest/Plataformas/Position2D5"]
 autoplay = "MovePlat"
-anims/MovePlat = SubResource( 67 )
-anims/RESET = SubResource( 68 )
+anims/MovePlat = SubResource( 16 )
+anims/RESET = SubResource( 17 )
 
 [node name="Position2D2" type="Position2D" parent="Forest/Plataformas"]
 position = Vector2( 1513.02, 1202 )
 
-[node name="Plataforma2" parent="Forest/Plataformas/Position2D2" instance=ExtResource( 15 )]
+[node name="Plataforma2" parent="Forest/Plataformas/Position2D2" instance=ExtResource( 25 )]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Forest/Plataformas/Position2D2"]
 autoplay = "MovePlat01"
-anims/MovePlat = SubResource( 17 )
-anims/MovePlat01 = SubResource( 18 )
-anims/RESET = SubResource( 19 )
+anims/MovePlat = SubResource( 18 )
+anims/MovePlat01 = SubResource( 19 )
+anims/RESET = SubResource( 20 )
 
 [node name="Position2D3" type="Position2D" parent="Forest/Plataformas"]
 position = Vector2( 12967, 1215 )
 
-[node name="Plataforma2" parent="Forest/Plataformas/Position2D3" instance=ExtResource( 15 )]
+[node name="Plataforma2" parent="Forest/Plataformas/Position2D3" instance=ExtResource( 25 )]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Forest/Plataformas/Position2D3"]
 autoplay = "MovePlatV"
-anims/MovePlat = SubResource( 27 )
-anims/MovePlat01 = SubResource( 28 )
-anims/MovePlat3 = SubResource( 29 )
-anims/MovePlatV = SubResource( 30 )
-anims/RESET = SubResource( 31 )
+anims/MovePlat = SubResource( 21 )
+anims/MovePlat01 = SubResource( 22 )
+anims/MovePlat3 = SubResource( 23 )
+anims/MovePlatV = SubResource( 24 )
+anims/RESET = SubResource( 25 )
 
 [node name="Position2D4" type="Position2D" parent="Forest/Plataformas"]
 position = Vector2( 13649, 962 )
 
-[node name="Plataforma2" parent="Forest/Plataformas/Position2D4" instance=ExtResource( 15 )]
+[node name="Plataforma2" parent="Forest/Plataformas/Position2D4" instance=ExtResource( 25 )]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Forest/Plataformas/Position2D4"]
 autoplay = "MovePlat3"
 playback_speed = 1.5
-anims/MovePlat = SubResource( 23 )
-anims/MovePlat01 = SubResource( 24 )
-anims/MovePlat3 = SubResource( 25 )
-anims/RESET = SubResource( 26 )
+anims/MovePlat = SubResource( 26 )
+anims/MovePlat01 = SubResource( 27 )
+anims/MovePlat3 = SubResource( 28 )
+anims/RESET = SubResource( 29 )
 
 [node name="Position2D6" type="Position2D" parent="Forest/Plataformas"]
 position = Vector2( 14683, 962 )
 
-[node name="Plataforma2" parent="Forest/Plataformas/Position2D6" instance=ExtResource( 15 )]
+[node name="Plataforma2" parent="Forest/Plataformas/Position2D6" instance=ExtResource( 25 )]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Forest/Plataformas/Position2D6"]
 autoplay = "MovePlat6"
-anims/MovePlat = SubResource( 37 )
-anims/MovePlat01 = SubResource( 38 )
-anims/MovePlat3 = SubResource( 39 )
-anims/MovePlat6 = SubResource( 40 )
-anims/RESET = SubResource( 41 )
+anims/MovePlat = SubResource( 30 )
+anims/MovePlat01 = SubResource( 31 )
+anims/MovePlat3 = SubResource( 32 )
+anims/MovePlat6 = SubResource( 33 )
+anims/RESET = SubResource( 34 )
 
 [node name="Position2D7" type="Position2D" parent="Forest/Plataformas"]
 position = Vector2( 25277, 962 )
 
-[node name="Plataforma2" parent="Forest/Plataformas/Position2D7" instance=ExtResource( 15 )]
+[node name="Plataforma2" parent="Forest/Plataformas/Position2D7" instance=ExtResource( 25 )]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Forest/Plataformas/Position2D7"]
 autoplay = "MovePlat7"
-anims/MovePlat = SubResource( 43 )
-anims/MovePlat01 = SubResource( 44 )
-anims/MovePlat3 = SubResource( 45 )
-anims/MovePlat6 = SubResource( 46 )
-anims/MovePlat7 = SubResource( 47 )
-anims/RESET = SubResource( 48 )
+anims/MovePlat = SubResource( 35 )
+anims/MovePlat01 = SubResource( 36 )
+anims/MovePlat3 = SubResource( 37 )
+anims/MovePlat6 = SubResource( 38 )
+anims/MovePlat7 = SubResource( 39 )
+anims/RESET = SubResource( 40 )
 
 [node name="Position2D8" type="Position2D" parent="Forest/Plataformas"]
 position = Vector2( 30545, 1071 )
 
-[node name="Plataforma2" parent="Forest/Plataformas/Position2D8" instance=ExtResource( 15 )]
+[node name="Plataforma2" parent="Forest/Plataformas/Position2D8" instance=ExtResource( 25 )]
 position = Vector2( 0.000610352, 0 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Forest/Plataformas/Position2D8"]
 autoplay = "MovePlat8"
-anims/MovePlat = SubResource( 49 )
-anims/MovePlat01 = SubResource( 50 )
-anims/MovePlat3 = SubResource( 51 )
-anims/MovePlat6 = SubResource( 52 )
-anims/MovePlat7 = SubResource( 53 )
-anims/MovePlat8 = SubResource( 54 )
-anims/RESET = SubResource( 55 )
+anims/MovePlat = SubResource( 41 )
+anims/MovePlat01 = SubResource( 42 )
+anims/MovePlat3 = SubResource( 43 )
+anims/MovePlat6 = SubResource( 44 )
+anims/MovePlat7 = SubResource( 45 )
+anims/MovePlat8 = SubResource( 46 )
+anims/RESET = SubResource( 47 )
 
 [node name="Position2D11" type="Position2D" parent="Forest/Plataformas"]
 position = Vector2( 34123, 896 )
 
-[node name="Plataforma2" parent="Forest/Plataformas/Position2D11" instance=ExtResource( 15 )]
+[node name="Plataforma2" parent="Forest/Plataformas/Position2D11" instance=ExtResource( 25 )]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Forest/Plataformas/Position2D11"]
 autoplay = "MovePlatV"
-anims/MovePlat = SubResource( 75 )
-anims/MovePlat01 = SubResource( 76 )
-anims/MovePlat3 = SubResource( 77 )
-anims/MovePlat6 = SubResource( 78 )
-anims/MovePlat7 = SubResource( 79 )
-anims/MovePlat8 = SubResource( 80 )
-anims/MovePlatV = SubResource( 81 )
-anims/RESET = SubResource( 82 )
+anims/MovePlat = SubResource( 48 )
+anims/MovePlat01 = SubResource( 49 )
+anims/MovePlat3 = SubResource( 50 )
+anims/MovePlat6 = SubResource( 51 )
+anims/MovePlat7 = SubResource( 52 )
+anims/MovePlat8 = SubResource( 53 )
+anims/MovePlatV = SubResource( 54 )
+anims/RESET = SubResource( 55 )
 
 [node name="Position2D9" type="Position2D" parent="Forest/Plataformas"]
 position = Vector2( 31054, 962 )
 
-[node name="Plataforma2" parent="Forest/Plataformas/Position2D9" instance=ExtResource( 15 )]
+[node name="Plataforma2" parent="Forest/Plataformas/Position2D9" instance=ExtResource( 25 )]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Forest/Plataformas/Position2D9"]
 autoplay = "MovePlat9"
@@ -1958,358 +1947,56 @@ anims/RESET = SubResource( 63 )
 [node name="Position2D10" type="Position2D" parent="Forest/Plataformas"]
 position = Vector2( 33556, 814 )
 
-[node name="Plataforma2" parent="Forest/Plataformas/Position2D10" instance=ExtResource( 15 )]
+[node name="Plataforma2" parent="Forest/Plataformas/Position2D10" instance=ExtResource( 25 )]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Forest/Plataformas/Position2D10"]
 autoplay = "MovePlataVertical"
-anims/MovePlat = SubResource( 83 )
-anims/MovePlat01 = SubResource( 84 )
-anims/MovePlat3 = SubResource( 85 )
-anims/MovePlat6 = SubResource( 86 )
-anims/MovePlataVertical = SubResource( 93 )
-anims/RESET = SubResource( 87 )
+anims/MovePlat = SubResource( 64 )
+anims/MovePlat01 = SubResource( 65 )
+anims/MovePlat3 = SubResource( 66 )
+anims/MovePlat6 = SubResource( 67 )
+anims/MovePlataVertical = SubResource( 68 )
+anims/RESET = SubResource( 69 )
 
 [node name="Position2D12" type="Position2D" parent="Forest/Plataformas"]
 position = Vector2( 34553, 1236 )
 
-[node name="Plataforma2" parent="Forest/Plataformas/Position2D12" instance=ExtResource( 15 )]
+[node name="Plataforma2" parent="Forest/Plataformas/Position2D12" instance=ExtResource( 25 )]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Forest/Plataformas/Position2D12"]
 autoplay = "MovePlat6"
-anims/MovePlat = SubResource( 88 )
-anims/MovePlat01 = SubResource( 89 )
-anims/MovePlat3 = SubResource( 90 )
-anims/MovePlat6 = SubResource( 91 )
-anims/RESET = SubResource( 92 )
+anims/MovePlat = SubResource( 70 )
+anims/MovePlat01 = SubResource( 71 )
+anims/MovePlat3 = SubResource( 72 )
+anims/MovePlat6 = SubResource( 73 )
+anims/RESET = SubResource( 74 )
 
-[node name="Mushrrom" type="Node2D" parent="Forest"]
+[node name="Mushroom" type="Node2D" parent="Forest"]
 
-[node name="Mushroom_green3" parent="Forest/Mushrrom" instance=ExtResource( 30 )]
+[node name="Mushroom_green3" parent="Forest/Mushroom" instance=ExtResource( 37 )]
 light_mask = 0
 position = Vector2( 22395, 1232 )
 
-[node name="Mushroom_green4" parent="Forest/Mushrrom" instance=ExtResource( 30 )]
+[node name="Mushroom_green4" parent="Forest/Mushroom" instance=ExtResource( 37 )]
 light_mask = 0
 position = Vector2( 25903, 1232 )
 
-[node name="Mushroom_green" parent="Forest/Mushrrom" instance=ExtResource( 30 )]
+[node name="Mushroom_green" parent="Forest/Mushroom" instance=ExtResource( 37 )]
 position = Vector2( 16516, 1228 )
 
-[node name="Mushroom_green2" parent="Forest/Mushrrom" instance=ExtResource( 30 )]
+[node name="Mushroom_green2" parent="Forest/Mushroom" instance=ExtResource( 37 )]
 position = Vector2( 19767, 1228 )
 
-[node name="Mushroom_big_green" parent="Forest/Mushrrom" instance=ExtResource( 33 )]
+[node name="Mushroom_big_green" parent="Forest/Mushroom" instance=ExtResource( 30 )]
 position = Vector2( 20550, 889 )
 z_index = -1
 
-[node name="Mushroom_big_green2" parent="Forest/Mushrrom" instance=ExtResource( 33 )]
+[node name="Mushroom_big_green2" parent="Forest/Mushroom" instance=ExtResource( 30 )]
 position = Vector2( 21003, 891 )
 z_index = -1
 
-[node name="Mushroom_big_green3" parent="Forest/Mushrrom" instance=ExtResource( 33 )]
+[node name="Mushroom_big_green3" parent="Forest/Mushroom" instance=ExtResource( 30 )]
 position = Vector2( 21912, 1033 )
 z_index = -1
-
-[node name="Underground" type="Node2D" parent="."]
-position = Vector2( 3919.98, -382 )
-
-[node name="ForestFloorHoleNegativeOne2" type="TileMap" parent="Underground"]
-tile_set = ExtResource( 10 )
-cell_size = Vector2( 70, 70 )
-cell_custom_transform = Transform2D( 70, 0, 0, 70, 0, 0 )
-show_collision = true
-format = 1
-tile_data = PoolIntArray( 1376587, 17, 0, 1376588, 34, 0, 1376589, 34, 0, 1376590, 34, 0, 1376591, 34, 0, 1376592, 18, 0, 1376596, 12, 0, 1376597, 34, 0, 1376598, 34, 0, 1376599, 34, 0, 1376600, 34, 0, 1376601, 34, 0, 1376602, 115, 0, 1376603, 116, 0, 1376604, 114, 0, 1376605, 114, 0, 1376606, 34, 0, 1376607, 34, 0, 1376608, 34, 0, 1376609, 34, 0, 1376610, 34, 0, 1376611, 34, 0, 1376612, 34, 0, 1376613, 114, 0, 1376614, 111, 0, 1376615, 112, 0, 1376616, 29, 0, 1376617, 29, 0, 1376618, 29, 0, 1376619, 29, 0, 1376620, 29, 0, 1376621, 29, 0, 1376622, 115, 0, 1376623, 116, 0, 1376624, 114, 0, 1376625, 111, 0, 1376626, 29, 0, 1376627, 29, 0, 1376628, 112, 0, 1376629, 114, 0, 1376630, 115, 0, 1376631, 116, 0, 1376632, 114, 0, 1376633, 29, 0, 1376634, 112, 0, 1376635, 34, 0, 1376636, 34, 0, 1376637, 34, 0, 1376638, 34, 0, 1376639, 34, 0, 1376640, 34, 0, 1376641, 34, 0, 1376642, 34, 0, 1376643, 34, 0, 1376644, 34, 0, 1376645, 34, 0, 1376646, 34, 0, 1376647, 34, 0, 1376648, 34, 0, 1376649, 34, 0, 1376650, 34, 0, 1376651, 34, 0, 1376652, 34, 0, 1376653, 34, 0, 1376654, 34, 0, 1376655, 34, 0, 1376656, 34, 0, 1376657, 34, 0, 1376658, 34, 0, 1376659, 34, 0, 1376660, 34, 0, 1376661, 34, 0, 1376662, 34, 0, 1376663, 34, 0, 1376664, 34, 0, 1376665, 34, 0, 1376666, 34, 0, 1376667, 18, 0, 1376671, 12, 0, 1376672, 34, 0, 1376673, 34, 0, 1376674, 34, 0, 1376675, 34, 0, 1376676, 34, 0, 1376677, 34, 0, 1376678, 34, 0, 1376679, 34, 0, 1376680, 34, 0, 1376681, 34, 0, 1376682, 34, 0, 1376683, 34, 0, 1442123, 17, 0, 1442124, 34, 0, 1442125, 34, 0, 1442126, 34, 0, 1442127, 34, 0, 1442128, 18, 0, 1442132, 12, 0, 1442133, 34, 0, 1442134, 111, 0, 1442135, 111, 0, 1442136, 115, 0, 1442137, 116, 0, 1442138, 29, 0, 1442139, 29, 0, 1442140, 29, 0, 1442141, 112, 0, 1442142, 29, 0, 1442143, 115, 0, 1442144, 116, 0, 1442145, 29, 0, 1442146, 29, 0, 1442147, 29, 0, 1442148, 111, 0, 1442149, 111, 0, 1442150, 112, 0, 1442151, 29, 0, 1442152, 29, 0, 1442153, 29, 0, 1442154, 29, 0, 1442155, 114, 0, 1442156, 115, 0, 1442157, 116, 0, 1442158, 114, 0, 1442159, 115, 0, 1442160, 116, 0, 1442161, 29, 0, 1442162, 29, 0, 1442163, 29, 0, 1442164, 29, 0, 1442165, 111, 0, 1442166, 112, 0, 1442167, 114, 0, 1442168, 114, 0, 1442169, 115, 0, 1442170, 116, 0, 1442171, 34, 0, 1442172, 34, 0, 1442173, 34, 0, 1442174, 34, 0, 1442175, 34, 0, 1442176, 34, 0, 1442177, 34, 0, 1442178, 34, 0, 1442179, 34, 0, 1442180, 34, 0, 1442181, 34, 0, 1442182, 34, 0, 1442183, 34, 0, 1442184, 34, 0, 1442185, 34, 0, 1442186, 34, 0, 1442187, 34, 0, 1442188, 34, 0, 1442189, 34, 0, 1442190, 34, 0, 1442191, 34, 0, 1442192, 34, 0, 1442193, 34, 0, 1442194, 34, 0, 1442195, 34, 0, 1442196, 34, 0, 1442197, 34, 0, 1442198, 34, 0, 1442199, 34, 0, 1442200, 34, 0, 1442201, 34, 0, 1442202, 34, 0, 1442203, 18, 0, 1442207, 12, 0, 1442208, 34, 0, 1442209, 34, 0, 1442210, 34, 0, 1442211, 34, 0, 1442212, 34, 0, 1442213, 34, 0, 1442214, 34, 0, 1442215, 34, 0, 1442216, 34, 0, 1442217, 34, 0, 1442218, 34, 0, 1442219, 34, 0, 1507659, 17, 0, 1507660, 34, 0, 1507661, 34, 0, 1507662, 34, 0, 1507663, 34, 0, 1507664, 18, 0, 1507668, 12, 0, 1507669, 34, 0, 1507670, 29, 0, 1507671, 29, 0, 1507672, 111, 0, 1507673, 112, 0, 1507674, 29, 0, 1507675, 29, 0, 1507676, 29, 0, 1507677, 114, 0, 1507678, 29, 0, 1507679, 112, 0, 1507680, 111, 0, 1507681, 29, 0, 1507682, 29, 0, 1507683, 29, 0, 1507684, 29, 0, 1507685, 29, 0, 1507686, 114, 0, 1507687, 115, 0, 1507688, 116, 0, 1507689, 29, 0, 1507690, 29, 0, 1507691, 29, 0, 1507692, 29, 0, 1507693, 112, 0, 1507694, 29, 0, 1507695, 111, 0, 1507696, 111, 0, 1507697, 29, 0, 1507698, 29, 0, 1507699, 112, 0, 1507700, 112, 0, 1507701, 29, 0, 1507702, 111, 0, 1507703, 111, 0, 1507704, 29, 0, 1507705, 29, 0, 1507706, 111, 0, 1507707, 34, 0, 1507708, 34, 0, 1507709, 34, 0, 1507710, 34, 0, 1507711, 34, 0, 1507712, 34, 0, 1507713, 34, 0, 1507714, 34, 0, 1507715, 34, 0, 1507716, 34, 0, 1507717, 34, 0, 1507718, 34, 0, 1507719, 34, 0, 1507720, 34, 0, 1507721, 34, 0, 1507722, 34, 0, 1507723, 34, 0, 1507724, 34, 0, 1507725, 34, 0, 1507726, 34, 0, 1507727, 34, 0, 1507728, 34, 0, 1507729, 34, 0, 1507730, 34, 0, 1507731, 34, 0, 1507732, 34, 0, 1507733, 34, 0, 1507734, 34, 0, 1507735, 34, 0, 1507736, 34, 0, 1507737, 34, 0, 1507738, 34, 0, 1507739, 18, 0, 1507743, 12, 0, 1507744, 34, 0, 1507745, 34, 0, 1507746, 34, 0, 1507747, 34, 0, 1507748, 34, 0, 1507749, 34, 0, 1507750, 34, 0, 1507751, 34, 0, 1507752, 34, 0, 1507753, 34, 0, 1507754, 34, 0, 1507755, 34, 0, 1573195, 17, 0, 1573196, 34, 0, 1573197, 34, 0, 1573198, 34, 0, 1573199, 34, 0, 1573200, 18, 0, 1573204, 12, 0, 1573205, 29, 0, 1573206, 29, 0, 1573207, 112, 0, 1573208, 29, 0, 1573209, 29, 0, 1573210, 29, 0, 1573211, 29, 0, 1573212, 29, 0, 1573213, 111, 0, 1573214, 29, 0, 1573215, 29, 0, 1573216, 29, 0, 1573217, 29, 0, 1573218, 29, 0, 1573219, 114, 0, 1573220, 29, 0, 1573221, 29, 0, 1573222, 29, 0, 1573223, 112, 0, 1573224, 111, 0, 1573225, 29, 0, 1573226, 29, 0, 1573227, 29, 0, 1573228, 29, 0, 1573229, 114, 0, 1573230, 29, 0, 1573231, 29, 0, 1573232, 29, 0, 1573233, 29, 0, 1573234, 114, 0, 1573235, 115, 0, 1573236, 116, 0, 1573237, 29, 0, 1573238, 29, 0, 1573239, 29, 0, 1573240, 29, 0, 1573241, 29, 0, 1573242, 29, 0, 1573243, 34, 0, 1573244, 34, 0, 1573245, 34, 0, 1573246, 34, 0, 1573247, 34, 0, 1573248, 17, 0, 1573249, 17, 0, 1573250, 17, 0, 1573251, 17, 0, 1573252, 17, 0, 1573253, 17, 0, 1573254, 17, 0, 1573255, 17, 0, 1573256, 17, 0, 1573257, 17, 0, 1573258, 34, 0, 1573259, 34, 0, 1573260, 34, 0, 1573261, 34, 0, 1573262, 34, 0, 1573263, 34, 0, 1573264, 34, 0, 1573265, 34, 0, 1573266, 34, 0, 1573267, 34, 0, 1573268, 34, 0, 1573269, 34, 0, 1573270, 34, 0, 1573271, 34, 0, 1573272, 34, 0, 1573273, 34, 0, 1573274, 34, 0, 1573275, 18, 0, 1573279, 12, 0, 1573280, 34, 0, 1573281, 34, 0, 1573282, 34, 0, 1573283, 34, 0, 1573284, 34, 0, 1573285, 34, 0, 1573286, 34, 0, 1573287, 34, 0, 1573288, 34, 0, 1573289, 34, 0, 1573290, 34, 0, 1573291, 34, 0, 1638731, 17, 0, 1638732, 34, 0, 1638733, 34, 0, 1638734, 34, 0, 1638735, 34, 0, 1638736, 18, 0, 1638740, 12, 0, 1638741, 29, 0, 1638742, 29, 0, 1638743, 114, 0, 1638744, 115, 0, 1638745, 116, 0, 1638746, 114, 0, 1638747, 29, 0, 1638748, 29, 0, 1638749, 29, 0, 1638750, 29, 0, 1638751, 29, 0, 1638752, 29, 0, 1638753, 29, 0, 1638754, 29, 0, 1638755, 111, 0, 1638756, 29, 0, 1638757, 29, 0, 1638758, 29, 0, 1638759, 29, 0, 1638760, 29, 0, 1638761, 29, 0, 1638762, 29, 0, 1638763, 29, 0, 1638764, 29, 0, 1638765, 111, 0, 1638766, 29, 0, 1638767, 29, 0, 1638768, 29, 0, 1638769, 29, 0, 1638770, 29, 0, 1638771, 111, 0, 1638772, 111, 0, 1638773, 29, 0, 1638774, 29, 0, 1638775, 29, 0, 1638776, 29, 0, 1638777, 29, 0, 1638778, 29, 0, 1638779, 34, 0, 1638780, 34, 0, 1638781, 34, 0, 1638782, 34, 0, 1638783, 17, 0, 1638784, 17, 0, 1638785, 17, 0, 1638786, 17, 0, 1638787, 17, 0, 1638788, 15, 0, 1638789, 20, 0, 1638790, 20, 0, 1638791, 20, 0, 1638792, 20, 0, 1638793, 20, 0, 1638794, 20, 0, 1638795, 16, 0, 1638796, 34, 0, 1638797, 34, 0, 1638798, 34, 0, 1638799, 34, 0, 1638800, 34, 0, 1638801, 34, 0, 1638802, 34, 0, 1638803, 34, 0, 1638804, 34, 0, 1638805, 34, 0, 1638806, 34, 0, 1638807, 34, 0, 1638808, 34, 0, 1638809, 34, 0, 1638810, 34, 0, 1638811, 18, 0, 1638815, 12, 0, 1638816, 34, 0, 1638817, 34, 0, 1638818, 34, 0, 1638819, 34, 0, 1638820, 34, 0, 1638821, 34, 0, 1638822, 34, 0, 1638823, 34, 0, 1638824, 34, 0, 1638825, 34, 0, 1638826, 34, 0, 1638827, 34, 0, 1704267, 17, 0, 1704268, 34, 0, 1704269, 34, 0, 1704270, 34, 0, 1704271, 34, 0, 1704272, 18, 0, 1704276, 12, 0, 1704277, 29, 0, 1704278, 29, 0, 1704279, 111, 0, 1704280, 111, 0, 1704281, 111, 0, 1704282, 114, 0, 1704283, 115, 0, 1704284, 116, 0, 1704285, 29, 0, 1704286, 29, 0, 1704287, 29, 0, 1704288, 29, 0, 1704289, 29, 0, 1704290, 29, 0, 1704291, 29, 0, 1704292, 29, 0, 1704293, 29, 0, 1704294, 29, 0, 1704295, 29, 0, 1704296, 29, 0, 1704297, 29, 0, 1704298, 29, 0, 1704299, 29, 0, 1704300, 29, 0, 1704301, 29, 0, 1704302, 29, 0, 1704303, 29, 0, 1704304, 29, 0, 1704305, 29, 0, 1704306, 29, 0, 1704307, 29, 0, 1704308, 29, 0, 1704309, 29, 0, 1704310, 29, 0, 1704311, 29, 0, 1704312, 29, 0, 1704313, 29, 0, 1704314, 29, 0, 1704315, 34, 0, 1704316, 34, 0, 1704317, 34, 0, 1704318, 34, 0, 1704319, 17, 0, 1704320, 17, 0, 1704321, 17, 0, 1704322, 17, 0, 1704323, 15, 0, 1704332, 16, 0, 1704333, 34, 0, 1704334, 34, 0, 1704335, 34, 0, 1704336, 34, 0, 1704337, 34, 0, 1704338, 34, 0, 1704339, 34, 0, 1704340, 34, 0, 1704341, 34, 0, 1704342, 34, 0, 1704343, 34, 0, 1704344, 34, 0, 1704345, 34, 0, 1704346, 34, 0, 1704347, 18, 0, 1704351, 12, 0, 1704352, 34, 0, 1704353, 34, 0, 1704354, 34, 0, 1704355, 34, 0, 1704356, 34, 0, 1704357, 34, 0, 1704358, 34, 0, 1704359, 34, 0, 1704360, 34, 0, 1704361, 34, 0, 1704362, 34, 0, 1704363, 34, 0, 1769803, 17, 0, 1769804, 34, 0, 1769805, 34, 0, 1769806, 34, 0, 1769807, 34, 0, 1769808, 18, 0, 1769812, 12, 0, 1769813, 29, 0, 1769814, 29, 0, 1769815, 29, 0, 1769816, 29, 0, 1769817, 29, 0, 1769818, 29, 0, 1769819, 29, 0, 1769820, 29, 0, 1769821, 29, 0, 1769822, 29, 0, 1769823, 29, 0, 1769824, 29, 0, 1769825, 29, 0, 1769826, 29, 0, 1769827, 29, 0, 1769828, 29, 0, 1769829, 29, 0, 1769830, 29, 0, 1769831, 29, 0, 1769832, 29, 0, 1769833, 29, 0, 1769834, 29, 0, 1769835, 29, 0, 1769836, 29, 0, 1769837, 29, 0, 1769838, 29, 0, 1769839, 29, 0, 1769840, 29, 0, 1769841, 29, 0, 1769842, 29, 0, 1769843, 29, 0, 1769844, 29, 0, 1769845, 29, 0, 1769846, 29, 0, 1769847, 29, 0, 1769848, 29, 0, 1769849, 29, 0, 1769850, 29, 0, 1769851, 17, 0, 1769852, 17, 0, 1769853, 17, 0, 1769854, 17, 0, 1769855, 17, 0, 1769856, 15, 0, 1769857, 20, 0, 1769858, 20, 0, 1769869, 20, 0, 1769870, 20, 0, 1769871, 20, 0, 1769872, 16, 0, 1769873, 17, 0, 1769874, 34, 0, 1769875, 34, 0, 1769876, 34, 0, 1769877, 34, 0, 1769878, 34, 0, 1769879, 34, 0, 1769880, 34, 0, 1769881, 34, 0, 1769882, 34, 0, 1769883, 18, 0, 1769887, 12, 0, 1769888, 34, 0, 1769889, 34, 0, 1769890, 34, 0, 1769891, 34, 0, 1769892, 34, 0, 1769893, 34, 0, 1769894, 34, 0, 1769895, 34, 0, 1769896, 34, 0, 1769897, 34, 0, 1769898, 34, 0, 1769899, 34, 0, 1835339, 17, 0, 1835340, 34, 0, 1835341, 34, 0, 1835342, 34, 0, 1835343, 34, 0, 1835344, 18, 0, 1835348, 12, 0, 1835349, 29, 0, 1835350, 29, 0, 1835351, 114, 0, 1835352, 29, 0, 1835353, 29, 0, 1835354, 29, 0, 1835355, 29, 0, 1835356, 114, 0, 1835357, 29, 0, 1835358, 115, 0, 1835359, 116, 0, 1835360, 114, 0, 1835361, 115, 0, 1835362, 116, 0, 1835363, 29, 0, 1835364, 17, 0, 1835365, 17, 0, 1835366, 17, 0, 1835367, 17, 0, 1835368, 17, 0, 1835369, 29, 0, 1835370, 29, 0, 1835371, 29, 0, 1835372, 29, 0, 1835373, 112, 0, 1835374, 112, 0, 1835375, 29, 0, 1835376, 29, 0, 1835377, 29, 0, 1835378, 29, 0, 1835379, 29, 0, 1835380, 29, 0, 1835381, 29, 0, 1835382, 29, 0, 1835383, 29, 0, 1835384, 29, 0, 1835385, 112, 0, 1835386, 29, 0, 1835387, 17, 0, 1835388, 17, 0, 1835389, 17, 0, 1835390, 17, 0, 1835391, 15, 0, 1835409, 16, 0, 1835410, 34, 0, 1835411, 34, 0, 1835412, 34, 0, 1835413, 34, 0, 1835414, 34, 0, 1835415, 34, 0, 1835416, 34, 0, 1835417, 34, 0, 1835418, 21, 0, 1835419, 18, 0, 1835423, 12, 0, 1835424, 42, 0, 1835425, 34, 0, 1835426, 34, 0, 1835427, 34, 0, 1835428, 41, 0, 1835429, 36, 0, 1835430, 34, 0, 1835431, 34, 0, 1835432, 34, 0, 1835433, 34, 0, 1835434, 34, 0, 1835435, 34, 0, 1900875, 17, 0, 1900876, 34, 0, 1900877, 34, 0, 1900878, 34, 0, 1900879, 34, 0, 1900880, 18, 0, 1900884, 12, 0, 1900885, 29, 0, 1900886, 29, 0, 1900887, 112, 0, 1900888, 29, 0, 1900889, 29, 0, 1900890, 29, 0, 1900891, 29, 0, 1900892, 112, 0, 1900893, 29, 0, 1900894, 29, 0, 1900895, 29, 0, 1900896, 29, 0, 1900897, 29, 0, 1900898, 29, 0, 1900899, 17, 0, 1900900, 17, 0, 1900901, 17, 0, 1900902, 17, 0, 1900903, 17, 0, 1900904, 17, 0, 1900905, 17, 0, 1900906, 17, 0, 1900907, 17, 0, 1900908, 29, 0, 1900909, 115, 0, 1900910, 116, 0, 1900911, 29, 0, 1900912, 29, 0, 1900913, 29, 0, 1900914, 29, 0, 1900915, 29, 0, 1900916, 29, 0, 1900917, 29, 0, 1900918, 17, 0, 1900919, 17, 0, 1900920, 17, 0, 1900921, 114, 0, 1900922, 17, 0, 1900923, 17, 0, 1900924, 15, 0, 1900925, 20, 0, 1900926, 20, 0, 1900946, 16, 0, 1900947, 20, 0, 1900948, 20, 0, 1900949, 20, 0, 1900950, 16, 0, 1900951, 34, 0, 1900952, 34, 0, 1900953, 15, 0, 1900961, 34, 0, 1900962, 34, 0, 1900963, 43, 0, 1900966, 36, 0, 1900967, 41, 0, 1900968, 41, 0, 1900969, 42, 0, 1900970, 34, 0, 1900971, 34, 0, 1966411, 17, 0, 1966412, 34, 0, 1966413, 34, 0, 1966414, 34, 0, 1966415, 34, 0, 1966416, 18, 0, 1966421, 41, 0, 1966422, 41, 0, 1966423, 41, 0, 1966424, 41, 0, 1966425, 41, 0, 1966426, 41, 0, 1966427, 41, 0, 1966428, 41, 0, 1966429, 41, 0, 1966430, 41, 0, 1966431, 17, 0, 1966432, 17, 0, 1966433, 17, 0, 1966434, 17, 0, 1966435, 17, 0, 1966436, 17, 0, 1966437, 17, 0, 1966438, 15, 0, 1966439, 20, 0, 1966440, 20, 0, 1966441, 20, 0, 1966442, 16, 0, 1966443, 17, 0, 1966444, 17, 0, 1966445, 17, 0, 1966446, 114, 0, 1966447, 15, 0, 1966448, 20, 0, 1966449, 20, 0, 1966450, 20, 0, 1966451, 20, 0, 1966452, 20, 0, 1966453, 20, 0, 1966454, 16, 0, 1966455, 17, 0, 1966456, 17, 0, 1966457, 114, 0, 1966458, 17, 0, 1966459, 15, 0, 1966487, 16, 0, 1966488, 21, 0, 1966497, 41, 0, 1966498, 41, 0, 1966505, 12, 0, 1966506, 34, 0, 1966507, 34, 0, 2031947, 17, 0, 2031948, 34, 0, 2031949, 34, 0, 2031950, 34, 0, 2031951, 15, 0, 2031952, 58, 0, 2031967, 41, 0, 2031968, 41, 0, 2031969, 41, 0, 2031970, 16, 0, 2031971, 17, 0, 2031972, 17, 0, 2031973, 15, 0, 2031979, 16, 0, 2031980, 17, 0, 2031981, 17, 0, 2031982, 113, 0, 2031991, 16, 0, 2031992, 17, 0, 2031993, 111, 0, 2031994, 15, 0, 2032041, 12, 0, 2032042, 34, 0, 2032043, 34, 0, 2097483, 17, 0, 2097484, 34, 0, 2097485, 34, 0, 2097486, 15, 0, 2097488, 58, 0, 2097507, 41, 0, 2097508, 41, 0, 2097516, 20, 0, 2097517, 20, 0, 2097528, 20, 0, 2097529, 113, 0, 2097577, 12, 0, 2097578, 34, 0, 2097579, 34, 0, 2163019, 17, 0, 2163020, 34, 0, 2163021, 18, 0, 2163047, 3, 0, 2163048, 4, 0, 2163058, 3, 0, 2163059, 4, 0, 2163093, 3, 0, 2163094, 4, 0, 2163113, 12, 0, 2163114, 34, 0, 2163115, 34, 0, 2228555, 17, 0, 2228556, 34, 0, 2228557, 48, 0, 2228558, 48, 0, 2228559, 48, 0, 2228560, 48, 0, 2228561, 48, 0, 2228562, 48, 0, 2228563, 48, 0, 2228564, 48, 0, 2228565, 48, 0, 2228566, 48, 0, 2228567, 107, 0, 2228568, 107, 0, 2228569, 48, 0, 2228570, 48, 0, 2228571, 48, 0, 2228572, 107, 0, 2228573, 48, 0, 2228574, 48, 0, 2228575, 48, 0, 2228576, 48, 0, 2228577, 48, 0, 2228578, 48, 0, 2228579, 48, 0, 2228580, 48, 0, 2228581, 48, 0, 2228582, 48, 0, 2228583, 48, 0, 2228584, 48, 0, 2228585, 48, 0, 2228586, 48, 0, 2228587, 48, 0, 2228588, 48, 0, 2228589, 48, 0, 2228590, 107, 0, 2228591, 48, 0, 2228592, 48, 0, 2228593, 48, 0, 2228594, 48, 0, 2228595, 48, 0, 2228596, 48, 0, 2228597, 48, 0, 2228598, 48, 0, 2228599, 48, 0, 2228600, 48, 0, 2228601, 107, 0, 2228602, 48, 0, 2228603, 48, 0, 2228604, 48, 0, 2228605, 48, 0, 2228606, 48, 0, 2228607, 48, 0, 2228608, 48, 0, 2228609, 48, 0, 2228610, 48, 0, 2228611, 48, 0, 2228612, 48, 0, 2228613, 48, 0, 2228614, 48, 0, 2228615, 48, 0, 2228616, 48, 0, 2228617, 48, 0, 2228618, 48, 0, 2228619, 48, 0, 2228620, 48, 0, 2228621, 48, 0, 2228622, 48, 0, 2228623, 48, 0, 2228624, 48, 0, 2228625, 48, 0, 2228626, 48, 0, 2228627, 48, 0, 2228628, 48, 0, 2228629, 48, 0, 2228630, 48, 0, 2228631, 48, 0, 2228632, 48, 0, 2228633, 48, 0, 2228634, 48, 0, 2228635, 48, 0, 2228636, 48, 0, 2228637, 48, 0, 2228638, 48, 0, 2228639, 48, 0, 2228640, 48, 0, 2228641, 48, 0, 2228642, 48, 0, 2228643, 48, 0, 2228644, 48, 0, 2228645, 48, 0, 2228646, 48, 0, 2228647, 48, 0, 2228648, 48, 0, 2228649, 14, 0, 2228650, 34, 0, 2228651, 34, 0, 2294091, 17, 0, 2294092, 34, 0, 2294093, 34, 0, 2294094, 34, 0, 2294095, 34, 0, 2294096, 34, 0, 2294097, 34, 0, 2294098, 34, 0, 2294099, 34, 0, 2294100, 34, 0, 2294101, 34, 0, 2294102, 34, 0, 2294103, 34, 0, 2294104, 34, 0, 2294105, 34, 0, 2294106, 34, 0, 2294107, 34, 0, 2294108, 34, 0, 2294109, 34, 0, 2294110, 34, 0, 2294111, 34, 0, 2294112, 34, 0, 2294113, 34, 0, 2294114, 34, 0, 2294115, 34, 0, 2294116, 34, 0, 2294117, 34, 0, 2294118, 34, 0, 2294119, 34, 0, 2294120, 34, 0, 2294121, 34, 0, 2294122, 34, 0, 2294123, 34, 0, 2294124, 34, 0, 2294125, 34, 0, 2294126, 34, 0, 2294127, 34, 0, 2294128, 34, 0, 2294129, 34, 0, 2294130, 34, 0, 2294131, 34, 0, 2294132, 34, 0, 2294133, 34, 0, 2294134, 34, 0, 2294135, 34, 0, 2294136, 34, 0, 2294137, 34, 0, 2294138, 34, 0, 2294139, 34, 0, 2294140, 34, 0, 2294141, 34, 0, 2294142, 34, 0, 2294143, 34, 0, 2294144, 34, 0, 2294145, 34, 0, 2294146, 34, 0, 2294147, 34, 0, 2294148, 34, 0, 2294149, 34, 0, 2294150, 34, 0, 2294151, 34, 0, 2294152, 34, 0, 2294153, 34, 0, 2294154, 34, 0, 2294155, 34, 0, 2294156, 34, 0, 2294157, 34, 0, 2294158, 34, 0, 2294159, 34, 0, 2294160, 34, 0, 2294161, 34, 0, 2294162, 34, 0, 2294163, 34, 0, 2294164, 34, 0, 2294165, 34, 0, 2294166, 34, 0, 2294167, 34, 0, 2294168, 34, 0, 2294169, 34, 0, 2294170, 34, 0, 2294171, 34, 0, 2294172, 34, 0, 2294173, 34, 0, 2294174, 34, 0, 2294175, 34, 0, 2294176, 34, 0, 2294177, 34, 0, 2294178, 34, 0, 2294179, 34, 0, 2294180, 34, 0, 2294181, 34, 0, 2294182, 34, 0, 2294183, 34, 0, 2294184, 34, 0, 2294185, 34, 0, 2294186, 34, 0, 2294187, 34, 0 )
-
-[node name="ForestFloorNegativeOne2" type="TileMap" parent="Underground"]
-z_index = -1
-tile_set = ExtResource( 10 )
-cell_size = Vector2( 70, 70 )
-cell_custom_transform = Transform2D( 70, 0, 0, 70, 0, 0 )
-format = 1
-tile_data = PoolIntArray( 786548, 59, 0, 1245574, 13, 0, 1245575, 13, 0, 1245576, 58, 0, 1245577, 58, 0, 1245578, 58, 0, 1245579, 58, 0, 1245580, 56, 0, 1311110, 13, 0, 1311111, 13, 0, 1311112, 58, 0, 1311113, 58, 0, 1311114, 58, 0, 1311115, 58, 0, 1311116, 56, 0, 1376592, 56, 0, 1376593, 56, 0, 1376594, 56, 0, 1376595, 56, 0, 1376596, 56, 0, 1376667, 95, 0, 1376668, 95, 0, 1376669, 95, 0, 1376670, 95, 0, 1376671, 95, 0, 1442128, 56, 0, 1442129, 56, 0, 1442130, 56, 0, 1442131, 56, 0, 1442132, 56, 0, 1442203, 95, 0, 1442204, 95, 0, 1442205, 95, 0, 1442206, 95, 0, 1442207, 95, 0, 1507664, 56, 0, 1507665, 56, 0, 1507666, 56, 0, 1507667, 56, 0, 1507668, 56, 0, 1507739, 95, 0, 1507740, 95, 0, 1507741, 95, 0, 1507742, 95, 0, 1507743, 95, 0, 1573200, 56, 0, 1573201, 56, 0, 1573202, 56, 0, 1573203, 56, 0, 1573204, 56, 0, 1573275, 95, 0, 1573276, 95, 0, 1573277, 95, 0, 1573278, 95, 0, 1573279, 95, 0, 1638736, 56, 0, 1638737, 56, 0, 1638738, 56, 0, 1638739, 56, 0, 1638740, 56, 0, 1638788, 56, 0, 1638789, 56, 0, 1638790, 56, 0, 1638791, 56, 0, 1638792, 56, 0, 1638793, 56, 0, 1638794, 56, 0, 1638795, 56, 0, 1638811, 95, 0, 1638812, 95, 0, 1638813, 95, 0, 1638814, 95, 0, 1638815, 95, 0, 1704272, 56, 0, 1704273, 56, 0, 1704274, 56, 0, 1704275, 56, 0, 1704276, 56, 0, 1704323, 56, 0, 1704324, 56, 0, 1704325, 56, 0, 1704326, 56, 0, 1704327, 56, 0, 1704328, 56, 0, 1704329, 56, 0, 1704330, 56, 0, 1704331, 56, 0, 1704332, 56, 0, 1704347, 95, 0, 1704348, 95, 0, 1704349, 95, 0, 1704350, 95, 0, 1704351, 95, 0, 1769808, 56, 0, 1769809, 56, 0, 1769810, 56, 0, 1769811, 56, 0, 1769812, 56, 0, 1769856, 56, 0, 1769857, 56, 0, 1769858, 56, 0, 1769859, 56, 0, 1769860, 56, 0, 1769861, 56, 0, 1769862, 56, 0, 1769863, 56, 0, 1769864, 56, 0, 1769865, 56, 0, 1769866, 56, 0, 1769867, 56, 0, 1769868, 56, 0, 1769869, 56, 0, 1769870, 56, 0, 1769871, 56, 0, 1769872, 56, 0, 1769883, 95, 0, 1769884, 95, 0, 1769885, 95, 0, 1769886, 95, 0, 1769887, 95, 0, 1835344, 56, 0, 1835345, 56, 0, 1835346, 56, 0, 1835347, 56, 0, 1835348, 56, 0, 1835391, 56, 0, 1835392, 56, 0, 1835393, 56, 0, 1835394, 56, 0, 1835395, 56, 0, 1835396, 56, 0, 1835397, 56, 0, 1835398, 56, 0, 1835399, 56, 0, 1835400, 56, 0, 1835401, 56, 0, 1835402, 56, 0, 1835403, 56, 0, 1835404, 56, 0, 1835405, 56, 0, 1835406, 56, 0, 1835407, 56, 0, 1835408, 56, 0, 1835409, 56, 0, 1835418, 56, 0, 1835419, 95, 0, 1835420, 95, 0, 1835421, 95, 0, 1835422, 95, 0, 1835423, 95, 0, 1835424, 56, 0, 1835428, 56, 0, 1835429, 56, 0, 1900880, 56, 0, 1900881, 56, 0, 1900882, 56, 0, 1900883, 56, 0, 1900884, 56, 0, 1900924, 56, 0, 1900925, 56, 0, 1900926, 56, 0, 1900927, 56, 0, 1900928, 56, 0, 1900929, 56, 0, 1900930, 56, 0, 1900931, 56, 0, 1900932, 56, 0, 1900933, 56, 0, 1900934, 56, 0, 1900935, 56, 0, 1900936, 56, 0, 1900937, 56, 0, 1900938, 56, 0, 1900939, 56, 0, 1900940, 56, 0, 1900941, 56, 0, 1900942, 56, 0, 1900943, 56, 0, 1900944, 56, 0, 1900945, 56, 0, 1900946, 56, 0, 1900947, 56, 0, 1900948, 56, 0, 1900949, 56, 0, 1900950, 56, 0, 1900953, 56, 0, 1900954, 56, 0, 1900955, 95, 0, 1900956, 95, 0, 1900957, 95, 0, 1900958, 95, 0, 1900959, 95, 0, 1900960, 56, 0, 1900963, 56, 0, 1900964, 56, 0, 1900965, 56, 0, 1900966, 56, 0, 1900967, 56, 0, 1900968, 56, 0, 1900969, 56, 0, 1966416, 56, 0, 1966417, 56, 0, 1966418, 56, 0, 1966419, 56, 0, 1966420, 56, 0, 1966421, 56, 0, 1966422, 56, 0, 1966423, 56, 0, 1966424, 56, 0, 1966425, 56, 0, 1966426, 56, 0, 1966427, 56, 0, 1966428, 56, 0, 1966429, 56, 0, 1966430, 56, 0, 1966432, 56, 0, 1966433, 56, 0, 1966434, 56, 0, 1966435, 56, 0, 1966436, 56, 0, 1966437, 56, 0, 1966438, 56, 0, 1966439, 56, 0, 1966440, 56, 0, 1966441, 56, 0, 1966442, 56, 0, 1966447, 56, 0, 1966448, 56, 0, 1966449, 56, 0, 1966450, 56, 0, 1966451, 56, 0, 1966452, 56, 0, 1966453, 56, 0, 1966454, 56, 0, 1966459, 56, 0, 1966460, 56, 0, 1966461, 56, 0, 1966462, 56, 0, 1966463, 56, 0, 1966464, 56, 0, 1966465, 56, 0, 1966466, 56, 0, 1966467, 56, 0, 1966468, 56, 0, 1966469, 56, 0, 1966470, 56, 0, 1966471, 56, 0, 1966472, 56, 0, 1966473, 56, 0, 1966474, 56, 0, 1966475, 56, 0, 1966476, 56, 0, 1966477, 56, 0, 1966478, 56, 0, 1966479, 56, 0, 1966480, 56, 0, 1966481, 56, 0, 1966482, 56, 0, 1966483, 56, 0, 1966484, 56, 0, 1966485, 56, 0, 1966486, 56, 0, 1966487, 56, 0, 1966488, 56, 0, 1966489, 56, 0, 1966490, 56, 0, 1966491, 95, 0, 1966492, 95, 0, 1966493, 95, 0, 1966494, 95, 0, 1966495, 95, 0, 1966496, 56, 0, 1966499, 56, 0, 1966500, 56, 0, 1966501, 56, 0, 1966502, 56, 0, 1966503, 56, 0, 1966504, 56, 0, 1966505, 56, 0, 2031951, 58, 0, 2031953, 56, 0, 2031954, 56, 0, 2031955, 56, 0, 2031956, 56, 0, 2031957, 56, 0, 2031958, 56, 0, 2031959, 56, 0, 2031960, 56, 0, 2031961, 56, 0, 2031962, 56, 0, 2031963, 56, 0, 2031964, 56, 0, 2031965, 56, 0, 2031966, 56, 0, 2031967, 56, 0, 2031968, 56, 0, 2031969, 56, 0, 2031970, 56, 0, 2031971, 56, 0, 2031972, 56, 0, 2031973, 56, 0, 2031974, 56, 0, 2031975, 56, 0, 2031976, 56, 0, 2031977, 56, 0, 2031978, 56, 0, 2031979, 56, 0, 2031982, 56, 0, 2031983, 56, 0, 2031984, 56, 0, 2031985, 56, 0, 2031986, 56, 0, 2031987, 56, 0, 2031988, 56, 0, 2031989, 56, 0, 2031990, 56, 0, 2031991, 56, 0, 2031994, 56, 0, 2031995, 56, 0, 2031996, 56, 0, 2031997, 56, 0, 2031998, 56, 0, 2031999, 56, 0, 2032000, 56, 0, 2032001, 56, 0, 2032002, 56, 0, 2032003, 56, 0, 2032004, 56, 0, 2032005, 56, 0, 2032006, 56, 0, 2032007, 56, 0, 2032008, 56, 0, 2032009, 56, 0, 2032010, 56, 0, 2032011, 56, 0, 2032012, 56, 0, 2032013, 56, 0, 2032014, 56, 0, 2032015, 56, 0, 2032016, 56, 0, 2032017, 56, 0, 2032018, 56, 0, 2032019, 56, 0, 2032020, 56, 0, 2032021, 56, 0, 2032022, 56, 0, 2032023, 56, 0, 2032024, 56, 0, 2032025, 56, 0, 2032026, 56, 0, 2032027, 95, 0, 2032028, 95, 0, 2032029, 95, 0, 2032030, 95, 0, 2032031, 95, 0, 2032032, 56, 0, 2032033, 56, 0, 2032034, 56, 0, 2032035, 56, 0, 2032036, 56, 0, 2032037, 56, 0, 2032038, 56, 0, 2032039, 56, 0, 2032040, 56, 0, 2032041, 56, 0, 2097486, 58, 0, 2097487, 58, 0, 2097489, 56, 0, 2097490, 56, 0, 2097491, 56, 0, 2097492, 56, 0, 2097493, 56, 0, 2097494, 56, 0, 2097495, 56, 0, 2097496, 56, 0, 2097497, 56, 0, 2097498, 56, 0, 2097499, 56, 0, 2097500, 56, 0, 2097501, 56, 0, 2097502, 56, 0, 2097503, 56, 0, 2097504, 56, 0, 2097505, 56, 0, 2097506, 56, 0, 2097507, 56, 0, 2097508, 56, 0, 2097509, 56, 0, 2097510, 56, 0, 2097511, 56, 0, 2097512, 56, 0, 2097513, 56, 0, 2097514, 56, 0, 2097515, 56, 0, 2097516, 56, 0, 2097517, 56, 0, 2097518, 56, 0, 2097519, 56, 0, 2097520, 56, 0, 2097521, 56, 0, 2097522, 56, 0, 2097523, 56, 0, 2097524, 56, 0, 2097525, 56, 0, 2097526, 56, 0, 2097527, 56, 0, 2097528, 56, 0, 2097529, 56, 0, 2097530, 56, 0, 2097531, 56, 0, 2097532, 56, 0, 2097533, 56, 0, 2097534, 56, 0, 2097535, 56, 0, 2097536, 56, 0, 2097537, 56, 0, 2097538, 56, 0, 2097539, 56, 0, 2097540, 56, 0, 2097541, 56, 0, 2097542, 56, 0, 2097543, 56, 0, 2097544, 56, 0, 2097545, 56, 0, 2097546, 56, 0, 2097547, 56, 0, 2097548, 56, 0, 2097549, 56, 0, 2097550, 56, 0, 2097551, 56, 0, 2097552, 56, 0, 2097553, 56, 0, 2097554, 56, 0, 2097555, 56, 0, 2097556, 56, 0, 2097557, 56, 0, 2097558, 56, 0, 2097559, 56, 0, 2097560, 56, 0, 2097561, 56, 0, 2097562, 56, 0, 2097563, 56, 0, 2097564, 56, 0, 2097565, 56, 0, 2097566, 56, 0, 2097567, 56, 0, 2097568, 56, 0, 2097569, 56, 0, 2097570, 56, 0, 2097571, 56, 0, 2097572, 56, 0, 2097573, 56, 0, 2097574, 56, 0, 2097575, 56, 0, 2097576, 56, 0, 2097577, 56, 0, 2163021, 58, 0, 2163022, 58, 0, 2163023, 56, 0, 2163024, 56, 0, 2163025, 56, 0, 2163026, 56, 0, 2163027, 56, 0, 2163028, 56, 0, 2163029, 56, 0, 2163030, 56, 0, 2163031, 56, 0, 2163032, 56, 0, 2163033, 56, 0, 2163034, 56, 0, 2163035, 56, 0, 2163036, 56, 0, 2163037, 56, 0, 2163038, 56, 0, 2163039, 56, 0, 2163040, 56, 0, 2163041, 56, 0, 2163042, 56, 0, 2163043, 56, 0, 2163044, 56, 0, 2163045, 56, 0, 2163046, 56, 0, 2163047, 56, 0, 2163048, 56, 0, 2163049, 56, 0, 2163050, 56, 0, 2163051, 56, 0, 2163052, 56, 0, 2163053, 56, 0, 2163054, 56, 0, 2163055, 56, 0, 2163056, 56, 0, 2163057, 56, 0, 2163058, 56, 0, 2163059, 56, 0, 2163060, 56, 0, 2163061, 56, 0, 2163062, 56, 0, 2163063, 56, 0, 2163064, 56, 0, 2163065, 56, 0, 2163066, 56, 0, 2163067, 56, 0, 2163068, 56, 0, 2163069, 56, 0, 2163070, 56, 0, 2163071, 56, 0, 2163072, 56, 0, 2163073, 56, 0, 2163074, 56, 0, 2163075, 56, 0, 2163076, 56, 0, 2163077, 56, 0, 2163078, 56, 0, 2163079, 56, 0, 2163080, 56, 0, 2163081, 56, 0, 2163082, 56, 0, 2163083, 56, 0, 2163084, 56, 0, 2163085, 56, 0, 2163086, 56, 0, 2163087, 56, 0, 2163088, 56, 0, 2163089, 56, 0, 2163090, 56, 0, 2163091, 56, 0, 2163092, 56, 0, 2163093, 56, 0, 2163094, 56, 0, 2163095, 56, 0, 2163096, 56, 0, 2163097, 56, 0, 2163098, 56, 0, 2163099, 56, 0, 2163100, 56, 0, 2163101, 56, 0, 2163102, 56, 0, 2163103, 56, 0, 2163104, 56, 0, 2163105, 56, 0, 2163106, 56, 0, 2163107, 56, 0, 2163108, 56, 0, 2163109, 56, 0, 2163110, 56, 0, 2163111, 56, 0, 2163112, 56, 0, 2163113, 56, 0, 2228557, 58, 0, 2228558, 58, 0 )
-
-[node name="StaticBody2D2" type="StaticBody2D" parent="Underground"]
-position = Vector2( 28024.5, 2364.51 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Underground/StaticBody2D2"]
-position = Vector2( -79.4922, -84.343 )
-shape = SubResource( 1 )
-
-[node name="StoneRune" parent="Underground" instance=ExtResource( 16 )]
-position = Vector2( 29490, 2354 )
-name_animation = "stone_rune_on"
-frames_rune = ExtResource( 17 )
-
-[node name="Squirrel" parent="Underground" instance=ExtResource( 4 )]
-position = Vector2( 27656, 2303 )
-scale = Vector2( 1.90322, 1.90322 )
-
-[node name="Mushroom" type="Node2D" parent="Underground"]
-scale = Vector2( 1.00729, 1.01523 )
-
-[node name="Murshroom_green2" parent="Underground/Mushroom" instance=ExtResource( 36 )]
-position = Vector2( 23694.4, 2323.62 )
-scale = Vector2( 0.88188, 0.88188 )
-
-[node name="Murshroom_green3" parent="Underground/Mushroom" instance=ExtResource( 36 )]
-position = Vector2( 24029, 2325.59 )
-scale = Vector2( 0.847129, 0.847129 )
-
-[node name="Murshroom_green4" parent="Underground/Mushroom" instance=ExtResource( 36 )]
-position = Vector2( 24602.8, 2326.58 )
-scale = Vector2( 0.780827, 0.780827 )
-
-[node name="Murshroom_green5" parent="Underground/Mushroom" instance=ExtResource( 36 )]
-position = Vector2( 26632, 2325.59 )
-scale = Vector2( 0.780827, 0.780827 )
-
-[node name="Murshroom_green6" parent="Underground/Mushroom" instance=ExtResource( 36 )]
-position = Vector2( 26675.7, 2325.59 )
-scale = Vector2( 0.780827, 0.780827 )
-
-[node name="Murshroom_green7" parent="Underground/Mushroom" instance=ExtResource( 36 )]
-position = Vector2( 29356.1, 2325.59 )
-scale = Vector2( 0.780827, 0.780827 )
-
-[node name="Murshroom_green8" parent="Underground/Mushroom" instance=ExtResource( 36 )]
-position = Vector2( 29519.9, 2326.58 )
-scale = Vector2( 0.780827, 0.780827 )
-
-[node name="Mushrrom_blue" parent="Underground/Mushroom" instance=ExtResource( 37 )]
-position = Vector2( 23245.7, 2320.67 )
-scale = Vector2( 0.261442, 0.261442 )
-
-[node name="Mushrrom_blue2" parent="Underground/Mushroom" instance=ExtResource( 37 )]
-position = Vector2( 24294, 2325.59 )
-scale = Vector2( 0.166411, 0.218629 )
-
-[node name="Mushrrom_blue4" parent="Underground/Mushroom" instance=ExtResource( 37 )]
-position = Vector2( 24310.9, 2321.65 )
-scale = Vector2( 0.192904, 0.253435 )
-
-[node name="Mushrrom_blue5" parent="Underground/Mushroom" instance=ExtResource( 37 )]
-position = Vector2( 24321.8, 2331.5 )
-scale = Vector2( 0.112371, 0.147632 )
-
-[node name="Mushrrom_blue6" parent="Underground/Mushroom" instance=ExtResource( 37 )]
-position = Vector2( 25021.7, 2262.55 )
-scale = Vector2( 0.112371, 0.147632 )
-
-[node name="Mushrrom_blue7" parent="Underground/Mushroom" instance=ExtResource( 37 )]
-position = Vector2( 25035.6, 2259.6 )
-scale = Vector2( 0.136108, 0.178817 )
-
-[node name="Mushrrom_blue8" parent="Underground/Mushroom" instance=ExtResource( 37 )]
-position = Vector2( 25049.5, 2262.55 )
-scale = Vector2( 0.112371, 0.147632 )
-
-[node name="Mushrrom_blue9" parent="Underground/Mushroom" instance=ExtResource( 37 )]
-position = Vector2( 25853.7, 2331.5 )
-scale = Vector2( 0.112371, 0.147632 )
-
-[node name="Mushrrom_blue10" parent="Underground/Mushroom" instance=ExtResource( 37 )]
-position = Vector2( 28195.6, 2331.5 )
-scale = Vector2( 0.112371, 0.147632 )
-
-[node name="Mushrrom_blue11" parent="Underground/Mushroom" instance=ExtResource( 37 )]
-position = Vector2( 28184.7, 2329.53 )
-scale = Vector2( 0.130735, 0.171759 )
-
-[node name="Mushrrom_blue12" parent="Underground/Mushroom" instance=ExtResource( 37 )]
-position = Vector2( 29345.2, 2330.52 )
-scale = Vector2( 0.114813, 0.15494 )
-
-[node name="Mushrrom_blue13" parent="Underground/Mushroom" instance=ExtResource( 37 )]
-position = Vector2( 29232.1, 2330.52 )
-scale = Vector2( 0.114813, 0.15494 )
-
-[node name="Mushrrom_blue3" parent="Underground/Mushroom" instance=ExtResource( 37 )]
-position = Vector2( 23266.5, 2328.55 )
-scale = Vector2( 0.17574, 0.17574 )
-
-[node name="AllySquirrel" parent="Underground" instance=ExtResource( 12 )]
-position = Vector2( 29161, 2343 )
-
-[node name="ControlDialogic" parent="Underground/AllySquirrel" instance=ExtResource( 21 )]
-visible = false
-margin_left = 59.397
-margin_top = 399.012
-margin_right = 59.397
-margin_bottom = 399.012
-
-[node name="Parallax" type="Node2D" parent="."]
-position = Vector2( 3919.98, -1.42987 )
-
-[node name="ParallaxBackground" parent="Parallax" instance=ExtResource( 7 )]
-
-[node name="AudioRiver" type="Node2D" parent="."]
-position = Vector2( 3919.98, -382 )
-
-[node name="RiverZero" type="AudioStreamPlayer2D" parent="AudioRiver"]
-position = Vector2( 736.02, 1379 )
-stream = ExtResource( 23 )
-volume_db = -21.81
-autoplay = true
-max_distance = 780.0
-
-[node name="RiverOne" type="AudioStreamPlayer2D" parent="AudioRiver"]
-position = Vector2( 1656.02, 1380 )
-stream = ExtResource( 23 )
-volume_db = -21.81
-autoplay = true
-max_distance = 750.0
-
-[node name="RiverTwo" type="AudioStreamPlayer2D" parent="AudioRiver"]
-position = Vector2( 3476.02, 1377 )
-stream = ExtResource( 23 )
-volume_db = -21.81
-autoplay = true
-max_distance = 750.0
-
-[node name="RiverThree" type="AudioStreamPlayer2D" parent="AudioRiver"]
-position = Vector2( 4909.02, 1366.88 )
-stream = ExtResource( 23 )
-volume_db = -21.81
-autoplay = true
-max_distance = 1800.0
-
-[node name="RiverFour" type="AudioStreamPlayer2D" parent="AudioRiver"]
-position = Vector2( 6420.74, 1366.88 )
-stream = ExtResource( 23 )
-volume_db = -21.81
-autoplay = true
-max_distance = 900.0
-
-[node name="RiverFive" type="AudioStreamPlayer2D" parent="AudioRiver"]
-position = Vector2( 8767.02, 1366.88 )
-stream = ExtResource( 23 )
-volume_db = -21.81
-autoplay = true
-max_distance = 900.0
-
-[node name="RiverSix" type="AudioStreamPlayer2D" parent="AudioRiver"]
-position = Vector2( 11156, 1366.88 )
-stream = ExtResource( 23 )
-volume_db = -21.81
-autoplay = true
-max_distance = 900.0
-
-[node name="RiverSeven" type="AudioStreamPlayer2D" parent="AudioRiver"]
-position = Vector2( 12679, 1367 )
-stream = ExtResource( 23 )
-volume_db = -21.81
-autoplay = true
-max_distance = 900.0
-
-[node name="RiverEight" type="AudioStreamPlayer2D" parent="AudioRiver"]
-position = Vector2( 14381, 1366.88 )
-stream = ExtResource( 23 )
-volume_db = -21.81
-autoplay = true
-max_distance = 900.0
-
-[node name="RiverNine" type="AudioStreamPlayer2D" parent="AudioRiver"]
-position = Vector2( 14808, 1366.88 )
-stream = ExtResource( 23 )
-volume_db = -21.81
-autoplay = true
-max_distance = 900.0
-
-[node name="RiverTen" type="AudioStreamPlayer2D" parent="AudioRiver"]
-position = Vector2( 14808, 1366.88 )
-stream = ExtResource( 23 )
-volume_db = -21.81
-autoplay = true
-max_distance = 900.0
-
-[node name="RiverEleven" type="AudioStreamPlayer2D" parent="AudioRiver"]
-position = Vector2( 15534, 1366.88 )
-stream = ExtResource( 23 )
-volume_db = -21.81
-autoplay = true
-max_distance = 900.0
-
-[node name="RiverTwelve" type="AudioStreamPlayer2D" parent="AudioRiver"]
-position = Vector2( 19642, 1388 )
-stream = ExtResource( 23 )
-volume_db = -21.81
-autoplay = true
-max_distance = 900.0
-
-[node name="RiverThirteen" type="AudioStreamPlayer2D" parent="AudioRiver"]
-position = Vector2( 19965, 1386 )
-stream = ExtResource( 23 )
-volume_db = -21.81
-autoplay = true
-max_distance = 900.0
-
-[node name="RiverFourTeen" type="AudioStreamPlayer2D" parent="AudioRiver"]
-position = Vector2( 24069, 1379 )
-stream = ExtResource( 23 )
-volume_db = -21.81
-autoplay = true
-max_distance = 900.0
-
-[node name="RiverFiveTeen" type="AudioStreamPlayer2D" parent="AudioRiver"]
-position = Vector2( 24867, 1382 )
-stream = ExtResource( 23 )
-volume_db = -21.81
-autoplay = true
-max_distance = 900.0
-
-[node name="RiverSixTeen" type="AudioStreamPlayer2D" parent="AudioRiver"]
-position = Vector2( 25762, 1373 )
-stream = ExtResource( 23 )
-volume_db = -21.81
-autoplay = true
-max_distance = 900.0
-
-[node name="RiverSevenTeen" type="AudioStreamPlayer2D" parent="AudioRiver"]
-position = Vector2( 26227, 1375 )
-stream = ExtResource( 23 )
-volume_db = -21.81
-autoplay = true
-max_distance = 900.0
-
-[node name="RiverEightTeen" type="AudioStreamPlayer2D" parent="AudioRiver"]
-position = Vector2( 30771, 1366.88 )
-stream = ExtResource( 23 )
-volume_db = -21.81
-autoplay = true
-max_distance = 900.0
-
-[node name="RiverNineTeen" type="AudioStreamPlayer2D" parent="AudioRiver"]
-position = Vector2( 31602, 1366.88 )
-stream = ExtResource( 23 )
-volume_db = -21.81
-autoplay = true
-max_distance = 900.0
-
-[node name="RiverTwenty" type="AudioStreamPlayer2D" parent="AudioRiver"]
-position = Vector2( 32135, 1374 )
-stream = ExtResource( 23 )
-volume_db = -21.81
-autoplay = true
-max_distance = 900.0
-
-[node name="RiverTwentyOne" type="AudioStreamPlayer2D" parent="AudioRiver"]
-position = Vector2( 33608, 1372 )
-stream = ExtResource( 23 )
-volume_db = -21.81
-autoplay = true
-max_distance = 900.0
-
-[node name="RiverTwentyTwo" type="AudioStreamPlayer2D" parent="AudioRiver"]
-position = Vector2( 34997, 1378 )
-stream = ExtResource( 23 )
-volume_db = -21.81
-autoplay = true
-max_distance = 900.0
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 2 )
-volume_db = -9.0
-autoplay = true
 
 [connection signal="body_entered" from="Forest/Conversation" to="Forest/Conversation" method="_on_Conversation_body_entered"]
