@@ -7,6 +7,7 @@ export var max_roll: float = 0.1
 
 onready var _noise: OpenSimplexNoise = OpenSimplexNoise.new()
 
+var _limit_forest: bool = true
 var _trauma: float = 0.0
 var _max_trauma: float = 1.0
 var _noise_y: float = 0.0
@@ -18,7 +19,18 @@ func _ready() -> void:
 	
 func _process(delta: float) -> void:
 	global_position.x = _player.global_position.x + sin(OS.get_ticks_msec() * 64)
-
+	if _limit_forest == true:
+		limit_top = 0
+		limit_left = 0
+		limit_right = 39800
+		limit_bottom = 1080
+	else:
+		limit_top = 1090
+		limit_left = 27070
+		limit_right = 33880
+		limit_bottom = 2139
+		
+		global_position.y = _player.global_position.y + sin(OS.get_ticks_msec() * 64)
 	if decay:
 		_trauma = max(_trauma - (decay * delta), 0)
 		start_shake()

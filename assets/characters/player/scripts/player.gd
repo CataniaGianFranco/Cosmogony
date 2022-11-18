@@ -35,7 +35,8 @@ func _ready() -> void:
 
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("ui_restart"):
-		GameHandler._health = 5
+		if GameHandler._health == 0:
+			GameHandler._health = 5
 		get_tree().reload_current_scene()
 	change_animation()
 
