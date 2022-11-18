@@ -1,4 +1,4 @@
-[gd_scene load_steps=217 format=2]
+[gd_scene load_steps=225 format=2]
 
 [ext_resource path="res://assets/characters/player/sprites/idle/idle_4.png" type="Texture" id=1]
 [ext_resource path="res://assets/characters/player/scripts/player.gd" type="Script" id=2]
@@ -188,6 +188,13 @@
 [ext_resource path="res://assets/characters/player/animated_gui_health.gd" type="Script" id=186]
 [ext_resource path="res://scripts/hurt_box.gd" type="Script" id=187]
 [ext_resource path="res://assets/characters/player/player_hurt.gd" type="Script" id=188]
+[ext_resource path="res://assets/characters/player/sprites/respawn/respawn_4.png" type="Texture" id=189]
+[ext_resource path="res://assets/characters/player/sprites/respawn/respawn_5.png" type="Texture" id=190]
+[ext_resource path="res://assets/characters/player/sprites/respawn/respawn_6.png" type="Texture" id=191]
+[ext_resource path="res://assets/characters/player/sprites/respawn/respawn_2.png" type="Texture" id=192]
+[ext_resource path="res://assets/characters/player/sprites/respawn/respawn_3.png" type="Texture" id=193]
+[ext_resource path="res://assets/characters/player/sprites/respawn/respawn_1.png" type="Texture" id=194]
+[ext_resource path="res://assets/characters/player/scripts/player_respawn.gd" type="Script" id=195]
 
 [sub_resource type="SpriteFrames" id=29]
 animations = [ {
@@ -520,6 +527,22 @@ tracks/0/keys = {
 "values": [ ExtResource( 19 ), ExtResource( 20 ) ]
 }
 
+[sub_resource type="Animation" id=31]
+resource_name = "respawn"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9, 1.2, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 194 ), ExtResource( 192 ), ExtResource( 193 ), ExtResource( 189 ), ExtResource( 190 ), ExtResource( 191 ) ]
+}
+
 [sub_resource type="Animation" id=5]
 resource_name = "walk"
 length = 0.833335
@@ -760,6 +783,7 @@ anims/hurt = SubResource( 11 )
 anims/idle = SubResource( 7 )
 anims/jump = SubResource( 9 )
 anims/land = SubResource( 17 )
+anims/respawn = SubResource( 31 )
 anims/walk = SubResource( 5 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
@@ -794,7 +818,7 @@ shape = SubResource( 19 )
 
 [node name="PlayerFSM" type="Node2D" parent="."]
 script = ExtResource( 150 )
-_initial_state = "Idle"
+_initial_state = "Respawn"
 
 [node name="Idle" type="Node2D" parent="PlayerFSM"]
 script = ExtResource( 151 )
@@ -817,6 +841,9 @@ script = ExtResource( 62 )
 [node name="DoubleJump" type="Node2D" parent="PlayerFSM"]
 script = ExtResource( 160 )
 
+[node name="Respawn" type="Node2D" parent="PlayerFSM"]
+script = ExtResource( 195 )
+
 [node name="RayCast2D" type="RayCast2D" parent="."]
 enabled = true
 cast_to = Vector2( 0, -62 )
@@ -831,5 +858,6 @@ position = Vector2( 0, -3 )
 shape = SubResource( 30 )
 
 [connection signal="animation_finished" from="AnimationPlayer" to="PlayerFSM" method="_on_AnimationPlayer_animation_finished"]
+[connection signal="animation_finished" from="AnimationPlayer" to="PlayerFSM/Respawn" method="_on_AnimationPlayer_animation_finished"]
 [connection signal="animation_finished" from="AnimationFragmentRune" to="." method="_on_AnimationFragmentRune_animation_finished"]
 [connection signal="body_entered" from="Weapon/ScarfHitBox" to="Weapon" method="_on_ScarfHitBox_body_entered"]

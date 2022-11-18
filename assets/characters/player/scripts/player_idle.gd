@@ -4,8 +4,9 @@ var _direction: Vector2
 
 func _enter() -> void:
 	._enter()
-	_player._velocity.x = 0
-	_animation.play("idle")
+	if _player._not_move == false:
+		_player._velocity.x = 0
+		_animation.play("idle")
 
 func _update(delta) -> void:
 	._update(delta)

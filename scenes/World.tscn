@@ -2444,7 +2444,7 @@ position = Vector2( 3297, 966 )
 scale = Vector2( 1, 1 )
 
 [node name="Player" parent="Forest" instance=ExtResource( 6 )]
-position = Vector2( 25890, 1062 )
+position = Vector2( -3179.37, 1261.49 )
 scale = Vector2( 1.4, 1.4 )
 collision_mask = 9
 sfx_dash = ExtResource( 25 )

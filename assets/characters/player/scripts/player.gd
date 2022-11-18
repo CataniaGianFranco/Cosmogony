@@ -23,6 +23,7 @@ const _MAXIMUM_JUMPS: int = 2
 var _is_crawling: bool = false
 var _is_lading: bool = false
 var ray : RayCast2D
+var _not_move: bool = true
 
 var _jumps_made: int = 0
 var _velocity: Vector2 = Vector2.ZERO
