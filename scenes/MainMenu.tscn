@@ -374,10 +374,9 @@ custom_fonts/font = SubResource( 8 )
 text = "Controles"
 
 [node name="SettingsMenu" type="VBoxContainer" parent="SettingsMenu/MainMenuTwo"]
-margin_left = -1920.0
-margin_top = 92.0
-margin_right = -640.0
-margin_bottom = 511.0
+margin_top = 72.0
+margin_right = 1280.0
+margin_bottom = 491.0
 script = ExtResource( 6 )
 
 [node name="VideoSettings" type="GridContainer" parent="SettingsMenu/MainMenuTwo/SettingsMenu"]
@@ -417,7 +416,6 @@ margin_top = 92.0
 margin_right = 1280.0
 margin_bottom = 137.0
 custom_fonts/font = SubResource( 15 )
-pressed = true
 text = "Off"
 align = 2
 
