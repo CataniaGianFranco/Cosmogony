@@ -1318,7 +1318,6 @@ shape = SubResource( 42 )
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Forest/Tree3/Area2D"]
 position = Vector2( 21959, 897 )
 rotation = -0.28881
-scale = Vector2( 1, 1 )
 shape = SubResource( 42 )
 
 [node name="Parallax" type="Node2D" parent="."]
