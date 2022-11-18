@@ -12,5 +12,7 @@ func _update(delta) -> void:
 		_player.ray.enabled = false
 		if Input.is_action_just_pressed("ui_jump"):
 			emit_signal("finished", "Jump")
+		if Input.is_action_just_pressed("ui_down"):
+			emit_signal("finished", "Crawl")
 	else:
 		emit_signal("finished", "Fall")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=225 format=2]
+[gd_scene load_steps=226 format=2]
 
 [ext_resource path="res://assets/characters/player/sprites/idle/idle_4.png" type="Texture" id=1]
 [ext_resource path="res://assets/characters/player/scripts/player.gd" type="Script" id=2]
@@ -195,6 +195,7 @@
 [ext_resource path="res://assets/characters/player/sprites/respawn/respawn_3.png" type="Texture" id=193]
 [ext_resource path="res://assets/characters/player/sprites/respawn/respawn_1.png" type="Texture" id=194]
 [ext_resource path="res://assets/characters/player/scripts/player_respawn.gd" type="Script" id=195]
+[ext_resource path="res://assets/characters/player/player_crawl.gd" type="Script" id=196]
 
 [sub_resource type="SpriteFrames" id=29]
 animations = [ {
@@ -843,6 +844,9 @@ script = ExtResource( 160 )
 
 [node name="Respawn" type="Node2D" parent="PlayerFSM"]
 script = ExtResource( 195 )
+
+[node name="Crawl" type="Node2D" parent="PlayerFSM"]
+script = ExtResource( 196 )
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
 enabled = true
