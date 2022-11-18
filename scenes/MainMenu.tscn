@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=2]
+[gd_scene load_steps=43 format=2]
 
 [ext_resource path="res://theme/main_menu.theme" type="Theme" id=1]
 [ext_resource path="res://fonts/Lato-BlackItalic.ttf" type="DynamicFontData" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://sprites/menu_principal/menu_principal_layer_4.png" type="Texture" id=13]
 [ext_resource path="res://sprites/menu_principal/menu_principal_layer_2.png" type="Texture" id=14]
 [ext_resource path="res://assets/shaders/fog.shader" type="Shader" id=15]
+[ext_resource path="res://sprites/menu_principal/cosmogony.png" type="Texture" id=16]
 
 [sub_resource type="Gradient" id=12]
 offsets = PoolRealArray( 0.0648148, 0.546296, 0.611111, 0.805556 )
@@ -211,6 +212,18 @@ texture = ExtResource( 12 )
 expand = true
 stretch_mode = 1
 
+[node name="TextureRect6" type="TextureRect" parent="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -623.5
+margin_top = -388.0
+margin_right = 623.5
+margin_bottom = -122.0
+texture = ExtResource( 16 )
+stretch_mode = 5
+
 [node name="Menu" type="VBoxContainer" parent="."]
 anchor_top = 0.265
 anchor_bottom = 0.265
@@ -226,6 +239,7 @@ custom_constants/separation = 25
 margin_right = 685.0
 margin_bottom = 253.0
 texture_normal = ExtResource( 3 )
+texture_hover = ExtResource( 3 )
 
 [node name="Play" type="Label" parent="Menu/Start"]
 anchor_left = 0.5
