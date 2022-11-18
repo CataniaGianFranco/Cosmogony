@@ -1651,6 +1651,18 @@ position = Vector2( 15368, 1406 )
 [node name="Danger9" parent="Forest/Dangers" instance=ExtResource( 27 )]
 position = Vector2( 15720, 1406 )
 
+[node name="Danger21" parent="Forest/Dangers" instance=ExtResource( 27 )]
+position = Vector2( 16976, 966 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Danger22" parent="Forest/Dangers" instance=ExtResource( 27 )]
+position = Vector2( 17888, 966 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Danger20" parent="Forest/Dangers" instance=ExtResource( 27 )]
+position = Vector2( 18272, 1326 )
+scale = Vector2( 27, 1 )
+
 [node name="Danger10" parent="Forest/Dangers" instance=ExtResource( 27 )]
 position = Vector2( 19640, 1406 )
 
@@ -1660,6 +1672,10 @@ position = Vector2( 19960, 1406 )
 [node name="Danger12" parent="Forest/Dangers" instance=ExtResource( 27 )]
 position = Vector2( 24432, 1438 )
 scale = Vector2( 11, 1 )
+
+[node name="Danger23" parent="Forest/Dangers" instance=ExtResource( 27 )]
+position = Vector2( 22696, 1366 )
+scale = Vector2( 4, 1 )
 
 [node name="Danger13" parent="Forest/Dangers" instance=ExtResource( 27 )]
 position = Vector2( 25752, 1406 )
@@ -1705,6 +1721,7 @@ shape = SubResource( 14 )
 position = Vector2( 35464, 1232 )
 
 [node name="Fog" type="Sprite" parent="Forest"]
+visible = false
 material = SubResource( 4 )
 position = Vector2( 13328, -1770 )
 scale = Vector2( 94.75, 85.6452 )
@@ -1834,14 +1851,6 @@ name_anim_rune = "fragment_laguz_1"
 
 [node name="Buffalo2" parent="Forest" instance=ExtResource( 3 )]
 position = Vector2( 27524, 1248 )
-
-[node name="Apple" parent="Forest" instance=ExtResource( 13 )]
-position = Vector2( -1372.98, 637 )
-scale = Vector2( 1, 1 )
-
-[node name="Apple2" parent="Forest" instance=ExtResource( 13 )]
-position = Vector2( 7692.02, 478 )
-scale = Vector2( 1, 1 )
 
 [node name="Apple3" parent="Forest" instance=ExtResource( 13 )]
 position = Vector2( 3297, 966 )
