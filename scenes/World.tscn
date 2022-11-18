@@ -946,7 +946,7 @@ position = Vector2( 3297, 966 )
 scale = Vector2( 1, 1 )
 
 [node name="Player" parent="Forest" instance=ExtResource( 6 )]
-position = Vector2( 16852, 875 )
+position = Vector2( 20189, 1218 )
 scale = Vector2( 1.4, 1.4 )
 collision_mask = 9
 sfx_dash = ExtResource( 25 )
@@ -1111,7 +1111,7 @@ position = Vector2( 20848, 986 )
 position = Vector2( 20856, 1117 )
 texture = ExtResource( 34 )
 
-[node name="Area2D" type="Area2D" parent="Forest/Tree3"]
+[node name="Area2D" type="StaticBody2D" parent="Forest/Tree3"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Forest/Tree3/Area2D"]
 position = Vector2( 20845.5, 820.5 )
