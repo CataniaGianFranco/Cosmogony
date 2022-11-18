@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Mushroom_mid_2_green_tree.png-f6c867cbb4c860a6029da6eb44d7d78d.stex"
+path="res://.import/Mushroom_mid_2_green_tree.png-fdfe95d5e79dfee1e07d7cb5f41b8f8f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/forest/tree/Mushroom_mid_2_green_tree.png"
-dest_files=[ "res://.import/Mushroom_mid_2_green_tree.png-f6c867cbb4c860a6029da6eb44d7d78d.stex" ]
+source_file="res://assets/forest/Tree/Mushroom_mid_2_green_tree.png"
+dest_files=[ "res://.import/Mushroom_mid_2_green_tree.png-fdfe95d5e79dfee1e07d7cb5f41b8f8f.stex" ]
 
 [params]
 
