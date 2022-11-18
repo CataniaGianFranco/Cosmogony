@@ -34,6 +34,8 @@ func _ready() -> void:
 	ray.enabled = false
 
 func _process(_delta: float) -> void:
+	var nombre = ray.get_collider()
+	print(nombre)
 	if Input.is_action_just_pressed("ui_restart"):
 		get_tree().reload_current_scene()
 	change_animation()
