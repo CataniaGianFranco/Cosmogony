@@ -7,24 +7,25 @@
 [ext_resource path="res://assets/forest/mushroom_blue/mushroom_blue_6.png" type="Texture" id=5]
 [ext_resource path="res://assets/forest/mushroom_blue/mushroom_blue_5.png" type="Texture" id=6]
 
-[sub_resource type="CapsuleShape2D" id=1]
-
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
 "frames": [ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 6 ), ExtResource( 5 ) ],
 "loop": true,
-"name": "default",
+"name": "blue",
 "speed": 5.0
 } ]
 
+[sub_resource type="CapsuleShape2D" id=1]
+
 [node name="Mushrrom_blue" type="KinematicBody2D"]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 2 )
+animation = "blue"
+frame = 1
+speed_scale = 1.8
+playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2( 0.14, 0.14 )
 shape = SubResource( 1 )
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-frames = SubResource( 2 )
-frame = 1
-speed_scale = 1.8
-playing = true

@@ -1,4 +1,4 @@
-[gd_scene load_steps=107 format=2]
+[gd_scene load_steps=108 format=2]
 
 [ext_resource path="res://world_environment/Main.tres" type="Environment" id=1]
 [ext_resource path="res://audio/ambient/chill_ambient.ogg" type="AudioStream" id=2]
@@ -27,6 +27,7 @@
 [ext_resource path="res://assets/characters/player/sfx/dash.wav" type="AudioStream" id=25]
 [ext_resource path="res://assets/dialogic/conversation/conversation.gd" type="Script" id=26]
 [ext_resource path="res://scenes/Danger.tscn" type="PackedScene" id=27]
+[ext_resource path="res://scenes/Tree_plataform.tscn" type="PackedScene" id=28]
 [ext_resource path="res://scenes/Mushroom_green.tscn" type="PackedScene" id=30]
 [ext_resource path="res://scenes/Mushroom_big_green.tscn" type="PackedScene" id=33]
 [ext_resource path="res://scenes/Murshroom_green2.tscn" type="PackedScene" id=36]
@@ -1636,8 +1637,8 @@ position = Vector2( 35464, 1232 )
 
 [node name="Fog" type="Sprite" parent="Forest"]
 material = SubResource( 4 )
-position = Vector2( 16236, -1833 )
-scale = Vector2( 82.2735, 74.3676 )
+position = Vector2( 13328, -1770 )
+scale = Vector2( 94.75, 85.6452 )
 z_index = -2
 texture = SubResource( 9 )
 
@@ -2009,6 +2010,34 @@ z_index = -1
 [node name="Mushroom_big_green3" parent="Forest/Mushrrom" instance=ExtResource( 33 )]
 position = Vector2( 21912, 1033 )
 z_index = -1
+
+[node name="Tree3" type="Node2D" parent="Forest"]
+
+[node name="Tree_plataform5" parent="Forest/Tree3" instance=ExtResource( 28 )]
+position = Vector2( 4648.02, 1310 )
+rotation = 1.5708
+
+[node name="Tree_plataform6" parent="Forest/Tree3" instance=ExtResource( 28 )]
+position = Vector2( 11536, 1310 )
+rotation = 1.5708
+
+[node name="Tree_plataform7" parent="Forest/Tree3" instance=ExtResource( 28 )]
+position = Vector2( 12216, 1310 )
+rotation = 1.5708
+
+[node name="Tree_plataform" parent="Forest/Tree3" instance=ExtResource( 28 )]
+position = Vector2( 17296, 1182 )
+
+[node name="Tree_plataform2" parent="Forest/Tree3" instance=ExtResource( 28 )]
+position = Vector2( 18128, 1182 )
+
+[node name="Tree_plataform3" parent="Forest/Tree3" instance=ExtResource( 28 )]
+position = Vector2( 18640, 1190 )
+scale = Vector2( 1, 0.9 )
+
+[node name="Tree_plataform4" parent="Forest/Tree3" instance=ExtResource( 28 )]
+position = Vector2( 19024, 1222 )
+scale = Vector2( 1, 0.7 )
 
 [node name="Underground" type="Node2D" parent="."]
 position = Vector2( 3919.98, -382 )
