@@ -1721,7 +1721,6 @@ shape = SubResource( 14 )
 position = Vector2( 35464, 1232 )
 
 [node name="Fog" type="Sprite" parent="Forest"]
-visible = false
 material = SubResource( 4 )
 position = Vector2( 13328, -1770 )
 scale = Vector2( 94.75, 85.6452 )
