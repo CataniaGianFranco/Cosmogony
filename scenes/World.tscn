@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=2]
+[gd_scene load_steps=68 format=2]
 
 [ext_resource path="res://world_environment/Main.tres" type="Environment" id=1]
 [ext_resource path="res://audio/ambient/chill_ambient.ogg" type="AudioStream" id=2]
@@ -30,6 +30,7 @@
 [ext_resource path="res://assets/forest/Tree/tree_water.png" type="Texture" id=28]
 [ext_resource path="res://scenes/Tree_base.tscn" type="PackedScene" id=29]
 [ext_resource path="res://scenes/Mushroom_green.tscn" type="PackedScene" id=30]
+[ext_resource path="res://scenes/Tree_plataform.tscn" type="PackedScene" id=31]
 
 [sub_resource type="RectangleShape2D" id=14]
 extents = Vector2( 12.9302, 370.811 )
@@ -938,7 +939,7 @@ position = Vector2( 3297, 966 )
 scale = Vector2( 1, 1 )
 
 [node name="Player" parent="Forest" instance=ExtResource( 6 )]
-position = Vector2( 15904, 1111 )
+position = Vector2( 16852, 875 )
 scale = Vector2( 1.4, 1.4 )
 collision_mask = 9
 sfx_dash = ExtResource( 25 )
@@ -1059,15 +1060,27 @@ anims/MovePlat3 = SubResource( 39 )
 anims/MovePlat6 = SubResource( 40 )
 anims/RESET = SubResource( 41 )
 
-[node name="Tree_base" type="Node2D" parent="Forest"]
-
-[node name="Tree_base" parent="Forest/Tree_base" instance=ExtResource( 29 )]
-position = Vector2( 14511, 1295 )
-
 [node name="KinematicBody2D" parent="Forest" instance=ExtResource( 30 )]
 position = Vector2( 16437, 1229 )
 
 [node name="Mushrrom" type="Node2D" parent="Forest"]
+
+[node name="Tree3" type="Node2D" parent="Forest"]
+
+[node name="Tree_base" parent="Forest/Tree3" instance=ExtResource( 29 )]
+position = Vector2( 14511, 1295 )
+
+[node name="Tree_plataform" parent="Forest/Tree3" instance=ExtResource( 31 )]
+position = Vector2( 17297, 1182 )
+
+[node name="Tree_plataform2" parent="Forest/Tree3" instance=ExtResource( 31 )]
+position = Vector2( 18270, 1182 )
+
+[node name="Tree_plataform3" parent="Forest/Tree3" instance=ExtResource( 31 )]
+position = Vector2( 18687, 1182 )
+
+[node name="Tree_plataform4" parent="Forest/Tree3" instance=ExtResource( 31 )]
+position = Vector2( 19035, 1182 )
 
 [node name="Parallax" type="Node2D" parent="."]
 position = Vector2( 3919.98, -1.42987 )
