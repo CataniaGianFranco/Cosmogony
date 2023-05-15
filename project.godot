@@ -138,6 +138,10 @@ ui_restart={
 2d_physics/layer_5="raycast"
 2d_physics/layer_6="danger"
 
+[mono]
+
+project/assembly_name="Cosmogony"
+
 [physics]
 
 common/enable_pause_aware_picking=true
